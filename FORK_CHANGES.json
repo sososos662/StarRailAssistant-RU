@@ -48,7 +48,7 @@
     },
     {
       "path": "CHANGELOG_RU.md",
-      "sha256": "c33714107ded1cdfc2a8dbb81ca63e2f30c2b1ea9fe4e6aa461a962e4a6d1ec5"
+      "sha256": "c451469ce10160569cb0bf5e1095dd8d65a145065581e6ddfe8b5e591cc4de52"
     },
     {
       "path": "FORK.md",
@@ -68,7 +68,7 @@
     },
     {
       "path": "README.ru.md",
-      "sha256": "bf793969be37d276a6688c6e9469d6c26e9227d329e81f8cc6d0e6d0ff3041cc"
+      "sha256": "01b61281d95c6bafdcfe1b443bb6ea09a75556b79d79cb1b38a9637ecaccd23f"
     },
     {
       "path": "README.zh.md",
@@ -192,7 +192,7 @@
     },
     {
       "path": "docs/RELEASE_NOTES.ru.md",
-      "sha256": "edb8e7b33cc2249eda7575a8e3ec54f2e2ca4f05d7097b04e96f75b19be9dd13"
+      "sha256": "efc501a3fc0e0a8bad27558d051e8268b39487995b9c64276df44889716c329c"
     },
     {
       "path": "docs/TESTING.ru.md",
@@ -268,7 +268,7 @@
     },
     {
       "path": "scripts/build_ru.py",
-      "sha256": "93aa2b1fddb6b2f01b83f3b6477ce1041ab98bb735b1f522562e3a20295a90a4"
+      "sha256": "e2426b879c400e7adcb6eeb58f631c0f9976a8527946e2f5cf129ab961a99f97"
     },
     {
       "path": "scripts/check_offline.py",
@@ -353,6 +353,10 @@
     {
       "path": "tests/perf002_projection_controls.py",
       "sha256": "b21dba8bcf921d932ab39c433c9119581e493a69dccb140e0472cef5dbe55ea4"
+    },
+    {
+      "path": "tests/test_build_packaging.py",
+      "sha256": "d9c0213297bcc6e0db84d05bf87722e27a07865da64c454ad4a766964522f3fb"
     },
     {
       "path": "tests/test_currency_wars_combined_diagnostics.py",
@@ -480,7 +484,7 @@
     {
       "path": "README.md",
       "upstream_sha256": "bc62720c6e24eb961210b1845799e27327cf06aa65ac2055eb647f8a6d6d8e8e",
-      "sha256": "bf793969be37d276a6688c6e9469d6c26e9227d329e81f8cc6d0e6d0ff3041cc"
+      "sha256": "01b61281d95c6bafdcfe1b443bb6ea09a75556b79d79cb1b38a9637ecaccd23f"
     },
     {
       "path": "SRACore/__main__.py",

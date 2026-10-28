@@ -12,16 +12,45 @@ import importlib.util
 import json
 import os
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import sys
 import urllib.request
 from zipfile import ZIP_DEFLATED, ZipFile
 
-from export_source import archive_source, digest, export, source_files
+try:
+    from .export_source import archive_source, digest, export, source_files
+except ImportError:
+    from export_source import archive_source, digest, export, source_files
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = "2.25.0-beta.1"
+
+
+def include_runtime_file(relative: Path) -> bool:
+    parts = tuple(part.casefold() for part in relative.parts)
+    if relative.is_absolute() or ".." in parts or "__pycache__" in parts:
+        return False
+    if relative.suffix.casefold() in {".pyc", ".pyo", ".pdb"}:
+        return False
+    return parts[:4] not in {
+        ("selenium", "webdriver", "common", "linux"),
+        ("selenium", "webdriver", "common", "macos"),
+    }
+
+
+def is_license_material(relative: Path) -> bool:
+    if not include_runtime_file(relative) or relative.suffix.casefold() in {
+            ".py", ".pyi", ".j2", ".jinja", ".jinja2", ".exe", ".dll", ".pyd",
+            ".so", ".o", ".obj", ".class", ".jar", ".whl", ".zip"}:
+        return False
+    if re.fullmatch(r"(?:licen[cs]es?|notice|third[-_ ]?party[-_ ]?notices?|copying)(?:[._ -].*)?",
+                    relative.name, flags=re.IGNORECASE):
+        return True
+    return any(part.casefold() in {"license", "licenses", "licence", "licences"}
+               for part in relative.parts[:-1]) and relative.suffix.casefold() in {
+                   "", ".txt", ".md", ".rst", ".html", ".htm"}
 
 
 def run(output, label, command, *, cwd=ROOT, environment=None):
@@ -37,7 +66,7 @@ def run(output, label, command, *, cwd=ROOT, environment=None):
 
 def overlay(source, destination):
     for path in sorted(source.rglob("*")):
-        if not path.is_file() or "__pycache__" in path.parts or path.suffix in {".pdb", ".pyc"}:
+        if not path.is_file() or not include_runtime_file(path.relative_to(source)):
             continue
         if path.name == "web.config" or path.name.startswith("opencv_videoio_ffmpeg"):
             continue
@@ -75,9 +104,7 @@ def licenses(runtime, *, nuget_assets=None):
         safe_name = "".join(c for c in name if c.isalnum() or c in "-_.")
         for entry in distribution.files or []:
             relative = Path(entry)
-            if ".." in relative.parts or not any(
-                    p.lower().startswith(("license", "notice", "thirdpartynotice", "copying"))
-                    for p in relative.parts):
+            if not is_license_material(relative):
                 continue
             source = Path(distribution.locate_file(entry))
             if not source.is_file():
@@ -102,8 +129,8 @@ def licenses(runtime, *, nuget_assets=None):
                 if not package.is_dir():
                     continue
                 for source in package.rglob("*"):
-                    if not source.is_file() or not (source.suffix == ".nuspec" or source.name.lower().startswith(
-                            ("license", "notice", "thirdpartynotice", "copying"))):
+                    if not source.is_file() or not (source.suffix == ".nuspec" or
+                                                   is_license_material(source.relative_to(package))):
                         continue
                     target = runtime / "third_party/nuget" / identifier / source.relative_to(package)
                     target.parent.mkdir(parents=True, exist_ok=True)
@@ -242,6 +269,10 @@ def main():
         if not (runtime / name).is_file():
             shutil.copyfile(system / name, runtime / name)
     versions = licenses(runtime, nuget_assets=dotnet_artifacts.rglob("project.assets.json"))
+    rejected = [path.relative_to(runtime).as_posix() for path in runtime.rglob("*")
+                if path.is_file() and not include_runtime_file(path.relative_to(runtime))]
+    if rejected:
+        raise RuntimeError(f"Unexpected development or non-Windows files: {rejected}")
     if inputs != {name: digest(path) for name, path in source_files().items()}:
         raise RuntimeError("Source changed while building; candidate must not be published")
     for name in ("SRA-cli.exe", "SRA.exe", "SRA-server.exe"):
