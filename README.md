@@ -12,7 +12,7 @@
 
 #### [Решение проблем](docs/TROUBLESHOOTING.ru.md) | [FAQ оригинала](https://starrailassistant.top/getting-started/faq/) | [Скачать](https://github.com/sososos662/StarRailAssistant-RU/releases) | [Инструкция](README_RU.md)
 
-# 🌟 StarRailAssistant (SRA) — русская версия
+# 🌟 StarRailAssistant (SRA)
 
 🎮 Помощник для автоматизации **Honkai: Star Rail**.
 Если при использовании возникли проблемы, сначала загляните в [руководство по их решению](docs/TROUBLESHOOTING.ru.md).
