@@ -14,8 +14,8 @@
     "LICENSE": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e",
     "NOTICE": "c9d350df0eac2415ca384aabc2348618955d217f7488f929d0e653869b8f04e1",
     "README.en.md": "78a368300cd7141a8be859fd7604d7c7a7510d630269cfd214d8795160e6a9f3",
-    "README.md": "ba88b555b0f1feff3d1df1e942212fea9cadf9258aaab31ed905e37ba45d6cf5",
-    "README.ru.md": "ba88b555b0f1feff3d1df1e942212fea9cadf9258aaab31ed905e37ba45d6cf5",
+    "README.md": "bf793969be37d276a6688c6e9469d6c26e9227d329e81f8cc6d0e6d0ff3041cc",
+    "README.ru.md": "bf793969be37d276a6688c6e9469d6c26e9227d329e81f8cc6d0e6d0ff3041cc",
     "README.zh.md": "d81021bcbb381790020aad2813e98fb59ffa4d093f72fab11cca19055542d5d9",
     "README_RU.md": "cb9f82cd70280ca5fb8a62899356ffc4f2334bd8574d83e0806493fccecb968e",
     "SECURITY.md": "4f0fae7920e510e9e66784fe5caffb059ebdc61c49b1bfcab4a850aeb4216903",
@@ -352,6 +352,7 @@
     "docs/RELEASE_NOTES.ru.md": "edb8e7b33cc2249eda7575a8e3ec54f2e2ca4f05d7097b04e96f75b19be9dd13",
     "docs/TESTING.ru.md": "561c71c835421a1c54db75a3f6e1a7daa3e082c04d40cfb31ab6cfe5e8702e28",
     "docs/TROUBLESHOOTING.ru.md": "1a916a514f47dbb1a7669f7ef68a4f32818114fb56cd4e39b2642a330264973a",
+    "docs/images/desktop-ru.jpg": "4e41a3419ede8710484338de1bc977d5b6acf384443705532443cd1c3f2952c7",
     "extensions/auto_player.py": "8c97ce020d696dec3dc8a99957c209048baa220ae833af4ce8297f7c08890fe0",
     "extensions/auto_plot.py": "f63130cee0d4a888672654211cea101da00043f2d65d8829245b7585c3feeea8",
     "extensions/currency_wars_plus.py": "6caa2ae8f9dd0bf95398ce20a63e6e07eb1a8d4a37c8027bce7650b895aabbb9",
@@ -923,7 +924,7 @@
     "tests/test_ocr_provider_diagnostics.py": "18777fd77bd40b960e02ddb14c4ec76169c9e305673024b85c67be9e2bcac300",
     "tests/test_runner_blocking.py": "9c2e65596366aedc6b47e7f6ccd371e95db90b098864377368e35f82c262d7bd",
     "tests/test_russian_localization.py": "3b14d2288fb72f83d36777421fe67c0ef14b1d75405d2912406a5476eee9450f",
-    "tests/test_source_export.py": "15efb358221d19b6617f0ec68739cf7c248c47d59531d69c1066fc906b8dae1c",
+    "tests/test_source_export.py": "faccb7c41d44a0dac5b452c7478453bb5f9d6a4714c9d88101dc169e31cd83c7",
     "tests/test_standard_io_utf8.py": "42548b877152f3e7c11da08d9961990cd30e7209e5c6f7ab62362e316a2c467e",
     "tests/test_tasks_notifications.py": "4b3260ca28ef12fc2b9dfaf75ab1e6afe255ae9d0146f851e8661f0da5f01258",
     "tests/fixtures/cw_strategy_code_dialog.png": "13768be3692b97266ec956f938a47e63f099dafbf615dd269f14ce5de1913c73",
@@ -944,7 +945,7 @@
     "tests/fixtures/terminal_recorded_235133/ocr.json": "abba3c53eb31149d2cae39564065d58872fe9189c025203f1ed2a98ee7e8d34c",
     "tests/fixtures/terminal_recorded_235133/summary.png": "95a408e85e8a9c3040b7bcc986b0d07926a9fa3cf39e9ac59df03c4674a138f9",
     "vendor/onnxruntime_directml-1.24.4-cp312-cp312-win_amd64.whl": "f2ecb68b7b7b259d2ef3112ae760149f9b5a1e7c0fbb73d539da6250a648a614",
-    "FORK_CHANGES.json": "71fdeb00f60393d8440e072986c509e022dfbe82b6d492fe968867883a075916"
+    "FORK_CHANGES.json": "8e0fdc919133ef07f6b8b6e3720ae221059cdbaabecbba9acc3d228e7cc85a07"
   },
   "note": "Manifest excludes itself. Private data/caches/build outputs are not exported."
 }

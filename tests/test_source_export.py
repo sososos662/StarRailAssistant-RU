@@ -1,6 +1,7 @@
 """The public source export retains the explicitly approved Europe variant only."""
 import hashlib
 from pathlib import PurePosixPath
+import re
 
 from scripts.export_source import source_files
 
@@ -27,3 +28,20 @@ def test_russian_landing_page_and_named_translation_are_both_exported_and_identi
     assert "## Что добавлено и улучшено в форке" in landing
     assert "Химэко Нова (Европа)" in landing
     assert "README.zh.md" in files
+
+
+def test_translated_upstream_readme_keeps_sections_and_approved_russian_screenshot():
+    files = source_files()
+    landing = files["README.md"].read_text(encoding="utf-8")
+    for section in ("Что такое SRA?", "Возможности", "Как начать пользоваться SRA?",
+                    "Нашли ошибку?", "Как помочь проекту", "Участники"):
+        assert section in landing
+    assert "## Важно знать" not in landing
+    assert "2,73" not in landing
+    screenshot = "docs/images/desktop-ru.jpg"
+    assert f"]({screenshot})" in landing
+    assert hashlib.sha256(files[screenshot].read_bytes()).hexdigest() == (
+        "4e41a3419ede8710484338de1bc977d5b6acf384443705532443cd1c3f2952c7")
+    for target in re.findall(r"\]\(([^)]+)\)", landing):
+        if not target.startswith(("https://", "http://", "#")):
+            assert target in files, target

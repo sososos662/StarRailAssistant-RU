@@ -68,7 +68,7 @@
     },
     {
       "path": "README.ru.md",
-      "sha256": "ba88b555b0f1feff3d1df1e942212fea9cadf9258aaab31ed905e37ba45d6cf5"
+      "sha256": "bf793969be37d276a6688c6e9469d6c26e9227d329e81f8cc6d0e6d0ff3041cc"
     },
     {
       "path": "README.zh.md",
@@ -201,6 +201,10 @@
     {
       "path": "docs/TROUBLESHOOTING.ru.md",
       "sha256": "1a916a514f47dbb1a7669f7ef68a4f32818114fb56cd4e39b2642a330264973a"
+    },
+    {
+      "path": "docs/images/desktop-ru.jpg",
+      "sha256": "4e41a3419ede8710484338de1bc977d5b6acf384443705532443cd1c3f2952c7"
     },
     {
       "path": "extensions/cw_plus/CONFIGURATION.ru.md",
@@ -436,7 +440,7 @@
     },
     {
       "path": "tests/test_source_export.py",
-      "sha256": "15efb358221d19b6617f0ec68739cf7c248c47d59531d69c1066fc906b8dae1c"
+      "sha256": "faccb7c41d44a0dac5b452c7478453bb5f9d6a4714c9d88101dc169e31cd83c7"
     },
     {
       "path": "tests/test_standard_io_utf8.py",
@@ -476,7 +480,7 @@
     {
       "path": "README.md",
       "upstream_sha256": "bc62720c6e24eb961210b1845799e27327cf06aa65ac2055eb647f8a6d6d8e8e",
-      "sha256": "ba88b555b0f1feff3d1df1e942212fea9cadf9258aaab31ed905e37ba45d6cf5"
+      "sha256": "bf793969be37d276a6688c6e9469d6c26e9227d329e81f8cc6d0e6d0ff3041cc"
     },
     {
       "path": "SRACore/__main__.py",
