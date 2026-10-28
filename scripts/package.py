@@ -129,6 +129,7 @@ def nuitka_build(version: str):
     cmd = [
         sys.executable, "-m", "nuitka",
         "--standalone", "--mingw64",
+        "--jobs=4",
         "--windows-console-mode=force",
         "--windows-icon-from-ico=resources/SRAicon.ico",
         "--company-name=StarRailAssistant Team",
@@ -160,8 +161,8 @@ def copy_core_resources(dist: Path):
     # shutil.copy2(ROOT_PATH / "main.py", dist / "main.py")
     # shutil.copytree(ROOT_PATH / "SRACore", dist / "SRACore")
     (DIST_DIR / "SRACore" / "localization").mkdir(parents=True, exist_ok=True)
-    shutil.copy2(ROOT_PATH / "SRACore" / "localization" / "resource_en-us.json", DIST_DIR / "SRACore" / "localization" / "resource_en-us.json")
-    shutil.copy2(ROOT_PATH / "SRACore" / "localization" / "resource_zh-cn.json", DIST_DIR / "SRACore" / "localization" / "resource_zh-cn.json")
+    for resource in (ROOT_PATH / "SRACore" / "localization").glob("*.json"):
+        shutil.copy2(resource, DIST_DIR / "SRACore" / "localization" / resource.name)
     shutil.copytree(ROOT_PATH / "resources", dist / "resources")
     rapidocr_pkg = SITE_PACKAGES_DIR / "rapidocr"  # pyright: ignore[reportOptionalOperand]
     if rapidocr_pkg.exists():

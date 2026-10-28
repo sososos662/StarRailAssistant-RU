@@ -37,12 +37,12 @@ python main.py -c "task run Default"  # one-shot command(s); '+' chains several
 Test:
 
 ```bash
-pytest                                                                 # full suite (10 tests)
+python scripts/check_offline.py --output ../checks-new tests             # isolated state; new output directory
 python -m pytest tests/test_main.py -q                                 # one file
 python -m pytest tests/test_runner_blocking.py::test_start_and_wait_blocks_until_worker_finishes -q
 ```
 
-Lint — flake8 is configured **only in CI** (`.github/workflows/python-app.yml`), there is no local config file:
+Lint — blocking flake8 is configured in `.github/workflows/ci.yml`; there is no local config file:
 
 ```bash
 flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics   # blocking
@@ -59,7 +59,7 @@ dotnet run --project SRAFrontend/SRAFrontend.Server/SRAFrontend.Server.csproj   
 Repo scripts:
 
 ```bash
-npm run build      # dotnet publish -c Release -r win-x64 SRAFrontend/SRAFrontend.sln && python scripts/package.py
+npm run build -- --output ../build-new   # safe local fork build; no publishing
 npm run modelgen   # regenerate SRACore/models/*.py from the C# models
 npm run pyl10nc    # regenerate localization from SRACore/localization/resource.toml
 npm run ver | ver:release | ver:patch | ver:pre
@@ -112,9 +112,10 @@ migrates legacy config shapes. Runtime logs and failure screenshots go to the re
 
 ## Conventions
 
-- **Language.** Commit messages are Chinese conventional commits (`.trae/rules/git-commit-message.md`); comments,
-  docstrings, log messages, task names and UI strings are Chinese. `README.md` is the Chinese source document — keep
-  it Chinese, mirror edits into `README.en.md`, and keep the language-switch links at the top of both.
+- **Language.** Preserve the existing Chinese code/comment conventions and the localization boundary.
+  This fork targets Russian-speaking users: `README.md` and `README.ru.md` are the same Russian landing page.
+  `README.zh.md` retains the Chinese upstream document; `README.en.md` retains English with a fork notice.
+  `README_RU.md` is the extended Russian guide. Keep language-switch links valid. Commit messages remain conventional.
 - **Generated files — never hand-edit.** `SRACore/models/app_settings.py` and `SRACore/models/tasks_config.py` come
   from `SRAFrontend/SRAFrontend/Models/*.cs` via `npm run modelgen`; `SRACore/localization/resource.py`,
   `resource_zh-cn.json` and `resource_en-us.json` come from `resource.toml` via `npm run pyl10nc`. Edit the C# model
@@ -130,19 +131,14 @@ migrates legacy config shapes. Runtime logs and failure screenshots go to the re
   the `@task`/`@extension` decorators are the house style; follow it rather than loosening types.
 - **Adding a user-visible field** means changing the backend model/schema: desktop Views bind to task configs and the
   WebUI renders from OpenAPI, so both follow the backend.
-- **Release notes live in `ChangeLog2.0.md`.** `scripts/package.py` reads it, substitutes `${VERSION}` and writes the
-  gitignored `version_info.txt` (first line = release name/tag) consumed by CI — edit the changelog, not
-  `version_info.txt`. `.github/workflows/python-app.yml` builds releases (Nuitka + Inno Setup + multi-zip artifacts),
-  `pypi.yml` publishes to PyPI, and `scripts/package.py` decides which files land in the Lite/Core/Resources/Server
-  zips.
+- **Fork releases.** Update `CHANGELOG_RU.md` and `docs/RELEASE_NOTES.ru.md`; keep the historical upstream
+  `ChangeLog2.0.md`. `FORK_VERSION` is separate from the internal app version. Active workflows only run CI
+  or create manual build artifacts. Six inherited publishing workflows are archived as `.disabled` files.
+  Do not use upstream `scripts/package.py` for fork publication: it can upload to R2. Follow `docs/PUBLISHING.ru.md`.
 
 ## Known issues
 
-Three backend tests currently fail on `main` from drift — do not treat them as regressions from your change, but do
-fix them if you touch the relevant modules:
-
-- `tests/test_main.py::test_main_version_option_exits_cleanly` patches `main.load_app_settings`, which no longer exists.
-- `tests/test_notification_system.py::test_channel_test_notification_catches_channel_exception` patches
-  `service.load_notification_settings`, which no longer exists.
-- `tests/test_tasks_notifications.py::test_load_all_tasks_and_trigger_start_complete_notifications` expects the five
-  core tasks to be registered merely by importing the test module; the test must import them itself.
+Historical upstream test drift has been corrected; failures are not an accepted baseline for this fork.
+See `docs/TESTING.ru.md` for exact checked revisions and counts. PERF-003 shop retries remain research, not a
+completed optimization. Never weaken unknown-identity, two-fresh-frame, TTL, purchase or stop guards.
+Offline checks do not prove full-game completion or a whole-party speedup. Do not start the game/tasks without consent.

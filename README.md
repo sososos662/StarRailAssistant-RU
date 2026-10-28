@@ -1,141 +1,82 @@
-<p align="center"><img src="/resources/SRAico.png" alt="icon"></p>
-<p align="center">
-    <img src="https://img.shields.io/badge/platform-Windows-blue" alt="platform">
-    <img alt="Static Badge" src="https://img.shields.io/badge/python-3.12-skyblue">
-    <img alt="Static Badge" src="https://img.shields.io/badge/.NET-10.0-purple">
-    <img alt="GitHub Downloads (all assets, all releases)" src="https://img.shields.io/github/downloads/Shasnow/StarRailAssistant/total">
-    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/Shasnow/StarRailAssistant">
-    <a href="https://mirrorchyan.com/zh/projects?rid=StarRailAssistant">
-        <img alt="mirrorc" src="https://img.shields.io/badge/Mirror%E9%85%B1-%239af3f6?logo=countingworkspro&logoColor=4f46e5">
-    </a>
-    <a href="https://pypi.org/project/starrailassistant/">
-      <img alt="PyPI Version" src="https://img.shields.io/pypi/v/starrailassistant">
-    </a>
-</p>
-<p align="center"><a href="https://starrailassistant.top"><b>主页</b></a> | <a href="README.en.md"><b>English</b></a></p>
+# StarRailAssistant-RU
 
-#### [问题排查](https://starrailassistant.top/getting-started/trouble-shooting/) | [FAQ](https://starrailassistant.top/getting-started/faq/) | [下载和安装](https://starrailassistant.top/getting-started/download/) | [使用方法](https://starrailassistant.top/getting-started/getting-started/)
+**Русскоязычный неофициальный форк [Shasnow/StarRailAssistant](https://github.com/Shasnow/StarRailAssistant)
+на базе `v2.25.0-beta.1`.**
 
-# 🌟 StarRailAssistant(SRA)
+[Русский](README.ru.md) · [English](README.en.md) · [中文](README.zh.md)
 
-🎮 崩坏星穹铁道自动化助手  
-如果您在使用的过程中遇到问题，请先阅读[问题排查](https://starrailassistant.top/getting-started/trouble-shooting/)。
+**[Скачать готовую сборку](https://github.com/sososos662/StarRailAssistant-RU/releases)** ·
+**[Инструкция по запуску](README_RU.md)** ·
+**[Сообщить об ошибке](https://github.com/sososos662/StarRailAssistant-RU/issues)**
 
-如果项目对您有帮助，欢迎点个Star⭐支持一下！
+Помощник автоматизирует действия в **Honkai: Star Rail** с помощью распознавания
+экрана. Этот форк предназначен прежде всего для русскоязычных пользователей.
+Это не только перевод интерфейса: здесь также исправлены и оптимизированы
+отдельные сценарии уже существующего CurrencyWarsPlus.
 
-## ❓ 什么是SRA？
+## Что добавлено и улучшено в форке
 
-🤖 一个基于图像识别的崩铁自动化程序，帮您完成从启动到退出的崩铁日常。
+- **Русский интерфейс:** desktop, WebUI, CLI и описания настроек. Исправлены
+  UTF-8-обмен между процессами, отображение кириллицы и отдельные подписи.
+- **Исправления «Валютных войн Plus»:** обработка неизвестных/пустых мест,
+  проверки покупок и состава, восстановление и финальная страница SSS.
+  Для финала исправлены неполное OCR кнопки и чтение HP — без отключения
+  подтверждений, двух свежих кадров и остановки.
+- **Оптимизация вычислений:** ускорены отдельные проверки магазина, страниц и
+  задней линии; убрана часть доказанно повторной работы, сохранены пороги и проверки.
+- **DirectML OCR:** переносимое распознавание через GPU с CPU-вариантом и
+  откатом при ошибке инициализации адаптера. [Состав и ограничения](GPU_OCR.ru.md).
+- **Диагностика:** ограниченные кадры и OCR неполной витрины, раздельные тайминги
+  и фактические провайдеры модельных сессий.
+- **«Химэко Нова (Европа)»:** сохранён предоставленный владельцем вариант
+  `himeko_global_europe_20261026.json` с его игровым кодом. Правила покупок,
+  расстановки и экономики в этом JSON не менялись.
 
-![预览](https://starrailassistant.top/_astro/softwaremain2.C3xP9Cen_6MuUy.webp)
+**Что уже было в оригинале:** сам CurrencyWarsPlus, этапы состава и экономики,
+две штатные стратегии, конечная экономика 3-7 и рекомендованная экипировка.
+Форк не приписывает себе создание этих механизмов. Два штатных JSON сохранены
+байт в байт. Подробнее: [FORK.md](FORK.md), [CHANGELOG_RU.md](CHANGELOG_RU.md).
 
-## ⚠️ 免责声明
+## Быстрый запуск
 
-本软件是一个外部工具旨在自动化《崩坏：星穹铁道》的游戏玩法。
-它被设计成仅通过现有用户界面与游戏交互,并遵守相关法律法规。
-该软件包不打算以任何方式破坏游戏平衡或提供任何不公平的优势。
-该软件包不会以任何方式修改任何游戏文件或游戏代码。
+1. Скачайте **готовый Windows x64 ZIP** из [Releases этого форка](https://github.com/sososos662/StarRailAssistant-RU/releases).
+   `Code → Download ZIP` и `Source.zip` — исходники, не готовая программа.
+2. Сверьте SHA256, полностью распакуйте архив в отдельную папку и запустите `SRA.exe`.
+   Отдельные Python и .NET готовой сборке не нужны. Антивирус отключать не требуется.
+3. Выберите **Настройки → Отображение → Язык → Русский**, подтвердите перезапуск.
+4. Для Plus откройте **Расширения → Валютные войны Plus → Настройки**: укажите
+   точное имя Первопроходца текущего аккаунта, стратегию и параметры запуска.
 
-This software is open source, free of charge and for learning and exchange purposes only. The developer team has the
-final right to interpret this project. All problems arising from the use of this software are not related to this
-project and the developer team. If you encounter a merchant using this software to practice on your behalf and charging
-for it, it may be the cost of equipment and time, etc. The problems and consequences arising from this software have
-nothing to do with it.
+**Русским является помощник. Игра должна использовать упрощённый китайский
+язык — 简体中文 — и разрешение 1920×1080.**
 
-本软件开源、免费，仅供学习交流使用。
-开发者团队拥有本项目的最终解释权。
-使用本软件产生的所有问题与本项目与开发者团队无关。
-若您遇到商家使用本软件进行代练并收费，可能是设备与时间等费用，产生的问题及后果与本软件无关。
+В поставке три JSON-стратегии: две штатные и вариант Европы. У Химеко с уровня 7
+для дальнейшего обычного опыта требуется выставленная **Химеко 2★**, а не весь
+состав 2★; её цель закупки остаётся 3★. [Подробные настройки и экономика](extensions/cw_plus/CONFIGURATION.ru.md).
 
-请注意，根据MiHoYo的 [崩坏:星穹铁道的公平游戏宣言](https://sr.mihoyo.com/news/111246?nav=news&type=notice):
+## Важно знать
 
-    "严禁使用外挂、加速器、脚本或其他破坏游戏公平性的第三方工具。"
-    "一经发现，米哈游（下亦称“我们”）将视违规严重程度及违规次数，采取扣除违规收益、冻结游戏账号、永久封禁游戏账号等措施。"
+- Это не официальный релиз Shasnow или HoYoverse. Автоматизация может нарушать
+  правила игры; гарантий безопасности аккаунта, победы или прохождения нет.
+- Новое полное игровое прохождение после последнего исправления финала не заявляется.
+  Успешные offline-тесты не заменяют проверку в живой игре.
+- Замер около 2,73× относится к конкретному OCR-набору, **не к скорости всей партии**.
+- Штатный upstream-updater может заменить форк оригинальной версией. Пока
+  обновляйте эту сборку вручную из Releases данного репозитория.
+- Логи и кадры могут содержать UID, имя и секреты. Не загружайте их без очистки:
+  [SECURITY.md](SECURITY.md).
 
-## ✨ 有什么功能？
+## Документация и происхождение
 
-* 🎯 **启动游戏**
-  * 在这里选择好游戏路径，输入账号与密码，`坐和放宽`程序会帮你解决好一切。已经适配b服。
-* ⚡ **清体力**
-  * 自由选择关卡、挑战次数、挑战顺序，支持根据培养目标自动选择关卡和挑战次数。
-* 🎁 **领取奖励**
-  * 包括：每日实训、无名勋礼、助战奖励、兑换码奖励、派遣奖励、巡星之礼、邮件奖励等。
-* 🚀 **差分宇宙刷等级**
-  * 支持刷到每周积分上限后自动停止、自动领取积分奖励。
-* 🎲 **货币战争**
-  * 标准博弈、超频博弈自动化（最高难度不一定能赢）
-  * 刷开局：支持任意投资环境、投资策略、Boss名称、Boss词条，如叽米、砂金
-* 🚪 **退出游戏**
-  * 可选退出SRA以及关闭计算机。
-* 📖 **自动剧情**
-  * 解放双手，享受剧情，支持`跳过`
-* 🔄 **多账号切换**
-* **云星穹铁道**
-  * 支持使用云星穹铁道，实现后台运行。
+- [Подробный русский обзор и запуск](README_RU.md)
+- [Отличия форка](FORK.md) и [история изменений](CHANGELOG_RU.md)
+- [Сборка](docs/BUILDING.ru.md), [тестирование](docs/TESTING.ru.md), [диагностика](docs/TROUBLESHOOTING.ru.md)
+- [База и атрибуция](UPSTREAM.md), [сторонние компоненты](THIRD_PARTY_NOTICES.md)
 
-## ⚠️ 注意事项
+Базовый коммит: `863509072bf2011b4d5a3e3d71072b6cd269637e`.
+Ревизия форка: **`2.25.0-beta.1-ru.20261028.1`**; внутренняя версия приложения
+сохранена `2.25.0-beta.1` для совместимости.
 
-* 📺 **分辨率要求**：
-  * 如果你的屏幕分辨率**大于1080p**，请将游戏调整至**1920x1080窗口**模式下运行，否则可能出现识别错误！
-  * 如果你的屏幕分辨率**等于1080p**，请将游戏调整至**1920x1080全屏**模式下运行，否则可能出现识别错误！
-* 🖱️ **操作提示**：**执行任务时不要进行其他键鼠操作！**
-
-## 🚀 我怎么才能使用SRA？急急急
-
-⬇️ 下载链接：[SRA](https://github.com/Shasnow/StarRailAssistant/releases/latest)
-
-下载说明: [ChangeLog2.0.md](ChangeLog2.0.md)
-
-运行时要求：
-含有 StarRailAssistant_DesktopDLC 的版本需要安装[.NET 桌面运行时 10.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/10.0) 。
-含有 StarRailAssistant_ServerDLC 的版本需要安装[ASP.NET Core 运行时 10.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/10.0)。
-
-* 在Release页面下载`StarRailAssistant_vX.X.X.zip`文件，*一切都为您准备妥当*，只需解压到您喜欢的位置，然后运行`SRA.exe`即可！
-* 如需使用 WebUI，无需单独下载：WebUI 已内嵌于包含服务端的完整包 `StarRailAssistant_vX.X.X.zip` 中（或安装 `ServerDLC`），解压后由服务端直接托管，启动服务端即可访问。
-* 从源码运行SRA，请阅读 [贡献指南](CONTRIBUTING.md)。
-
-## 🐛 你这代码保熟吗？
-
-我们无法保证代码能完美的运行，这便是 **`issues`** 存在的意义。
-
-* 📝 通过 **`issues`** 反馈：<https://github.com/Shasnow/StarRailAssisant/issues>
-* 📧 通过 **`电子邮件`** 反馈：<yukikage@qq.com>
-* 💬 或者加入测试群 **994571792** 在这里，你可以：
-    * ~~⚡ 获得更快的下载速度~~
-    * 🆕 提前获取版本更新
-    * 💌 反馈和意见得到及时回复
-    * 🤝 与精通 `Python` , `Java` , `C/C++` , `SQL`, `C#` , `Go` , `Vue3` , `HTML` , `JavaScript` , `CSS` , `TypeScript`
-      的大佬交流。
-    * ✨ 与 **`暮光闪闪`** 交流友谊的魔法
-    * 🎮 和 **`青雀`** 一起摸鱼
-    * 😺 体验 **`柔情猫娘`** 的温柔
-    * 🧠 向 **`梦见月瑞希`** 获取心理咨询
-* 欢迎通过上述渠道反馈问题和提交意见！
-
-## 🤝 想要为项目做出贡献
-
-请阅读 [贡献指南](CONTRIBUTING.md)。
-
-----------------------------------------------------------------------------------------------
-
-## 🙏 贡献者
-
-感谢以下贡献者对本项目做出的贡献
-
-<a href="https://github.com/Shasnow/StarRailAssistant/graphs/contributors">
-
-  <img src="https://contrib.rocks/image?repo=Shasnow/StarRailAssistant"  alt="contrib"/>
-
-</a>
-
-## ⭐ Star History
-
-<a href="https://www.star-history.com/?repos=Shasnow%2FStarRailAssistant&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Shasnow/StarRailAssistant&type=date&theme=dark&legend=top-left&sealed_token=-d1hfRmVNv67qW-5NaLnQpmr58Vatft_y975chPsQxz3vrLBmXMjqH_G2XuU9t1rwl-NqjNBgKKmYL_3inwquYr1j0QEtL-uiclG-hR18uUPLcpm2mb92g" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Shasnow/StarRailAssistant&type=date&legend=top-left&sealed_token=-d1hfRmVNv67qW-5NaLnQpmr58Vatft_y975chPsQxz3vrLBmXMjqH_G2XuU9t1rwl-NqjNBgKKmYL_3inwquYr1j0QEtL-uiclG-hR18uUPLcpm2mb92g" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Shasnow/StarRailAssistant&type=date&legend=top-left&sealed_token=-d1hfRmVNv67qW-5NaLnQpmr58Vatft_y975chPsQxz3vrLBmXMjqH_G2XuU9t1rwl-NqjNBgKKmYL_3inwquYr1j0QEtL-uiclG-hR18uUPLcpm2mb92g" />
- </picture>
-</a>
-
-----------------------------------------------------------------------------------------------
+Оригинальные авторы — **Shasnow и участники StarRailAssistant**;
+CurrencyWarsPlus — **YukkiSSYB**. Авторские уведомления и лицензия
+**[AGPL-3.0-or-later](LICENSE)** сохранены.

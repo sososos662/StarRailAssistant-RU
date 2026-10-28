@@ -1,6 +1,3 @@
-* text=auto eol=crlf
-
-# ssyb：发行清单按统一换行校验，跨平台检出保持相同字节。
-/extensions/currency_wars_plus.py text eol=lf
-/extensions/cw_plus/** text=auto eol=lf
-/extensions/cw_plus/**/*.png -text
+# RU 分支：发行清单按原始字节校验，不隐式转换换行。
+# 保持 Git 对象、GitHub 源码归档和 Source ZIP 一致；-text 不禁用文本差异显示。
+* -text

@@ -173,6 +173,11 @@ public class AppService(SettingsService settingsService, ILogger<AppService> log
         {
             0 => PhrasesZh,
             1 => PhrasesEn,
+            2 => Array.ConvertAll(PhrasesZh, phrase => phrase switch
+            {
+                "并非\n'Sequence Read Archive'" => Localization.UiText.Get("U0187"),
+                _ => Localization.UiText.T(phrase)
+            }),
             _ => PhrasesZh
         };
     }

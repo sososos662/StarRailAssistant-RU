@@ -1456,6 +1456,62 @@ def _protected_successor_prefix(config, stage, observations, capacity, move,
                    reason="protected_successor_prefix")
 
 
+def _shorten_interim_roundtrip(config, stage, observations, capacity, first,
+                                preferred_names, excluded_moves, max_moves):
+    """只压缩同区域临时角色的退场再入场，不改变原有短路径的最终阵容。"""
+    if (stage.position_fallbacks or first.source_area != "in_hand"
+            or first.target_area not in FIELD_AREAS or max_moves < 2):
+        return ()
+    target = observations[first.target_area][first.target_index]
+    if not _movable(target) or _name(target) in stage.on_field + stage.off_field:
+        return ()
+    # 未知身份、星级或未确认输入不能支持短路径等价证明。
+    if any(getattr(obs, "evidence", "") in UNRELIABLE_EVIDENCE
+           or getattr(obs, "stale", False) or _state(obs) not in {"known", "empty", "locked"}
+           or _movable(obs) and (type(getattr(obs, "stars", None)) is not int or not 1 <= obs.stars <= 3)
+           for slots in observations.values() for obs in slots):
+        return ()
+
+    def apply(snapshot, move):
+        after = {area: list(slots) for area, slots in snapshot.items()}
+        after[move.source_area][move.source_index], after[move.target_area][move.target_index] = (
+            after[move.target_area][move.target_index], after[move.source_area][move.source_index])
+        return after
+
+    def roster(snapshot):
+        # 攻略约束区域而非同区域格号；身份、星级及人口保持完全一致。
+        return tuple(tuple(sorted(slots, key=repr)) for slots in _board_key(snapshot))
+
+    current, middle = apply(observations, first), ()
+    for _ in range(min(max_moves - 1, 2)):
+        following = _plan_greedy_formation_move(config, stage, current, capacity,
+                                               preferred_names, excluded_moves)
+        if following is None:
+            break
+        following = _identified_move(following, current, requires_completion=True)
+        restored = apply(current, following)
+        if ((following.source_area, following.source_index) == (first.source_area, first.source_index)
+                and following.source_name == _name(target) and following.target_area == first.target_area
+                and _empty(observations[following.target_area][following.target_index])):
+            direct = replace(first, target_index=following.target_index, reason="keep_interim_in_place")
+            shortened = (_identified_move(direct, observations, requires_completion=True),) + middle
+            actual = observations
+            for move in shortened:
+                actual = apply(actual, move)
+            if (roster(actual) == roster(restored) and validate_formation_sequence(
+                    config, stage, observations, capacity, shortened, preferred_names, excluded_moves)):
+                return shortened
+            break
+        # 临时角色已被其他步骤使用时，不再尝试重排这个前缀。
+        if (first.source_area, first.source_index) in {
+                (following.source_area, following.source_index),
+                (following.target_area, following.target_index)}:
+            break
+        middle += (following,)
+        current = restored
+    return ()
+
+
 # ssyb：序列规划仍要求逐步确认，不能把预测棋盘当成观测。
 def plan_formation_sequence(config: FormationConfig | None, stage: FormationStage | None,
                             observations: Mapping[str, Sequence[Any]], capacity: int | None,
@@ -1520,6 +1576,11 @@ def plan_formation_sequence(config: FormationConfig | None, stage: FormationStag
                 # 验证这个已证明的阶段优先选择。
                 return tuple(replace(move, requires_completion=True) for move in primary_plan)
     if greedy is not None:
+        if _include_interim_targets and not _require_complete:
+            shortened = _shorten_interim_roundtrip(config, stage, observations, capacity,
+                greedy, preferred_names, excluded_moves, max_moves)
+            if shortened:
+                return shortened
         return (_identified_move(greedy, observations, requires_completion=completion_required),)
     if max_moves < 2:
         return ()

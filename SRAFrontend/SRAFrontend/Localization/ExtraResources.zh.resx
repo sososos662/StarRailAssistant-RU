@@ -1,0 +1,6046 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="root">
+    <xs:element name="root" ns1:IsDataSet="true">
+        </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="U0224" xml:space="preserve">
+    <value>已结束</value>
+  </data>
+  <data name="U0225" xml:space="preserve">
+    <value>剩余 {0} 天 {1} 小时</value>
+  </data>
+  <data name="U0226" xml:space="preserve">
+    <value>剩余 {0} 小时</value>
+  </data>
+  <data name="U0227" xml:space="preserve">
+    <value>未开始</value>
+  </data>
+  <data name="U0228" xml:space="preserve">
+    <value>{0} 天 {1} 小时后开始</value>
+  </data>
+  <data name="U0229" xml:space="preserve">
+    <value>{0} 小时后开始</value>
+  </data>
+  <data name="U0230" xml:space="preserve">
+    <value>已结束 {0} 天 {1} 小时</value>
+  </data>
+  <data name="U0231" xml:space="preserve">
+    <value>已结束 {0} 小时</value>
+  </data>
+  <data name="U0232" xml:space="preserve">
+    <value>进行中</value>
+  </data>
+  <data name="U0233" xml:space="preserve">
+    <value>任务启动成功</value>
+  </data>
+  <data name="U0234" xml:space="preserve">
+    <value>已启动配置：{0}</value>
+  </data>
+  <data name="U0235" xml:space="preserve">
+    <value>任务启动失败</value>
+  </data>
+  <data name="U0236" xml:space="preserve">
+    <value>无法启动配置：{0}，请检查后端状态。</value>
+  </data>
+  <data name="U0237" xml:space="preserve">
+    <value>已启动所有配置任务。</value>
+  </data>
+  <data name="U0238" xml:space="preserve">
+    <value>无法启动所有配置任务，请检查后端状态。</value>
+  </data>
+  <data name="U0239" xml:space="preserve">
+    <value>保存成功</value>
+  </data>
+  <data name="U0240" xml:space="preserve">
+    <value>已保存当前配置。</value>
+  </data>
+  <data name="U0241" xml:space="preserve">
+    <value>已启动任务</value>
+  </data>
+  <data name="U0242" xml:space="preserve">
+    <value>无法启动任务，请检查后端状态。</value>
+  </data>
+  <data name="U0243" xml:space="preserve">
+    <value>无效的配置名称</value>
+  </data>
+  <data name="U0244" xml:space="preserve">
+    <value>配置名称不能包含以下字符：\ / : * ? " &lt; &gt; |</value>
+  </data>
+  <data name="U0247" xml:space="preserve">
+    <value>鼠标不在游戏窗口</value>
+  </data>
+  <data name="U0257" xml:space="preserve">
+    <value>公告</value>
+  </data>
+  <data name="U0258" xml:space="preserve">
+    <value>检查更新失败</value>
+  </data>
+  <data name="U0259" xml:space="preserve">
+    <value>当前版本号格式无效</value>
+  </data>
+  <data name="U0260" xml:space="preserve">
+    <value>无法获取更新信息，请检查网络连接</value>
+  </data>
+  <data name="U0261" xml:space="preserve">
+    <value>远程版本号格式无效</value>
+  </data>
+  <data name="U0262" xml:space="preserve">
+    <value>已是最新版本</value>
+  </data>
+  <data name="U0263" xml:space="preserve">
+    <value>发现新版本</value>
+  </data>
+  <data name="U0264" xml:space="preserve">
+    <value>正在自动下载更新包：{0}</value>
+  </data>
+  <data name="U0265" xml:space="preserve">
+    <value>自动更新</value>
+  </data>
+  <data name="U0266" xml:space="preserve">
+    <value>手动更新</value>
+  </data>
+  <data name="U0267" xml:space="preserve">
+    <value>忽略</value>
+  </data>
+  <data name="U0268" xml:space="preserve">
+    <value>快捷方式已存在</value>
+  </data>
+  <data name="U0269" xml:space="preserve">
+    <value>快捷方式已存在于桌面</value>
+  </data>
+  <data name="U0270" xml:space="preserve">
+    <value>创建快捷方式</value>
+  </data>
+  <data name="U0271" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="U0272" xml:space="preserve">
+    <value>不再询问</value>
+  </data>
+  <data name="U0273" xml:space="preserve">
+    <value>创建桌面快捷方式</value>
+  </data>
+  <data name="U0274" xml:space="preserve">
+    <value>检测到桌面快捷方式不存在，是否现在创建？</value>
+  </data>
+  <data name="U0275" xml:space="preserve">
+    <value>快捷方式创建成功</value>
+  </data>
+  <data name="U0276" xml:space="preserve">
+    <value>已在桌面创建 SRA 快捷方式</value>
+  </data>
+  <data name="U0277" xml:space="preserve">
+    <value>快捷方式创建失败</value>
+  </data>
+  <data name="U0278" xml:space="preserve">
+    <value>查看日志以获取更多信息</value>
+  </data>
+  <data name="U0279" xml:space="preserve">
+    <value>清理旧文件失败</value>
+  </data>
+  <data name="U0280" xml:space="preserve">
+    <value>无法删除旧可执行文件：{0}</value>
+  </data>
+  <data name="U0281" xml:space="preserve">
+    <value>打开失败</value>
+  </data>
+  <data name="U0282" xml:space="preserve">
+    <value>指定的路径不存在</value>
+  </data>
+  <data name="U0283" xml:space="preserve">
+    <value>发生错误：{0}</value>
+  </data>
+  <data name="U0284" xml:space="preserve">
+    <value>正在下载...</value>
+  </data>
+  <data name="U0285" xml:space="preserve">
+    <value>下载已取消</value>
+  </data>
+  <data name="U0286" xml:space="preserve">
+    <value>您已取消更新包的下载</value>
+  </data>
+  <data name="U0287" xml:space="preserve">
+    <value>下载更新失败</value>
+  </data>
+  <data name="U0288" xml:space="preserve">
+    <value>下载完成</value>
+  </data>
+  <data name="U0289" xml:space="preserve">
+    <value>更新包已就绪</value>
+  </data>
+  <data name="U0290" xml:space="preserve">
+    <value>立即解压</value>
+  </data>
+  <data name="U0291" xml:space="preserve">
+    <value>稍后</value>
+  </data>
+  <data name="U0292" xml:space="preserve">
+    <value>更新包已下载完成</value>
+  </data>
+  <data name="U0293" xml:space="preserve">
+    <value>解压过程将短暂停止后端服务，是否现在开始解压？</value>
+  </data>
+  <data name="U0294" xml:space="preserve">
+    <value>已推迟解压</value>
+  </data>
+  <data name="U0295" xml:space="preserve">
+    <value>可稍后重新检查更新以继续</value>
+  </data>
+  <data name="U0296" xml:space="preserve">
+    <value>即将开始解压</value>
+  </data>
+  <data name="U0297" xml:space="preserve">
+    <value>更新包将在3秒后解压</value>
+  </data>
+  <data name="U0298" xml:space="preserve">
+    <value>热更新应用完成</value>
+  </data>
+  <data name="U0299" xml:space="preserve">
+    <value>请重启控制台以使用最新版本</value>
+  </data>
+  <data name="U0300" xml:space="preserve">
+    <value>更新准备完成</value>
+  </data>
+  <data name="U0301" xml:space="preserve">
+    <value>重启应用程序以应用最新版本</value>
+  </data>
+  <data name="U0302" xml:space="preserve">
+    <value>立即重启</value>
+  </data>
+  <data name="U0303" xml:space="preserve">
+    <value>更新已准备就绪</value>
+  </data>
+  <data name="U0304" xml:space="preserve">
+    <value>是否现在重启应用以应用最新版本？</value>
+  </data>
+  <data name="U0305" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="U0306" xml:space="preserve">
+    <value>重新安装最新版本</value>
+  </data>
+  <data name="U0307" xml:space="preserve">
+    <value>此操作将重新下载并安装最新版本安装包，以修复可能存在的问题。是否继续？</value>
+  </data>
+  <data name="U0308" xml:space="preserve">
+    <value>正在下载最新版本安装包...</value>
+  </data>
+  <data name="U0309" xml:space="preserve">
+    <value>操作已取消</value>
+  </data>
+  <data name="U0310" xml:space="preserve">
+    <value>您已取消安装包的下载</value>
+  </data>
+  <data name="U0311" xml:space="preserve">
+    <value>重新安装失败</value>
+  </data>
+  <data name="U0312" xml:space="preserve">
+    <value>网络错误：无法下载最新版本安装包，请检查网络连接，或在更新设置中切换下载渠道后重试。</value>
+  </data>
+  <data name="U0313" xml:space="preserve">
+    <value>版本 {0} 安装包 SHA256 校验通过，即将开始安装</value>
+  </data>
+  <data name="U0314" xml:space="preserve">
+    <value>安装完成</value>
+  </data>
+  <data name="U0315" xml:space="preserve">
+    <value>应用将在 3 秒后自动重启</value>
+  </data>
+  <data name="U0316" xml:space="preserve">
+    <value>正在解压更新</value>
+  </data>
+  <data name="U0317" xml:space="preserve">
+    <value>请稍候...</value>
+  </data>
+  <data name="U0318" xml:space="preserve">
+    <value>手动解压</value>
+  </data>
+  <data name="U0319" xml:space="preserve">
+    <value>退出程序</value>
+  </data>
+  <data name="U0320" xml:space="preserve">
+    <value>更新解压失败</value>
+  </data>
+  <data name="U0321" xml:space="preserve">
+    <value>自动解压失败：{0}
+
+需要退出程序完成解压（退出后请等待5~10秒），或手动完成解压</value>
+  </data>
+  <data name="U0322" xml:space="preserve">
+    <value>重启失败</value>
+  </data>
+  <data name="U0323" xml:space="preserve">
+    <value>连接中...</value>
+  </data>
+  <data name="U0324" xml:space="preserve">
+    <value>取消下载</value>
+  </data>
+  <data name="U0325" xml:space="preserve">
+    <value>正在取消...</value>
+  </data>
+  <data name="U0113" xml:space="preserve">
+    <value>扫描</value>
+  </data>
+  <data name="U0326" xml:space="preserve">
+    <value>可选项：{0} 个</value>
+  </data>
+  <data name="U0327" xml:space="preserve">
+    <value>{0}（当前值）</value>
+  </data>
+  <data name="U0328" xml:space="preserve">
+    <value>扫描失败：{0}</value>
+  </data>
+  <data name="U0329" xml:space="preserve">
+    <value>未来版本支持WebSocket连接命令</value>
+  </data>
+  <data name="U0330" xml:space="preserve">
+    <value>未连接到任何WebSocket服务器</value>
+  </data>
+  <data name="U0331" xml:space="preserve">
+    <value>未知命令: {0}</value>
+  </data>
+  <data name="U0332" xml:space="preserve">
+    <value>导出日志</value>
+  </data>
+  <data name="U0333" xml:space="preserve">
+    <value>ZIP 压缩包</value>
+  </data>
+  <data name="U0334" xml:space="preserve">
+    <value>正在导出日志</value>
+  </data>
+  <data name="U0335" xml:space="preserve">
+    <value>正在收集日志文件并打包，请稍候...</value>
+  </data>
+  <data name="U0336" xml:space="preserve">
+    <value>日志导出成功</value>
+  </data>
+  <data name="U0337" xml:space="preserve">
+    <value>已保存至：{0}</value>
+  </data>
+  <data name="U0338" xml:space="preserve">
+    <value>日志导出失败: {TargetPath}</value>
+  </data>
+  <data name="U0339" xml:space="preserve">
+    <value>日志导出失败</value>
+  </data>
+  <data name="U0340" xml:space="preserve">
+    <value>发生错误：{0}
+请检查目标路径是否可写后重试</value>
+  </data>
+  <data name="U0341" xml:space="preserve">
+    <value>运行中</value>
+  </data>
+  <data name="U0342" xml:space="preserve">
+    <value>已停止</value>
+  </data>
+  <data name="U0343" xml:space="preserve">
+    <value>配置 - {0}</value>
+  </data>
+  <data name="U0344" xml:space="preserve">
+    <value>未能获取可选项，请确认后端已启动后重试。</value>
+  </data>
+  <data name="U0345" xml:space="preserve">
+    <value>活动日历</value>
+  </data>
+  <data name="U0346" xml:space="preserve">
+    <value>已选 {0}/{1} 个，共 {2}（冗余合计 {3}）</value>
+  </data>
+  <data name="U0347" xml:space="preserve">
+    <value>CDK长度错误，应为24位字符</value>
+  </data>
+  <data name="U0348" xml:space="preserve">
+    <value>验证中...</value>
+  </data>
+  <data name="U0349" xml:space="preserve">
+    <value>验证失败，无法连接到验证服务</value>
+  </data>
+  <data name="U0350" xml:space="preserve">
+    <value>CDK有效 至: {0:ss}</value>
+  </data>
+  <data name="U0351" xml:space="preserve">
+    <value>完整性检查通过，共校验 {0} 个文件</value>
+  </data>
+  <data name="U0352" xml:space="preserve">
+    <value>以下文件缺失</value>
+  </data>
+  <data name="U0353" xml:space="preserve">
+    <value>以下文件校验失败（已损坏或版本不一致）</value>
+  </data>
+  <data name="U0354" xml:space="preserve">
+    <value>知道了</value>
+  </data>
+  <data name="U0355" xml:space="preserve">
+    <value>未找到完整性清单文件（manifest.md5.json），请通过应用内更新重新安装后再试</value>
+  </data>
+  <data name="U0356" xml:space="preserve">
+    <value>检查失败：{0}</value>
+  </data>
+  <data name="U0357" xml:space="preserve">
+    <value>{0}（{1} 个）</value>
+  </data>
+  <data name="U0358" xml:space="preserve">
+    <value>……其余 {0} 个文件省略</value>
+  </data>
+  <data name="U0359" xml:space="preserve">
+    <value>未发现可清理的文件</value>
+  </data>
+  <data name="U0360" xml:space="preserve">
+    <value>删除选中</value>
+  </data>
+  <data name="U0361" xml:space="preserve">
+    <value>已删除 {0} 个文件，释放 {1}</value>
+  </data>
+  <data name="U0362" xml:space="preserve">
+    <value>已删除 {0} 个文件，{1} 个删除失败（可能被占用）：{2}{3: "")}</value>
+  </data>
+  <data name="U0363" xml:space="preserve">
+    <value>未找到完整性清单文件（manifest.md5.json），无法区分冗余文件，请通过应用内更新重新安装后再试</value>
+  </data>
+  <data name="U0365" xml:space="preserve">
+    <value>选择下载文件的保存目录</value>
+  </data>
+  <data name="U0366" xml:space="preserve">
+    <value>目录不可用</value>
+  </data>
+  <data name="U0367" xml:space="preserve">
+    <value>无法创建或访问所选目录：
+{0}
+请重新选择其他目录。</value>
+  </data>
+  <data name="U0368" xml:space="preserve">
+    <value>语言已更改</value>
+  </data>
+  <data name="U0369" xml:space="preserve">
+    <value>需要重启应用以应用新语言，是否立即重启？</value>
+  </data>
+  <data name="X0135" xml:space="preserve">
+    <value>{0}：{1}</value>
+  </data>
+  <data name="U0370" xml:space="preserve">
+    <value>邮件测试</value>
+  </data>
+  <data name="U0371" xml:space="preserve">
+    <value>请先完成 SMTP 相关设置</value>
+  </data>
+  <data name="U0372" xml:space="preserve">
+    <value>测试邮件已发送，请检查收件箱</value>
+  </data>
+  <data name="U0373" xml:space="preserve">
+    <value>Webhook 测试</value>
+  </data>
+  <data name="U0374" xml:space="preserve">
+    <value>请先填写 Webhook 地址</value>
+  </data>
+  <data name="U0375" xml:space="preserve">
+    <value>测试请求已发送至：{0}</value>
+  </data>
+  <data name="U0376" xml:space="preserve">
+    <value>Telegram 测试</value>
+  </data>
+  <data name="U0377" xml:space="preserve">
+    <value>请先填写 Bot Token 和 Chat ID</value>
+  </data>
+  <data name="U0378" xml:space="preserve">
+    <value>测试消息已发送，请检查 Telegram</value>
+  </data>
+  <data name="U0379" xml:space="preserve">
+    <value>ServerChan 测试</value>
+  </data>
+  <data name="U0380" xml:space="preserve">
+    <value>请先填写 SendKey</value>
+  </data>
+  <data name="U0381" xml:space="preserve">
+    <value>测试消息已发送，请检查微信</value>
+  </data>
+  <data name="U0382" xml:space="preserve">
+    <value>Bark 测试</value>
+  </data>
+  <data name="U0383" xml:space="preserve">
+    <value>请先填写设备 Key</value>
+  </data>
+  <data name="U0384" xml:space="preserve">
+    <value>测试消息已发送，请检查 iPhone</value>
+  </data>
+  <data name="U0385" xml:space="preserve">
+    <value>飞书测试</value>
+  </data>
+  <data name="U0386" xml:space="preserve">
+    <value>测试消息已发送，请检查飞书</value>
+  </data>
+  <data name="U0387" xml:space="preserve">
+    <value>企业微信测试</value>
+  </data>
+  <data name="U0388" xml:space="preserve">
+    <value>测试消息已发送，请检查企业微信</value>
+  </data>
+  <data name="U0389" xml:space="preserve">
+    <value>钉钉测试</value>
+  </data>
+  <data name="U0390" xml:space="preserve">
+    <value>测试消息已发送，请检查钉钉</value>
+  </data>
+  <data name="U0391" xml:space="preserve">
+    <value>Discord 测试</value>
+  </data>
+  <data name="U0392" xml:space="preserve">
+    <value>测试消息已发送，请检查 Discord</value>
+  </data>
+  <data name="U0393" xml:space="preserve">
+    <value>xxtui 测试</value>
+  </data>
+  <data name="U0394" xml:space="preserve">
+    <value>请先填写 API Key</value>
+  </data>
+  <data name="U0395" xml:space="preserve">
+    <value>测试消息已发送</value>
+  </data>
+  <data name="U0396" xml:space="preserve">
+    <value>OneBot 测试</value>
+  </data>
+  <data name="U0397" xml:space="preserve">
+    <value>请填写 API 地址以及 QQ 号或群号（至少一个）</value>
+  </data>
+  <data name="U0398" xml:space="preserve">
+    <value>测试消息已发送，请检查 QQ</value>
+  </data>
+  <data name="U0399" xml:space="preserve">
+    <value>开发者模式</value>
+  </data>
+  <data name="U0400" xml:space="preserve">
+    <value>您正处于开发者模式！</value>
+  </data>
+  <data name="U0401" xml:space="preserve">
+    <value>只需再执行 {0} 次操作，即可进入开发者模式。</value>
+  </data>
+  <data name="U0402" xml:space="preserve">
+    <value>未选择</value>
+  </data>
+  <data name="U0403" xml:space="preserve">
+    <value>暂无任务</value>
+  </data>
+  <data name="U0404" xml:space="preserve">
+    <value>{0} 等 {1} 个任务</value>
+  </data>
+  <data name="U0405" xml:space="preserve">
+    <value>副本配置加载失败</value>
+  </data>
+  <data name="U0406" xml:space="preserve">
+    <value>未能从后端获取副本配置，请尝试重启后端。</value>
+  </data>
+  <data name="U0407" xml:space="preserve">
+    <value>攻略加载失败</value>
+  </data>
+  <data name="U0408" xml:space="preserve">
+    <value>选择攻略文件</value>
+  </data>
+  <data name="U0409" xml:space="preserve">
+    <value>JSON 攻略文件</value>
+  </data>
+  <data name="U0410" xml:space="preserve">
+    <value>攻略导入失败</value>
+  </data>
+  <data name="U0411" xml:space="preserve">
+    <value>后端无响应</value>
+  </data>
+  <data name="U0412" xml:space="preserve">
+    <value>攻略导入成功</value>
+  </data>
+  <data name="U0413" xml:space="preserve">
+    <value>请选择副本关卡后再添加任务</value>
+  </data>
+  <data name="U0564" xml:space="preserve">
+    <value>获取背景图</value>
+  </data>
+  <data name="U0565" xml:space="preserve">
+    <value>获取系统信息</value>
+  </data>
+  <data name="U0566" xml:space="preserve">
+    <value>获取短语</value>
+  </data>
+  <data name="U0567" xml:space="preserve">
+    <value>重启后端</value>
+  </data>
+  <data name="U0415" xml:space="preserve">
+    <value>停止后端</value>
+  </data>
+  <data name="U0568" xml:space="preserve">
+    <value>获取最近日志</value>
+  </data>
+  <data name="U0569" xml:space="preserve">
+    <value>SSE 日志流</value>
+  </data>
+  <data name="U0570" xml:space="preserve">
+    <value>获取 Operator 截图</value>
+  </data>
+  <data name="U0571" xml:space="preserve">
+    <value>获取所有配置名称</value>
+  </data>
+  <data name="U0572" xml:space="preserve">
+    <value>获取指定配置</value>
+  </data>
+  <data name="U0573" xml:space="preserve">
+    <value>新建配置</value>
+  </data>
+  <data name="U0574" xml:space="preserve">
+    <value>名称包含非法字符</value>
+  </data>
+  <data name="U0575" xml:space="preserve">
+    <value>配置已存在</value>
+  </data>
+  <data name="U0576" xml:space="preserve">
+    <value>更新配置</value>
+  </data>
+  <data name="U0577" xml:space="preserve">
+    <value>删除配置</value>
+  </data>
+  <data name="U0578" xml:space="preserve">
+    <value>列出所有已注册的扩展</value>
+  </data>
+  <data name="U0579" xml:space="preserve">
+    <value>获取扩展配置 Schema</value>
+  </data>
+  <data name="U0580" xml:space="preserve">
+    <value>获取扩展配置值</value>
+  </data>
+  <data name="U0581" xml:space="preserve">
+    <value>设置扩展配置值</value>
+  </data>
+  <data name="U0582" xml:space="preserve">
+    <value>运行指定扩展</value>
+  </data>
+  <data name="U0583" xml:space="preserve">
+    <value>停止指定扩展</value>
+  </data>
+  <data name="U0584" xml:space="preserve">
+    <value>重新扫描并导入扩展模块</value>
+  </data>
+  <data name="U0585" xml:space="preserve">
+    <value>列出所有可用的 Operator 方法</value>
+  </data>
+  <data name="U0586" xml:space="preserve">
+    <value>获取 Operator 方法的详细帮助</value>
+  </data>
+  <data name="U0587" xml:space="preserve">
+    <value>调用 Operator 方法</value>
+  </data>
+  <data name="U0588" xml:space="preserve">
+    <value>获取设置</value>
+  </data>
+  <data name="U0589" xml:space="preserve">
+    <value>获取当前应用程序的设置</value>
+  </data>
+  <data name="U0590" xml:space="preserve">
+    <value>修改设置</value>
+  </data>
+  <data name="U0591" xml:space="preserve">
+    <value>按字段修改设置，支持只传需要修改的部分。请求体为 AppSettings 的部分 JSON，例如 { "advanced": { "backend.remote.enabled": true } }</value>
+  </data>
+  <data name="U0592" xml:space="preserve">
+    <value>运行任务</value>
+  </data>
+  <data name="U0593" xml:space="preserve">
+    <value>运行单个指定任务</value>
+  </data>
+  <data name="U0594" xml:space="preserve">
+    <value>停止任务</value>
+  </data>
+  <data name="U0595" xml:space="preserve">
+    <value>获取任务状态</value>
+  </data>
+  <data name="U0001" xml:space="preserve">
+    <value>通用设置</value>
+  </data>
+  <data name="U0002" xml:space="preserve">
+    <value>显示设置</value>
+  </data>
+  <data name="U0003" xml:space="preserve">
+    <value>更新设置</value>
+  </data>
+  <data name="U0004" xml:space="preserve">
+    <value>高级设置</value>
+  </data>
+  <data name="U0005" xml:space="preserve">
+    <value>通知设置</value>
+  </data>
+  <data name="U0006" xml:space="preserve">
+    <value>游戏路径索引，指向 gamePath.uris 中的一个 URI</value>
+  </data>
+  <data name="U0007" xml:space="preserve">
+    <value>游戏路径列表，支持多个路径以便快速切换</value>
+  </data>
+  <data name="U0008" xml:space="preserve">
+    <value>是否自动检测游戏路径，启用后将扫描常见安装位置以找到游戏路径</value>
+  </data>
+  <data name="U0009" xml:space="preserve">
+    <value>是否启用游戏启动参数，启用后将使用下面的参数启动游戏</value>
+  </data>
+  <data name="U0010" xml:space="preserve">
+    <value>游戏窗口模式，如 窗口化、全屏</value>
+  </data>
+  <data name="U0012" xml:space="preserve">
+    <value>游戏窗口尺寸，格式为 宽x高，如 1920x1080</value>
+  </data>
+  <data name="U0013" xml:space="preserve">
+    <value>是否使用无边框游戏窗口</value>
+  </data>
+  <data name="U0014" xml:space="preserve">
+    <value>是否启用自动战斗</value>
+  </data>
+  <data name="U0015" xml:space="preserve">
+    <value>是否使用命令行启动游戏（避免一些直接启动导致的问题）</value>
+  </data>
+  <data name="U0016" xml:space="preserve">
+    <value>高级启动参数，直接传递给游戏进程，覆盖其他参数设置</value>
+  </data>
+  <data name="U0017" xml:space="preserve">
+    <value>是否使用云游戏</value>
+  </data>
+  <data name="U0018" xml:space="preserve">
+    <value>云游戏使用的浏览器</value>
+  </data>
+  <data name="U0019" xml:space="preserve">
+    <value>云游戏使用的浏览器路径</value>
+  </data>
+  <data name="U0020" xml:space="preserve">
+    <value>云游戏使用的浏览器是否无头模式</value>
+  </data>
+  <data name="U0021" xml:space="preserve">
+    <value>云游戏使用的浏览器是否静音</value>
+  </data>
+  <data name="U0022" xml:space="preserve">
+    <value>施放秘技的快捷键</value>
+  </data>
+  <data name="U0023" xml:space="preserve">
+    <value>打开活动界面的快捷键</value>
+  </data>
+  <data name="U0024" xml:space="preserve">
+    <value>打开纪行界面的快捷键</value>
+  </data>
+  <data name="U0025" xml:space="preserve">
+    <value>打开卡池界面的快捷键</value>
+  </data>
+  <data name="U0026" xml:space="preserve">
+    <value>打开指南界面的快捷键</value>
+  </data>
+  <data name="U0027" xml:space="preserve">
+    <value>停止运行任务的快捷键</value>
+  </data>
+  <data name="U0028" xml:space="preserve">
+    <value>是否启用叠加层</value>
+  </data>
+  <data name="U0029" xml:space="preserve">
+    <value>OCR 识图置信度，范围 0-1，数值越高越严格</value>
+  </data>
+  <data name="U0030" xml:space="preserve">
+    <value>模板匹配置信度（识图置信度），范围 0-1，数值越高越严格</value>
+  </data>
+  <data name="U0031" xml:space="preserve">
+    <value>任务失败后是否尝试重启游戏并重试</value>
+  </data>
+  <data name="U0032" xml:space="preserve">
+    <value>任务失败后最大重试次数</value>
+  </data>
+  <data name="U0033" xml:space="preserve">
+    <value>背景图片 URI，可以是本地路径或网络 URL</value>
+  </data>
+  <data name="U0034" xml:space="preserve">
+    <value>背景图片不透明度，范围 0-1</value>
+  </data>
+  <data name="U0035" xml:space="preserve">
+    <value>控制面板不透明度，范围 0-1</value>
+  </data>
+  <data name="U0036" xml:space="preserve">
+    <value>界面语言，0=中文, 1=English</value>
+  </data>
+  <data name="U0037" xml:space="preserve">
+    <value>是否记住窗口位置和大小</value>
+  </data>
+  <data name="U0038" xml:space="preserve">
+    <value>窗口状态，0=正常, 1=最小化, 2=最大化</value>
+  </data>
+  <data name="U0039" xml:space="preserve">
+    <value>主窗口位置的 X 坐标</value>
+  </data>
+  <data name="U0040" xml:space="preserve">
+    <value>主窗口位置的 Y 坐标</value>
+  </data>
+  <data name="U0041" xml:space="preserve">
+    <value>主窗口宽度</value>
+  </data>
+  <data name="U0042" xml:space="preserve">
+    <value>主窗口高度</value>
+  </data>
+  <data name="U0043" xml:space="preserve">
+    <value>是否启用通知功能</value>
+  </data>
+  <data name="U0044" xml:space="preserve">
+    <value>是否启用系统通知</value>
+  </data>
+  <data name="U0045" xml:space="preserve">
+    <value>是否启用 Bark 推送</value>
+  </data>
+  <data name="U0046" xml:space="preserve">
+    <value>Bark 推送的密文内容，设置后作为 ciphertext 参数发送</value>
+  </data>
+  <data name="U0047" xml:space="preserve">
+    <value>Bark 设备 Key，支持逗号分隔多个设备</value>
+  </data>
+  <data name="U0048" xml:space="preserve">
+    <value>Bark 消息分组</value>
+  </data>
+  <data name="U0049" xml:space="preserve">
+    <value>Bark 推送图标的 URL</value>
+  </data>
+  <data name="U0050" xml:space="preserve">
+    <value>Bark 推送级别，active/timeSensitive/passive</value>
+  </data>
+  <data name="U0051" xml:space="preserve">
+    <value>Bark 服务器地址</value>
+  </data>
+  <data name="U0052" xml:space="preserve">
+    <value>Bark 推送提示音名称</value>
+  </data>
+  <data name="U0053" xml:space="preserve">
+    <value>是否启用钉钉机器人推送</value>
+  </data>
+  <data name="U0054" xml:space="preserve">
+    <value>钉钉机器人的加签密钥（SEC 开头）</value>
+  </data>
+  <data name="U0055" xml:space="preserve">
+    <value>钉钉机器人的 Webhook 地址</value>
+  </data>
+  <data name="U0056" xml:space="preserve">
+    <value>是否启用 Discord 推送</value>
+  </data>
+  <data name="U0057" xml:space="preserve">
+    <value>是否在 Discord 推送中附带截图</value>
+  </data>
+  <data name="U0058" xml:space="preserve">
+    <value>Discord 的 Webhook 地址</value>
+  </data>
+  <data name="U0059" xml:space="preserve">
+    <value>是否启用飞书推送</value>
+  </data>
+  <data name="U0060" xml:space="preserve">
+    <value>飞书应用的 App ID</value>
+  </data>
+  <data name="U0061" xml:space="preserve">
+    <value>飞书应用的 App Secret</value>
+  </data>
+  <data name="U0062" xml:space="preserve">
+    <value>飞书消息接收者 ID</value>
+  </data>
+  <data name="U0063" xml:space="preserve">
+    <value>飞书接收者 ID 类型，如 open_id、user_id、union_id、chat_id</value>
+  </data>
+  <data name="U0064" xml:space="preserve">
+    <value>飞书机器人的 Webhook 地址</value>
+  </data>
+  <data name="U0065" xml:space="preserve">
+    <value>是否启用 OneBot 推送</value>
+  </data>
+  <data name="U0066" xml:space="preserve">
+    <value>是否在 OneBot 推送中附带截图</value>
+  </data>
+  <data name="U0067" xml:space="preserve">
+    <value>OneBot 推送的目标群号</value>
+  </data>
+  <data name="U0068" xml:space="preserve">
+    <value>OneBot 的访问 Token</value>
+  </data>
+  <data name="U0069" xml:space="preserve">
+    <value>OneBot 的 HTTP API 地址</value>
+  </data>
+  <data name="U0070" xml:space="preserve">
+    <value>OneBot 机器人的账号</value>
+  </data>
+  <data name="U0071" xml:space="preserve">
+    <value>是否启用 Server酱 推送</value>
+  </data>
+  <data name="U0072" xml:space="preserve">
+    <value>Server酱 的 SendKey</value>
+  </data>
+  <data name="U0073" xml:space="preserve">
+    <value>是否启用 Telegram 推送</value>
+  </data>
+  <data name="U0074" xml:space="preserve">
+    <value>是否为 Telegram 推送启用代理</value>
+  </data>
+  <data name="U0075" xml:space="preserve">
+    <value>是否在 Telegram 推送中附带截图</value>
+  </data>
+  <data name="U0076" xml:space="preserve">
+    <value>是否启用企业微信推送</value>
+  </data>
+  <data name="U0077" xml:space="preserve">
+    <value>是否在企业微信推送中附带截图</value>
+  </data>
+  <data name="U0078" xml:space="preserve">
+    <value>企业微信机器人的 Webhook 地址</value>
+  </data>
+  <data name="U0079" xml:space="preserve">
+    <value>是否启用自定义 Webhook 推送</value>
+  </data>
+  <data name="U0080" xml:space="preserve">
+    <value>自定义 Webhook 的 URL</value>
+  </data>
+  <data name="U0081" xml:space="preserve">
+    <value>是否启用 息知(xxtui) 推送</value>
+  </data>
+  <data name="U0082" xml:space="preserve">
+    <value>是否启用邮件推送</value>
+  </data>
+  <data name="U0083" xml:space="preserve">
+    <value>SMTP 服务器端口，SSL 通常为 465</value>
+  </data>
+  <data name="U0084" xml:space="preserve">
+    <value>收件邮箱地址</value>
+  </data>
+  <data name="U0085" xml:space="preserve">
+    <value>发件邮箱地址</value>
+  </data>
+  <data name="U0086" xml:space="preserve">
+    <value>SMTP 服务器地址</value>
+  </data>
+  <data name="U0087" xml:space="preserve">
+    <value>SMTP 授权码（加密存储）</value>
+  </data>
+  <data name="U0088" xml:space="preserve">
+    <value>Telegram Bot API 地址</value>
+  </data>
+  <data name="U0089" xml:space="preserve">
+    <value>Telegram 机器人的 Bot Token</value>
+  </data>
+  <data name="U0090" xml:space="preserve">
+    <value>Telegram 推送目标 Chat ID</value>
+  </data>
+  <data name="U0091" xml:space="preserve">
+    <value>Telegram 代理服务器地址</value>
+  </data>
+  <data name="U0092" xml:space="preserve">
+    <value>息知(xxtui) 的 API Key</value>
+  </data>
+  <data name="U0093" xml:space="preserve">
+    <value>息知(xxtui) 的推送通道</value>
+  </data>
+  <data name="U0094" xml:space="preserve">
+    <value>息知(xxtui) 的消息来源</value>
+  </data>
+  <data name="U0095" xml:space="preserve">
+    <value>任务完成时发送通知的任务名称列表</value>
+  </data>
+  <data name="U0096" xml:space="preserve">
+    <value>任务开始时发送通知的任务名称列表</value>
+  </data>
+  <data name="U0097" xml:space="preserve">
+    <value>下载渠道，0=Mirror Chyan, 1=Github Release, 2=AUTO-MAS</value>
+  </data>
+  <data name="U0098" xml:space="preserve">
+    <value>是否启用自动更新: 将在有更新时直接开始下载</value>
+  </data>
+  <data name="U0099" xml:space="preserve">
+    <value>是否启用检查更新功能: 将在启动时检查更新并提示用户</value>
+  </data>
+  <data name="U0100" xml:space="preserve">
+    <value>更新频道，0=Stable, 1=Beta</value>
+  </data>
+  <data name="U0101" xml:space="preserve">
+    <value>更新安装包的下载保存目录，留空则使用系统临时目录下的 SRA 文件夹</value>
+  </data>
+  <data name="U0102" xml:space="preserve">
+    <value>Mirror Chyan 下载渠道的授权码，敏感信息将被加密存储</value>
+  </data>
+  <data name="U0103" xml:space="preserve">
+    <value>后端启动参数</value>
+  </data>
+  <data name="U0104" xml:space="preserve">
+    <value>是否使用远程后端</value>
+  </data>
+  <data name="U0105" xml:space="preserve">
+    <value>远程后端地址</value>
+  </data>
+  <data name="U0106" xml:space="preserve">
+    <value>是否在叠加层显示调试信息</value>
+  </data>
+  <data name="U0107" xml:space="preserve">
+    <value>是否启用开发者模式</value>
+  </data>
+  <data name="U0108" xml:space="preserve">
+    <value>是否启用自定义后端</value>
+  </data>
+  <data name="U0109" xml:space="preserve">
+    <value>自定义后端命令/可执行文件，如 python、sra-cli、uv 或可执行文件路径</value>
+  </data>
+  <data name="U0110" xml:space="preserve">
+    <value>自定义后端启动参数，如 main.py、-m SRACore</value>
+  </data>
+  <data name="U0111" xml:space="preserve">
+    <value>自定义后端工作目录，留空时使用程序当前目录</value>
+  </data>
+  <data name="U0112" xml:space="preserve">
+    <value>是否保存 OCR 截图以便调试</value>
+  </data>
+  <data name="U0114" xml:space="preserve">
+    <value>任务配置名称</value>
+  </data>
+  <data name="U0115" xml:space="preserve">
+    <value>启动游戏配置</value>
+  </data>
+  <data name="U0116" xml:space="preserve">
+    <value>体力配置</value>
+  </data>
+  <data name="U0117" xml:space="preserve">
+    <value>领取奖励配置</value>
+  </data>
+  <data name="U0118" xml:space="preserve">
+    <value>旷宇纷争配置</value>
+  </data>
+  <data name="U0119" xml:space="preserve">
+    <value>任务完成后操作</value>
+  </data>
+  <data name="U0120" xml:space="preserve">
+    <value>配置文件版本号</value>
+  </data>
+  <data name="U0121" xml:space="preserve">
+    <value>是否启用启动游戏任务</value>
+  </data>
+  <data name="U0122" xml:space="preserve">
+    <value>游戏渠道，0-国服，1-B服，2-国际服</value>
+  </data>
+  <data name="U0123" xml:space="preserve">
+    <value>游戏启动程序路径</value>
+  </data>
+  <data name="U0124" xml:space="preserve">
+    <value>国际服服务器，0-亚洲，1-欧洲，2-美洲，3-台港澳，仅国际服有效</value>
+  </data>
+  <data name="U0125" xml:space="preserve">
+    <value>是否使用全局设置中的游戏路径</value>
+  </data>
+  <data name="U0126" xml:space="preserve">
+    <value>启动游戏后的等待延迟（秒）</value>
+  </data>
+  <data name="U0127" xml:space="preserve">
+    <value>是否自动登录账号</value>
+  </data>
+  <data name="U0128" xml:space="preserve">
+    <value>是否在登录失败后自动重新登录</value>
+  </data>
+  <data name="U0129" xml:space="preserve">
+    <value>加密存储的账号密码</value>
+  </data>
+  <data name="U0130" xml:space="preserve">
+    <value>加密存储的账号用户名</value>
+  </data>
+  <data name="U0131" xml:space="preserve">
+    <value>是否启用开拓力任务</value>
+  </data>
+  <data name="U0132" xml:space="preserve">
+    <value>花藏繁生中拟造花萼（金）的目标关卡</value>
+  </data>
+  <data name="U0133" xml:space="preserve">
+    <value>花藏繁生中拟造花萼（赤）的目标关卡</value>
+  </data>
+  <data name="U0134" xml:space="preserve">
+    <value>是否使用支援角色</value>
+  </data>
+  <data name="U0135" xml:space="preserve">
+    <value>是否启用培养目标，开启后将优先完成培养目标</value>
+  </data>
+  <data name="U0136" xml:space="preserve">
+    <value>培养目标材料优先：识别到材料型副本时跳过饰品提取与侵蚀隧洞，未识别到时仍保留</value>
+  </data>
+  <data name="U0137" xml:space="preserve">
+    <value>是否启用多倍活动检测，启用后将优先刷取花藏繁生/异器盈界/位面分裂副本</value>
+  </data>
+  <data name="U0138" xml:space="preserve">
+    <value>位面分裂的目标关卡</value>
+  </data>
+  <data name="U0139" xml:space="preserve">
+    <value>异器盈界的目标关卡</value>
+  </data>
+  <data name="U0140" xml:space="preserve">
+    <value>补充体力的次数</value>
+  </data>
+  <data name="U0141" xml:space="preserve">
+    <value>是否补充体力</value>
+  </data>
+  <data name="U0142" xml:space="preserve">
+    <value>补充体力的方式，0-后备开拓力，1-燃料，2-星琼</value>
+  </data>
+  <data name="U0143" xml:space="preserve">
+    <value>任务列表</value>
+  </data>
+  <data name="U0144" xml:space="preserve">
+    <value>是否启用领取奖励任务</value>
+  </data>
+  <data name="U0145" xml:space="preserve">
+    <value>是否领取派遣奖励</value>
+  </data>
+  <data name="U0146" xml:space="preserve">
+    <value>是否领取每日实训奖励</value>
+  </data>
+  <data name="U0147" xml:space="preserve">
+    <value>是否领取巡星之礼奖励</value>
+  </data>
+  <data name="U0148" xml:space="preserve">
+    <value>是否领取邮件奖励</value>
+  </data>
+  <data name="U0149" xml:space="preserve">
+    <value>是否领取无名勋礼奖励</value>
+  </data>
+  <data name="U0150" xml:space="preserve">
+    <value>是否执行兑换码兑换</value>
+  </data>
+  <data name="U0151" xml:space="preserve">
+    <value>是否领取漫游签证奖励</value>
+  </data>
+  <data name="U0152" xml:space="preserve">
+    <value>兑换码列表，格式为：兑换码1 兑换码2 兑换码3</value>
+  </data>
+  <data name="U0153" xml:space="preserve">
+    <value>是否启用旷宇纷争任务</value>
+  </data>
+  <data name="U0154" xml:space="preserve">
+    <value>货币战争总开关</value>
+  </data>
+  <data name="U0155" xml:space="preserve">
+    <value>货币战争难度，0-最低难度，1-最高难度，2-当前难度</value>
+  </data>
+  <data name="U0156" xml:space="preserve">
+    <value>货币战争模式，0-标准博弈，1-超频博弈，2-刷开局</value>
+  </data>
+  <data name="U0157" xml:space="preserve">
+    <value>启用后，若旷宇纷争积分奖励已满则跳过货币战争任务</value>
+  </data>
+  <data name="U0158" xml:space="preserve">
+    <value>货币战争刷开局时的Boss词缀</value>
+  </data>
+  <data name="U0159" xml:space="preserve">
+    <value>货币战争刷开局时的Boss名称</value>
+  </data>
+  <data name="U0160" xml:space="preserve">
+    <value>货币战争刷开局时的投资环境</value>
+  </data>
+  <data name="U0161" xml:space="preserve">
+    <value>货币战争刷开局时的投资策略</value>
+  </data>
+  <data name="U0162" xml:space="preserve">
+    <value>货币战争刷开局时的运行次数</value>
+  </data>
+  <data name="U0163" xml:space="preserve">
+    <value>货币战争使用的攻略名称</value>
+  </data>
+  <data name="U0164" xml:space="preserve">
+    <value>货币战争使用的攻略索引</value>
+  </data>
+  <data name="U0165" xml:space="preserve">
+    <value>货币战争中开拓者的名字</value>
+  </data>
+  <data name="U0166" xml:space="preserve">
+    <value>差分宇宙总开关</value>
+  </data>
+  <data name="U0167" xml:space="preserve">
+    <value>差分宇宙模式：0-刷单层，1-完整对局</value>
+  </data>
+  <data name="U0168" xml:space="preserve">
+    <value>差分宇宙运行次数</value>
+  </data>
+  <data name="U0169" xml:space="preserve">
+    <value>差分宇宙是否使用秘技速刷</value>
+  </data>
+  <data name="U0170" xml:space="preserve">
+    <value>是否启用积分奖励，启用后当达到周积分上限时跳过此任务</value>
+  </data>
+  <data name="U0171" xml:space="preserve">
+    <value>是否启用任务完成后操作</value>
+  </data>
+  <data name="U0172" xml:space="preserve">
+    <value>完成任务后是否退出应用</value>
+  </data>
+  <data name="U0173" xml:space="preserve">
+    <value>完成任务后是否退出游戏</value>
+  </data>
+  <data name="U0174" xml:space="preserve">
+    <value>完成任务后是否注销当前用户</value>
+  </data>
+  <data name="U0175" xml:space="preserve">
+    <value>完成任务后是否登出账号</value>
+  </data>
+  <data name="U0176" xml:space="preserve">
+    <value>完成任务后是否关机</value>
+  </data>
+  <data name="U0177" xml:space="preserve">
+    <value>完成任务后是否睡眠</value>
+  </data>
+  <data name="U0178" xml:space="preserve">
+    <value>任务名称</value>
+  </data>
+  <data name="U0179" xml:space="preserve">
+    <value>任务标识ID，如 calyx_golden、echo_of_war</value>
+  </data>
+  <data name="U0180" xml:space="preserve">
+    <value>关卡等级</value>
+  </data>
+  <data name="U0181" xml:space="preserve">
+    <value>关卡名称</value>
+  </data>
+  <data name="U0182" xml:space="preserve">
+    <value>手动模式下单个任务的执行次数</value>
+  </data>
+  <data name="U0183" xml:space="preserve">
+    <value>手动模式下的执行轮数</value>
+  </data>
+  <data name="U0184" xml:space="preserve">
+    <value>是否根据剩余体力自动分配执行次数</value>
+  </data>
+  <data name="U0195" xml:space="preserve">
+    <value>发送失败: 进程未运行（输入: {0}）</value>
+  </data>
+  <data name="U0196" xml:space="preserve">
+    <value>发送失败: {0}（输入: {1}）</value>
+  </data>
+  <data name="U0197" xml:space="preserve">
+    <value>启动失败: 未找到后端可执行文件（路径: {0}）</value>
+  </data>
+  <data name="U0198" xml:space="preserve">
+    <value>启动失败: {0}</value>
+  </data>
+  <data name="U0199" xml:space="preserve">
+    <value>进程已退出（PID: {0}，退出代码为: {1}）</value>
+  </data>
+  <data name="U0206" xml:space="preserve">
+    <value>[RemoteBackend] 连接断开，3 秒后重连...</value>
+  </data>
+  <data name="U0207" xml:space="preserve">
+    <value>获取版本信息的URL参数不正确</value>
+  </data>
+  <data name="U0208" xml:space="preserve">
+    <value>填入的 CDK 已过期</value>
+  </data>
+  <data name="U0209" xml:space="preserve">
+    <value>填入的 CDK 错误</value>
+  </data>
+  <data name="U0210" xml:space="preserve">
+    <value>填入的 CDK 今日下载次数已达上限</value>
+  </data>
+  <data name="U0211" xml:space="preserve">
+    <value>填入的 CDK 类型和待下载的资源不匹配</value>
+  </data>
+  <data name="U0212" xml:space="preserve">
+    <value>填入的 CDK 已被封禁</value>
+  </data>
+  <data name="U0213" xml:space="preserve">
+    <value>对应架构和系统下的资源不存在</value>
+  </data>
+  <data name="U0214" xml:space="preserve">
+    <value>错误的系统参数</value>
+  </data>
+  <data name="U0215" xml:space="preserve">
+    <value>错误的架构参数</value>
+  </data>
+  <data name="U0216" xml:space="preserve">
+    <value>错误的更新通道参数</value>
+  </data>
+  <data name="U0217" xml:space="preserve">
+    <value>当前版本：{0}</value>
+  </data>
+  <data name="U0218" xml:space="preserve">
+    <value>热修复：{0}</value>
+  </data>
+  <data name="U0219" xml:space="preserve">
+    <value>未找到 MD5 完整性清单</value>
+  </data>
+  <data name="U0220" xml:space="preserve">
+    <value>MD5 清单内容为空或格式错误</value>
+  </data>
+  <data name="U0221" xml:space="preserve">
+    <value>ZIP文件不存在</value>
+  </data>
+  <data name="U0222" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="U0223" xml:space="preserve">
+    <value>当天暂无活动</value>
+  </data>
+  <data name="U0248" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="U0249" xml:space="preserve">
+    <value>关卡</value>
+  </data>
+  <data name="U0250" xml:space="preserve">
+    <value>单次次数</value>
+  </data>
+  <data name="U0251" xml:space="preserve">
+    <value>运行次数</value>
+  </data>
+  <data name="U0252" xml:space="preserve">
+    <value>自动检测</value>
+  </data>
+  <data name="U0253" xml:space="preserve">
+    <value>次数：自动检测</value>
+  </data>
+  <data name="U0254" xml:space="preserve">
+    <value>执行次数</value>
+  </data>
+  <data name="U0255" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="U0414" xml:space="preserve">
+    <value>重新启动后端</value>
+  </data>
+  <data name="U0416" xml:space="preserve">
+    <value>将控制台、前端、后端日志打包导出为 ZIP 文件</value>
+  </data>
+  <data name="U0417" xml:space="preserve">
+    <value>导出中...</value>
+  </data>
+  <data name="U0418" xml:space="preserve">
+    <value>如果要反馈问题，请发送日志文件，而不是这个页面的照片或截图</value>
+  </data>
+  <data name="U0419" xml:space="preserve">
+    <value>过滤器：</value>
+  </data>
+  <data name="U0420" xml:space="preserve">
+    <value>请输入文本</value>
+  </data>
+  <data name="U0421" xml:space="preserve">
+    <value>或填写攻略 JSON 的完整路径</value>
+  </data>
+  <data name="U0422" xml:space="preserve">
+    <value>攻略 JSON 的完整路径</value>
+  </data>
+  <data name="U0423" xml:space="preserve">
+    <value>扫描中...</value>
+  </data>
+  <data name="U0424" xml:space="preserve">
+    <value>加载配置中...</value>
+  </data>
+  <data name="U0425" xml:space="preserve">
+    <value>猫猫糕友人帐</value>
+  </data>
+  <data name="U0426" xml:space="preserve">
+    <value>查询对应猫猫糕 UID</value>
+  </data>
+  <data name="U0427" xml:space="preserve">
+    <value>寻找猫猫糕</value>
+  </data>
+  <data name="U0428" xml:space="preserve">
+    <value>在浏览器中打开猫猫糕友人帐</value>
+  </data>
+  <data name="U0429" xml:space="preserve">
+    <value>可用扩展</value>
+  </data>
+  <data name="U0430" xml:space="preserve">
+    <value>重新从后端读取扩展列表</value>
+  </data>
+  <data name="U0431" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="U0432" xml:space="preserve">
+    <value>运行</value>
+  </data>
+  <data name="U0433" xml:space="preserve">
+    <value>启动该扩展</value>
+  </data>
+  <data name="U0434" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="U0435" xml:space="preserve">
+    <value>停止该扩展</value>
+  </data>
+  <data name="U0436" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="U0437" xml:space="preserve">
+    <value>打开扩展配置</value>
+  </data>
+  <data name="U0438" xml:space="preserve">
+    <value>暂无可用扩展</value>
+  </data>
+  <data name="U0439" xml:space="preserve">
+    <value>请确认后端已启动，然后点击「刷新」重新加载</value>
+  </data>
+  <data name="U0440" xml:space="preserve">
+    <value>切换深/浅色模式</value>
+  </data>
+  <data name="U0441" xml:space="preserve">
+    <value>活动</value>
+  </data>
+  <data name="U0442" xml:space="preserve">
+    <value>常见问题</value>
+  </data>
+  <data name="U0443" xml:space="preserve">
+    <value>正在删除...</value>
+  </data>
+  <data name="U0444" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="U0445" xml:space="preserve">
+    <value>开启以自动检测电脑中的游戏</value>
+  </data>
+  <data name="U0446" xml:space="preserve">
+    <value>浏览并选择文件</value>
+  </data>
+  <data name="U0447" xml:space="preserve">
+    <value>启用后，下面的参数才会生效</value>
+  </data>
+  <data name="U0448" xml:space="preserve">
+    <value>留空使用官方 API</value>
+  </data>
+  <data name="U0449" xml:space="preserve">
+    <value>SCT... 或 sctp...</value>
+  </data>
+  <data name="U0450" xml:space="preserve">
+    <value>留空则不发送私聊</value>
+  </data>
+  <data name="U0451" xml:space="preserve">
+    <value>留空则不发送群聊</value>
+  </data>
+  <data name="U0452" xml:space="preserve">
+    <value>留空则不使用认证</value>
+  </data>
+  <data name="U0453" xml:space="preserve">
+    <value>从 Bark App 复制，多个用逗号分隔</value>
+  </data>
+  <data name="U0454" xml:space="preserve">
+    <value>minuet（可选）</value>
+  </data>
+  <data name="U0455" xml:space="preserve">
+    <value>图标 URL（可选）</value>
+  </data>
+  <data name="U0456" xml:space="preserve">
+    <value>加密内容（可选）</value>
+  </data>
+  <data name="U0457" xml:space="preserve">
+    <value>应用 AppSecret</value>
+  </data>
+  <data name="U0458" xml:space="preserve">
+    <value>open_id（默认）</value>
+  </data>
+  <data name="U0459" xml:space="preserve">
+    <value>Webhook 地址</value>
+  </data>
+  <data name="U0460" xml:space="preserve">
+    <value>SEC... （可选）</value>
+  </data>
+  <data name="U0461" xml:space="preserve">
+    <value>从 xxtui.com 获取</value>
+  </data>
+  <data name="U0462" xml:space="preserve">
+    <value>如 StarRailAssistant（可选）</value>
+  </data>
+  <data name="U0463" xml:space="preserve">
+    <value>如 WX_MP（可选）</value>
+  </data>
+  <data name="U0464" xml:space="preserve">
+    <value>重新下载并安装最新版本安装包，以修复可能存在的文件损坏等问题</value>
+  </data>
+  <data name="U0465" xml:space="preserve">
+    <value>更新安装包的下载保存目录，留空则使用默认临时目录</value>
+  </data>
+  <data name="U0466" xml:space="preserve">
+    <value>可直接编辑，或点击右侧按钮选择目录</value>
+  </data>
+  <data name="U0467" xml:space="preserve">
+    <value>更改</value>
+  </data>
+  <data name="U0468" xml:space="preserve">
+    <value>打开当前下载目录</value>
+  </data>
+  <data name="U0469" xml:space="preserve">
+    <value>根据安装包内置的 MD5 清单校验应用文件完整性</value>
+  </data>
+  <data name="U0470" xml:space="preserve">
+    <value>扫描应用目录下的冗余文件（更新残留、日志等），结果包含个人数据，请谨慎操作</value>
+  </data>
+  <data name="U0471" xml:space="preserve">
+    <value>python、sra-cli 或可执行文件路径</value>
+  </data>
+  <data name="U0472" xml:space="preserve">
+    <value>如 main.py、-m SRACore，留空表示无参数</value>
+  </data>
+  <data name="U0473" xml:space="preserve">
+    <value>如 /path/to/working/dir，留空表示使用当前目录</value>
+  </data>
+  <data name="U0474" xml:space="preserve">
+    <value>设备ID: </value>
+  </data>
+  <data name="U0475" xml:space="preserve">
+    <value>简体中文</value>
+  </data>
+  <data name="U0476" xml:space="preserve">
+    <value>Mirror 酱</value>
+  </data>
+  <data name="U0477" xml:space="preserve">
+    <value>旷宇纷争</value>
+  </data>
+  <data name="U0478" xml:space="preserve">
+    <value>单次运行</value>
+  </data>
+  <data name="U0479" xml:space="preserve">
+    <value>差分宇宙 - 乐园漫记</value>
+  </data>
+  <data name="U0480" xml:space="preserve">
+    <value>秘技速刷</value>
+  </data>
+  <data name="U0481" xml:space="preserve">
+    <value>启用积分奖励</value>
+  </data>
+  <data name="U0482" xml:space="preserve">
+    <value>货币战争 - 零和博弈</value>
+  </data>
+  <data name="U0483" xml:space="preserve">
+    <value>开拓者名称 </value>
+  </data>
+  <data name="U0484" xml:space="preserve">
+    <value>请输入开拓者角色名</value>
+  </data>
+  <data name="U0485" xml:space="preserve">
+    <value>攻略站</value>
+  </data>
+  <data name="U0486" xml:space="preserve">
+    <value>积分已满时跳过</value>
+  </data>
+  <data name="U0487" xml:space="preserve">
+    <value>下方可配置Boss名称、Boss词条、投资环境与投资策略。格式参见文档。</value>
+  </data>
+  <data name="U0488" xml:space="preserve">
+    <value>Boss名称</value>
+  </data>
+  <data name="U0489" xml:space="preserve">
+    <value>例如：巨鹿生物制药;增熵能源集团;金血记忆体联盟</value>
+  </data>
+  <data name="U0490" xml:space="preserve">
+    <value>Boss词条</value>
+  </data>
+  <data name="U0491" xml:space="preserve">
+    <value>例如：决战在即 !时间刺客</value>
+  </data>
+  <data name="U0492" xml:space="preserve">
+    <value>投资环境</value>
+  </data>
+  <data name="U0493" xml:space="preserve">
+    <value>例如：长线利好 ?轮岗</value>
+  </data>
+  <data name="U0494" xml:space="preserve">
+    <value>投资策略</value>
+  </data>
+  <data name="U0495" xml:space="preserve">
+    <value>第一位面策略1 第一位面策略2；第二位面策略1 第二位面策略2</value>
+  </data>
+  <data name="U0496" xml:space="preserve">
+    <value>模式</value>
+  </data>
+  <data name="U0497" xml:space="preserve">
+    <value>刷第一关</value>
+  </data>
+  <data name="U0498" xml:space="preserve">
+    <value>完整对局</value>
+  </data>
+  <data name="U0499" xml:space="preserve">
+    <value>请完成引导关卡I、引导关卡II，并清除所有新手提示</value>
+  </data>
+  <data name="U0500" xml:space="preserve">
+    <value>标准博弈</value>
+  </data>
+  <data name="U0501" xml:space="preserve">
+    <value>超频博弈</value>
+  </data>
+  <data name="U0502" xml:space="preserve">
+    <value>刷开局</value>
+  </data>
+  <data name="U0503" xml:space="preserve">
+    <value>难度</value>
+  </data>
+  <data name="U0504" xml:space="preserve">
+    <value>最低难度</value>
+  </data>
+  <data name="U0505" xml:space="preserve">
+    <value>最高难度</value>
+  </data>
+  <data name="U0506" xml:space="preserve">
+    <value>当前难度</value>
+  </data>
+  <data name="U0507" xml:space="preserve">
+    <value>攻略</value>
+  </data>
+  <data name="U0508" xml:space="preserve">
+    <value>导入</value>
+  </data>
+  <data name="U0509" xml:space="preserve">
+    <value>请先手动完成一次以清除所有新手提示</value>
+  </data>
+  <data name="U0510" xml:space="preserve">
+    <value>任务完成后</value>
+  </data>
+  <data name="U0511" xml:space="preserve">
+    <value>登出当前账号</value>
+  </data>
+  <data name="U0512" xml:space="preserve">
+    <value>退出游戏</value>
+  </data>
+  <data name="U0513" xml:space="preserve">
+    <value>关闭程序</value>
+  </data>
+  <data name="U0514" xml:space="preserve">
+    <value>关机</value>
+  </data>
+  <data name="U0515" xml:space="preserve">
+    <value>休眠</value>
+  </data>
+  <data name="U0516" xml:space="preserve">
+    <value>注销当前用户</value>
+  </data>
+  <data name="U0517" xml:space="preserve">
+    <value>无动作</value>
+  </data>
+  <data name="U0518" xml:space="preserve">
+    <value>领取奖励</value>
+  </data>
+  <data name="U0519" xml:space="preserve">
+    <value>漫游签证</value>
+  </data>
+  <data name="U0520" xml:space="preserve">
+    <value>派遣</value>
+  </data>
+  <data name="U0521" xml:space="preserve">
+    <value>邮件</value>
+  </data>
+  <data name="U0522" xml:space="preserve">
+    <value>每日实训</value>
+  </data>
+  <data name="U0523" xml:space="preserve">
+    <value>无名勋礼</value>
+  </data>
+  <data name="U0524" xml:space="preserve">
+    <value>巡星之礼</value>
+  </data>
+  <data name="U0525" xml:space="preserve">
+    <value>兑换码</value>
+  </data>
+  <data name="U0526" xml:space="preserve">
+    <value>兑换码填写处</value>
+  </data>
+  <data name="U0527" xml:space="preserve">
+    <value>启动游戏</value>
+  </data>
+  <data name="U0528" xml:space="preserve">
+    <value>渠道</value>
+  </data>
+  <data name="U0529" xml:space="preserve">
+    <value>国际服区服</value>
+  </data>
+  <data name="U0530" xml:space="preserve">
+    <value>使用全局设置</value>
+  </data>
+  <data name="U0531" xml:space="preserve">
+    <value>启动游戏后，等待游戏加载完成再执行后续任务的时间，单位为秒。</value>
+  </data>
+  <data name="U0532" xml:space="preserve">
+    <value>启动等待时间（秒）</value>
+  </data>
+  <data name="U0533" xml:space="preserve">
+    <value>自动登录</value>
+  </data>
+  <data name="U0534" xml:space="preserve">
+    <value>勾选后，游戏启动后会使用指定的账号与密码进行自动登录。</value>
+  </data>
+  <data name="U0535" xml:space="preserve">
+    <value>总是重新登录</value>
+  </data>
+  <data name="U0536" xml:space="preserve">
+    <value>勾选后，每次启动游戏时都会退出当前登录账号重新登录。</value>
+  </data>
+  <data name="U0537" xml:space="preserve">
+    <value>账号：</value>
+  </data>
+  <data name="U0538" xml:space="preserve">
+    <value>密码：</value>
+  </data>
+  <data name="U0539" xml:space="preserve">
+    <value>官服</value>
+  </data>
+  <data name="U0540" xml:space="preserve">
+    <value>b服</value>
+  </data>
+  <data name="U0541" xml:space="preserve">
+    <value>国际服</value>
+  </data>
+  <data name="U0542" xml:space="preserve">
+    <value>勾选自动登录表明您已阅读并知晓《用户协议》和《隐私政策》</value>
+  </data>
+  <data name="U0543" xml:space="preserve">
+    <value>清体力</value>
+  </data>
+  <data name="U0544" xml:space="preserve">
+    <value>任务清单</value>
+  </data>
+  <data name="U0545" xml:space="preserve">
+    <value>补充体力</value>
+  </data>
+  <data name="U0546" xml:space="preserve">
+    <value>使用</value>
+  </data>
+  <data name="U0547" xml:space="preserve">
+    <value>后备开拓力</value>
+  </data>
+  <data name="U0548" xml:space="preserve">
+    <value>燃料</value>
+  </data>
+  <data name="U0549" xml:space="preserve">
+    <value>星琼</value>
+  </data>
+  <data name="U0550" xml:space="preserve">
+    <value>补充</value>
+  </data>
+  <data name="U0551" xml:space="preserve">
+    <value>次</value>
+  </data>
+  <data name="U0552" xml:space="preserve">
+    <value>使用支援角色</value>
+  </data>
+  <data name="U0553" xml:space="preserve">
+    <value>启用培养目标</value>
+  </data>
+  <data name="U0554" xml:space="preserve">
+    <value>材料优先</value>
+  </data>
+  <data name="U0555" xml:space="preserve">
+    <value>培养目标是否仅识别材料类型副本，启用后跳过饰品提取与侵蚀隧洞</value>
+  </data>
+  <data name="U0556" xml:space="preserve">
+    <value>启用多倍活动检测</value>
+  </data>
+  <data name="U0557" xml:space="preserve">
+    <value>花藏繁生</value>
+  </data>
+  <data name="U0558" xml:space="preserve">
+    <value>拟造花萼（金）</value>
+  </data>
+  <data name="U0559" xml:space="preserve">
+    <value>拟造花萼（赤）</value>
+  </data>
+  <data name="U0560" xml:space="preserve">
+    <value>异器盈界</value>
+  </data>
+  <data name="U0561" xml:space="preserve">
+    <value>侵蚀隧洞</value>
+  </data>
+  <data name="U0562" xml:space="preserve">
+    <value>位面分裂</value>
+  </data>
+  <data name="U0563" xml:space="preserve">
+    <value>饰品提取</value>
+  </data>
+  <data name="U0011" xml:space="preserve">
+    <value>窗口化</value>
+  </data>
+  <data name="U0185" xml:space="preserve">
+    <value>欢迎使用 SRA</value>
+  </data>
+  <data name="U0186" xml:space="preserve">
+    <value>坐和放宽</value>
+  </data>
+  <data name="U0187" xml:space="preserve">
+    <value>并非
+'Sequence Read Archive'</value>
+  </data>
+  <data name="U0188" xml:space="preserve">
+    <value>启动器启动启动器</value>
+  </data>
+  <data name="U0189" xml:space="preserve">
+    <value>飞荧扑火，向死而生</value>
+  </data>
+  <data name="U0190" xml:space="preserve">
+    <value>跨越寰宇终抵黯淡星外</value>
+  </data>
+  <data name="U0191" xml:space="preserve">
+    <value>立志成为崩铁糕手</value>
+  </data>
+  <data name="U0192" xml:space="preserve">
+    <value>我们将在过去篆刻未来</value>
+  </data>
+  <data name="U0193" xml:space="preserve">
+    <value>铁花飞，飘逸不残灰</value>
+  </data>
+  <data name="U0194" xml:space="preserve">
+    <value>一切正常就是异常</value>
+  </data>
+  <data name="U0200" xml:space="preserve">
+    <value>非Windows系统不支持注册表操作</value>
+  </data>
+  <data name="U0201" xml:space="preserve">
+    <value>无法自动检测游戏路径</value>
+  </data>
+  <data name="U0202" xml:space="preserve">
+    <value>注册表访问被拒绝，请以管理员身份运行</value>
+  </data>
+  <data name="U0203" xml:space="preserve">
+    <value>未找到注册表项: {key}</value>
+  </data>
+  <data name="U0204" xml:space="preserve">
+    <value>全屏幕</value>
+  </data>
+  <data name="U0245" xml:space="preserve">
+    <value>yyyy年MM月dd日 dddd</value>
+  </data>
+  <data name="U0246" xml:space="preserve">
+    <value>当控制台输出日志时，这里会显示日志内容。</value>
+  </data>
+  <data name="U0256" xml:space="preserve">
+    <value>按键盘设置快捷键</value>
+  </data>
+  <data name="U0364" xml:space="preserve">
+    <value>扫描失败：{e.Message}</value>
+  </data>
+  <data name="M0001" xml:space="preserve">
+    <value>重新导入任务模块，实现热重载</value>
+  </data>
+  <data name="M0003" xml:space="preserve">
+    <value>运行指定的扩展</value>
+  </data>
+  <data name="M0004" xml:space="preserve">
+    <value>显示扩展的配置 Schema 详情</value>
+  </data>
+  <data name="M0005" xml:space="preserve">
+    <value>重新导入扩展模块（含已导入模块的热重载）</value>
+  </data>
+  <data name="M0006" xml:space="preserve">
+    <value>停止指定后台扩展或当前正在运行的单次扩展</value>
+  </data>
+  <data name="M0007" xml:space="preserve">
+    <value>显示扩展运行状态</value>
+  </data>
+  <data name="M0008" xml:space="preserve">
+    <value>扩展配置管理</value>
+  </data>
+  <data name="M0009" xml:space="preserve">
+    <value>获取扩展配置</value>
+  </data>
+  <data name="M0010" xml:space="preserve">
+    <value>设置扩展配置</value>
+  </data>
+  <data name="M0014" xml:space="preserve">
+    <value>扩展管理：查看、运行已注册的扩展</value>
+  </data>
+  <data name="M0015" xml:space="preserve">
+    <value>按扩展类型自动分发：非后台扩展走共享线程，后台扩展走专用线程</value>
+  </data>
+  <data name="M0016" xml:space="preserve">
+    <value>扩展标识（可通过 extension list 查看）</value>
+  </data>
+  <data name="M0017" xml:space="preserve">
+    <value>扩展配置文件名（不带 .json 后缀），不指定则不加载文件配置</value>
+  </data>
+  <data name="M0018" xml:space="preserve">
+    <value>扩展键名</value>
+  </data>
+  <data name="M0019" xml:space="preserve">
+    <value>停止指定的后台扩展或当前正在运行的单次扩展</value>
+  </data>
+  <data name="M0020" xml:space="preserve">
+    <value>扩展标识；若不传则停止当前单次扩展</value>
+  </data>
+  <data name="M0021" xml:space="preserve">
+    <value>扩展标识</value>
+  </data>
+  <data name="M0022" xml:space="preserve">
+    <value>配置 JSON 字符串</value>
+  </data>
+  <data name="M0023" xml:space="preserve">
+    <value>方法名称</value>
+  </data>
+  <data name="M0024" xml:space="preserve">
+    <value>调用指定的 Operator 方法</value>
+  </data>
+  <data name="M0025" xml:space="preserve">
+    <value>方法名称（可通过 operator list 查看）</value>
+  </data>
+  <data name="M0026" xml:space="preserve">
+    <value>JSON 格式的方法参数，例如 '{"x": 0.5, "y": 0.7}'</value>
+  </data>
+  <data name="M0027" xml:space="preserve">
+    <value>列出所有攻略</value>
+  </data>
+  <data name="M0028" xml:space="preserve">
+    <value>导入攻略文件到攻略目录</value>
+  </data>
+  <data name="M0029" xml:space="preserve">
+    <value>查看开拓力副本配置</value>
+  </data>
+  <data name="M0030" xml:space="preserve">
+    <value>指定子任务名称（如 calyx_golden）</value>
+  </data>
+  <data name="M0031" xml:space="preserve">
+    <value>子命令</value>
+  </data>
+  <data name="M0032" xml:space="preserve">
+    <value>攻略文件的绝对路径（JSON 格式）</value>
+  </data>
+  <data name="M0033" xml:space="preserve">
+    <value>自动演奏</value>
+  </data>
+  <data name="M0034" xml:space="preserve">
+    <value>按 JSON 乐谱自动演奏游戏键盘（暂停 F8 / 重置 F10 / 停止 F9）</value>
+  </data>
+  <data name="M0035" xml:space="preserve">
+    <value>乐谱名称或 JSON 文件路径</value>
+  </data>
+  <data name="M0036" xml:space="preserve">
+    <value>演奏速度倍率（1.0 = 乐谱原速）</value>
+  </data>
+  <data name="M0037" xml:space="preserve">
+    <value>演奏遍数</value>
+  </data>
+  <data name="M0038" xml:space="preserve">
+    <value>首次开始前的延迟（秒），用于切换到游戏窗口</value>
+  </data>
+  <data name="M0039" xml:space="preserve">
+    <value>演练模式：不实际按键，仅校验乐谱与时序</value>
+  </data>
+  <data name="M0040" xml:space="preserve">
+    <value>启用演奏热键（暂停/重置）</value>
+  </data>
+  <data name="M0041" xml:space="preserve">
+    <value>暂停/继续热键</value>
+  </data>
+  <data name="M0042" xml:space="preserve">
+    <value>重置热键</value>
+  </data>
+  <data name="M0043" xml:space="preserve">
+    <value>自动对话</value>
+  </data>
+  <data name="M0044" xml:space="preserve">
+    <value>自动检测并处理剧情对话，可按配置跳过剧情</value>
+  </data>
+  <data name="M0045" xml:space="preserve">
+    <value>是否自动跳过剧情对话</value>
+  </data>
+  <data name="M0046" xml:space="preserve">
+    <value>货币战争优化版</value>
+  </data>
+  <data name="M0047" xml:space="preserve">
+    <value>按所选攻略自动进行货币战争：购买角色、部署阵容并开始战斗，支持常规与超频博弈。</value>
+  </data>
+  <data name="M0048" xml:space="preserve">
+    <value>填写游戏内开拓者名称。</value>
+  </data>
+  <data name="M0049" xml:space="preserve">
+    <value>选择攻略；新增 JSON 后点击扫描攻略文件夹。也可填写攻略 JSON 的完整路径。</value>
+  </data>
+  <data name="M0050" xml:space="preserve">
+    <value>本次运行的局数。</value>
+  </data>
+  <data name="M0051" xml:space="preserve">
+    <value>选择最低难度、最高难度或保持当前难度。</value>
+  </data>
+  <data name="M0052" xml:space="preserve">
+    <value>开启后运行超频博弈，关闭后运行常规博弈。</value>
+  </data>
+  <data name="M0053" xml:space="preserve">
+    <value>开拓者名称</value>
+  </data>
+  <data name="M0058" xml:space="preserve">
+    <value>抽卡资源预测</value>
+  </data>
+  <data name="M0059" xml:space="preserve">
+    <value>预测当前版本结束前的抽卡资源</value>
+  </data>
+  <data name="M0060" xml:space="preserve">
+    <value>版本起始日（YYYY-MM-DD），用于推算当前版本区间</value>
+  </data>
+  <data name="M0061" xml:space="preserve">
+    <value>每个版本持续天数</value>
+  </data>
+  <data name="M0062" xml:space="preserve">
+    <value>前瞻直播距版本结束的天数</value>
+  </data>
+  <data name="M0063" xml:space="preserve">
+    <value>前瞻状态：auto/done/not_done</value>
+  </data>
+  <data name="M0064" xml:space="preserve">
+    <value>深渊刷新间隔天数</value>
+  </data>
+  <data name="M0065" xml:space="preserve">
+    <value>首次深渊刷新偏移天数</value>
+  </data>
+  <data name="M0066" xml:space="preserve">
+    <value>深渊刷新次数覆写，-1为自动</value>
+  </data>
+  <data name="M0067" xml:space="preserve">
+    <value>深渊是否计入今天刷新</value>
+  </data>
+  <data name="M0068" xml:space="preserve">
+    <value>周常刷新星期几（0=周一）</value>
+  </data>
+  <data name="M0069" xml:space="preserve">
+    <value>周常次数覆写，-1为自动</value>
+  </data>
+  <data name="M0070" xml:space="preserve">
+    <value>周常是否计入今天刷新</value>
+  </data>
+  <data name="M0071" xml:space="preserve">
+    <value>版本更新补偿星琼</value>
+  </data>
+  <data name="M0072" xml:space="preserve">
+    <value>是否有小月卡</value>
+  </data>
+  <data name="M0073" xml:space="preserve">
+    <value>无月卡每日星琼</value>
+  </data>
+  <data name="M0074" xml:space="preserve">
+    <value>有月卡每日星琼</value>
+  </data>
+  <data name="M0075" xml:space="preserve">
+    <value>每次深渊刷新星琼</value>
+  </data>
+  <data name="M0076" xml:space="preserve">
+    <value>每周模拟宇宙星琼</value>
+  </data>
+  <data name="M0077" xml:space="preserve">
+    <value>前瞻兑换码星琼</value>
+  </data>
+  <data name="M0078" xml:space="preserve">
+    <value>自动扫描背包第一排资源</value>
+  </data>
+  <data name="M0079" xml:space="preserve">
+    <value>手动填写当前星琼</value>
+  </data>
+  <data name="M0080" xml:space="preserve">
+    <value>手动填写当前星轨专票</value>
+  </data>
+  <data name="M0081" xml:space="preserve">
+    <value>手动填写当前星轨通票</value>
+  </data>
+  <data name="M0082" xml:space="preserve">
+    <value>自动扫描奖励指南</value>
+  </data>
+  <data name="M0083" xml:space="preserve">
+    <value>奖励指南类型：auto/jade/special_pass/normal_pass</value>
+  </data>
+  <data name="M0084" xml:space="preserve">
+    <value>手动填写奖励指南星琼</value>
+  </data>
+  <data name="M0085" xml:space="preserve">
+    <value>手动填写奖励指南专票</value>
+  </data>
+  <data name="M0086" xml:space="preserve">
+    <value>手动填写奖励指南通票</value>
+  </data>
+  <data name="X0673" xml:space="preserve">
+    <value>（空）</value>
+  </data>
+  <data name="X0674" xml:space="preserve">
+    <value>扫描攻略文件夹</value>
+  </data>
+  <data name="X0675" xml:space="preserve">
+    <value>姬子五级提质，七级全员二星</value>
+  </data>
+  <data name="X0676" xml:space="preserve">
+    <value>银狼Lv.999省钱经济</value>
+  </data>
+  <data name="B0001" xml:space="preserve">
+    <value>已注册 {0} 个扩展</value>
+  </data>
+  <data name="B0002" xml:space="preserve">
+    <value>加载扩展配置 {0}...</value>
+  </data>
+  <data name="B0003" xml:space="preserve">
+    <value>扩展配置文件不存在，将使用默认配置</value>
+  </data>
+  <data name="B0004" xml:space="preserve">
+    <value>扩展配置文件格式错误: {0}</value>
+  </data>
+  <data name="B0005" xml:space="preserve">
+    <value>加载扩展配置文件时发生未知错误: {0}</value>
+  </data>
+  <data name="B0006" xml:space="preserve">
+    <value>扩展配置 {0} 未在文件中找到，使用默认值</value>
+  </data>
+  <data name="B0007" xml:space="preserve">
+    <value>扩展配置 {0} 为重载后新增，使用默认值</value>
+  </data>
+  <data name="B0008" xml:space="preserve">
+    <value>邮件通知发送失败：SMTP 配置不完整，请检查服务器、端口、发件人、授权码和收件人。</value>
+  </data>
+  <data name="B0009" xml:space="preserve">
+    <value>邮件通知发送失败：SMTP 认证失败，请检查是否使用了邮箱授权码，而不是登录密码。({0})</value>
+  </data>
+  <data name="B0010" xml:space="preserve">
+    <value>邮件通知发送失败：SMTP 连接意外断开，请检查 SMTP 地址、端口以及授权码。({0})</value>
+  </data>
+  <data name="B0011" xml:space="preserve">
+    <value>邮件通知发送失败：SMTP 服务返回错误，请检查邮箱服务配置。({0})</value>
+  </data>
+  <data name="B0012" xml:space="preserve">
+    <value>邮件通知发送失败：网络连接异常，请检查服务器地址、端口和网络环境。({0})</value>
+  </data>
+  <data name="B0013" xml:space="preserve">
+    <value>plyer 模块未安装，无法发送系统通知</value>
+  </data>
+  <data name="B0014" xml:space="preserve">
+    <value>使用账号密码登录...</value>
+  </data>
+  <data name="B0015" xml:space="preserve">
+    <value>设置自动战斗为 {0}</value>
+  </data>
+  <data name="B0016" xml:space="preserve">
+    <value>设置沿用自动战斗状态</value>
+  </data>
+  <data name="B0017" xml:space="preserve">
+    <value>无头模式已禁用 Pointer Lock</value>
+  </data>
+  <data name="B0018" xml:space="preserve">
+    <value>已清除登录态 Cookie，准备重新登录</value>
+  </data>
+  <data name="B0019" xml:space="preserve">
+    <value>检测到已登录状态</value>
+  </data>
+  <data name="B0020" xml:space="preserve">
+    <value>登录失败</value>
+  </data>
+  <data name="B0021" xml:space="preserve">
+    <value>设置战斗二倍速为 {0}</value>
+  </data>
+  <data name="B0022" xml:space="preserve">
+    <value>未检测到 UID，跳过设置战斗二倍速</value>
+  </data>
+  <data name="B0023" xml:space="preserve">
+    <value>未知浏览器类型 {0}</value>
+  </data>
+  <data name="B0024" xml:space="preserve">
+    <value>{0} 启动失败，清理残留浏览器进程与锁文件后重试: {1}</value>
+  </data>
+  <data name="B0025" xml:space="preserve">
+    <value>已结束占用 selenium_profile 的残留浏览器进程 (PID {0})</value>
+  </data>
+  <data name="B0026" xml:space="preserve">
+    <value>无头模式禁用 Pointer Lock 失败: {0}</value>
+  </data>
+  <data name="B0027" xml:space="preserve">
+    <value>账号密码登录失败: {0}</value>
+  </data>
+  <data name="B0028" xml:space="preserve">
+    <value>检测到选择排队队列界面，选择普通队列</value>
+  </data>
+  <data name="B0029" xml:space="preserve">
+    <value>游戏已启动，无需排队</value>
+  </data>
+  <data name="B0030" xml:space="preserve">
+    <value>等待排队异常: {0}</value>
+  </data>
+  <data name="B0031" xml:space="preserve">
+    <value>CDP 截图失败，回退到 Selenium 截图: {0}</value>
+  </data>
+  <data name="B0032" xml:space="preserve">
+    <value>清理锁文件失败: {0}</value>
+  </data>
+  <data name="B0033" xml:space="preserve">
+    <value>线程已停止，排队等待中断</value>
+  </data>
+  <data name="B0034" xml:space="preserve">
+    <value>选择排队队列超时</value>
+  </data>
+  <data name="B0035" xml:space="preserve">
+    <value>正在排队...</value>
+  </data>
+  <data name="B0036" xml:space="preserve">
+    <value>排队超时</value>
+  </data>
+  <data name="B0037" xml:space="preserve">
+    <value>排队成功，正在进入游戏</value>
+  </data>
+  <data name="B0038" xml:space="preserve">
+    <value>当前状态: {0}</value>
+  </data>
+  <data name="B0039" xml:space="preserve">
+    <value>未知参数: {0}</value>
+  </data>
+  <data name="B0040" xml:space="preserve">
+    <value>游戏启动路径: {0}</value>
+  </data>
+  <data name="B0041" xml:space="preserve">
+    <value>游戏启动命令已执行</value>
+  </data>
+  <data name="B0042" xml:space="preserve">
+    <value>未找到窗口 '{0}'，无法激活</value>
+  </data>
+  <data name="B0043" xml:space="preserve">
+    <value>已激活窗口 '{0}'</value>
+  </data>
+  <data name="B0044" xml:space="preserve">
+    <value>游戏已在运行中</value>
+  </data>
+  <data name="B0045" xml:space="preserve">
+    <value>使用 CMD 启动游戏</value>
+  </data>
+  <data name="B0046" xml:space="preserve">
+    <value>已终止游戏进程 {0}</value>
+  </data>
+  <data name="B0047" xml:space="preserve">
+    <value>未找到运行中的游戏进程 {0}</value>
+  </data>
+  <data name="B0048" xml:space="preserve">
+    <value>正在启动官服游戏客户端...</value>
+  </data>
+  <data name="B0049" xml:space="preserve">
+    <value>正在启动B站服游戏客户端...</value>
+  </data>
+  <data name="B0050" xml:space="preserve">
+    <value>正在启动国际服游戏客户端...</value>
+  </data>
+  <data name="B0051" xml:space="preserve">
+    <value>未知的游戏渠道配置</value>
+  </data>
+  <data name="B0052" xml:space="preserve">
+    <value>无法获取窗口客户区域 '{0}' 句柄 '{1}', 请检查游戏是否已启动</value>
+  </data>
+  <data name="B0053" xml:space="preserve">
+    <value>无法获取窗口客户区域 '{0}' 句柄 '{1}', 窗口可能被最小化</value>
+  </data>
+  <data name="B0054" xml:space="preserve">
+    <value>按键 {0} 已被注册</value>
+  </data>
+  <data name="B0055" xml:space="preserve">
+    <value>回调执行失败 (按键={0}): {1}</value>
+  </data>
+  <data name="B0056" xml:space="preserve">
+    <value>pynput库未安装，键盘监听功能不可用。</value>
+  </data>
+  <data name="B0057" xml:space="preserve">
+    <value>可能的失败原因：游戏分辨率不符合要求：1920x1080，当前：{0}x{1}。</value>
+  </data>
+  <data name="B0058" xml:space="preserve">
+    <value>可能的失败原因：识图置信度过高: &gt; 0.9, 当前：{0}。</value>
+  </data>
+  <data name="B0059" xml:space="preserve">
+    <value>可能的失败原因：识图置信度过低: &lt; 0.7, 当前：{0}。</value>
+  </data>
+  <data name="B0060" xml:space="preserve">
+    <value>只能注册 BaseTask 的子类</value>
+  </data>
+  <data name="B0061" xml:space="preserve">
+    <value>创建 StartGameTask 失败: {0}</value>
+  </data>
+  <data name="B0062" xml:space="preserve">
+    <value>重试时需要启动游戏，自动执行启动游戏任务</value>
+  </data>
+  <data name="B0063" xml:space="preserve">
+    <value>重试时启动游戏失败</value>
+  </data>
+  <data name="B0064" xml:space="preserve">
+    <value>重试时启动游戏异常: {0}</value>
+  </data>
+  <data name="B0065" xml:space="preserve">
+    <value>游戏进程未在运行，无需终止</value>
+  </data>
+  <data name="B0066" xml:space="preserve">
+    <value>终止游戏进程时出错: {0}</value>
+  </data>
+  <data name="B0067" xml:space="preserve">
+    <value>旷宇纷争任务全部完成</value>
+  </data>
+  <data name="B0068" xml:space="preserve">
+    <value>执行任务：旷宇纷争-差分宇宙</value>
+  </data>
+  <data name="B0069" xml:space="preserve">
+    <value>货币战争开拓者名称为空，请在前端配置中填写。</value>
+  </data>
+  <data name="B0070" xml:space="preserve">
+    <value>执行任务：旷宇纷争-货币战争 刷开局</value>
+  </data>
+  <data name="B0071" xml:space="preserve">
+    <value>旷宇纷争-差分宇宙任务失败</value>
+  </data>
+  <data name="B0072" xml:space="preserve">
+    <value>旷宇纷争-货币战争刷开局任务失败</value>
+  </data>
+  <data name="B0073" xml:space="preserve">
+    <value>执行任务：旷宇纷争-货币战争 常规</value>
+  </data>
+  <data name="B0074" xml:space="preserve">
+    <value>旷宇纷争-货币战争任务失败</value>
+  </data>
+  <data name="B0075" xml:space="preserve">
+    <value>[启动流程] 对局启动成功</value>
+  </data>
+  <data name="B0076" xml:space="preserve">
+    <value>中止当前对局并返回开始页面</value>
+  </data>
+  <data name="B0077" xml:space="preserve">
+    <value>获取当前金币数量</value>
+  </data>
+  <data name="B0078" xml:space="preserve">
+    <value>当前后台角色：{0}</value>
+  </data>
+  <data name="B0079" xml:space="preserve">
+    <value>当前前台角色：{0}</value>
+  </data>
+  <data name="B0080" xml:space="preserve">
+    <value>当前备战席角色：{0}</value>
+  </data>
+  <data name="B0081" xml:space="preserve">
+    <value>收集水晶</value>
+  </data>
+  <data name="B0082" xml:space="preserve">
+    <value>已尝试{0}次出售角色，备战席仍为满状态，将强制执行出售</value>
+  </data>
+  <data name="B0083" xml:space="preserve">
+    <value>出售操作完成</value>
+  </data>
+  <data name="B0084" xml:space="preserve">
+    <value>挑战结束</value>
+  </data>
+  <data name="B0085" xml:space="preserve">
+    <value>购物流程结束，关闭商店</value>
+  </data>
+  <data name="B0086" xml:space="preserve">
+    <value>获取当前等级</value>
+  </data>
+  <data name="B0087" xml:space="preserve">
+    <value>已加载攻略: {0}: {1}</value>
+  </data>
+  <data name="B0088" xml:space="preserve">
+    <value>已卸载当前攻略，角色优先级已重置</value>
+  </data>
+  <data name="B0089" xml:space="preserve">
+    <value>=== 放置前台角色 ===</value>
+  </data>
+  <data name="B0090" xml:space="preserve">
+    <value>=== 放置后台角色 ===</value>
+  </data>
+  <data name="B0091" xml:space="preserve">
+    <value>角色放置完成</value>
+  </data>
+  <data name="B0092" xml:space="preserve">
+    <value>前台为空且后台无角色可提升</value>
+  </data>
+  <data name="B0093" xml:space="preserve">
+    <value>{0}无低priority角色可替换</value>
+  </data>
+  <data name="B0094" xml:space="preserve">
+    <value>开始对换操作: {0}[{1}] &lt;-&gt; {2}[{3}]</value>
+  </data>
+  <data name="B0095" xml:space="preserve">
+    <value>源角色: {0}</value>
+  </data>
+  <data name="B0096" xml:space="preserve">
+    <value>目标角色: {0}</value>
+  </data>
+  <data name="B0097" xml:space="preserve">
+    <value>对换操作完成: {0}[{1}] &lt;-&gt; {2}[{3}]</value>
+  </data>
+  <data name="B0098" xml:space="preserve">
+    <value>开始对{0}区域角色按优先级排序</value>
+  </data>
+  <data name="B0099" xml:space="preserve">
+    <value>{0}区域优先级排序完成，成功交换 {1} 次</value>
+  </data>
+  <data name="B0100" xml:space="preserve">
+    <value>开始对所有区域进行优先级排序</value>
+  </data>
+  <data name="B0101" xml:space="preserve">
+    <value>货币战争运行次数为 0 ，本次将跳过运行。</value>
+  </data>
+  <data name="B0102" xml:space="preserve">
+    <value>第{0}次进入货币战争，剩余{1}次</value>
+  </data>
+  <data name="B0103" xml:space="preserve">
+    <value>当前积分奖励: {0}</value>
+  </data>
+  <data name="B0104" xml:space="preserve">
+    <value>页面定位递归过深，可能存在无限循环</value>
+  </data>
+  <data name="B0105" xml:space="preserve">
+    <value>[启动流程] 页面定位失败，无法开始游戏</value>
+  </data>
+  <data name="B0106" xml:space="preserve">
+    <value>[启动流程] 进入对局流程失败</value>
+  </data>
+  <data name="B0107" xml:space="preserve">
+    <value>[启动流程] 对局初始化失败</value>
+  </data>
+  <data name="B0108" xml:space="preserve">
+    <value>[进入流程] 未识别到开始按钮</value>
+  </data>
+  <data name="B0109" xml:space="preserve">
+    <value>[进入流程] 未识别到任何进入方式（标准/继续）</value>
+  </data>
+  <data name="B0110" xml:space="preserve">
+    <value>[新游戏] 点击进入按钮失败</value>
+  </data>
+  <data name="B0111" xml:space="preserve">
+    <value>[新游戏] 点击开始对局按钮失败</value>
+  </data>
+  <data name="B0112" xml:space="preserve">
+    <value>[难度选择] 选择最高难度</value>
+  </data>
+  <data name="B0113" xml:space="preserve">
+    <value>[Boss信息] 未识别到下一步提示</value>
+  </data>
+  <data name="B0114" xml:space="preserve">
+    <value>[Boss信息] 点击下一步按钮失败</value>
+  </data>
+  <data name="B0115" xml:space="preserve">
+    <value>[投资环境] 未识别到投资环境界面</value>
+  </data>
+  <data name="B0116" xml:space="preserve">
+    <value>[继续进度] 点击继续按钮失败</value>
+  </data>
+  <data name="B0117" xml:space="preserve">
+    <value>[继续进度] 进入对局成功</value>
+  </data>
+  <data name="B0118" xml:space="preserve">
+    <value>[初始化] 继续进度</value>
+  </data>
+  <data name="B0119" xml:space="preserve">
+    <value>[应用策略] 未识别到应用策略按钮</value>
+  </data>
+  <data name="B0120" xml:space="preserve">
+    <value>当前后台共有 {0} 个位置</value>
+  </data>
+  <data name="B0121" xml:space="preserve">
+    <value>备战席已满，尝试出售角色</value>
+  </data>
+  <data name="B0122" xml:space="preserve">
+    <value>强制出售角色成功</value>
+  </data>
+  <data name="B0123" xml:space="preserve">
+    <value>强制出售角色失败，备战席仍为满状态</value>
+  </data>
+  <data name="B0124" xml:space="preserve">
+    <value>已出售角色：{0}</value>
+  </data>
+  <data name="B0125" xml:space="preserve">
+    <value>未识别到战斗按钮或跳过按钮</value>
+  </data>
+  <data name="B0126" xml:space="preserve">
+    <value>跳过战斗</value>
+  </data>
+  <data name="B0127" xml:space="preserve">
+    <value>战斗开始，等待挑战结束</value>
+  </data>
+  <data name="B0128" xml:space="preserve">
+    <value>检测到状态：{0}({1})</value>
+  </data>
+  <data name="B0129" xml:space="preserve">
+    <value>未识别到下一页按钮，无法继续</value>
+  </data>
+  <data name="B0130" xml:space="preserve">
+    <value>检测到特殊事件：{0}</value>
+  </data>
+  <data name="B0131" xml:space="preserve">
+    <value>当前商店无目标角色可购买</value>
+  </data>
+  <data name="B0132" xml:space="preserve">
+    <value>未指定攻略文件名，将使用默认策略</value>
+  </data>
+  <data name="B0133" xml:space="preserve">
+    <value>前台为空，提升后台角色 {0} (off_field[{1}]) 到前台 on_field[0]</value>
+  </data>
+  <data name="B0134" xml:space="preserve">
+    <value>无效的备战席索引：{0}（范围：0~{1}）</value>
+  </data>
+  <data name="B0135" xml:space="preserve">
+    <value>备战席索引 {0} 无有效角色或角色已放置</value>
+  </data>
+  <data name="B0136" xml:space="preserve">
+    <value>{0}无空位可放置</value>
+  </data>
+  <data name="B0137" xml:space="preserve">
+    <value>无效的区域类型: source={0}, target={1}</value>
+  </data>
+  <data name="B0138" xml:space="preserve">
+    <value>源区域索引超出范围: {0} (0~{1})</value>
+  </data>
+  <data name="B0139" xml:space="preserve">
+    <value>目标区域索引超出范围: {0} (0~{1})</value>
+  </data>
+  <data name="B0140" xml:space="preserve">
+    <value>对换操作失败：目标位置无法放置该角色</value>
+  </data>
+  <data name="B0141" xml:space="preserve">
+    <value>无效的区域类型: {0}，只支持 'on_field' 或 'off_field'</value>
+  </data>
+  <data name="B0142" xml:space="preserve">
+    <value>所有区域优先级排序完成</value>
+  </data>
+  <data name="B0143" xml:space="preserve">
+    <value>无需进行排序操作</value>
+  </data>
+  <data name="B0144" xml:space="preserve">
+    <value>旷宇纷争积分奖励已满，跳过货币战争任务</value>
+  </data>
+  <data name="B0145" xml:space="preserve">
+    <value>[页面定位] 正在定位到货币战争开始页面</value>
+  </data>
+  <data name="B0146" xml:space="preserve">
+    <value>[页面定位] 已定位到货币战争开始页面</value>
+  </data>
+  <data name="B0147" xml:space="preserve">
+    <value>[进入流程] 已处于准备阶段，跳过进入流程</value>
+  </data>
+  <data name="B0148" xml:space="preserve">
+    <value>[难度选择] 选择最低难度</value>
+  </data>
+  <data name="B0149" xml:space="preserve">
+    <value>[继续进度] 未识别到点击空白提示</value>
+  </data>
+  <data name="B0150" xml:space="preserve">
+    <value>[继续进度] 流程异常：{0}</value>
+  </data>
+  <data name="B0151" xml:space="preserve">
+    <value>备战席未满，跳过出售角色</value>
+  </data>
+  <data name="B0152" xml:space="preserve">
+    <value>强制出售角色：{0}</value>
+  </data>
+  <data name="B0153" xml:space="preserve">
+    <value>等待挑战结束超时</value>
+  </data>
+  <data name="B0154" xml:space="preserve">
+    <value>关卡状态检测超时，未识别到任何图片</value>
+  </data>
+  <data name="B0155" xml:space="preserve">
+    <value>状态 {0} 处理完成</value>
+  </data>
+  <data name="B0156" xml:space="preserve">
+    <value>达到终止状态：{0}，退出关卡切换流程</value>
+  </data>
+  <data name="B0157" xml:space="preserve">
+    <value>特殊事件处理失败</value>
+  </data>
+  <data name="B0158" xml:space="preserve">
+    <value>当前金币{0}与上一轮相同，退出购物循环</value>
+  </data>
+  <data name="B0159" xml:space="preserve">
+    <value>金币不足4（当前{0}），退出购物循环</value>
+  </data>
+  <data name="B0160" xml:space="preserve">
+    <value>等级{0}大于3且小于最低等级{1}，执行升级操作</value>
+  </data>
+  <data name="B0161" xml:space="preserve">
+    <value>等级{0}&lt;中级等级{1}且未购买角色，执行升级操作</value>
+  </data>
+  <data name="B0162" xml:space="preserve">
+    <value>最大队伍人数已更新为 {0}</value>
+  </data>
+  <data name="B0163" xml:space="preserve">
+    <value>攻略角色不存在，跳过：{0}</value>
+  </data>
+  <data name="B0164" xml:space="preserve">
+    <value>角色 {0} 替换{1}索引 {2} 的 {3} (priority {4} → {5})</value>
+  </data>
+  <data name="B0165" xml:space="preserve">
+    <value>[页面定位] 已定位到货币战争准备阶段</value>
+  </data>
+  <data name="B0166" xml:space="preserve">
+    <value>[难度选择] 保持当前难度</value>
+  </data>
+  <data name="B0167" xml:space="preserve">
+    <value>[难度选择] 未知难度模式：{0}，使用当前难度</value>
+  </data>
+  <data name="B0168" xml:space="preserve">
+    <value>获取区域[{0}]角色失败：{1}</value>
+  </data>
+  <data name="B0169" xml:space="preserve">
+    <value>出售非攻略角色：{0}</value>
+  </data>
+  <data name="B0170" xml:space="preserve">
+    <value>前台区域无角色，无法出战，跳过本轮剩余流程</value>
+  </data>
+  <data name="B0171" xml:space="preserve">
+    <value>挑战结束超时，未能成功中止对局</value>
+  </data>
+  <data name="B0172" xml:space="preserve">
+    <value>处理状态 {0} 时发生异常: {1}</value>
+  </data>
+  <data name="B0173" xml:space="preserve">
+    <value>商店中发现角色：{0}，P: {1}</value>
+  </data>
+  <data name="B0174" xml:space="preserve">
+    <value>商店中发现未知角色：{0}</value>
+  </data>
+  <data name="B0175" xml:space="preserve">
+    <value>购买角色：{0}</value>
+  </data>
+  <data name="B0176" xml:space="preserve">
+    <value>当前金币 {0} 小于最低保留数量 {1}，退出购物循环</value>
+  </data>
+  <data name="B0177" xml:space="preserve">
+    <value>无法解析最大队伍人数：{0}</value>
+  </data>
+  <data name="B0178" xml:space="preserve">
+    <value>{0}区域位置交换: [{1}] &lt;-&gt; [{2}]</value>
+  </data>
+  <data name="B0179" xml:space="preserve">
+    <value>[页面定位] 检测超时，未识别到任何目标页面</value>
+  </data>
+  <data name="B0180" xml:space="preserve">
+    <value>OCR识别到角色名称：{0}，但未在角色列表中找到匹配项</value>
+  </data>
+  <data name="B0181" xml:space="preserve">
+    <value>出售满足攻略要求的角色：{0}</value>
+  </data>
+  <data name="B0182" xml:space="preserve">
+    <value>前台区域未达上限，继续战斗</value>
+  </data>
+  <data name="B0183" xml:space="preserve">
+    <value>角色 {0} 放置到{1}索引 {2}（空位）</value>
+  </data>
+  <data name="B0184" xml:space="preserve">
+    <value>识别到投资策略：{0}</value>
+  </data>
+  <data name="B0185" xml:space="preserve">
+    <value>识别到Boss词缀：{0}</value>
+  </data>
+  <data name="B0186" xml:space="preserve">
+    <value>识别到Boss名称：{0}</value>
+  </data>
+  <data name="B0187" xml:space="preserve">
+    <value>识别到投资环境：{0}</value>
+  </data>
+  <data name="B0188" xml:space="preserve">
+    <value>检测到开局，正在识别Boss名称...</value>
+  </data>
+  <data name="B0189" xml:space="preserve">
+    <value>检测到开局，正在识别Boss词缀...</value>
+  </data>
+  <data name="B0190" xml:space="preserve">
+    <value>正在识别投资环境...</value>
+  </data>
+  <data name="B0191" xml:space="preserve">
+    <value>投资环境不符合要求，尝试刷新...</value>
+  </data>
+  <data name="B0192" xml:space="preserve">
+    <value>已刷到满足要求的开局，停止刷开局</value>
+  </data>
+  <data name="B0193" xml:space="preserve">
+    <value>所有阶段投资策略已满足，停止刷开局</value>
+  </data>
+  <data name="B0194" xml:space="preserve">
+    <value>阶段{0}投资策略未满足要求，准备重开...</value>
+  </data>
+  <data name="B0195" xml:space="preserve">
+    <value>阶段{0}无投资策略要求，所有阶段已满足，停止刷开局</value>
+  </data>
+  <data name="B0196" xml:space="preserve">
+    <value>阶段{0}无投资策略要求，继续游戏...</value>
+  </data>
+  <data name="B0197" xml:space="preserve">
+    <value>阶段{0}正在识别投资策略...</value>
+  </data>
+  <data name="B0198" xml:space="preserve">
+    <value>投资策略OCR识别失败：无识别结果</value>
+  </data>
+  <data name="B0199" xml:space="preserve">
+    <value>Boss词缀OCR识别失败：无识别结果</value>
+  </data>
+  <data name="B0200" xml:space="preserve">
+    <value>Boss名称OCR识别失败：无识别结果</value>
+  </data>
+  <data name="B0201" xml:space="preserve">
+    <value>投资环境OCR识别失败：无识别结果</value>
+  </data>
+  <data name="B0202" xml:space="preserve">
+    <value>Boss名称不符合要求，准备重开...</value>
+  </data>
+  <data name="B0203" xml:space="preserve">
+    <value>Boss词缀不符合要求，准备重开...</value>
+  </data>
+  <data name="B0204" xml:space="preserve">
+    <value>Boss词缀符合要求，继续游戏...</value>
+  </data>
+  <data name="B0205" xml:space="preserve">
+    <value>投资环境符合要求，继续游戏...</value>
+  </data>
+  <data name="B0206" xml:space="preserve">
+    <value>检测到投资策略re-trigger，阶段{0}未变更，不推进阶段</value>
+  </data>
+  <data name="B0207" xml:space="preserve">
+    <value>阶段{0}已无更多投资策略要求，停止刷开局</value>
+  </data>
+  <data name="B0208" xml:space="preserve">
+    <value>投资策略不符合要求，正在刷新...</value>
+  </data>
+  <data name="B0209" xml:space="preserve">
+    <value>投资策略符合要求，继续游戏...</value>
+  </data>
+  <data name="B0210" xml:space="preserve">
+    <value>检测到需要的投资策略 {0} (匹配: {1})</value>
+  </data>
+  <data name="B0211" xml:space="preserve">
+    <value>第{0}位面Boss名称缺失，期望【{1}】</value>
+  </data>
+  <data name="B0212" xml:space="preserve">
+    <value>第{0}位面Boss名称不符合要求，识别到【{1}】，期望包含【{2}】</value>
+  </data>
+  <data name="B0213" xml:space="preserve">
+    <value>无法刷新，准备重开...</value>
+  </data>
+  <data name="B0214" xml:space="preserve">
+    <value>已无刷新次数</value>
+  </data>
+  <data name="B0215" xml:space="preserve">
+    <value>当前阶段满足且无后续要求，停止刷开局</value>
+  </data>
+  <data name="B0216" xml:space="preserve">
+    <value>缺少需要词缀【{0}】，不符合要求</value>
+  </data>
+  <data name="B0217" xml:space="preserve">
+    <value>检测到必须的投资环境【{0}】(匹配: {1})</value>
+  </data>
+  <data name="B0218" xml:space="preserve">
+    <value>检测到词缀【{0}】(识别:{1})，不符合要求</value>
+  </data>
+  <data name="B0219" xml:space="preserve">
+    <value>检测到可选的投资环境【{0}】(匹配: {1})</value>
+  </data>
+  <data name="B0220" xml:space="preserve">
+    <value>执行任务：差分宇宙-周期演算</value>
+  </data>
+  <data name="B0221" xml:space="preserve">
+    <value>开始游戏循环</value>
+  </data>
+  <data name="B0222" xml:space="preserve">
+    <value>第{0}次进入差分宇宙，少女祈祷中…</value>
+  </data>
+  <data name="B0223" xml:space="preserve">
+    <value>移动</value>
+  </data>
+  <data name="B0224" xml:space="preserve">
+    <value>尝试进入战斗</value>
+  </data>
+  <data name="B0225" xml:space="preserve">
+    <value>战斗开始</value>
+  </data>
+  <data name="B0226" xml:space="preserve">
+    <value>等待战斗结束</value>
+  </data>
+  <data name="B0227" xml:space="preserve">
+    <value>扫描完成仍未找到事件</value>
+  </data>
+  <data name="B0228" xml:space="preserve">
+    <value>已尝试 {0} 次，仍未找到随意门</value>
+  </data>
+  <data name="B0229" xml:space="preserve">
+    <value>已尝试 {0} 次仍未对齐，继续执行</value>
+  </data>
+  <data name="B0230" xml:space="preserve">
+    <value>开始前进，超时 {0}s，等待检测交互提示</value>
+  </data>
+  <data name="B0231" xml:space="preserve">
+    <value>无法处理站点 {0}</value>
+  </data>
+  <data name="B0232" xml:space="preserve">
+    <value>识别到 {0} 个选项</value>
+  </data>
+  <data name="B0233" xml:space="preserve">
+    <value>选择站点: {0}</value>
+  </data>
+  <data name="B0234" xml:space="preserve">
+    <value>退出差分宇宙</value>
+  </data>
+  <data name="B0235" xml:space="preserve">
+    <value>返回主界面</value>
+  </data>
+  <data name="B0236" xml:space="preserve">
+    <value>未找到差分宇宙入口</value>
+  </data>
+  <data name="B0237" xml:space="preserve">
+    <value>未找到差分宇宙启动按钮</value>
+  </data>
+  <data name="B0238" xml:space="preserve">
+    <value>点击差分宇宙启动按钮失败</value>
+  </data>
+  <data name="B0239" xml:space="preserve">
+    <value>识别到事件: {0}</value>
+  </data>
+  <data name="B0240" xml:space="preserve">
+    <value>{0}/{1} 未找到事件，前进后重试</value>
+  </data>
+  <data name="B0241" xml:space="preserve">
+    <value>前进超时未检测到交互提示，尝试直接交互</value>
+  </data>
+  <data name="B0242" xml:space="preserve">
+    <value>第 {0} 次检测：未找到，旋转视角</value>
+  </data>
+  <data name="B0243" xml:space="preserve">
+    <value>第 {0} 次对齐：偏差 {1}px，旋转视角</value>
+  </data>
+  <data name="B0244" xml:space="preserve">
+    <value>未找到随意门，无法导航到下一个站点</value>
+  </data>
+  <data name="B0245" xml:space="preserve">
+    <value>检测到交互提示，停止前进</value>
+  </data>
+  <data name="B0246" xml:space="preserve">
+    <value>前进超时（{0}s），停止前进</value>
+  </data>
+  <data name="B0247" xml:space="preserve">
+    <value>检测到选择界面: {0}</value>
+  </data>
+  <data name="B0248" xml:space="preserve">
+    <value>选择面具后未找到确认按钮</value>
+  </data>
+  <data name="B0249" xml:space="preserve">
+    <value>未找到下一个站点</value>
+  </data>
+  <data name="B0250" xml:space="preserve">
+    <value>未找到目标站点，第 {0}/{1} 次刷新站点</value>
+  </data>
+  <data name="B0251" xml:space="preserve">
+    <value>未刷出目标站点，选择第一个选项</value>
+  </data>
+  <data name="B0252" xml:space="preserve">
+    <value>未找到探索成功按钮</value>
+  </data>
+  <data name="B0253" xml:space="preserve">
+    <value>等待结算退出入口超时</value>
+  </data>
+  <data name="B0254" xml:space="preserve">
+    <value>未找到结算确认按钮</value>
+  </data>
+  <data name="B0255" xml:space="preserve">
+    <value>差分宇宙页面定位超时</value>
+  </data>
+  <data name="B0256" xml:space="preserve">
+    <value>扫描未找到事件，结束事件站点处理</value>
+  </data>
+  <data name="B0257" xml:space="preserve">
+    <value>已找到随意门</value>
+  </data>
+  <data name="B0258" xml:space="preserve">
+    <value>第 {0} 次对齐：偏差 {1}px，已居中</value>
+  </data>
+  <data name="B0259" xml:space="preserve">
+    <value>第 {0} 次对齐：旋转后丢失目标，终止对齐</value>
+  </data>
+  <data name="B0260" xml:space="preserve">
+    <value>未匹配到任何选择界面</value>
+  </data>
+  <data name="B0261" xml:space="preserve">
+    <value>未找到刷新按钮，停止刷新</value>
+  </data>
+  <data name="B0262" xml:space="preserve">
+    <value>刷新后未找到站点选项</value>
+  </data>
+  <data name="B0263" xml:space="preserve">
+    <value>未找到事件选择项</value>
+  </data>
+  <data name="B0264" xml:space="preserve">
+    <value>等待指南界面超时</value>
+  </data>
+  <data name="B0265" xml:space="preserve">
+    <value>处理{0}时发生错误: {1}</value>
+  </data>
+  <data name="B0266" xml:space="preserve">
+    <value>检测超时</value>
+  </data>
+  <data name="B0267" xml:space="preserve">
+    <value>登出账号</value>
+  </data>
+  <data name="B0270" xml:space="preserve">
+    <value>正在关机...</value>
+  </data>
+  <data name="B0271" xml:space="preserve">
+    <value>正在睡眠...</value>
+  </data>
+  <data name="B0272" xml:space="preserve">
+    <value>正在注销当前用户...</value>
+  </data>
+  <data name="G0012" xml:space="preserve">
+    <value>领取奖励</value>
+  </data>
+  <data name="B0274" xml:space="preserve">
+    <value>执行任务：签证奖励</value>
+  </data>
+  <data name="B0275" xml:space="preserve">
+    <value>任务完成：签证奖励</value>
+  </data>
+  <data name="B0276" xml:space="preserve">
+    <value>执行任务：领取兑换码</value>
+  </data>
+  <data name="B0277" xml:space="preserve">
+    <value>任务完成：领取兑换码</value>
+  </data>
+  <data name="B0278" xml:space="preserve">
+    <value>执行任务：领取邮件</value>
+  </data>
+  <data name="B0279" xml:space="preserve">
+    <value>任务完成：领取邮件</value>
+  </data>
+  <data name="B0280" xml:space="preserve">
+    <value>执行任务：巡星之礼</value>
+  </data>
+  <data name="B0281" xml:space="preserve">
+    <value>任务完成：巡星之礼</value>
+  </data>
+  <data name="B0282" xml:space="preserve">
+    <value>执行任务：领取派遣奖励</value>
+  </data>
+  <data name="B0283" xml:space="preserve">
+    <value>任务完成：领取派遣奖励</value>
+  </data>
+  <data name="B0284" xml:space="preserve">
+    <value>执行任务：领取每日实训奖励</value>
+  </data>
+  <data name="B0285" xml:space="preserve">
+    <value>任务完成：领取每日实训奖励</value>
+  </data>
+  <data name="B0286" xml:space="preserve">
+    <value>前往无名勋礼页面</value>
+  </data>
+  <data name="B0287" xml:space="preserve">
+    <value>前往无名勋礼页面超过最大尝试次数</value>
+  </data>
+  <data name="B0288" xml:space="preserve">
+    <value>前往ESC界面</value>
+  </data>
+  <data name="B0289" xml:space="preserve">
+    <value>前往ESC界面超过最大尝试次数</value>
+  </data>
+  <data name="B0290" xml:space="preserve">
+    <value>执行任务：领取无名勋礼奖励</value>
+  </data>
+  <data name="B0291" xml:space="preserve">
+    <value>完成任务：领取无名勋礼奖励</value>
+  </data>
+  <data name="B0292" xml:space="preserve">
+    <value>没有可领取的奖励3</value>
+  </data>
+  <data name="B0293" xml:space="preserve">
+    <value>未填写兑换码</value>
+  </data>
+  <data name="B0294" xml:space="preserve">
+    <value>没有可以领取的邮件</value>
+  </data>
+  <data name="B0295" xml:space="preserve">
+    <value>没有巡星之礼活动</value>
+  </data>
+  <data name="B0296" xml:space="preserve">
+    <value>领取成功</value>
+  </data>
+  <data name="B0297" xml:space="preserve">
+    <value>没有可以领取的巡星之礼</value>
+  </data>
+  <data name="B0298" xml:space="preserve">
+    <value>没有可领取的奖励</value>
+  </data>
+  <data name="B0299" xml:space="preserve">
+    <value>没有可以领取的派遣奖励</value>
+  </data>
+  <data name="B0300" xml:space="preserve">
+    <value>领取了无名勋礼奖励</value>
+  </data>
+  <data name="B0301" xml:space="preserve">
+    <value>找到合成任务</value>
+  </data>
+  <data name="B0302" xml:space="preserve">
+    <value>材料合成</value>
+  </data>
+  <data name="B0303" xml:space="preserve">
+    <value>未能找到合成任务</value>
+  </data>
+  <data name="B0304" xml:space="preserve">
+    <value>找到升级遗器任务</value>
+  </data>
+  <data name="B0305" xml:space="preserve">
+    <value>升级完毕，准备返回领取奖励</value>
+  </data>
+  <data name="B0306" xml:space="preserve">
+    <value>未能找到升级遗器任务</value>
+  </data>
+  <data name="B0307" xml:space="preserve">
+    <value>没有可领取的奖励2</value>
+  </data>
+  <data name="B0308" xml:space="preserve">
+    <value>未能找到合适的材料进行合成</value>
+  </data>
+  <data name="B0309" xml:space="preserve">
+    <value>合成完毕，返回领取奖励</value>
+  </data>
+  <data name="B0310" xml:space="preserve">
+    <value>未能找到合适的遗物进行升级</value>
+  </data>
+  <data name="B0311" xml:space="preserve">
+    <value>未能找到升级材料</value>
+  </data>
+  <data name="B0312" xml:space="preserve">
+    <value>未能进入签证奖励页面，请检查游戏状态</value>
+  </data>
+  <data name="B0313" xml:space="preserve">
+    <value>没有可领取的奖励1</value>
+  </data>
+  <data name="B0314" xml:space="preserve">
+    <value>前往ESC界面超时</value>
+  </data>
+  <data name="B0315" xml:space="preserve">
+    <value>更换升级材料为四星及以下</value>
+  </data>
+  <data name="B0316" xml:space="preserve">
+    <value>前往无名勋礼页面超时</value>
+  </data>
+  <data name="B0317" xml:space="preserve">
+    <value>启动游戏任务开始</value>
+  </data>
+  <data name="B0318" xml:space="preserve">
+    <value>游戏已启动, {0}秒后开始自动化操作</value>
+  </data>
+  <data name="B0319" xml:space="preserve">
+    <value>检测到滑块验证码，请在游戏窗口中手动拖动滑块完成验证</value>
+  </data>
+  <data name="B0320" xml:space="preserve">
+    <value>等待滑块验证码超时，请检查游戏状态</value>
+  </data>
+  <data name="B0321" xml:space="preserve">
+    <value>登录后等待欢迎界面超时，请检查游戏状态</value>
+  </data>
+  <data name="B0322" xml:space="preserve">
+    <value>登录账号：{0}*****{1}</value>
+  </data>
+  <data name="B0323" xml:space="preserve">
+    <value>打开国际服区服选择器，当前区服: {0}，目标区服: {1}</value>
+  </data>
+  <data name="B0324" xml:space="preserve">
+    <value>国际服区服选择未找到确认按钮: {0}</value>
+  </data>
+  <data name="B0325" xml:space="preserve">
+    <value>登出确认弹窗未能关闭，登录界面可能被遮挡</value>
+  </data>
+  <data name="B0326" xml:space="preserve">
+    <value>未设置游戏启动路径</value>
+  </data>
+  <data name="B0327" xml:space="preserve">
+    <value>登录状态 {0}</value>
+  </data>
+  <data name="B0328" xml:space="preserve">
+    <value>未启用自动登录，请手动完成登录</value>
+  </data>
+  <data name="B0329" xml:space="preserve">
+    <value>自动登录账号或密码未设置，请检查配置中的自动登录账号和密码</value>
+  </data>
+  <data name="B0330" xml:space="preserve">
+    <value>未检测到登录界面</value>
+  </data>
+  <data name="B0331" xml:space="preserve">
+    <value>未检测到登录界面输入框，请检查游戏状态</value>
+  </data>
+  <data name="B0332" xml:space="preserve">
+    <value>未检测到同意隐私政策界面，请检查游戏状态</value>
+  </data>
+  <data name="B0333" xml:space="preserve">
+    <value>未检测到国际服区服选择器，跳过区服切换</value>
+  </data>
+  <data name="B0334" xml:space="preserve">
+    <value>未检测到国际服区服选择弹窗</value>
+  </data>
+  <data name="B0335" xml:space="preserve">
+    <value>未检测到国际服目标区服: {0}</value>
+  </data>
+  <data name="B0336" xml:space="preserve">
+    <value>已选择国际服区服: {0}</value>
+  </data>
+  <data name="B0337" xml:space="preserve">
+    <value>未找到登出按钮</value>
+  </data>
+  <data name="B0338" xml:space="preserve">
+    <value>登录成功</value>
+  </data>
+  <data name="B0339" xml:space="preserve">
+    <value>已进入游戏</value>
+  </data>
+  <data name="B0340" xml:space="preserve">
+    <value>未知登录状态</value>
+  </data>
+  <data name="B0341" xml:space="preserve">
+    <value>游戏需要更新，请手动更新游戏后重试</value>
+  </data>
+  <data name="B0342" xml:space="preserve">
+    <value>滑块验证码已完成</value>
+  </data>
+  <data name="B0343" xml:space="preserve">
+    <value>未知的游戏渠道配置，当前配置值 {0}</value>
+  </data>
+  <data name="B0344" xml:space="preserve">
+    <value>未能进入游戏，需要下载过往任务资源。</value>
+  </data>
+  <data name="B0345" xml:space="preserve">
+    <value>登出失败，沿用当前登录状态继续</value>
+  </data>
+  <data name="B0346" xml:space="preserve">
+    <value>等待登录界面超时，请检查游戏状态</value>
+  </data>
+  <data name="B0347" xml:space="preserve">
+    <value>需要重启游戏以完成更新，正在重启游戏...</value>
+  </data>
+  <data name="B0348" xml:space="preserve">
+    <value>未知游戏状态，当前状态码: {0}，预期状态码: 0~3</value>
+  </data>
+  <data name="B0349" xml:space="preserve">
+    <value>重启游戏更新后仍无法进入，已尝试 {0} 次</value>
+  </data>
+  <data name="B0350" xml:space="preserve">
+    <value>识别培养目标任务信息</value>
+  </data>
+  <data name="B0351" xml:space="preserve">
+    <value>获取活动信息</value>
+  </data>
+  <data name="B0352" xml:space="preserve">
+    <value>奖励剩余次数：{0}</value>
+  </data>
+  <data name="B0353" xml:space="preserve">
+    <value>当前后备开拓力: {0}, 当前开拓力: {1}, 沉浸器: {2}</value>
+  </data>
+  <data name="B0354" xml:space="preserve">
+    <value>每个任务基础可执行次数: {0}, 剩余体力: {1}</value>
+  </data>
+  <data name="B0355" xml:space="preserve">
+    <value>执行任务：饰品提取</value>
+  </data>
+  <data name="B0356" xml:space="preserve">
+    <value>任务完成：饰品提取</value>
+  </data>
+  <data name="B0357" xml:space="preserve">
+    <value>执行任务：{0}</value>
+  </data>
+  <data name="B0358" xml:space="preserve">
+    <value>任务完成：{0}</value>
+  </data>
+  <data name="B0359" xml:space="preserve">
+    <value>开始战斗</value>
+  </data>
+  <data name="B0360" xml:space="preserve">
+    <value>请检查自动战斗和倍速是否开启</value>
+  </data>
+  <data name="B0361" xml:space="preserve">
+    <value>前往生存索引页面</value>
+  </data>
+  <data name="B0362" xml:space="preserve">
+    <value>前往生存索引页面失败，已尝试 {0} 次</value>
+  </data>
+  <data name="B0363" xml:space="preserve">
+    <value>前往活动页面</value>
+  </data>
+  <data name="B0364" xml:space="preserve">
+    <value>前往活动页面失败，已尝试 {0} 次</value>
+  </data>
+  <data name="B0365" xml:space="preserve">
+    <value>已启用材料优先：优先识别材料类型副本</value>
+  </data>
+  <data name="B0366" xml:space="preserve">
+    <value>未找到任何培养目标任务</value>
+  </data>
+  <data name="B0367" xml:space="preserve">
+    <value>识别到所需物品: {0}</value>
+  </data>
+  <data name="B0368" xml:space="preserve">
+    <value>{0} 需要刷取 {1} 的关卡 {2}</value>
+  </data>
+  <data name="B0369" xml:space="preserve">
+    <value>跳转到生存索引页面失败</value>
+  </data>
+  <data name="B0370" xml:space="preserve">
+    <value>未识别到可执行任务</value>
+  </data>
+  <data name="B0371" xml:space="preserve">
+    <value>当前体力和沉浸器都为0，无任务可执行</value>
+  </data>
+  <data name="B0372" xml:space="preserve">
+    <value>任务 {0} ({1}) 将执行 {2} 次</value>
+  </data>
+  <data name="B0373" xml:space="preserve">
+    <value>点击关卡失败</value>
+  </data>
+  <data name="B0374" xml:space="preserve">
+    <value>等待页面加载超时，当前关卡：%s</value>
+  </data>
+  <data name="B0375" xml:space="preserve">
+    <value>等待挑战按钮超时失败</value>
+  </data>
+  <data name="B0376" xml:space="preserve">
+    <value>点击挑战按钮失败</value>
+  </data>
+  <data name="B0377" xml:space="preserve">
+    <value>点击开始挑战按钮失败</value>
+  </data>
+  <data name="B0378" xml:space="preserve">
+    <value>背包内遗器数量超过限制，请先清理</value>
+  </data>
+  <data name="B0379" xml:space="preserve">
+    <value>编队中存在无法战斗的角色</value>
+  </data>
+  <data name="B0380" xml:space="preserve">
+    <value>剩余次数{0}</value>
+  </data>
+  <data name="B0381" xml:space="preserve">
+    <value>退出战斗</value>
+  </data>
+  <data name="B0382" xml:space="preserve">
+    <value>战斗结束</value>
+  </data>
+  <data name="B0383" xml:space="preserve">
+    <value>未找到支援按钮</value>
+  </data>
+  <data name="B0384" xml:space="preserve">
+    <value>未检测到替换图标，踢掉4号位角色</value>
+  </data>
+  <data name="B0385" xml:space="preserve">
+    <value>未找到副本类别：{0}</value>
+  </data>
+  <data name="B0387" xml:space="preserve">
+    <value>培养目标OCR识别为空，跳过当前目标</value>
+  </data>
+  <data name="B0388" xml:space="preserve">
+    <value>材料优先：检测到材料类型副本，已移除非材料类型副本</value>
+  </data>
+  <data name="B0389" xml:space="preserve">
+    <value>材料优先：未检测到材料类型副本，保留非材料类型副本</value>
+  </data>
+  <data name="B0390" xml:space="preserve">
+    <value>饰品提取任务追加 {0} 次（来自沉浸器）</value>
+  </data>
+  <data name="B0391" xml:space="preserve">
+    <value>获取奖励剩余次数失败</value>
+  </data>
+  <data name="B0392" xml:space="preserve">
+    <value>OCR识别结果为空</value>
+  </data>
+  <data name="B0393" xml:space="preserve">
+    <value>识别到的体力值格式错误: {0}</value>
+  </data>
+  <data name="B0394" xml:space="preserve">
+    <value>体力不足</value>
+  </data>
+  <data name="B0395" xml:space="preserve">
+    <value>战斗失败</value>
+  </data>
+  <data name="B0396" xml:space="preserve">
+    <value>点击再次挑战按钮失败</value>
+  </data>
+  <data name="B0397" xml:space="preserve">
+    <value>等待战斗结束超时（{0}秒）</value>
+  </data>
+  <data name="B0398" xml:space="preserve">
+    <value>获得光锥</value>
+  </data>
+  <data name="B0399" xml:space="preserve">
+    <value>OCR识别结果格式错误: {0}</value>
+  </data>
+  <data name="B0400" xml:space="preserve">
+    <value>退出战斗失败</value>
+  </data>
+  <data name="B0401" xml:space="preserve">
+    <value>已使用后备开拓力进行补充</value>
+  </data>
+  <data name="B0402" xml:space="preserve">
+    <value>补充体力失败</value>
+  </data>
+  <data name="B0403" xml:space="preserve">
+    <value>已使用燃料进行补充</value>
+  </data>
+  <data name="B0404" xml:space="preserve">
+    <value>补充体力失败，补充方式：使用燃料</value>
+  </data>
+  <data name="B0405" xml:space="preserve">
+    <value>已使用星琼进行补充</value>
+  </data>
+  <data name="B0406" xml:space="preserve">
+    <value>补充体力失败，补充方式：使用星琼</value>
+  </data>
+  <data name="B0407" xml:space="preserve">
+    <value>加载乐谱：{0}</value>
+  </data>
+  <data name="B0408" xml:space="preserve">
+    <value>演奏热键已启用：暂停/继续 [{0}]，重置 [{1}]（停止请按 SRA 全局停止键）</value>
+  </data>
+  <data name="B0409" xml:space="preserve">
+    <value>演奏结束：《{0}》 {1}</value>
+  </data>
+  <data name="B0410" xml:space="preserve">
+    <value>{0} 秒后开始演奏，请切换到游戏窗口…</value>
+  </data>
+  <data name="B0411" xml:space="preserve">
+    <value>[dry-run] 音符#{0} {1} @{2}s</value>
+  </data>
+  <data name="B0412" xml:space="preserve">
+    <value>音符#{0} 按键失败：{1}</value>
+  </data>
+  <data name="B0413" xml:space="preserve">
+    <value>演奏已暂停（按暂停键继续）</value>
+  </data>
+  <data name="B0414" xml:space="preserve">
+    <value>演奏继续</value>
+  </data>
+  <data name="B0415" xml:space="preserve">
+    <value>乐谱没有任何可演奏音符（全部为休止符）</value>
+  </data>
+  <data name="B0416" xml:space="preserve">
+    <value>最大时序误差 {0}ms 超过 50ms 目标，建议降低演奏速度或关闭其他高负载程序</value>
+  </data>
+  <data name="B0417" xml:space="preserve">
+    <value>热键 {0} 与演奏按键冲突，演奏期间触发该键会同时控制播放，建议修改配置</value>
+  </data>
+  <data name="B0418" xml:space="preserve">
+    <value>乐谱加载失败：{0}</value>
+  </data>
+  <data name="B0419" xml:space="preserve">
+    <value>未注入全局事件监听器，演奏热键（暂停/重置）不可用</value>
+  </data>
+  <data name="B0420" xml:space="preserve">
+    <value>提升定时器精度失败（不影响功能）：{0}</value>
+  </data>
+  <data name="B0421" xml:space="preserve">
+    <value>演奏已重置，从头开始</value>
+  </data>
+  <data name="B0422" xml:space="preserve">
+    <value>请先在货币战争优化版的配置中填写开拓者名称。</value>
+  </data>
+  <data name="B0423" xml:space="preserve">
+    <value>货币战争优化版本次运行结果：{0}（{1}）</value>
+  </data>
+  <data name="B0424" xml:space="preserve">
+    <value>货币战争优化版攻略不存在：{0}</value>
+  </data>
+  <data name="B0425" xml:space="preserve">
+    <value>货币战争优化版配置未通过检查：{0}</value>
+  </data>
+  <data name="B0426" xml:space="preserve">
+    <value>[续跑恢复] 局标识={0} 累计脚本循环={1} 原因={2} 关联={3} 历史页面={4} 历史待确认={5} confirmed_battles={6} confirmed_battle_lower_bound={7} battle_count_unknown={8} economy_stage={9} equipment_since_check={10}；现场状态重新观察</value>
+  </data>
+  <data name="B0427" xml:space="preserve">
+    <value>[购后收尾] 本准备期仅一次，最多60秒/3次移动，目标={0}</value>
+  </data>
+  <data name="B0428" xml:space="preserve">
+    <value>[整备检查] {0} 观察版本={1} 布局版本={2}</value>
+  </data>
+  <data name="B0429" xml:space="preserve">
+    <value>[结算血量] {0}</value>
+  </data>
+  <data name="B0430" xml:space="preserve">
+    <value>未知角色区域</value>
+  </data>
+  <data name="B0431" xml:space="preserve">
+    <value>[角色证据失效] 来源={0}，奖励身份/合成影响未知，恢复完整识别</value>
+  </data>
+  <data name="B0432" xml:space="preserve">
+    <value>[分区识别收尾] 前后台真实观测已齐全，恢复全场标记，不追加扫描</value>
+  </data>
+  <data name="B0433" xml:space="preserve">
+    <value>[串行任务重建] 原任务已返回，在同一宿主线程认证当前页面并恢复原对局</value>
+  </data>
+  <data name="B0434" xml:space="preserve">
+    <value>[启动流程] 原因={0}；{1}；恢复={2}</value>
+  </data>
+  <data name="B0435" xml:space="preserve">
+    <value>[识别继续] 原因={0}；{1}；任务保持运行</value>
+  </data>
+  <data name="B0436" xml:space="preserve">
+    <value>[启动返回确认] 结果=unconfirmed 阶段={0} 帧数={1} 连续证据={2} Esc={3} 追踪关闭={4} 耗时={5}s 最慢帧={6}s</value>
+  </data>
+  <data name="B0437" xml:space="preserve">
+    <value>[节点退场] 已连续两帧确认阶段={0}，解除节点输入收据={1}</value>
+  </data>
+  <data name="B0438" xml:space="preserve">
+    <value>[流程恢复] 第{0}次，从当前画面重新定位：{1}</value>
+  </data>
+  <data name="B0439" xml:space="preserve">
+    <value>[自动续跑] 同一处故障的续跑轮次已用完，保留诊断与存档</value>
+  </data>
+  <data name="B0440" xml:space="preserve">
+    <value>[装备资源] 版本={0} 原因={1}</value>
+  </data>
+  <data name="B0441" xml:space="preserve">
+    <value>[装备检查] {0} 资源版本={1} 状态={2}</value>
+  </data>
+  <data name="B0442" xml:space="preserve">
+    <value>[补给箱] {0}，停止本次任务，避免重复开启或误点角色；截图={1}</value>
+  </data>
+  <data name="B0443" xml:space="preserve">
+    <value>补给箱未完成：{0}</value>
+  </data>
+  <data name="B0444" xml:space="preserve">
+    <value>备战席已识别 {0}，锁定 {1}，未知 {2}</value>
+  </data>
+  <data name="B0445" xml:space="preserve">
+    <value>[装备三选一] 输入结果尚未确认，保留待确认状态，禁止重复选择或点击底层控件</value>
+  </data>
+  <data name="B0446" xml:space="preserve">
+    <value>[商店界面] 未确认{0}，已发送切换={1}</value>
+  </data>
+  <data name="B0447" xml:space="preserve">
+    <value>[满员检查] 原失败={0}，证据稳定={1}，提示={2}，匹配={3}，溢出={4}，续接={5}</value>
+  </data>
+  <data name="B0448" xml:space="preserve">
+    <value>[满员恢复] 原失败={0}，已确认备战席已满提示，溢出={1}</value>
+  </data>
+  <data name="B0449" xml:space="preserve">
+    <value>[满员恢复] 达到本轮出售上限，未将满员状态标记为恢复</value>
+  </data>
+  <data name="B0450" xml:space="preserve">
+    <value>[出战检查] 前台没有已确认角色，重新识别并尝试布阵</value>
+  </data>
+  <data name="B0451" xml:space="preserve">
+    <value>[{0}检查] {1}，交由主流程重新定位恢复；截图={2}</value>
+  </data>
+  <data name="B0452" xml:space="preserve">
+    <value>[诊断保存] {0}</value>
+  </data>
+  <data name="B0453" xml:space="preserve">
+    <value>{0}未确认：{1}</value>
+  </data>
+  <data name="B0454" xml:space="preserve">
+    <value>[出战快照] 操作={0} 局标识={1} 累计循环={2} 观察版本={3} 布局版本={4} 人口={5}/{6} 待确认={7} 职责={8} 就绪={9} 阵容与备战={10}</value>
+  </data>
+  <data name="B0455" xml:space="preserve">
+    <value>[奖励速战] 自然商店结束：{0}</value>
+  </data>
+  <data name="B0456" xml:space="preserve">
+    <value>强敌提示确认后仍未退场</value>
+  </data>
+  <data name="B0457" xml:space="preserve">
+    <value>遭遇节点确认后仍未退场，停止重复选择</value>
+  </data>
+  <data name="B0458" xml:space="preserve">
+    <value>[事件退场确认] 事件={0} 结果=unconfirmed 阶段={1} 帧数={2} 准备连续帧={3} 下一事件连续帧={4} 确认次数={5} 耗时={6}s 最慢帧={7}s</value>
+  </data>
+  <data name="B0459" xml:space="preserve">
+    <value>特殊事件连续处理达到上限</value>
+  </data>
+  <data name="B0460" xml:space="preserve">
+    <value>[备战关卡] round={0} OCR={1}</value>
+  </data>
+  <data name="B0461" xml:space="preserve">
+    <value>[经济复核] round={0} L={1} confirmed={2} battle_lower_bound={3}；本准备阶段最多一次</value>
+  </data>
+  <data name="B0462" xml:space="preserve">
+    <value>[金币校验] action=experience 未观察到经验进展，before={0} after={1}；结束本轮购物后继续任务</value>
+  </data>
+  <data name="B0463" xml:space="preserve">
+    <value>[金币校验] action={0} expected={1} actual={2} before={3} after={4} reread={5}；记录差异并按现场余额继续</value>
+  </data>
+  <data name="B0464" xml:space="preserve">
+    <value>[真实战斗] id={0} confirmed={1} lower_bound={2} equipment_since_check={3} evidence={4}</value>
+  </data>
+  <data name="B0465" xml:space="preserve">
+    <value>[搜牌结算] 统一复核持有和合成：{0}</value>
+  </data>
+  <data name="B0466" xml:space="preserve">
+    <value>[搜牌结算] 已确认购买={0} 已售余牌={1} 整理后实际金币={2}</value>
+  </data>
+  <data name="B0467" xml:space="preserve">
+    <value>[采购记账恢复] 已按真实库存补记且仅记一次：{0}</value>
+  </data>
+  <data name="B0468" xml:space="preserve">
+    <value>[终局运营] 3-7强制消费：逐级判断升级，否则零保留买牌搜牌，搜牌累计上限={0}，覆盖所有配置经济限制</value>
+  </data>
+  <data name="B0469" xml:space="preserve">
+    <value>[终局运营] 本次结束：{0}</value>
+  </data>
+  <data name="B0470" xml:space="preserve">
+    <value>[商店收尾] 当前版本={0} 已评估版本={1} 当前页已评估={2} 尚未处理={3} 退出原因={4}</value>
+  </data>
+  <data name="B0471" xml:space="preserve">
+    <value>商店本轮结束：{0}</value>
+  </data>
+  <data name="B0472" xml:space="preserve">
+    <value>商店等级={0} 来源={1} 原因={2} OCR={3}</value>
+  </data>
+  <data name="B0473" xml:space="preserve">
+    <value>[人口继续] 原因={0} 当前人数未知，保留此前上限={1}；继续已确认棋盘的整备，自动补读最多2次/间隔至少2秒；文本={2} OCR={3} 截图={4} 采样={5}</value>
+  </data>
+  <data name="B0474" xml:space="preserve">
+    <value>[人口确认] 完整读数未确认：{0}，当前人口未知，OCR={1}</value>
+  </data>
+  <data name="B0475" xml:space="preserve">
+    <value>[人口确认] 沿用此前队伍上限={0}，当前人数继续未知</value>
+  </data>
+  <data name="B0476" xml:space="preserve">
+    <value>[经济配置] mode={0} stages={1} purchase_reserve={2} main_search_purchase_reserve={3} all_in_round={4} equipment={5} equipment_interval={6} opening_policy={7}；正常购物不限制总秒数，启用阶段表时覆盖旧等级与金币门槛</value>
+  </data>
+  <data name="B0477" xml:space="preserve">
+    <value>已加载攻略: {0}，前期主C: {1}</value>
+  </data>
+  <data name="B0478" xml:space="preserve">
+    <value>[换人确认] 结果={0} 原因={1} 来源={2}[{3}]:{4} 目标={5}[{6}]:{7} 布局版本={8} 观察版本={9}</value>
+  </data>
+  <data name="B0479" xml:space="preserve">
+    <value>角色星级证据失效：{0}，原因={1}</value>
+  </data>
+  <data name="B0480" xml:space="preserve">
+    <value>货币战争回合={0} 总耗时={1}s 阶段={2} 主C已上阵={3} 最近读取等级={4} 最近读取金币={5} 血量={6} 本场结果={7} 场上名称与星级={8} 羁绊={9} 槽位={10} 卖出={11} 商店={12} 分段={13}</value>
+  </data>
+  <data name="B0481" xml:space="preserve">
+    <value>货币战争内存流程版本={0} 阶段等待秒数：页面={1} 入局={2} 关卡={3} 出战按钮={4} 准备宽限={5} 结算={6} 事件={7} 稳定={8} 战斗复核={9} 战斗总上限={10}</value>
+  </data>
+  <data name="B0482" xml:space="preserve">
+    <value>货币战争运行参数：min_coins={0} min_level={1} mid_level={2} main_c={3} search_level={4} main_c_search_min_coins={5} main_c_search_purchase_reserve_gold={6} refresh_cost={7} xp_cost={8} economy={9} equipment_interval={10} budgets={11} shopping_total_seconds=unlimited</value>
+  </data>
+  <data name="B0483" xml:space="preserve">
+    <value>[货币战争耗时] {0}: {1}s</value>
+  </data>
+  <data name="B0484" xml:space="preserve">
+    <value>[续跑恢复] 检查点写入失败：{0}</value>
+  </data>
+  <data name="B0485" xml:space="preserve">
+    <value>[续跑恢复] 无法保存检查点：{0}</value>
+  </data>
+  <data name="B0486" xml:space="preserve">
+    <value>奖励交易未确认，不能重置准备期或购买额度</value>
+  </data>
+  <data name="B0487" xml:space="preserve">
+    <value>[布阵跳过] 游戏提示{0}当前无法上场且两端未变化，本整备期跳过备战[{1}]进入{2}的全部槽位</value>
+  </data>
+  <data name="B0488" xml:space="preserve">
+    <value>[整备恢复] 第{0}次补读，原因={1} 缺口={2}</value>
+  </data>
+  <data name="B0489" xml:space="preserve">
+    <value>[整备检查] 未确认就绪，截图={0} 采样原因={1}</value>
+  </data>
+  <data name="B0490" xml:space="preserve">
+    <value>阵容升级条件未满足：{0}</value>
+  </data>
+  <data name="B0491" xml:space="preserve">
+    <value>[启动诊断] 保存原因={0}</value>
+  </data>
+  <data name="B0492" xml:space="preserve">
+    <value>[识别留证] 原因={0} 截图={1} 保存结果={2}</value>
+  </data>
+  <data name="B0493" xml:space="preserve">
+    <value>[进入流程] 关闭说明后仍未找到开始按钮</value>
+  </data>
+  <data name="B0494" xml:space="preserve">
+    <value>点击开始按钮达到重试上限</value>
+  </data>
+  <data name="B0495" xml:space="preserve">
+    <value>[金币校验] 本轮消费结束：{0}；记录错误，继续整备和后续任务</value>
+  </data>
+  <data name="B0496" xml:space="preserve">
+    <value>[购物恢复] 原因={0} 补读={1}，沿用本准备期购物额度</value>
+  </data>
+  <data name="B0497" xml:space="preserve">
+    <value>[经济决策] action=save reason=preparation_no_progress</value>
+  </data>
+  <data name="B0498" xml:space="preserve">
+    <value>页面导航额度已耗尽，保留待确认状态并停止发送输入</value>
+  </data>
+  <data name="B0499" xml:space="preserve">
+    <value>节点已有待确认输入，禁止重复选择</value>
+  </data>
+  <data name="B0500" xml:space="preserve">
+    <value>[事件交接] 双帧确认 {0} -&gt; {1}，结束旧收据并重新选择新事件</value>
+  </data>
+  <data name="B0501" xml:space="preserve">
+    <value>[流程恢复] 同一战斗总等待上限已到，不重置计时或重复发送战斗输入</value>
+  </data>
+  <data name="B0502" xml:space="preserve">
+    <value>[自动续跑] 第{0}/{1}轮，等待{2}秒后重新定位当前对局：{3}</value>
+  </data>
+  <data name="B0503" xml:space="preserve">
+    <value>下一步按钮尚未稳定</value>
+  </data>
+  <data name="B0504" xml:space="preserve">
+    <value>下一步按钮点击失败</value>
+  </data>
+  <data name="B0505" xml:space="preserve">
+    <value>[场地识别] 未确认商店及浮层收起，暂停前后台扫描</value>
+  </data>
+  <data name="B0506" xml:space="preserve">
+    <value>[布局确认] 后台布局版本={0} 总槽位={1} 支援槽={2}，重建坐标及动作证据</value>
+  </data>
+  <data name="B0507" xml:space="preserve">
+    <value>[后台身份] 总槽位={0} 支援={1} 普通候选={2} 未知={3} 身份结构确认={4}</value>
+  </data>
+  <data name="B0508" xml:space="preserve">
+    <value>[布局确认] 拒绝本帧候选，旧坐标等待复核：{0}</value>
+  </data>
+  <data name="B0509" xml:space="preserve">
+    <value>[后台增量识别] 普通槽待读={0}，支援已重新双帧认证</value>
+  </data>
+  <data name="B0510" xml:space="preserve">
+    <value>[装备节奏] skipped={0} since_check={1} interval={2}</value>
+  </data>
+  <data name="B0511" xml:space="preserve">
+    <value>[装备节奏] 本准备期已达有限整批尝试上限，保留到期批次</value>
+  </data>
+  <data name="B0512" xml:space="preserve">
+    <value>[装备节奏] batch_completed={0} due={1} unconfirmed={2} seconds={3}</value>
+  </data>
+  <data name="B0513" xml:space="preserve">
+    <value>[金币识别] 来源={0} 候选={1} 选择={2} 原因={3} 可靠={4}；按证据继续</value>
+  </data>
+  <data name="B0514" xml:space="preserve">
+    <value>[费用识别] action={0} fee={1} 来源={2} 原因={3} 证据={4}</value>
+  </data>
+  <data name="B0515" xml:space="preserve">
+    <value>[费用识别] action={0} fee={1} 原因={2} 证据={3}；使用默认预算</value>
+  </data>
+  <data name="B0516" xml:space="preserve">
+    <value>[补给箱] 开启第{0}件，位置={1}；完成前不重复点击</value>
+  </data>
+  <data name="B0517" xml:space="preserve">
+    <value>[装备三选一] 已发送最右卡片选择，位置={0}；等待页面确认</value>
+  </data>
+  <data name="B0518" xml:space="preserve">
+    <value>[满员恢复] 尚有未确认输入，保留角色和原动作等待复核</value>
+  </data>
+  <data name="B0519" xml:space="preserve">
+    <value>[满员恢复] 备战席可见页面未确认，暂停出售</value>
+  </data>
+  <data name="B0520" xml:space="preserve">
+    <value>[满员恢复] 本轮已确认出售={0}，提示={1}，剩余溢出={2}；提示消失前暂缓场上扫描</value>
+  </data>
+  <data name="B0521" xml:space="preserve">
+    <value>[过渡牌保护] 场地证据未确认或冲突，保留非攻略角色：{0}</value>
+  </data>
+  <data name="B0522" xml:space="preserve">
+    <value>尝试出售备战席[{0}] {1}</value>
+  </data>
+  <data name="B0523" xml:space="preserve">
+    <value>已确认出售 {0}</value>
+  </data>
+  <data name="B0524" xml:space="preserve">
+    <value>[奖励速战] 回合={0} 沿用现有阵容出战；完整整备留到下一准备阶段</value>
+  </data>
+  <data name="B0525" xml:space="preserve">
+    <value>已确认进入战斗，保持当前自动战斗状态，等待挑战结束</value>
+  </data>
+  <data name="B0526" xml:space="preserve">
+    <value>已确认挑战结算，等待奖励动画结束和继续挑战按钮</value>
+  </data>
+  <data name="B0527" xml:space="preserve">
+    <value>[关卡切换] 稳定等待后画面已变化，重新确认当前阶段</value>
+  </data>
+  <data name="B0528" xml:space="preserve">
+    <value>命运卜者事件未确认完成，停止重复选择</value>
+  </data>
+  <data name="B0529" xml:space="preserve">
+    <value>强敌提示关闭失败</value>
+  </data>
+  <data name="B0530" xml:space="preserve">
+    <value>[强敌提示] 已确认退场，下一阶段={0}</value>
+  </data>
+  <data name="B0531" xml:space="preserve">
+    <value>遭遇节点选择失败</value>
+  </data>
+  <data name="B0532" xml:space="preserve">
+    <value>遭遇节点确认失败</value>
+  </data>
+  <data name="B0533" xml:space="preserve">
+    <value>事件={0} 关键词={1} 复核={2} 候选={3}</value>
+  </data>
+  <data name="B0534" xml:space="preserve">
+    <value>[开局保护] action={0} round={1} from_round={2}；保留过渡牌，只采购当前商店中的攻略目标</value>
+  </data>
+  <data name="B0535" xml:space="preserve">
+    <value>[全额运营] round={0} L={1} target={2} gold={3} xp={4} cost={5} reason={6}</value>
+  </data>
+  <data name="B0536" xml:space="preserve">
+    <value>[搜牌结算] 持有份数与采购记录不符，完整复核一次前后台和备战席</value>
+  </data>
+  <data name="B0537" xml:space="preserve">
+    <value>[连续采购] 尝试购买 商店[{0}] {1} 价格={2}</value>
+  </data>
+  <data name="B0538" xml:space="preserve">
+    <value>[终局购后收尾] 尝试={0}/3 主C已上场={1}；不续预算</value>
+  </data>
+  <data name="B0539" xml:space="preserve">
+    <value>[等级读取] 重试明细={0}；本轮暂停搜牌和购买经验</value>
+  </data>
+  <data name="B0540" xml:space="preserve">
+    <value>[人口确认] 当前={0}/{1} 来源={2}</value>
+  </data>
+  <data name="B0541" xml:space="preserve">
+    <value>equipment_interval_battles 必须为正整数</value>
+  </data>
+  <data name="B0542" xml:space="preserve">
+    <value>shopping_budget 必须是有效预算参数对象</value>
+  </data>
+  <data name="B0543" xml:space="preserve">
+    <value>special_events 必须是事件与关键词字符串的对象</value>
+  </data>
+  <data name="B0544" xml:space="preserve">
+    <value>[布阵保护] 后台布局或支援身份未确认，等待重建后再规划</value>
+  </data>
+  <data name="B0545" xml:space="preserve">
+    <value>[布阵保护] 人口证据冲突，等待补读：{0}</value>
+  </data>
+  <data name="B0546" xml:space="preserve">
+    <value>拒绝阵容替换：{0}</value>
+  </data>
+  <data name="B0547" xml:space="preserve">
+    <value>[布阵] 阶段={0} 原因={1} {2}[{3}]-&gt;{4}[{5}] 观察版本={6} 布局版本={7}</value>
+  </data>
+  <data name="B0548" xml:space="preserve">
+    <value>[攻略人口] 游戏总上限={0} NPC占用={1} 普通角色名额={2} 阶段={3} 临时站位={4}</value>
+  </data>
+  <data name="B0549" xml:space="preserve">
+    <value>[整备恢复] 补读后无新增有效证据，原因={0} 缺口={1}</value>
+  </data>
+  <data name="B0550" xml:space="preserve">
+    <value>[结算血量] 页面已交接，保留未知；不在后续页面读取旧ROI</value>
+  </data>
+  <data name="B0551" xml:space="preserve">
+    <value>[后台身份] 槽={0} 当前准备页两帧普通身份复核完成；剩余疑点={1}</value>
+  </data>
+  <data name="B0552" xml:space="preserve">
+    <value>[未知价格购后确认] {0} 商品已消失，实际金币={1}-&gt;{2}，支出={3}</value>
+  </data>
+  <data name="B0553" xml:space="preserve">
+    <value>[串行任务重建] 原存档或上下文未通过核验：{0}</value>
+  </data>
+  <data name="B0554" xml:space="preserve">
+    <value>[页面定位] 已定位到对局首领展示页面</value>
+  </data>
+  <data name="B0555" xml:space="preserve">
+    <value>[启动诊断] 已保存失败时游戏画面：{0}</value>
+  </data>
+  <data name="B0556" xml:space="preserve">
+    <value>[启动诊断] 采样未完成，保留启动失败结果：{0} {1}</value>
+  </data>
+  <data name="B0557" xml:space="preserve">
+    <value>[识别留证] 原因={0} 采样未完成：{1} {2}；错误仍保留在独立运行日志，继续自动复核</value>
+  </data>
+  <data name="B0558" xml:space="preserve">
+    <value>[进入流程] 已在对局首领展示页，继续下一步</value>
+  </data>
+  <data name="B0559" xml:space="preserve">
+    <value>[难度选择] 未能在时限内确认最低职级，停止启动</value>
+  </data>
+  <data name="B0560" xml:space="preserve">
+    <value>[初始化] 继续进度的准备界面尚未确认，继续自动复核</value>
+  </data>
+  <data name="B0561" xml:space="preserve">
+    <value>[启动流程] 攻略已应用并返回准备界面</value>
+  </data>
+  <data name="B0562" xml:space="preserve">
+    <value>购物恢复未确认准备界面</value>
+  </data>
+  <data name="B0563" xml:space="preserve">
+    <value>[购物恢复] 后台布局失效，先重新确认完整布局和角色</value>
+  </data>
+  <data name="B0564" xml:space="preserve">
+    <value>3-7终局整备无进展，禁止在金币尚未消费完时进入战斗</value>
+  </data>
+  <data name="B0565" xml:space="preserve">
+    <value>[流程恢复] 已定位阶段={0}</value>
+  </data>
+  <data name="B0566" xml:space="preserve">
+    <value>[流程恢复] 未能完成：{0}</value>
+  </data>
+  <data name="B0567" xml:space="preserve">
+    <value>[自动续跑] 同一战斗等待总上限已到，保留存档后停止</value>
+  </data>
+  <data name="B0568" xml:space="preserve">
+    <value>[自动续跑] 当前页面已确认，继续原对局；无进展重试次数仍保留</value>
+  </data>
+  <data name="B0569" xml:space="preserve">
+    <value>[布局确认] 锁定支援单位已通过两帧认证，后台槽={0}，计入人口并禁止移动</value>
+  </data>
+  <data name="B0570" xml:space="preserve">
+    <value>[布局确认] 完整边框已确认，身份未知槽={0}；保留坐标并禁止操作，不推算NPC数量或空位</value>
+  </data>
+  <data name="B0571" xml:space="preserve">
+    <value>[补给箱] 奖励页面读取失败：{0}</value>
+  </data>
+  <data name="B0572" xml:space="preserve">
+    <value>备战席批量空位检测不可用，恢复逐槽识别：{0}</value>
+  </data>
+  <data name="B0573" xml:space="preserve">
+    <value>[装备三选一] 同帧识别未确认：{0}</value>
+  </data>
+  <data name="B0574" xml:space="preserve">
+    <value>[装备三选一] 已连续确认弹窗消失和底层准备页面，恢复当前准备期</value>
+  </data>
+  <data name="B0575" xml:space="preserve">
+    <value>[商店概率弹窗] 识别未确认：{0}</value>
+  </data>
+  <data name="B0576" xml:space="preserve">
+    <value>[满员恢复] 提示尚未稳定或恢复额度结束，保留进展等待后续恢复</value>
+  </data>
+  <data name="B0577" xml:space="preserve">
+    <value>[满员恢复] 提示已消失且溢出已清空，开始统一扫描场上与库存</value>
+  </data>
+  <data name="B0578" xml:space="preserve">
+    <value>[满员恢复] 提示已消失、溢出队列已清空、库存已复核，返回原准备流程</value>
+  </data>
+  <data name="B0579" xml:space="preserve">
+    <value>[满员恢复] 提示已退但队列尚未清空，等待补位，不追加出售</value>
+  </data>
+  <data name="B0580" xml:space="preserve">
+    <value>[满员恢复] 当前攻略尚未允许出售，不改变原有开局限制</value>
+  </data>
+  <data name="B0581" xml:space="preserve">
+    <value>[满员恢复] 无安全余牌可卖，保留主C、职责、攻略材料及过渡角色；不强制刷新或绕过攻略购买经验</value>
+  </data>
+  <data name="B0582" xml:space="preserve">
+    <value>[满员恢复] 出售前提示、队列或源槽位已变化，按新观测重判，不发送旧计划</value>
+  </data>
+  <data name="B0583" xml:space="preserve">
+    <value>[满员恢复] 出售尚未确认，停止追加输入：{0}</value>
+  </data>
+  <data name="B0584" xml:space="preserve">
+    <value>[满员恢复] 出售已确认，补位或提示退场尚未确认，停止追加输入</value>
+  </data>
+  <data name="B0585" xml:space="preserve">
+    <value>[余牌清理] 本批已确认出售={0}，剩余余牌留待后续清理</value>
+  </data>
+  <data name="B0586" xml:space="preserve">
+    <value>装备三选一尚未完成，交由有界页面恢复</value>
+  </data>
+  <data name="B0587" xml:space="preserve">
+    <value>[出战检查] 已连续确认战斗后节点={0}，转交关卡切换</value>
+  </data>
+  <data name="B0588" xml:space="preserve">
+    <value>遭遇节点确认后重复出现，停止重复选择</value>
+  </data>
+  <data name="B0589" xml:space="preserve">
+    <value>对局结束检查点保存失败：{0}</value>
+  </data>
+  <data name="B0590" xml:space="preserve">
+    <value>[终局状态] 整局结果={0} 小队生命值={1}</value>
+  </data>
+  <data name="B0591" xml:space="preserve">
+    <value>投资策略后的装备选择尚未完成</value>
+  </data>
+  <data name="B0592" xml:space="preserve">
+    <value>[事件局部复核] 事件={0} 保留角色身份、星级和布局；沿用移动两端及已有待确认槽位，刷新装备和消费证据</value>
+  </data>
+  <data name="B0593" xml:space="preserve">
+    <value>事件 {0} 未配置关键词，采用末项默认规则</value>
+  </data>
+  <data name="B0594" xml:space="preserve">
+    <value>事件 {0} 未找到配置关键词 {1}，停止选择</value>
+  </data>
+  <data name="B0595" xml:space="preserve">
+    <value>[事件退场观察] 事件={0} 帧={1} 阶段={2} 确认按钮={3} 耗时={4}s</value>
+  </data>
+  <data name="B0596" xml:space="preserve">
+    <value>事件 {0} 已确认选择 {1}</value>
+  </data>
+  <data name="B0597" xml:space="preserve">
+    <value>[事件确认] 事件={0} 确认重试={1}/3，不重复选择</value>
+  </data>
+  <data name="B0598" xml:space="preserve">
+    <value>头号玩家事件未确认完成</value>
+  </data>
+  <data name="B0599" xml:space="preserve">
+    <value>[经济决策] 金币读数冲突={0}/{1}；复读后继续，不中止任务</value>
+  </data>
+  <data name="B0600" xml:space="preserve">
+    <value>[购后增量核实] 缺全场完成标记，按真实逐槽收据补缺；不作废未受影响观测</value>
+  </data>
+  <data name="B0601" xml:space="preserve">
+    <value>[连续采购] {0} 两帧完整牌面及可靠余额未变，已确认未成交，当前页跳过槽位{1}</value>
+  </data>
+  <data name="B0602" xml:space="preserve">
+    <value>[连续采购] 本页结束，累计待复核={0} 实际金币={1}；保留商店等待经济判断</value>
+  </data>
+  <data name="B0603" xml:space="preserve">
+    <value>[终局运营] L={0} gold={1} xp={2} next_level={3} upgrade_cost={4} action={5} reason={6}</value>
+  </data>
+  <data name="B0604" xml:space="preserve">
+    <value>[终局运营] 搜牌={0}/{1} 金币={2}-&gt;{3} 牌面变化={4}</value>
+  </data>
+  <data name="B0605" xml:space="preserve">
+    <value>[搜牌预算] 首次主C搜索={0} 等级={1} 金币={2} 有效保留={3} 刷新费用={4}</value>
+  </data>
+  <data name="B0606" xml:space="preserve">
+    <value>[商店页] 当前版本={0} 已评估版本={1} 需求={2} 输入动作={3}</value>
+  </data>
+  <data name="B0607" xml:space="preserve">
+    <value>[刷新结果] 金币={0}-&gt;{1} 牌面变化={2} 连续未变化={3}</value>
+  </data>
+  <data name="B0608" xml:space="preserve">
+    <value>[人口确认] 卖出前重试失败读数，使用增强对比度的两帧识别</value>
+  </data>
+  <data name="B0609" xml:space="preserve">
+    <value>[人口继续] 自动补读={0}/2，使用新的两帧证据</value>
+  </data>
+  <data name="B0610" xml:space="preserve">
+    <value>攻略 {0} 必须是角色与星级的对象</value>
+  </data>
+  <data name="B0611" xml:space="preserve">
+    <value>攻略参数 {0} 无效</value>
+  </data>
+  <data name="B0612" xml:space="preserve">
+    <value>请在 equipment.interval_battles 中统一配置装备间隔</value>
+  </data>
+  <data name="B0613" xml:space="preserve">
+    <value>阶段阵容角色必须同时定义在攻略购买名单中</value>
+  </data>
+  <data name="B0614" xml:space="preserve">
+    <value>shopping_budget.{0} 无效</value>
+  </data>
+  <data name="B0615" xml:space="preserve">
+    <value>special_events 的优先级组不能为空，请用 &gt; 分隔非空关键词组</value>
+  </data>
+  <data name="B0616" xml:space="preserve">
+    <value>中断拖动后释放鼠标失败：{0}</value>
+  </data>
+  <data name="B0617" xml:space="preserve">
+    <value>[形态复核] {0} 事件已退场且库存已重新确认，清除待确认标记；最近实际价格={1}</value>
+  </data>
+  <data name="B0618" xml:space="preserve">
+    <value>[布阵计划] 目标或实际端点已变化，停止旧计划并重新规划</value>
+  </data>
+  <data name="B0619" xml:space="preserve">
+    <value>[布阵] 阶段={0} 无更多安全移动，排除候选={1}</value>
+  </data>
+  <data name="B0620" xml:space="preserve">
+    <value>无法核验已导入模块路径：{0}.{1}</value>
+  </data>
+  <data name="B0621" xml:space="preserve">
+    <value>货币战争运行文件={0} SHA256={1}</value>
+  </data>
+  <data name="B0622" xml:space="preserve">
+    <value>[整备收尾] 预算已用尽，跳过后续运营，使用已确认阵容出战；攻略缺口={0}</value>
+  </data>
+  <data name="B0623" xml:space="preserve">
+    <value>[商店识别] 同帧读取未完成：{0}；转现场OCR</value>
+  </data>
+  <data name="B0624" xml:space="preserve">
+    <value>[商店识别] 同帧彩色后备补全名称与槽位</value>
+  </data>
+  <data name="B0625" xml:space="preserve">
+    <value>[商店识别] 彩色后备未完成：{0}</value>
+  </data>
+  <data name="B0626" xml:space="preserve">
+    <value>[金币校验] action=purchase name={0} before={1} after={2} reason=inventory_confirmed charge={3}；按现场金额继续</value>
+  </data>
+  <data name="B0627" xml:space="preserve">
+    <value>[满员恢复] 出售已确认，溢出同名补位：{0} 队列={1}-&gt;{2}</value>
+  </data>
+  <data name="B0628" xml:space="preserve">
+    <value>[真实战斗] 准备页已确认；清除缺入战证据的旧点击意图，不计战斗</value>
+  </data>
+  <data name="B0629" xml:space="preserve">
+    <value>[启动返回确认] 结果=confirmed 帧数={0} Esc={1} 追踪关闭={2} 耗时={3}s 最慢帧={4}s</value>
+  </data>
+  <data name="B0630" xml:space="preserve">
+    <value>[启动返回确认] 结果=escape_failed 帧数={0} Esc={1} 耗时={2}s</value>
+  </data>
+  <data name="B0631" xml:space="preserve">
+    <value>[购物恢复] 后台布局仍未确认，保留未知状态等待下一次恢复</value>
+  </data>
+  <data name="B0632" xml:space="preserve">
+    <value>[流程恢复] 推进={0}，重新识别下一画面</value>
+  </data>
+  <data name="B0633" xml:space="preserve">
+    <value>[装备优先级] 优先角色身份补读未确认，暂缓给其他角色使用装备</value>
+  </data>
+  <data name="B0634" xml:space="preserve">
+    <value>[费用识别] 同帧引擎未完成：{0}；转现场OCR</value>
+  </data>
+  <data name="B0635" xml:space="preserve">
+    <value>角色识别失败 {0}[{1}]: {2}</value>
+  </data>
+  <data name="B0636" xml:space="preserve">
+    <value>[后台空位] 批量读取未确认，继续逐槽识别：{0}</value>
+  </data>
+  <data name="B0637" xml:space="preserve">
+    <value>[满员恢复] 库存复核期间提示或队列发生变化，暂缓场上扫描</value>
+  </data>
+  <data name="B0638" xml:space="preserve">
+    <value>[满员恢复] 清理后场上布局尚未确认，暂停返回原流程</value>
+  </data>
+  <data name="B0639" xml:space="preserve">
+    <value>[满员恢复] 统一复核期间提示或队列发生变化，保留恢复状态</value>
+  </data>
+  <data name="B0640" xml:space="preserve">
+    <value>[入战识别] 已连续确认战斗控件与角色栏，等待实际结算</value>
+  </data>
+  <data name="B0641" xml:space="preserve">
+    <value>[入战识别] 出战后仍持续处于准备界面</value>
+  </data>
+  <data name="B0642" xml:space="preserve">
+    <value>[入战识别] 暂未捕获战斗提示，继续等待明确战斗或结算画面</value>
+  </data>
+  <data name="B0643" xml:space="preserve">
+    <value>[出战检查] 已点击编队确认，等待战斗界面证据</value>
+  </data>
+  <data name="B0644" xml:space="preserve">
+    <value>已识别挑战结算，等待奖励动画结束和继续挑战按钮</value>
+  </data>
+  <data name="B0645" xml:space="preserve">
+    <value>[结算检查] 已连续确认下一阶段={0}，转交关卡切换</value>
+  </data>
+  <data name="B0646" xml:space="preserve">
+    <value>下一步点击后画面未推进，转交页面恢复</value>
+  </data>
+  <data name="B0647" xml:space="preserve">
+    <value>节点选择尚未确认，转交页面恢复</value>
+  </data>
+  <data name="B0648" xml:space="preserve">
+    <value>[事件标题] 同帧读取未确认：{0}</value>
+  </data>
+  <data name="B0649" xml:space="preserve">
+    <value>[购后增量核实] 复用未变化角色={0}，批量确认空位={1}，备战席需读身份星级={2}</value>
+  </data>
+  <data name="B0650" xml:space="preserve">
+    <value>[购后增量核实] 观察不完整或与交易前记录冲突，恢复完整识别</value>
+  </data>
+  <data name="B0651" xml:space="preserve">
+    <value>[终局运营] 剩余金币={0}，当前商店无可买需求牌且不足刷新费用</value>
+  </data>
+  <data name="B0652" xml:space="preserve">
+    <value>[终局运营] 已达到3-7搜牌上限={0}，当前页需求牌已处理，剩余金币={1}，停止刷新</value>
+  </data>
+  <data name="B0653" xml:space="preserve">
+    <value>[购物批次] 提前复核={0} 原因=需要现场状态或备战空间</value>
+  </data>
+  <data name="B0654" xml:space="preserve">
+    <value>买牌决策={0} {1}</value>
+  </data>
+  <data name="B0655" xml:space="preserve">
+    <value>尝试购买商店[{0}] {1}</value>
+  </data>
+  <data name="B0656" xml:space="preserve">
+    <value>已确认购买 {0}</value>
+  </data>
+  <data name="B0657" xml:space="preserve">
+    <value>[经济决策] mode=stages stage={0} stage_reason={1} battles={2} L={3} target={4} gold={5} R={6} P={7} xp_cost={8} roll_cost={9} action={10} reason={11} gate={12}</value>
+  </data>
+  <data name="B0658" xml:space="preserve">
+    <value>[商店恢复] 原经济规则允许刷新，使用本准备期唯一故障重建输入</value>
+  </data>
+  <data name="B0659" xml:space="preserve">
+    <value>[人口确认] 零读数不能解除未知支援保护，保留槽位证据等待认证</value>
+  </data>
+  <data name="B0660" xml:space="preserve">
+    <value>[人口确认] 零人口与已确认角色冲突，保留场地证据等待补读</value>
+  </data>
+  <data name="B0661" xml:space="preserve">
+    <value>[人口确认] 已确认空战斗区，允许放置起手角色</value>
+  </data>
+  <data name="B0662" xml:space="preserve">
+    <value>[人口确认] 准备页未通过弹窗优先检查，保留场地证据</value>
+  </data>
+  <data name="B0663" xml:space="preserve">
+    <value>攻略角色 {0} 的目标星级无效</value>
+  </data>
+  <data name="B0664" xml:space="preserve">
+    <value>无法核验运行文件 {0}: {1}</value>
+  </data>
+  <data name="B0665" xml:space="preserve">
+    <value>[续跑恢复] 无法核验{0}：{1}；不沿用旧历史</value>
+  </data>
+  <data name="B0666" xml:space="preserve">
+    <value>[启动返回确认] 已确认装备追踪弹窗，尝试关闭一次；重新观察准备界面</value>
+  </data>
+  <data name="B0667" xml:space="preserve">
+    <value>[事件恢复] 事件={0} 已连续两帧确认返回准备界面，清除待确认选择={1}，不重复选择</value>
+  </data>
+  <data name="B0668" xml:space="preserve">
+    <value>[准备恢复] 仍在同一准备期，保留已完成收集和可靠槽位，只补读缺口</value>
+  </data>
+  <data name="B0669" xml:space="preserve">
+    <value>[流程恢复] 节点输入已尝试，仅观察退场，不重复选择</value>
+  </data>
+  <data name="B0670" xml:space="preserve">
+    <value>[流程恢复] 选择动作尚未确认，保留现场，禁止重复选择</value>
+  </data>
+  <data name="B0671" xml:space="preserve">
+    <value>出战流程未完成，重新定位当前页面</value>
+  </data>
+  <data name="B0672" xml:space="preserve">
+    <value>关卡切换未完成，重新定位当前页面</value>
+  </data>
+  <data name="B0673" xml:space="preserve">
+    <value>[金币识别] 同帧引擎未完成：{0}；转现场OCR</value>
+  </data>
+  <data name="B0674" xml:space="preserve">
+    <value>[后台动态恢复] 新帧数量或坐标变化，自动重建完整后台并重新确认人口</value>
+  </data>
+  <data name="B0675" xml:space="preserve">
+    <value>[补给箱] 奖励提示及点击区域已持续稳定，准备选择</value>
+  </data>
+  <data name="B0676" xml:space="preserve">
+    <value>[补给箱] 已发送奖励确认，等待返回备战界面</value>
+  </data>
+  <data name="B0677" xml:space="preserve">
+    <value>[补给箱] 已确认奖励选择完成并返回备战界面</value>
+  </data>
+  <data name="B0678" xml:space="preserve">
+    <value>[商店界面] 收起尝试={0}/3</value>
+  </data>
+  <data name="B0679" xml:space="preserve">
+    <value>[战斗等待] 连续两帧仍在战斗，继续等待结算；累计={0}s 总上限={1}s</value>
+  </data>
+  <data name="B0680" xml:space="preserve">
+    <value>[金币校验] action=experience before={0} after={1} reason={2} progress={3}；按现场结果继续</value>
+  </data>
+  <data name="B0681" xml:space="preserve">
+    <value>[连续采购] {0} 店牌尚未退场，但真实库存已确认新增；只计本次输入一份</value>
+  </data>
+  <data name="B0682" xml:space="preserve">
+    <value>[连续采购] {0} 真实库存确认未成交，退出旧页并跳过槽位{1}</value>
+  </data>
+  <data name="B0683" xml:space="preserve">
+    <value>[购物收尾] 购后复核无经济变化，保持收起直接结束，原因={0} 金币={1}</value>
+  </data>
+  <data name="B0684" xml:space="preserve">
+    <value>[购物收尾] 展开复读后无需继续消费，原因={0}</value>
+  </data>
+  <data name="B0685" xml:space="preserve">
+    <value>[购买复核] {0} 合成或持有星级未知，暂停同名重复购买</value>
+  </data>
+  <data name="B0686" xml:space="preserve">
+    <value>买牌决策=target_reached_on_bench {0} 目标星级={1}</value>
+  </data>
+  <data name="B0687" xml:space="preserve">
+    <value>[未知价格采购] {0} 已确认目标与槽位，直接尝试购买，购后读取实际余额；购前金币={1}</value>
+  </data>
+  <data name="B0688" xml:space="preserve">
+    <value>[未知价格采购] {0} 连续复核未成交，当前页不重复点击，继续评估其他购买和经验</value>
+  </data>
+  <data name="B0689" xml:space="preserve">
+    <value>[人口留证] 采样未完成：{0} {1}；继续扩展日志留存</value>
+  </data>
+  <data name="B0690" xml:space="preserve">
+    <value>重建后当前页面仍未确认</value>
+  </data>
+  <data name="B0691" xml:space="preserve">
+    <value>[启动返回确认] 结果=tracking_close_failed</value>
+  </data>
+  <data name="B0692" xml:space="preserve">
+    <value>[准备恢复] 本准备期已收集水晶，跳过重复收集</value>
+  </data>
+  <data name="B0693" xml:space="preserve">
+    <value>[购物批次] 按已确认持有量连续采购，待购目标={0}</value>
+  </data>
+  <data name="B0694" xml:space="preserve">
+    <value>[搜牌结算] 边界={0} 金币={1} 目标可解锁={2} 预算用尽={3}</value>
+  </data>
+  <data name="B0695" xml:space="preserve">
+    <value>买牌决策=batch_target_covered {0} 目标星级={1}；持有及已确认购买份数已足够</value>
+  </data>
+  <data name="B0696" xml:space="preserve">
+    <value>[购前识别] 跳过商店[{0}] {1}：持有星级补读后仍未知，继续评估其他牌</value>
+  </data>
+  <data name="B0697" xml:space="preserve">
+    <value>[经济决策] action=prepare reason=purchase_space_unconfirmed name={0}</value>
+  </data>
+  <data name="B0698" xml:space="preserve">
+    <value>[经济决策] action=save reason=purchase_reserve name={0} gold={1} price={2} R={3}</value>
+  </data>
+  <data name="B0699" xml:space="preserve">
+    <value>[商店恢复] 已确认本槽未成交，跳过该槽并继续原采购与经济判断</value>
+  </data>
+  <data name="B0700" xml:space="preserve">
+    <value>[购物批次] 统一复核={0} 本批购买={1} 购物退出原因={2}</value>
+  </data>
+  <data name="B0701" xml:space="preserve">
+    <value>重建后原奖励交易仍未确认</value>
+  </data>
+  <data name="B0702" xml:space="preserve">
+    <value>[难度选择] 降低职级达到点击上限，停止启动</value>
+  </data>
+  <data name="B0703" xml:space="preserve">
+    <value>[难度选择] 降低职级点击失败，停止启动</value>
+  </data>
+  <data name="B0704" xml:space="preserve">
+    <value>[角色时效检查] 前台待补读={0}，检查点={1}秒</value>
+  </data>
+  <data name="B0705" xml:space="preserve">
+    <value>[出战前余牌清理] 已确认出售={0}</value>
+  </data>
+  <data name="B0706" xml:space="preserve">
+    <value>[奖励速战] 已确认购买 {0}；余额={1} 保留={2}，下轮统一整备</value>
+  </data>
+  <data name="B0707" xml:space="preserve">
+    <value>装备批次中断，重新定位准备界面</value>
+  </data>
+  <data name="B0708" xml:space="preserve">
+    <value>[购物批次] 当前页采购完成，统一复核后重算升级门槛 等级={0} 目标={1} 门槛={2}</value>
+  </data>
+  <data name="B0709" xml:space="preserve">
+    <value>[奖励速战] {0} 免费/未知价画面未变，本页不再点击同名槽，保留库存待下普通准备期复核</value>
+  </data>
+  <data name="B0710" xml:space="preserve">
+    <value>[节点待确认] {0} 收据={1}；缺少可靠选中态证据，只观察退场</value>
+  </data>
+  <data name="B0711" xml:space="preserve">
+    <value>{0} 必须为非负整数，不能为布尔值</value>
+  </data>
+  <data name="B0712" xml:space="preserve">
+    <value>{0} 包含未知字段: {1}</value>
+  </data>
+  <data name="B0713" xml:space="preserve">
+    <value>economy 必须为对象</value>
+  </data>
+  <data name="B0714" xml:space="preserve">
+    <value>economy.enabled 必须为布尔值</value>
+  </data>
+  <data name="B0715" xml:space="preserve">
+    <value>max_level 必须为正整数</value>
+  </data>
+  <data name="B0716" xml:space="preserve">
+    <value>main_c_search_level 必须为正整数</value>
+  </data>
+  <data name="B0717" xml:space="preserve">
+    <value>economy.stages 必须为非空阶段列表</value>
+  </data>
+  <data name="B0718" xml:space="preserve">
+    <value>economy 最后阶段 target_level 不得低于 main_c_search_level</value>
+  </data>
+  <data name="B0719" xml:space="preserve">
+    <value>economy.stages 不能为空</value>
+  </data>
+  <data name="B0720" xml:space="preserve">
+    <value>confirmed_battle_lower_bound 必须为非负整数</value>
+  </data>
+  <data name="B0721" xml:space="preserve">
+    <value>confirmed_battle_lower_bound 不得大于已知总场次</value>
+  </data>
+  <data name="B0722" xml:space="preserve">
+    <value>recheck_level_lower_bound 必须为布尔值</value>
+  </data>
+  <data name="B0723" xml:space="preserve">
+    <value>active_economy_stage_index 超出当前阶段表范围</value>
+  </data>
+  <data name="B0724" xml:space="preserve">
+    <value>economy.all_in_round 必须为 1-9 范围内的关卡编号，例如 3-7</value>
+  </data>
+  <data name="B0725" xml:space="preserve">
+    <value>{0} 必须为对象</value>
+  </data>
+  <data name="B0726" xml:space="preserve">
+    <value>{0} 缺少字段: {1}</value>
+  </data>
+  <data name="B0727" xml:space="preserve">
+    <value>{0}.target_level 必须为 1 到 {1} 的整数</value>
+  </data>
+  <data name="B0728" xml:space="preserve">
+    <value>economy 第一阶段 from_battles 必须为 0</value>
+  </data>
+  <data name="B0729" xml:space="preserve">
+    <value>economy 阶段 from_battles 必须严格递增</value>
+  </data>
+  <data name="B0730" xml:space="preserve">
+    <value>economy 阶段 target_level 不能下降</value>
+  </data>
+  <data name="B0731" xml:space="preserve">
+    <value>equipment 必须为对象</value>
+  </data>
+  <data name="B0732" xml:space="preserve">
+    <value>equipment 包含未知字段</value>
+  </data>
+  <data name="B0733" xml:space="preserve">
+    <value>equipment.priority_characters 必须为非空角色列表</value>
+  </data>
+  <data name="B0734" xml:space="preserve">
+    <value>equipment.others_from_round 必须为有效关卡，例如 3-4</value>
+  </data>
+  <data name="B0735" xml:space="preserve">
+    <value>equipment.interval_battles 必须为正整数</value>
+  </data>
+  <data name="B0736" xml:space="preserve">
+    <value>equipment.priority_characters 必须为有效角色名称</value>
+  </data>
+  <data name="B0737" xml:space="preserve">
+    <value>equipment.priority_characters 不得重复角色或别名</value>
+  </data>
+  <data name="B0738" xml:space="preserve">
+    <value>formation 必须为对象或 null</value>
+  </data>
+  <data name="B0739" xml:space="preserve">
+    <value>formation.roles 必须为职责到提供者列表的映射</value>
+  </data>
+  <data name="B0740" xml:space="preserve">
+    <value>formation.assignment_groups 必须为对象</value>
+  </data>
+  <data name="B0741" xml:space="preserve">
+    <value>formation.position_rules 必须为列表</value>
+  </data>
+  <data name="B0742" xml:space="preserve">
+    <value>formation.traits 必须为角色到羁绊列表的映射</value>
+  </data>
+  <data name="B0743" xml:space="preserve">
+    <value>protect_until_fielded 必须为对象</value>
+  </data>
+  <data name="B0744" xml:space="preserve">
+    <value>formation.stages 必须是非空列表</value>
+  </data>
+  <data name="B0745" xml:space="preserve">
+    <value>formation 角色名称必须为非空字符串</value>
+  </data>
+  <data name="B0746" xml:space="preserve">
+    <value>formation 未知或不可操作角色：{0}</value>
+  </data>
+  <data name="B0747" xml:space="preserve">
+    <value>{0} 必须为角色列表</value>
+  </data>
+  <data name="B0748" xml:space="preserve">
+    <value>{0} 不得重复角色或其别名</value>
+  </data>
+  <data name="B0749" xml:space="preserve">
+    <value>{0} 必须为 {1} 至 {2} 的整数</value>
+  </data>
+  <data name="B0750" xml:space="preserve">
+    <value>formation.roles 职责名称必须为非空字符串</value>
+  </data>
+  <data name="B0751" xml:space="preserve">
+    <value>formation.roles 提供者必须为非空列表</value>
+  </data>
+  <data name="B0752" xml:space="preserve">
+    <value>role_requirements 必须为对象</value>
+  </data>
+  <data name="B0753" xml:space="preserve">
+    <value>assignment_groups 名称必须为非空字符串</value>
+  </data>
+  <data name="B0754" xml:space="preserve">
+    <value>assignment_groups 包含未知配置</value>
+  </data>
+  <data name="B0755" xml:space="preserve">
+    <value>assignment_groups 目前支持前台或后台一个席位(count=1)</value>
+  </data>
+  <data name="B0756" xml:space="preserve">
+    <value>assignment_groups.candidates 必须为非空列表</value>
+  </data>
+  <data name="B0757" xml:space="preserve">
+    <value>replace_from 必须引用本组候选</value>
+  </data>
+  <data name="B0758" xml:space="preserve">
+    <value>同一候选不能分配到多个席位</value>
+  </data>
+  <data name="B0759" xml:space="preserve">
+    <value>assignment_groups.star_policy 仅支持 prefer_not_lower</value>
+  </data>
+  <data name="B0760" xml:space="preserve">
+    <value>assignment_groups 必须在同条件或证据缺失时保留现任</value>
+  </data>
+  <data name="B0761" xml:space="preserve">
+    <value>position_rules 包含未知配置</value>
+  </data>
+  <data name="B0762" xml:space="preserve">
+    <value>position_rules 不得重复、覆盖席位候选或引用非采购角色</value>
+  </data>
+  <data name="B0763" xml:space="preserve">
+    <value>position_rules.area 只能为前后台区域</value>
+  </data>
+  <data name="B0764" xml:space="preserve">
+    <value>requires_assignment 必须为席位到候选的映射</value>
+  </data>
+  <data name="B0765" xml:space="preserve">
+    <value>formation.traits 羁绊必须为非空字符串列表</value>
+  </data>
+  <data name="B0766" xml:space="preserve">
+    <value>formation.traits 不得重复角色别名</value>
+  </data>
+  <data name="B0767" xml:space="preserve">
+    <value>protect_until_fielded 不能自我依赖或重复</value>
+  </data>
+  <data name="B0768" xml:space="preserve">
+    <value>每个 formation stage 必须有名称</value>
+  </data>
+  <data name="B0769" xml:space="preserve">
+    <value>formation stage 名称不得重复</value>
+  </data>
+  <data name="B0770" xml:space="preserve">
+    <value>formation stages 必须按 min_capacity 递增排列</value>
+  </data>
+  <data name="B0771" xml:space="preserve">
+    <value>stage 前台须有 1 至 4 人，前后台不得重复同名</value>
+  </data>
+  <data name="B0772" xml:space="preserve">
+    <value>stage 角色必须已列入根购买目标或职责候选</value>
+  </data>
+  <data name="B0773" xml:space="preserve">
+    <value>阶段前置角色必须来自购买目标或职责候选</value>
+  </data>
+  <data name="B0774" xml:space="preserve">
+    <value>requires_stars 角色必须来自购买目标或职责候选</value>
+  </data>
+  <data name="B0775" xml:space="preserve">
+    <value>首个阶段必须从 min_capacity=0 开始且无角色前置要求</value>
+  </data>
+  <data name="B0776" xml:space="preserve">
+    <value>stage.priority 必须来自本阶段阵容</value>
+  </data>
+  <data name="B0777" xml:space="preserve">
+    <value>upgrade_gate 必须为对象或 null</value>
+  </data>
+  <data name="B0778" xml:space="preserve">
+    <value>assignment_groups 必须在至少一个阶段拥有可替换席位</value>
+  </data>
+  <data name="B0779" xml:space="preserve">
+    <value>阶段中同组席位超过 count</value>
+  </data>
+  <data name="B0780" xml:space="preserve">
+    <value>职责提供者必须为对象</value>
+  </data>
+  <data name="B0781" xml:space="preserve">
+    <value>同一职责提供者不得重复角色或别名</value>
+  </data>
+  <data name="B0782" xml:space="preserve">
+    <value>职责 area 只能为非空前后台区域列表</value>
+  </data>
+  <data name="B0783" xml:space="preserve">
+    <value>role_requirements 必须引用已定义职责并提供对象</value>
+  </data>
+  <data name="B0784" xml:space="preserve">
+    <value>职责候选必须属于该职责且正式/过渡候选不得重复</value>
+  </data>
+  <data name="B0785" xml:space="preserve">
+    <value>职责 minimum 不得超过不同候选角色数量</value>
+  </data>
+  <data name="B0786" xml:space="preserve">
+    <value>职责 minimum 无法在前台4槽、后台6槽分配满足</value>
+  </data>
+  <data name="B0787" xml:space="preserve">
+    <value>职责 on_missing 必须为 block 或 warn_continue</value>
+  </data>
+  <data name="B0788" xml:space="preserve">
+    <value>assignment_groups 候选配置无效</value>
+  </data>
+  <data name="B0789" xml:space="preserve">
+    <value>assignment_groups 候选须为不重复的采购目标</value>
+  </data>
+  <data name="B0790" xml:space="preserve">
+    <value>requires_assignment 必须引用已定义席位候选</value>
+  </data>
+  <data name="B0791" xml:space="preserve">
+    <value>{0} 引用了没有成员定义的羁绊：{1}</value>
+  </data>
+  <data name="B0792" xml:space="preserve">
+    <value>{0} 包含重复别名</value>
+  </data>
+  <data name="B0793" xml:space="preserve">
+    <value>protect_until_fielded 存在循环依赖</value>
+  </data>
+  <data name="B0794" xml:space="preserve">
+    <value>攻略配置必须是对象</value>
+  </data>
+  <data name="B0795" xml:space="preserve">
+    <value>main_c_search_level 必须为正整数，不能为布尔值</value>
+  </data>
+  <data name="B0796" xml:space="preserve">
+    <value>main_c 必须为已知角色的非空名称，或省略</value>
+  </data>
+  <data name="B0797" xml:space="preserve">
+    <value>main_c 不是已知角色：{0}</value>
+  </data>
+  <data name="B0798" xml:space="preserve">
+    <value>main_c 必须存在于 on_field 或 off_field：{0}</value>
+  </data>
+  <data name="B0799" xml:space="preserve">
+    <value>{0} 必须为角色到目标星级的映射</value>
+  </data>
+  <data name="B0800" xml:space="preserve">
+    <value>opening_policy 仅支持 sell_from_round 和 refresh_from_round</value>
+  </data>
+  <data name="B0801" xml:space="preserve">
+    <value>opening_policy.{0} 必须为 x-y 格式的回合，如 1-4</value>
+  </data>
+  <data name="B0802" xml:space="preserve">
+    <value>preparation_budget 必须是有效的预算对象</value>
+  </data>
+  <data name="B0803" xml:space="preserve">
+    <value>preparation_budget.seconds 不能超过 total_seconds</value>
+  </data>
+  <data name="B0804" xml:space="preserve">
+    <value>preparation_budget.confirmation_seconds 不能超过 total_seconds</value>
+  </data>
+  <data name="B0805" xml:space="preserve">
+    <value>preparation_budget.{0} 无效</value>
+  </data>
+  <data name="B0806" xml:space="preserve">
+    <value>reward_fast_rounds 必须为回合列表</value>
+  </data>
+  <data name="B0807" xml:space="preserve">
+    <value>reward_fast_rounds 必须使用 x-y 格式的回合，如 1-8</value>
+  </data>
+  <data name="B0808" xml:space="preserve">
+    <value>reward_fast_rounds 不得重复</value>
+  </data>
+  <data name="B0809" xml:space="preserve">
+    <value>货币战争优化版独立运行日志已开始。</value>
+  </data>
+  <data name="B0810" xml:space="preserve">
+    <value>货币战争优化版独立日志不可用，继续使用宿主日志：{0}</value>
+  </data>
+  <data name="B0811" xml:space="preserve">
+    <value>货币战争优化版本次运行已停止。</value>
+  </data>
+  <data name="B0812" xml:space="preserve">
+    <value>货币战争优化版本次运行异常终止。</value>
+  </data>
+  <data name="B0813" xml:space="preserve">
+    <value>货币战争优化版独立日志释放失败：{0}</value>
+  </data>
+  <data name="B0814" xml:space="preserve">
+    <value>[银狼费用复测] 已判定费用未知，进入本准备期唯一补测，来源={0}[{1}]</value>
+  </data>
+  <data name="B0815" xml:space="preserve">
+    <value>[银狼费用复测] 双帧确认费用={0}，返回原购物决策；本次无刷新、买牌或买经验输入</value>
+  </data>
+  <data name="B0816" xml:space="preserve">
+    <value>银狼费用补测后未确认返回准备界面</value>
+  </data>
+  <data name="B0817" xml:space="preserve">
+    <value>[银狼费用复测] 补测未确认：{0}；沿用原有恢复，不推断费用</value>
+  </data>
+  <data name="B0818" xml:space="preserve">
+    <value>等待时间不能小于零。</value>
+  </data>
+  <data name="B0819" xml:space="preserve">
+    <value>无法找到或读取文件 {0}</value>
+  </data>
+  <data name="B0820" xml:space="preserve">
+    <value>顶栏数字(左→右): {0}</value>
+  </data>
+  <data name="B0821" xml:space="preserve">
+    <value>抽卡资源预测开始</value>
+  </data>
+  <data name="B0822" xml:space="preserve">
+    <value>未确认贵重物品页签</value>
+  </data>
+  <data name="B0823" xml:space="preserve">
+    <value>连续按 Esc 后仍未检测到左下角 Enter 提示，继续执行后续流程</value>
+  </data>
+  <data name="B0824" xml:space="preserve">
+    <value>左下角操作提示 OCR: {0}</value>
+  </data>
+  <data name="B0825" xml:space="preserve">
+    <value>已尝试点击奖励指南，但未识别到"剩余"文本，将继续扫描当前页面</value>
+  </data>
+  <data name="B0826" xml:space="preserve">
+    <value>日期格式无效：{0}，需要 YYYY-MM-DD</value>
+  </data>
+  <data name="B0827" xml:space="preserve">
+    <value>抽卡资源预测完成</value>
+  </data>
+  <data name="B0828" xml:space="preserve">
+    <value>背包未打开</value>
+  </data>
+  <data name="B0829" xml:space="preserve">
+    <value>未识别到星琼数量</value>
+  </data>
+  <data name="B0830" xml:space="preserve">
+    <value>未能确认奖励指南页面</value>
+  </data>
+  <data name="B0831" xml:space="preserve">
+    <value>未检测到左下角 Enter 提示，按 Esc 返回角色操作界面 ({0}/5)</value>
+  </data>
+  <data name="B0832" xml:space="preserve">
+    <value>已检测到角色操作界面 Enter 提示</value>
+  </data>
+  <data name="B0833" xml:space="preserve">
+    <value>未识别到 ESC 菜单中的旅情事记入口</value>
+  </data>
+  <data name="B0834" xml:space="preserve">
+    <value>点击旅情事记后未进入包含奖励指南的页面</value>
+  </data>
+  <data name="B0835" xml:space="preserve">
+    <value>点击 {0}: ({1}, {2})</value>
+  </data>
+  <data name="B0836" xml:space="preserve">
+    <value>奖励指南第 {0} 屏：星琼+{1}, 专票+{2}, 通票+{3}</value>
+  </data>
+  <data name="B0837" xml:space="preserve">
+    <value>未能返回角色操作界面，停止预测</value>
+  </data>
+  <data name="B0838" xml:space="preserve">
+    <value>抽卡资源预测失败</value>
+  </data>
+  <data name="B0839" xml:space="preserve">
+    <value>背包扫描已取消</value>
+  </data>
+  <data name="B0840" xml:space="preserve">
+    <value>已切换到游戏窗口，并检测到角色操作界面 Enter 提示</value>
+  </data>
+  <data name="B0841" xml:space="preserve">
+    <value>奖励指南向下滑动已无新内容，结束扫描</value>
+  </data>
+  <data name="B0842" xml:space="preserve">
+    <value>奖励指南已滑动到顶部</value>
+  </data>
+  <data name="B0843" xml:space="preserve">
+    <value>任务结束返回角色界面失败：{0}</value>
+  </data>
+  <data name="G0004" xml:space="preserve">
+    <value>运行中</value>
+  </data>
+  <data name="G0014" xml:space="preserve">
+    <value>旷宇纷争</value>
+  </data>
+  <data name="G0011" xml:space="preserve">
+    <value>启动游戏</value>
+  </data>
+  <data name="G0010" xml:space="preserve">
+    <value>清体力</value>
+  </data>
+  <data name="G0103" xml:space="preserve">
+    <value>（空）</value>
+  </data>
+  <data name="G0102" xml:space="preserve">
+    <value>扫描攻略文件夹</value>
+  </data>
+  <data name="R0001" xml:space="preserve">
+    <value>已重载任务，当前共 {0} 个任务</value>
+  </data>
+  <data name="R0002" xml:space="preserve">
+    <value>已重载扩展，当前共 {0} 个（更新 {1} 个）</value>
+  </data>
+  <data name="R0003" xml:space="preserve">
+    <value>Show current task status</value>
+  </data>
+  <data name="R0004" xml:space="preserve">
+    <value>已注册 {0} 个任务</value>
+  </data>
+  <data name="R0005" xml:space="preserve">
+    <value>List all registered tasks</value>
+  </data>
+  <data name="R0006" xml:space="preserve">
+    <value>，新增: {0}</value>
+  </data>
+  <data name="R0007" xml:space="preserve">
+    <value>，移除: {0}</value>
+  </data>
+  <data name="R0008" xml:space="preserve">
+    <value>扩展 {0} 配置模式</value>
+  </data>
+  <data name="R0009" xml:space="preserve">
+    <value>，已重启后台扩展: {0}</value>
+  </data>
+  <data name="R0010" xml:space="preserve">
+    <value>扩展已停止</value>
+  </data>
+  <data name="R0011" xml:space="preserve">
+    <value>扩展 {0} 配置</value>
+  </data>
+  <data name="R0012" xml:space="preserve">
+    <value>扩展 {0} 配置已保存</value>
+  </data>
+  <data name="R0013" xml:space="preserve">
+    <value>统一调用 Operator 方法，与游戏交互</value>
+  </data>
+  <data name="R0014" xml:space="preserve">
+    <value>没有已注册的任务</value>
+  </data>
+  <data name="R0015" xml:space="preserve">
+    <value>可用任务:</value>
+  </data>
+  <data name="R0016" xml:space="preserve">
+    <value>任务线程正在运行中，无法执行重载操作</value>
+  </data>
+  <data name="R0017" xml:space="preserve">
+    <value>任务目录不存在: {0}</value>
+  </data>
+  <data name="R0018" xml:space="preserve">
+    <value>重载完成，但没有已注册的任务</value>
+  </data>
+  <data name="R0019" xml:space="preserve">
+    <value>没有已注册的扩展</value>
+  </data>
+  <data name="R0020" xml:space="preserve">
+    <value>扩展：</value>
+  </data>
+  <data name="R0021" xml:space="preserve">
+    <value>扩展 '{0}' 不存在，使用 'extension list' 查看可用扩展</value>
+  </data>
+  <data name="R0022" xml:space="preserve">
+    <value>已启动扩展 '{0}'</value>
+  </data>
+  <data name="R0023" xml:space="preserve">
+    <value>无法启动扩展 '{0}'</value>
+  </data>
+  <data name="R0024" xml:space="preserve">
+    <value>扩展 '{0}' 不存在</value>
+  </data>
+  <data name="R0025" xml:space="preserve">
+    <value>扩展线程正在运行中，无法执行重载操作</value>
+  </data>
+  <data name="R0026" xml:space="preserve">
+    <value>重载完成，但没有已注册的扩展</value>
+  </data>
+  <data name="R0027" xml:space="preserve">
+    <value>已停止扩展 '{0}'</value>
+  </data>
+  <data name="R0028" xml:space="preserve">
+    <value>当前没有正在运行的扩展</value>
+  </data>
+  <data name="R0029" xml:space="preserve">
+    <value>配置为空</value>
+  </data>
+  <data name="R0030" xml:space="preserve">
+    <value>扩展 '{0}' 没有配置</value>
+  </data>
+  <data name="R0031" xml:space="preserve">
+    <value>可用方法:</value>
+  </data>
+  <data name="R0032" xml:space="preserve">
+    <value>方法 '{0}' 不存在</value>
+  </data>
+  <data name="R0033" xml:space="preserve">
+    <value>方法 '{0}' 不存在。可用方法: {1}</value>
+  </data>
+  <data name="R0034" xml:space="preserve">
+    <value>{0} 执行成功</value>
+  </data>
+  <data name="R0035" xml:space="preserve">
+    <value>Output JSON instead of plain text</value>
+  </data>
+  <data name="R0036" xml:space="preserve">
+    <value>已启动后台扩展 '{0}'</value>
+  </data>
+  <data name="R0037" xml:space="preserve">
+    <value>无法启动后台扩展 '{0}'</value>
+  </data>
+  <data name="R0038" xml:space="preserve">
+    <value>扩展 '{0}' 未在运行</value>
+  </data>
+  <data name="R0039" xml:space="preserve">
+    <value>当前正在运行的扩展是 '{0}'，不是 '{1}'</value>
+  </data>
+  <data name="R0040" xml:space="preserve">
+    <value>JSON 格式错误: {0}</value>
+  </data>
+  <data name="R0041" xml:space="preserve">
+    <value>配置验证失败: {0}</value>
+  </data>
+  <data name="R0042" xml:space="preserve">
+    <value>Operator 初始化失败: {0}</value>
+  </data>
+  <data name="R0043" xml:space="preserve">
+    <value>JSON 解析错误: {0}</value>
+  </data>
+  <data name="R0044" xml:space="preserve">
+    <value>文件未找到: {0}</value>
+  </data>
+  <data name="R0045" xml:space="preserve">
+    <value>缺少必需参数: {0}</value>
+  </data>
+  <data name="R0046" xml:space="preserve">
+    <value>参数类型错误: {0}</value>
+  </data>
+  <data name="R0047" xml:space="preserve">
+    <value>执行失败: {0}</value>
+  </data>
+  <data name="R0048" xml:space="preserve">
+    <value>已停止后台扩展 '{0}'</value>
+  </data>
+  <data name="R0049" xml:space="preserve">
+    <value>后台扩展 '{0}' 未运行</value>
+  </data>
+  <data name="R0050" xml:space="preserve">
+    <value>测试通知发送</value>
+  </data>
+  <data name="R0051" xml:space="preserve">
+    <value>企业微信</value>
+  </data>
+  <data name="R0052" xml:space="preserve">
+    <value>通知渠道测试</value>
+  </data>
+  <data name="R0053" xml:space="preserve">
+    <value>这是一条测试通知, 如果你收到此通知，证明你的渠道配置正确</value>
+  </data>
+  <data name="R0054" xml:space="preserve">
+    <value> 测试通知发送失败：</value>
+  </data>
+  <data name="R0055" xml:space="preserve">
+    <value>[SRA 通知]</value>
+  </data>
+  <data name="R0056" xml:space="preserve">
+    <value>事件: </value>
+  </data>
+  <data name="R0057" xml:space="preserve">
+    <value>结果: </value>
+  </data>
+  <data name="R0058" xml:space="preserve">
+    <value>时间: </value>
+  </data>
+  <data name="R0059" xml:space="preserve">
+    <value>消息: </value>
+  </data>
+  <data name="R0060" xml:space="preserve">
+    <value>任务 {0} 执行失败。</value>
+  </data>
+  <data name="R0061" xml:space="preserve">
+    <value>任务 {0} 开始执行。</value>
+  </data>
+  <data name="R0062" xml:space="preserve">
+    <value>任务 {0} 执行完成。</value>
+  </data>
+  <data name="G0000" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="G0001" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="G0002" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="G0003" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="G0005" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="G0006" xml:space="preserve">
+    <value>前台</value>
+  </data>
+  <data name="G0007" xml:space="preserve">
+    <value>后台</value>
+  </data>
+  <data name="G0008" xml:space="preserve">
+    <value>备战席</value>
+  </data>
+  <data name="G0009" xml:space="preserve">
+    <value>商店</value>
+  </data>
+  <data name="G0013" xml:space="preserve">
+    <value>任务完成</value>
+  </data>
+  <data name="G0015" xml:space="preserve">
+    <value>差分宇宙</value>
+  </data>
+  <data name="G0016" xml:space="preserve">
+    <value>货币战争</value>
+  </data>
+  <data name="G0017" xml:space="preserve">
+    <value>姬子</value>
+  </data>
+  <data name="G0018" xml:space="preserve">
+    <value>银狼</value>
+  </data>
+  <data name="G0019" xml:space="preserve">
+    <value>三月七</value>
+  </data>
+  <data name="G0020" xml:space="preserve">
+    <value>丹恒</value>
+  </data>
+  <data name="G0021" xml:space="preserve">
+    <value>瓦尔特</value>
+  </data>
+  <data name="G0022" xml:space="preserve">
+    <value>布洛妮娅</value>
+  </data>
+  <data name="G0023" xml:space="preserve">
+    <value>希儿</value>
+  </data>
+  <data name="G0024" xml:space="preserve">
+    <value>克拉拉</value>
+  </data>
+  <data name="G0025" xml:space="preserve">
+    <value>娜塔莎</value>
+  </data>
+  <data name="G0026" xml:space="preserve">
+    <value>佩拉</value>
+  </data>
+  <data name="G0027" xml:space="preserve">
+    <value>杰帕德</value>
+  </data>
+  <data name="G0028" xml:space="preserve">
+    <value>希露瓦</value>
+  </data>
+  <data name="G0029" xml:space="preserve">
+    <value>彦卿</value>
+  </data>
+  <data name="G0030" xml:space="preserve">
+    <value>艾丝妲</value>
+  </data>
+  <data name="G0031" xml:space="preserve">
+    <value>阿兰</value>
+  </data>
+  <data name="G0032" xml:space="preserve">
+    <value>黑塔</value>
+  </data>
+  <data name="G0033" xml:space="preserve">
+    <value>大黑塔</value>
+  </data>
+  <data name="G0034" xml:space="preserve">
+    <value>虎克</value>
+  </data>
+  <data name="G0035" xml:space="preserve">
+    <value>桑博</value>
+  </data>
+  <data name="G0036" xml:space="preserve">
+    <value>青雀</value>
+  </data>
+  <data name="G0037" xml:space="preserve">
+    <value>停云</value>
+  </data>
+  <data name="G0038" xml:space="preserve">
+    <value>景元</value>
+  </data>
+  <data name="G0039" xml:space="preserve">
+    <value>白露</value>
+  </data>
+  <data name="G0040" xml:space="preserve">
+    <value>素裳</value>
+  </data>
+  <data name="G0041" xml:space="preserve">
+    <value>罗刹</value>
+  </data>
+  <data name="G0042" xml:space="preserve">
+    <value>驭空</value>
+  </data>
+  <data name="G0043" xml:space="preserve">
+    <value>刃</value>
+  </data>
+  <data name="G0044" xml:space="preserve">
+    <value>卡芙卡</value>
+  </data>
+  <data name="G0045" xml:space="preserve">
+    <value>卢卡</value>
+  </data>
+  <data name="G0046" xml:space="preserve">
+    <value>符玄</value>
+  </data>
+  <data name="G0047" xml:space="preserve">
+    <value>玲可</value>
+  </data>
+  <data name="G0048" xml:space="preserve">
+    <value>镜流</value>
+  </data>
+  <data name="G0049" xml:space="preserve">
+    <value>托帕</value>
+  </data>
+  <data name="G0050" xml:space="preserve">
+    <value>桂乃芬</value>
+  </data>
+  <data name="G0051" xml:space="preserve">
+    <value>藿藿</value>
+  </data>
+  <data name="G0052" xml:space="preserve">
+    <value>银枝</value>
+  </data>
+  <data name="G0053" xml:space="preserve">
+    <value>寒鸦</value>
+  </data>
+  <data name="G0054" xml:space="preserve">
+    <value>阮梅</value>
+  </data>
+  <data name="G0055" xml:space="preserve">
+    <value>雪衣</value>
+  </data>
+  <data name="G0056" xml:space="preserve">
+    <value>真理医生</value>
+  </data>
+  <data name="G0057" xml:space="preserve">
+    <value>黑天鹅</value>
+  </data>
+  <data name="G0058" xml:space="preserve">
+    <value>花火</value>
+  </data>
+  <data name="G0059" xml:space="preserve">
+    <value>米沙</value>
+  </data>
+  <data name="G0060" xml:space="preserve">
+    <value>黄泉</value>
+  </data>
+  <data name="G0061" xml:space="preserve">
+    <value>砂金</value>
+  </data>
+  <data name="G0062" xml:space="preserve">
+    <value>加拉赫</value>
+  </data>
+  <data name="G0063" xml:space="preserve">
+    <value>知更鸟</value>
+  </data>
+  <data name="G0064" xml:space="preserve">
+    <value>波提欧</value>
+  </data>
+  <data name="G0065" xml:space="preserve">
+    <value>流萤</value>
+  </data>
+  <data name="G0066" xml:space="preserve">
+    <value>翡翠</value>
+  </data>
+  <data name="G0067" xml:space="preserve">
+    <value>云璃</value>
+  </data>
+  <data name="G0068" xml:space="preserve">
+    <value>椒丘</value>
+  </data>
+  <data name="G0069" xml:space="preserve">
+    <value>飞霄</value>
+  </data>
+  <data name="G0070" xml:space="preserve">
+    <value>灵砂</value>
+  </data>
+  <data name="G0071" xml:space="preserve">
+    <value>貊泽</value>
+  </data>
+  <data name="G0072" xml:space="preserve">
+    <value>乱破</value>
+  </data>
+  <data name="G0073" xml:space="preserve">
+    <value>星期日</value>
+  </data>
+  <data name="G0074" xml:space="preserve">
+    <value>忘归人</value>
+  </data>
+  <data name="G0075" xml:space="preserve">
+    <value>开拓者</value>
+  </data>
+  <data name="G0076" xml:space="preserve">
+    <value>阿格莱雅</value>
+  </data>
+  <data name="G0077" xml:space="preserve">
+    <value>缇宝</value>
+  </data>
+  <data name="G0078" xml:space="preserve">
+    <value>万敌</value>
+  </data>
+  <data name="G0079" xml:space="preserve">
+    <value>遐蝶</value>
+  </data>
+  <data name="G0080" xml:space="preserve">
+    <value>那刻夏</value>
+  </data>
+  <data name="G0081" xml:space="preserve">
+    <value>风堇</value>
+  </data>
+  <data name="G0082" xml:space="preserve">
+    <value>赛飞儿</value>
+  </data>
+  <data name="G0083" xml:space="preserve">
+    <value>白厄</value>
+  </data>
+  <data name="G0084" xml:space="preserve">
+    <value>海瑟音</value>
+  </data>
+  <data name="G0085" xml:space="preserve">
+    <value>刻律德菈</value>
+  </data>
+  <data name="G0086" xml:space="preserve">
+    <value>长夜月</value>
+  </data>
+  <data name="G0087" xml:space="preserve">
+    <value>丹恒·腾荒</value>
+  </data>
+  <data name="G0088" xml:space="preserve">
+    <value>score</value>
+  </data>
+  <data name="G0089" xml:space="preserve">
+    <value>speed</value>
+  </data>
+  <data name="G0090" xml:space="preserve">
+    <value>loops</value>
+  </data>
+  <data name="G0091" xml:space="preserve">
+    <value>start_delay</value>
+  </data>
+  <data name="G0092" xml:space="preserve">
+    <value>dry_run</value>
+  </data>
+  <data name="G0093" xml:space="preserve">
+    <value>enable_hotkeys</value>
+  </data>
+  <data name="G0094" xml:space="preserve">
+    <value>pause_key</value>
+  </data>
+  <data name="G0095" xml:space="preserve">
+    <value>reset_key</value>
+  </data>
+  <data name="G0096" xml:space="preserve">
+    <value>isAutoSkip</value>
+  </data>
+  <data name="G0097" xml:space="preserve">
+    <value>username</value>
+  </data>
+  <data name="G0098" xml:space="preserve">
+    <value>strategy</value>
+  </data>
+  <data name="G0099" xml:space="preserve">
+    <value>runtimes</value>
+  </data>
+  <data name="G0100" xml:space="preserve">
+    <value>difficulty</value>
+  </data>
+  <data name="G0101" xml:space="preserve">
+    <value>overclock</value>
+  </data>
+  <data name="G0104" xml:space="preserve">
+    <value>【4列车3量子】姬子五级补质量·七级二星放行</value>
+  </data>
+  <data name="G0105" xml:space="preserve">
+    <value>【5欢愉3量子】银狼低配·五级找核九级成型</value>
+  </data>
+  <data name="D0003" xml:space="preserve">
+    <value>凝滞虚影</value>
+  </data>
+  <data name="D0005" xml:space="preserve">
+    <value>历战余响</value>
+  </data>
+  <data name="D0006" xml:space="preserve">
+    <value>虫虫来袭</value>
+  </data>
+  <data name="D0007" xml:space="preserve">
+    <value>鎏金追忆</value>
+  </data>
+  <data name="D0008" xml:space="preserve">
+    <value>西风丛中</value>
+  </data>
+  <data name="D0009" xml:space="preserve">
+    <value>月下朱殷</value>
+  </data>
+  <data name="D0010" xml:space="preserve">
+    <value>纷争不休</value>
+  </data>
+  <data name="D0011" xml:space="preserve">
+    <value>蠹役饥肠</value>
+  </data>
+  <data name="D0012" xml:space="preserve">
+    <value>永恒笑剧</value>
+  </data>
+  <data name="D0013" xml:space="preserve">
+    <value>伴你入眠</value>
+  </data>
+  <data name="D0014" xml:space="preserve">
+    <value>天剑如雨</value>
+  </data>
+  <data name="D0015" xml:space="preserve">
+    <value>孽果盘生</value>
+  </data>
+  <data name="D0016" xml:space="preserve">
+    <value>百年冻土</value>
+  </data>
+  <data name="D0017" xml:space="preserve">
+    <value>温柔话语</value>
+  </data>
+  <data name="D0018" xml:space="preserve">
+    <value>浴火钢心</value>
+  </data>
+  <data name="D0019" xml:space="preserve">
+    <value>坚城不倒</value>
+  </data>
+  <data name="D0020" xml:space="preserve">
+    <value>回忆之蕾</value>
+  </data>
+  <data name="D0021" xml:space="preserve">
+    <value>以太之蕾</value>
+  </data>
+  <data name="D0022" xml:space="preserve">
+    <value>珍藏之蕾</value>
+  </data>
+  <data name="D0023" xml:space="preserve">
+    <value>二相乐园</value>
+  </data>
+  <data name="D0024" xml:space="preserve">
+    <value>翁法罗斯</value>
+  </data>
+  <data name="D0025" xml:space="preserve">
+    <value>匹诺康尼</value>
+  </data>
+  <data name="D0026" xml:space="preserve">
+    <value>仙舟罗浮</value>
+  </data>
+  <data name="D0027" xml:space="preserve">
+    <value>雅利洛VI</value>
+  </data>
+  <data name="D0028" xml:space="preserve">
+    <value>溟簇之形</value>
+  </data>
+  <data name="D0029" xml:space="preserve">
+    <value>职司之形</value>
+  </data>
+  <data name="D0030" xml:space="preserve">
+    <value>幽府之形</value>
+  </data>
+  <data name="D0031" xml:space="preserve">
+    <value>锋芒之形</value>
+  </data>
+  <data name="D0032" xml:space="preserve">
+    <value>残灰之形</value>
+  </data>
+  <data name="D0033" xml:space="preserve">
+    <value>嗔怒之形</value>
+  </data>
+  <data name="D0034" xml:space="preserve">
+    <value>燔灼之形</value>
+  </data>
+  <data name="D0035" xml:space="preserve">
+    <value>炎华之形</value>
+  </data>
+  <data name="D0036" xml:space="preserve">
+    <value>塞壬之形</value>
+  </data>
+  <data name="D0037" xml:space="preserve">
+    <value>冰酿之形</value>
+  </data>
+  <data name="D0038" xml:space="preserve">
+    <value>冰棱之形</value>
+  </data>
+  <data name="D0039" xml:space="preserve">
+    <value>霜晶之形</value>
+  </data>
+  <data name="D0040" xml:space="preserve">
+    <value>音爆之形</value>
+  </data>
+  <data name="D0041" xml:space="preserve">
+    <value>机狼之形</value>
+  </data>
+  <data name="D0042" xml:space="preserve">
+    <value>震厄之形</value>
+  </data>
+  <data name="D0043" xml:space="preserve">
+    <value>鸣雷之形</value>
+  </data>
+  <data name="D0044" xml:space="preserve">
+    <value>烬日之形</value>
+  </data>
+  <data name="D0045" xml:space="preserve">
+    <value>今宵之形</value>
+  </data>
+  <data name="D0046" xml:space="preserve">
+    <value>天人之形</value>
+  </data>
+  <data name="D0047" xml:space="preserve">
+    <value>巽风之形</value>
+  </data>
+  <data name="D0048" xml:space="preserve">
+    <value>吞噬之形</value>
+  </data>
+  <data name="D0049" xml:space="preserve">
+    <value>凛月之形</value>
+  </data>
+  <data name="D0050" xml:space="preserve">
+    <value>焦炙之形</value>
+  </data>
+  <data name="D0051" xml:space="preserve">
+    <value>孽兽之形</value>
+  </data>
+  <data name="D0052" xml:space="preserve">
+    <value>空海之形</value>
+  </data>
+  <data name="D0053" xml:space="preserve">
+    <value>役轮之形</value>
+  </data>
+  <data name="D0054" xml:space="preserve">
+    <value>弦音之形</value>
+  </data>
+  <data name="D0055" xml:space="preserve">
+    <value>偃偶之形</value>
+  </data>
+  <data name="D0056" xml:space="preserve">
+    <value>幻光之形</value>
+  </data>
+  <data name="D0057" xml:space="preserve">
+    <value>密伶之径</value>
+  </data>
+  <data name="D0058" xml:space="preserve">
+    <value>观火之径</value>
+  </data>
+  <data name="D0059" xml:space="preserve">
+    <value>魔占之径</value>
+  </data>
+  <data name="D0060" xml:space="preserve">
+    <value>隐救之径</value>
+  </data>
+  <data name="D0061" xml:space="preserve">
+    <value>雳勇之径</value>
+  </data>
+  <data name="D0062" xml:space="preserve">
+    <value>弦歌之径</value>
+  </data>
+  <data name="D0063" xml:space="preserve">
+    <value>迷识之径</value>
+  </data>
+  <data name="D0064" xml:space="preserve">
+    <value>勇骑之径</value>
+  </data>
+  <data name="D0065" xml:space="preserve">
+    <value>梦潜之径</value>
+  </data>
+  <data name="D0066" xml:space="preserve">
+    <value>幽冥之径</value>
+  </data>
+  <data name="D0067" xml:space="preserve">
+    <value>药使之径</value>
+  </data>
+  <data name="D0068" xml:space="preserve">
+    <value>野焰之径</value>
+  </data>
+  <data name="D0069" xml:space="preserve">
+    <value>圣颂之径</value>
+  </data>
+  <data name="D0070" xml:space="preserve">
+    <value>睿智之径</value>
+  </data>
+  <data name="D0071" xml:space="preserve">
+    <value>漂泊之径</value>
+  </data>
+  <data name="D0072" xml:space="preserve">
+    <value>迅拳之径</value>
+  </data>
+  <data name="D0073" xml:space="preserve">
+    <value>霜风之径</value>
+  </data>
+  <data name="D0074" xml:space="preserve">
+    <value>坏灭的喜剧</value>
+  </data>
+  <data name="D0075" xml:space="preserve">
+    <value>铁骸的锈冢</value>
+  </data>
+  <data name="D0076" xml:space="preserve">
+    <value>晨昏的回眸</value>
+  </data>
+  <data name="D0077" xml:space="preserve">
+    <value>心兽的战场</value>
+  </data>
+  <data name="D0078" xml:space="preserve">
+    <value>尘梦的赞礼</value>
+  </data>
+  <data name="D0079" xml:space="preserve">
+    <value>蛀星的旧魇</value>
+  </data>
+  <data name="D0080" xml:space="preserve">
+    <value>不死的神实</value>
+  </data>
+  <data name="D0081" xml:space="preserve">
+    <value>寒潮的落幕</value>
+  </data>
+  <data name="D0082" xml:space="preserve">
+    <value>毁灭的开端</value>
+  </data>
+  <data name="D0083" xml:space="preserve">
+    <value>万色愚者自将</value>
+  </data>
+  <data name="D0084" xml:space="preserve">
+    <value>万色，愚者自将</value>
+  </data>
+  <data name="D0085" xml:space="preserve">
+    <value>一杯酪酊的时代</value>
+  </data>
+  <data name="D0086" xml:space="preserve">
+    <value>无人遗垢</value>
+  </data>
+  <data name="D0087" xml:space="preserve">
+    <value>暮辉烬蕾</value>
+  </data>
+  <data name="D0088" xml:space="preserve">
+    <value>海妖残鰭</value>
+  </data>
+  <data name="D0089" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="D0090" xml:space="preserve">
+    <value>Language / Язык</value>
+  </data>
+  <data name="D0091" xml:space="preserve">
+    <value>online</value>
+  </data>
+  <data name="D0092" xml:space="preserve">
+    <value>The command to execute AFTER launch</value>
+  </data>
+  <data name="D0093" xml:space="preserve">
+    <value>Do not require admin privileges</value>
+  </data>
+  <data name="D0094" xml:space="preserve">
+    <value>Subcommands, type '{subcommand} --help' for more information</value>
+  </data>
+  <data name="D0095" xml:space="preserve">
+    <value>Find the path of the executable file or a directory</value>
+  </data>
+  <data name="D0096" xml:space="preserve">
+    <value>The path to find</value>
+  </data>
+  <data name="D0097" xml:space="preserve">
+    <value>Start the SRA server</value>
+  </data>
+  <data name="D0098" xml:space="preserve">
+    <value>Expose the server to the public network</value>
+  </data>
+  <data name="D0099" xml:space="preserve">
+    <value>The port to use</value>
+  </data>
+  <data name="D0100" xml:space="preserve">
+    <value>Build-in Commands</value>
+  </data>
+  <data name="D0101" xml:space="preserve">
+    <value>Task status</value>
+  </data>
+  <data name="D0102" xml:space="preserve">
+    <value>Current version: {0}</value>
+  </data>
+  <data name="D0103" xml:space="preserve">
+    <value>Welcome to SRA-cli (version {0}, core {1}). 
+Type 'help' to list commands.</value>
+  </data>
+  <data name="D0104" xml:space="preserve">
+    <value>坠星启航地/寰宇生研院</value>
+  </data>
+  <data name="D0105" xml:space="preserve">
+    <value>零号关卡朋克洛德/千星荟萃之城</value>
+  </data>
+  <data name="D0106" xml:space="preserve">
+    <value>永恒之地翁法罗斯/天国@直播间</value>
+  </data>
+  <data name="D0107" xml:space="preserve">
+    <value>妖精织梦的乐园/沉欢醉饮的海隅</value>
+  </data>
+  <data name="D0108" xml:space="preserve">
+    <value>谧宁拾骨地/渊思寂虑的巨树</value>
+  </data>
+  <data name="D0109" xml:space="preserve">
+    <value>沉陆海域露莎卡/奇想蕉乐园</value>
+  </data>
+  <data name="D0110" xml:space="preserve">
+    <value>奔狼的都蓝王朝/劫火莲灯铸炼宫</value>
+  </data>
+  <data name="D0111" xml:space="preserve">
+    <value>无主荒星茨冈尼亚/出云显世与高天神国</value>
+  </data>
+  <data name="D0112" xml:space="preserve">
+    <value>苍穹战线格拉默/梦想之地匹诺康尼</value>
+  </data>
+  <data name="D0113" xml:space="preserve">
+    <value>繁星竞技场/折断的龙骨</value>
+  </data>
+  <data name="D0114" xml:space="preserve">
+    <value>筑城者的贝洛伯格/停转的萨尔索图</value>
+  </data>
+  <data name="D0115" xml:space="preserve">
+    <value>泛银河商业公司/星体差分机</value>
+  </data>
+  <data name="D0116" xml:space="preserve">
+    <value>盗贼公国塔利亚/生命的翁瓦克</value>
+  </data>
+  <data name="D0117" xml:space="preserve">
+    <value>太空封印站/不老者的仙舟</value>
+  </data>
+  <data name="D0118" xml:space="preserve">
+    <value>回忆之蕾（二相乐园）</value>
+  </data>
+  <data name="D0119" xml:space="preserve">
+    <value>漫游指南</value>
+  </data>
+  <data name="D0120" xml:space="preserve">
+    <value>以太之蕾（二相乐园）</value>
+  </data>
+  <data name="D0121" xml:space="preserve">
+    <value>提纯以太</value>
+  </data>
+  <data name="D0122" xml:space="preserve">
+    <value>珍藏之蕾（二相乐园）</value>
+  </data>
+  <data name="D0123" xml:space="preserve">
+    <value>信用点</value>
+  </data>
+  <data name="D0124" xml:space="preserve">
+    <value>回忆之蕾（翁法罗斯）</value>
+  </data>
+  <data name="D0125" xml:space="preserve">
+    <value>以太之蕾（翁法罗斯）</value>
+  </data>
+  <data name="D0126" xml:space="preserve">
+    <value>珍藏之蕾（翁法罗斯）</value>
+  </data>
+  <data name="D0127" xml:space="preserve">
+    <value>回忆之蕾（匹诺康尼）</value>
+  </data>
+  <data name="D0128" xml:space="preserve">
+    <value>以太之蕾（匹诺康尼）</value>
+  </data>
+  <data name="D0129" xml:space="preserve">
+    <value>珍藏之蕾（匹诺康尼）</value>
+  </data>
+  <data name="D0130" xml:space="preserve">
+    <value>回忆之蕾（仙舟罗浮）</value>
+  </data>
+  <data name="D0131" xml:space="preserve">
+    <value>以太之蕾（仙舟罗浮）</value>
+  </data>
+  <data name="D0132" xml:space="preserve">
+    <value>珍藏之蕾（仙舟罗浮）</value>
+  </data>
+  <data name="D0133" xml:space="preserve">
+    <value>回忆之蕾（雅利洛VI）</value>
+  </data>
+  <data name="D0134" xml:space="preserve">
+    <value>以太之蕾（雅利洛VI）</value>
+  </data>
+  <data name="D0135" xml:space="preserve">
+    <value>珍藏之蕾（雅利洛VI）</value>
+  </data>
+  <data name="D0136" xml:space="preserve">
+    <value>万色，愚者自将（毁灭）</value>
+  </data>
+  <data name="D0137" xml:space="preserve">
+    <value>月狂獠牙（毁灭）</value>
+  </data>
+  <data name="D0138" xml:space="preserve">
+    <value>月狂獠牙</value>
+  </data>
+  <data name="D0139" xml:space="preserve">
+    <value>净世残刃（毁灭）</value>
+  </data>
+  <data name="D0140" xml:space="preserve">
+    <value>净世残刃</value>
+  </data>
+  <data name="D0141" xml:space="preserve">
+    <value>神体琥珀（存护）</value>
+  </data>
+  <data name="D0142" xml:space="preserve">
+    <value>神体琥珀</value>
+  </data>
+  <data name="D0143" xml:space="preserve">
+    <value>琥珀的坚守（存护）</value>
+  </data>
+  <data name="D0144" xml:space="preserve">
+    <value>琥珀的坚守</value>
+  </data>
+  <data name="D0145" xml:space="preserve">
+    <value>天谴血矛（巡猎）</value>
+  </data>
+  <data name="D0146" xml:space="preserve">
+    <value>天谴血矛</value>
+  </data>
+  <data name="D0147" xml:space="preserve">
+    <value>逆时一击（巡猎）</value>
+  </data>
+  <data name="D0148" xml:space="preserve">
+    <value>逆时一击</value>
+  </data>
+  <data name="D0149" xml:space="preserve">
+    <value>逐星之矢（巡猎）</value>
+  </data>
+  <data name="D0150" xml:space="preserve">
+    <value>逐星之矢</value>
+  </data>
+  <data name="D0151" xml:space="preserve">
+    <value>万相果实（丰饶）</value>
+  </data>
+  <data name="D0152" xml:space="preserve">
+    <value>万相果实</value>
+  </data>
+  <data name="D0153" xml:space="preserve">
+    <value>永恒之花（丰饶）</value>
+  </data>
+  <data name="D0154" xml:space="preserve">
+    <value>永恒之花</value>
+  </data>
+  <data name="D0155" xml:space="preserve">
+    <value>银河沙盘（智识）</value>
+  </data>
+  <data name="D0156" xml:space="preserve">
+    <value>银河沙盘</value>
+  </data>
+  <data name="D0157" xml:space="preserve">
+    <value>精致色稿（智识）</value>
+  </data>
+  <data name="D0158" xml:space="preserve">
+    <value>精致色稿</value>
+  </data>
+  <data name="D0159" xml:space="preserve">
+    <value>智识之钥（智识）</value>
+  </data>
+  <data name="D0160" xml:space="preserve">
+    <value>智识之钥</value>
+  </data>
+  <data name="D0161" xml:space="preserve">
+    <value>天外乐章（同谐）</value>
+  </data>
+  <data name="D0162" xml:space="preserve">
+    <value>天外乐章</value>
+  </data>
+  <data name="D0163" xml:space="preserve">
+    <value>群星乐章（同谐）</value>
+  </data>
+  <data name="D0164" xml:space="preserve">
+    <value>群星乐章</value>
+  </data>
+  <data name="D0165" xml:space="preserve">
+    <value>法吉娜之心（虚无）</value>
+  </data>
+  <data name="D0166" xml:space="preserve">
+    <value>法吉娜之心</value>
+  </data>
+  <data name="D0167" xml:space="preserve">
+    <value>焚天之魔（虚无）</value>
+  </data>
+  <data name="D0168" xml:space="preserve">
+    <value>焚天之魔</value>
+  </data>
+  <data name="D0169" xml:space="preserve">
+    <value>沉沦黑曜（虚无）</value>
+  </data>
+  <data name="D0170" xml:space="preserve">
+    <value>沉沦黑曜</value>
+  </data>
+  <data name="D0171" xml:space="preserve">
+    <value>阿赖耶华（记忆）</value>
+  </data>
+  <data name="D0172" xml:space="preserve">
+    <value>阿赖耶华</value>
+  </data>
+  <data name="D0173" xml:space="preserve">
+    <value>《绒绒号》典藏版合集（欢愉）</value>
+  </data>
+  <data name="D0174" xml:space="preserve">
+    <value>《绒绒号》典藏版合集</value>
+  </data>
+  <data name="D0175" xml:space="preserve">
+    <value>侵略凝块</value>
+  </data>
+  <data name="D0176" xml:space="preserve">
+    <value>星际和平工作证</value>
+  </data>
+  <data name="D0177" xml:space="preserve">
+    <value>幽府通令</value>
+  </data>
+  <data name="D0178" xml:space="preserve">
+    <value>铁狼碎齿</value>
+  </data>
+  <data name="D0179" xml:space="preserve">
+    <value>明辉日珥</value>
+  </data>
+  <data name="D0180" xml:space="preserve">
+    <value>忿火之心</value>
+  </data>
+  <data name="D0181" xml:space="preserve">
+    <value>过热钢刃</value>
+  </data>
+  <data name="D0182" xml:space="preserve">
+    <value>恒温晶壳</value>
+  </data>
+  <data name="D0183" xml:space="preserve">
+    <value>冷藏梦箱</value>
+  </data>
+  <data name="D0184" xml:space="preserve">
+    <value>苦寒晶壳</value>
+  </data>
+  <data name="D0185" xml:space="preserve">
+    <value>风雪之角</value>
+  </data>
+  <data name="D0186" xml:space="preserve">
+    <value>狂雷扫弦</value>
+  </data>
+  <data name="D0187" xml:space="preserve">
+    <value>兽棺之钉</value>
+  </data>
+  <data name="D0188" xml:space="preserve">
+    <value>炼形者雷枝</value>
+  </data>
+  <data name="D0189" xml:space="preserve">
+    <value>往日之影的雷冠</value>
+  </data>
+  <data name="D0190" xml:space="preserve">
+    <value>暴风之眼</value>
+  </data>
+  <data name="D0191" xml:space="preserve">
+    <value>嗤笑丑面</value>
+  </data>
+  <data name="D0192" xml:space="preserve">
+    <value>暗帷月华</value>
+  </data>
+  <data name="D0193" xml:space="preserve">
+    <value>炙梦喷枪</value>
+  </data>
+  <data name="D0194" xml:space="preserve">
+    <value>苍猿之钉</value>
+  </data>
+  <data name="D0195" xml:space="preserve">
+    <value>虚幻铸铁</value>
+  </data>
+  <data name="D0196" xml:space="preserve">
+    <value>纷争先兆</value>
+  </data>
+  <data name="D0197" xml:space="preserve">
+    <value>一曲合弦的幻景</value>
+  </data>
+  <data name="D0198" xml:space="preserve">
+    <value>镇灵敕符</value>
+  </data>
+  <data name="D0199" xml:space="preserve">
+    <value>往日之影的金饰</value>
+  </data>
+  <data name="D0200" xml:space="preserve">
+    <value>戏梦点星的伶人/贪噬禁果的异端</value>
+  </data>
+  <data name="D0201" xml:space="preserve">
+    <value>星如我见的领航员/叩问天工的名冶</value>
+  </data>
+  <data name="D0202" xml:space="preserve">
+    <value>闪耀功勋的魔法少女/应天涉远的卜者</value>
+  </data>
+  <data name="D0203" xml:space="preserve">
+    <value>再创天地的救世主/自匿星芒的隐士</value>
+  </data>
+  <data name="D0204" xml:space="preserve">
+    <value>烈阳惊雷的女武神/恶海逐波的船长</value>
+  </data>
+  <data name="D0205" xml:space="preserve">
+    <value>凯歌祝捷的英豪/哀歌覆国的诗人</value>
+  </data>
+  <data name="D0206" xml:space="preserve">
+    <value>重循苦旅的司铎/识海迷坠的学者</value>
+  </data>
+  <data name="D0207" xml:space="preserve">
+    <value>荡除蠹灾的铁骑/风举云飞的勇烈</value>
+  </data>
+  <data name="D0208" xml:space="preserve">
+    <value>死水深潜的先驱/机心戏梦的钟表匠</value>
+  </data>
+  <data name="D0209" xml:space="preserve">
+    <value>毁烬焚骨的大公/幽锁深牢的系囚</value>
+  </data>
+  <data name="D0210" xml:space="preserve">
+    <value>宝命长存的莳者/骇域漫游的信使</value>
+  </data>
+  <data name="D0211" xml:space="preserve">
+    <value>熔岩锻铸的火匠/盗匪荒漠的废土客</value>
+  </data>
+  <data name="D0212" xml:space="preserve">
+    <value>净庭教宗的圣骑士/激奏雷电的乐队</value>
+  </data>
+  <data name="D0213" xml:space="preserve">
+    <value>戍卫风雪的铁卫/繁星璀璨的天才</value>
+  </data>
+  <data name="D0214" xml:space="preserve">
+    <value>云无留迹的过客/野穗伴行的快枪手</value>
+  </data>
+  <data name="D0215" xml:space="preserve">
+    <value>街头出身的拳王/流星追迹的怪盗</value>
+  </data>
+  <data name="D0216" xml:space="preserve">
+    <value>密林卧雪的猎人/晨昏交界的翔鹰</value>
+  </data>
+  <data name="D0217" xml:space="preserve">
+    <value>伪觉者的期许</value>
+  </data>
+  <data name="D0218" xml:space="preserve">
+    <value>灭流绝溢的缄默</value>
+  </data>
+  <data name="D0219" xml:space="preserve">
+    <value>阳雷的遥想</value>
+  </data>
+  <data name="D0220" xml:space="preserve">
+    <value>吉光片羽</value>
+  </data>
+  <data name="D0221" xml:space="preserve">
+    <value>同愿的遗音</value>
+  </data>
+  <data name="D0222" xml:space="preserve">
+    <value>蛀星孕灾的旧恶</value>
+  </data>
+  <data name="D0223" xml:space="preserve">
+    <value>无穷假身的遗恨</value>
+  </data>
+  <data name="D0224" xml:space="preserve">
+    <value>守护者的悲愿</value>
+  </data>
+  <data name="D0225" xml:space="preserve">
+    <value>毁灭者的末路</value>
+  </data>
+  <data name="D0234" xml:space="preserve">
+    <value>Saber</value>
+  </data>
+  <data name="D0235" xml:space="preserve">
+    <value>Archer</value>
+  </data>
+  <data name="D0242" xml:space="preserve">
+    <value>托帕&amp;账账</value>
+  </data>
+  <data name="D0271" xml:space="preserve">
+    <value>大丽花</value>
+  </data>
+  <data name="D0284" xml:space="preserve">
+    <value>昔涟</value>
+  </data>
+  <data name="D0285" xml:space="preserve">
+    <value>火花</value>
+  </data>
+  <data name="D0286" xml:space="preserve">
+    <value>爻光</value>
+  </data>
+  <data name="D0287" xml:space="preserve">
+    <value>不死途</value>
+  </data>
+  <data name="D0288" xml:space="preserve">
+    <value>绯英</value>
+  </data>
+  <data name="D0289" xml:space="preserve">
+    <value>银狼LV.999</value>
+  </data>
+  <data name="D0290" xml:space="preserve">
+    <value>远坂凛</value>
+  </data>
+  <data name="D0291" xml:space="preserve">
+    <value>吉尔伽美什</value>
+  </data>
+  <data name="D0292" xml:space="preserve">
+    <value>盛会之星</value>
+  </data>
+  <data name="D0293" xml:space="preserve">
+    <value>学者</value>
+  </data>
+  <data name="RussianLanguageName" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="FixErrorZh" xml:space="preserve">
+    <value>发生错误</value>
+  </data>
+  <data name="FixErrorEn" xml:space="preserve">
+    <value>An error occurred</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="InfoText" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="ErrorText" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="SuccessText" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="JustIconText" xml:space="preserve">
+    <value>Just Icon.</value>
+  </data>
+  <data name="Field0001" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="Field0003" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="Field0004" xml:space="preserve">
+    <value>loop</value>
+  </data>
+  <data name="Field0005" xml:space="preserve">
+    <value>Loop</value>
+  </data>
+  <data name="Field0007" xml:space="preserve">
+    <value>Start Delay</value>
+  </data>
+  <data name="Field0009" xml:space="preserve">
+    <value>Dry Run</value>
+  </data>
+  <data name="Field0011" xml:space="preserve">
+    <value>Enable Hotkeys</value>
+  </data>
+  <data name="Field0012" xml:space="preserve">
+    <value>hotkey_pause</value>
+  </data>
+  <data name="Field0013" xml:space="preserve">
+    <value>Hotkey Pause</value>
+  </data>
+  <data name="Field0014" xml:space="preserve">
+    <value>hotkey_reset</value>
+  </data>
+  <data name="Field0015" xml:space="preserve">
+    <value>Hotkey Reset</value>
+  </data>
+  <data name="Field0016" xml:space="preserve">
+    <value>skip_plot</value>
+  </data>
+  <data name="Field0017" xml:space="preserve">
+    <value>Skip Plot</value>
+  </data>
+  <data name="Field0019" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="Field0021" xml:space="preserve">
+    <value>Strategy</value>
+  </data>
+  <data name="Field0023" xml:space="preserve">
+    <value>Runtimes</value>
+  </data>
+  <data name="Field0025" xml:space="preserve">
+    <value>Difficulty</value>
+  </data>
+  <data name="Field0027" xml:space="preserve">
+    <value>Overclock</value>
+  </data>
+  <data name="Field0028" xml:space="preserve">
+    <value>version_start_date</value>
+  </data>
+  <data name="Field0029" xml:space="preserve">
+    <value>Version Start Date</value>
+  </data>
+  <data name="Field0030" xml:space="preserve">
+    <value>version_days</value>
+  </data>
+  <data name="Field0031" xml:space="preserve">
+    <value>Version Days</value>
+  </data>
+  <data name="Field0032" xml:space="preserve">
+    <value>preview_before_end_days</value>
+  </data>
+  <data name="Field0033" xml:space="preserve">
+    <value>Preview Before End Days</value>
+  </data>
+  <data name="Field0034" xml:space="preserve">
+    <value>preview_status</value>
+  </data>
+  <data name="Field0035" xml:space="preserve">
+    <value>Preview Status</value>
+  </data>
+  <data name="Field0036" xml:space="preserve">
+    <value>endgame_refresh_interval_days</value>
+  </data>
+  <data name="Field0037" xml:space="preserve">
+    <value>Endgame Refresh Interval Days</value>
+  </data>
+  <data name="Field0038" xml:space="preserve">
+    <value>endgame_first_refresh_offset_days</value>
+  </data>
+  <data name="Field0039" xml:space="preserve">
+    <value>Endgame First Refresh Offset Days</value>
+  </data>
+  <data name="Field0040" xml:space="preserve">
+    <value>endgame_refresh_count_override</value>
+  </data>
+  <data name="Field0041" xml:space="preserve">
+    <value>Endgame Refresh Count Override</value>
+  </data>
+  <data name="Field0042" xml:space="preserve">
+    <value>include_today_endgame</value>
+  </data>
+  <data name="Field0043" xml:space="preserve">
+    <value>Include Today Endgame</value>
+  </data>
+  <data name="Field0044" xml:space="preserve">
+    <value>weekly_reset_weekday</value>
+  </data>
+  <data name="Field0045" xml:space="preserve">
+    <value>Weekly Reset Weekday</value>
+  </data>
+  <data name="Field0046" xml:space="preserve">
+    <value>weekly_count_override</value>
+  </data>
+  <data name="Field0047" xml:space="preserve">
+    <value>Weekly Count Override</value>
+  </data>
+  <data name="Field0048" xml:space="preserve">
+    <value>include_today_weekly</value>
+  </data>
+  <data name="Field0049" xml:space="preserve">
+    <value>Include Today Weekly</value>
+  </data>
+  <data name="Field0050" xml:space="preserve">
+    <value>version_compensation_jade</value>
+  </data>
+  <data name="Field0051" xml:space="preserve">
+    <value>Version Compensation Jade</value>
+  </data>
+  <data name="Field0052" xml:space="preserve">
+    <value>has_monthly_card</value>
+  </data>
+  <data name="Field0053" xml:space="preserve">
+    <value>Has Monthly Card</value>
+  </data>
+  <data name="Field0054" xml:space="preserve">
+    <value>daily_jade_without_card</value>
+  </data>
+  <data name="Field0055" xml:space="preserve">
+    <value>Daily Jade Without Card</value>
+  </data>
+  <data name="Field0056" xml:space="preserve">
+    <value>daily_jade_with_card</value>
+  </data>
+  <data name="Field0057" xml:space="preserve">
+    <value>Daily Jade With Card</value>
+  </data>
+  <data name="Field0058" xml:space="preserve">
+    <value>endgame_jade_per_refresh</value>
+  </data>
+  <data name="Field0059" xml:space="preserve">
+    <value>Endgame Jade Per Refresh</value>
+  </data>
+  <data name="Field0060" xml:space="preserve">
+    <value>weekly_universe_jade</value>
+  </data>
+  <data name="Field0061" xml:space="preserve">
+    <value>Weekly Universe Jade</value>
+  </data>
+  <data name="Field0062" xml:space="preserve">
+    <value>preview_jade</value>
+  </data>
+  <data name="Field0063" xml:space="preserve">
+    <value>Preview Jade</value>
+  </data>
+  <data name="Field0064" xml:space="preserve">
+    <value>scan_bag</value>
+  </data>
+  <data name="Field0065" xml:space="preserve">
+    <value>Scan Bag</value>
+  </data>
+  <data name="Field0066" xml:space="preserve">
+    <value>manual_current_jade</value>
+  </data>
+  <data name="Field0067" xml:space="preserve">
+    <value>Manual Current Jade</value>
+  </data>
+  <data name="Field0068" xml:space="preserve">
+    <value>manual_special_pass</value>
+  </data>
+  <data name="Field0069" xml:space="preserve">
+    <value>Manual Special Pass</value>
+  </data>
+  <data name="Field0070" xml:space="preserve">
+    <value>manual_normal_pass</value>
+  </data>
+  <data name="Field0071" xml:space="preserve">
+    <value>Manual Normal Pass</value>
+  </data>
+  <data name="Field0072" xml:space="preserve">
+    <value>scan_event_guide</value>
+  </data>
+  <data name="Field0073" xml:space="preserve">
+    <value>Scan Event Guide</value>
+  </data>
+  <data name="Field0074" xml:space="preserve">
+    <value>event_reward_type</value>
+  </data>
+  <data name="Field0075" xml:space="preserve">
+    <value>Event Reward Type</value>
+  </data>
+  <data name="Field0076" xml:space="preserve">
+    <value>manual_event_jade</value>
+  </data>
+  <data name="Field0077" xml:space="preserve">
+    <value>Manual Event Jade</value>
+  </data>
+  <data name="Field0078" xml:space="preserve">
+    <value>manual_event_special_pass</value>
+  </data>
+  <data name="Field0079" xml:space="preserve">
+    <value>Manual Event Special Pass</value>
+  </data>
+  <data name="Field0080" xml:space="preserve">
+    <value>manual_event_normal_pass</value>
+  </data>
+  <data name="Field0081" xml:space="preserve">
+    <value>Manual Event Normal Pass</value>
+  </data>
+  <data name="Final0000" xml:space="preserve">
+    <value>Bon voyage</value>
+  </data>
+  <data name="Final0001" xml:space="preserve">
+    <value>May your path be clear</value>
+  </data>
+  <data name="Final0002" xml:space="preserve">
+    <value>May you get to where
+dreams are all
+crystalline and sweet</value>
+  </data>
+  <data name="Final0003" xml:space="preserve">
+    <value>Config name contains invalid characters</value>
+  </data>
+  <data name="Final0004" xml:space="preserve">
+    <value>Config name already exists</value>
+  </data>
+  <data name="Final0005" xml:space="preserve">
+    <value>Invalid config payload</value>
+  </data>
+</root>

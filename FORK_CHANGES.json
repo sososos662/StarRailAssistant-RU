@@ -1,0 +1,991 @@
+{
+  "schema": 1,
+  "prepared_date": "2026-10-28",
+  "base_tag": "v2.25.0-beta.1",
+  "base_commit": "863509072bf2011b4d5a3e3d71072b6cd269637e",
+  "upstream_zip_sha256": "153c49741a052416c7b0732f73399a1f9bb8d703746957c582551ae6fd093082",
+  "fork_version": "2.25.0-beta.1-ru.20261028.1",
+  "added": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/fork_bug.yml",
+      "sha256": "3a1c459674676f5b68e4b058c8fe75b8bba1b758097311d483fb1292d7cff5f9"
+    },
+    {
+      "path": ".github/upstream-workflows-disabled/README.md",
+      "sha256": "2771d8bc1e18fd2f58fa161bf60da30b9d09a933c7fc361b3e57ac17bc0d6ca1"
+    },
+    {
+      "path": ".github/upstream-workflows-disabled/auto-mas.yml.disabled",
+      "sha256": "06a18ccb0d380f3c1b272c869978945ddc54f09e9bfcfbc8a8f9998fdbb74495"
+    },
+    {
+      "path": ".github/upstream-workflows-disabled/mirrorchyan.yml.disabled",
+      "sha256": "8b23318a0ed051fb1bfa89a40335dd32641d380d861919621f8cabd9b9ffa4b0"
+    },
+    {
+      "path": ".github/upstream-workflows-disabled/mirrorchyan_release_note.yml.disabled",
+      "sha256": "e249a7ea68cc1ad2f03a1fb6b387c86527b308ac509d5614f89be5f9c21b7fe6"
+    },
+    {
+      "path": ".github/upstream-workflows-disabled/mirrorchyan_resource.yml.disabled",
+      "sha256": "d928f32a24a8defcc45dc309770ed7617d3710f3336006d47e27a45a03a83b1d"
+    },
+    {
+      "path": ".github/upstream-workflows-disabled/pypi.yml.disabled",
+      "sha256": "a1a835a62877458136afefcfc8322afda876d7eb951786e90d41fa465112e78a"
+    },
+    {
+      "path": ".github/upstream-workflows-disabled/python-app.yml.disabled",
+      "sha256": "fcb4086a5ea98e9adba34bff8ce8a9a0a910d6bfe86f2a3db7327b7fd88ccd58"
+    },
+    {
+      "path": ".github/workflows/build-fork.yml",
+      "sha256": "8c9fc485461ff33ea75eff771e8261bd6e08bfc238d63b38fd722bfe9cddfb9d"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "6598ba9c03c7a99b421ceedc127afaea88e8eb5665b581a03ea2ff30187e04b3"
+    },
+    {
+      "path": "CHANGELOG_RU.md",
+      "sha256": "c33714107ded1cdfc2a8dbb81ca63e2f30c2b1ea9fe4e6aa461a962e4a6d1ec5"
+    },
+    {
+      "path": "FORK.md",
+      "sha256": "71744eb646c5120789b83be0c6d6f00b3d751c6ba50496eb8dd4153bada03467"
+    },
+    {
+      "path": "FORK_VERSION",
+      "sha256": "60e5647ca993e38a4fb6fbd81d6fb568b23e0e3fa8c3e7687aa0c5e73386324d"
+    },
+    {
+      "path": "GPU_OCR.ru.md",
+      "sha256": "c16c350c8a7081c0a83336fbe4c8dc85f291f656d4b050b8c1375fffd0a2220d"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "c9d350df0eac2415ca384aabc2348618955d217f7488f929d0e653869b8f04e1"
+    },
+    {
+      "path": "README.ru.md",
+      "sha256": "ba88b555b0f1feff3d1df1e942212fea9cadf9258aaab31ed905e37ba45d6cf5"
+    },
+    {
+      "path": "README.zh.md",
+      "sha256": "d81021bcbb381790020aad2813e98fb59ffa4d093f72fab11cca19055542d5d9"
+    },
+    {
+      "path": "README_RU.md",
+      "sha256": "cb9f82cd70280ca5fb8a62899356ffc4f2334bd8574d83e0806493fccecb968e"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "4f0fae7920e510e9e66784fe5caffb059ebdc61c49b1bfcab4a850aeb4216903"
+    },
+    {
+      "path": "SRACore/localization/presentation.json",
+      "sha256": "8f331d436af424b0a8b2c53290edd3d291bff0223a2d64015e8f6706af83ee41"
+    },
+    {
+      "path": "SRACore/localization/presentation.py",
+      "sha256": "2edc8c36ba1ed5e2ae188755ab0966c12df4a0f85f3e9c24f18f08c4288f3d19"
+    },
+    {
+      "path": "SRACore/localization/resource_ru-ru.json",
+      "sha256": "e498ab9aef47d0d49ddeba46093158cb79b277c038d04be17f55ed444adc9a5f"
+    },
+    {
+      "path": "SRACore/operators/ocr_diagnostics.py",
+      "sha256": "a1ab9cf00a68a8fb696a05675091e02b3df81762bdf98aa8cf813075e7aebe99"
+    },
+    {
+      "path": "SRACore/util/phase_timing.py",
+      "sha256": "40bc539b698e6cd1067ed20cfa5068fda07987067754f79313ea6401de422972"
+    },
+    {
+      "path": "SRACore/util/standard_io.py",
+      "sha256": "0a8934e047523ae4ee66f12376a6ec791f9827cfe9857c3a13eaa14769e0f843"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Styles/RussianTypography.axaml",
+      "sha256": "5a859e035e7abe9f91cd235294b2b4b115a67fbc0a5d1bc308060cece40faa0d"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Styles/RussianTypography.cs",
+      "sha256": "95e45e2296d7f05fba7b6e79ec170cedb345b81c68867fa9b90150155e78dd32"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend/Localization/ExtraResources.cs",
+      "sha256": "7a43be328c7c8a4b71da8953c9586f3764383256d6cd2f8e57ef0b3d63e7d8fc"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend/Localization/ExtraResources.resx",
+      "sha256": "0b401d5d21f17f970b16fc260498347177ce6f5beaef85100bd4d42c1a15aba1"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend/Localization/ExtraResources.ru-RU.resx",
+      "sha256": "15741001cee94c19ac84da6d62d1c193af47cc8443b6d7583f9053cac0d70898"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend/Localization/ExtraResources.zh.resx",
+      "sha256": "0b401d5d21f17f970b16fc260498347177ce6f5beaef85100bd4d42c1a15aba1"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend/Localization/Resources.ru-RU.resx",
+      "sha256": "f27abe50186147d5c44f7873b7e314721c42ecc56aa0c31b87999d2c4fb89516"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend/Localization/UiText.cs",
+      "sha256": "4fe43753c2840c625c2ac6c14469e1ca2e53bbaa76a288cdaa96f65aadea0966"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/auto-imports.d.ts",
+      "sha256": "9ff922b8d79138e9a85de3eff6e73f0d705858101129595ac85bba552ecca17d"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/components.d.ts",
+      "sha256": "ff171965bc61d27a63e6be69e7e903f36073fff2f7a0f72edf526068bf09a34f"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/scripts/localize.mjs",
+      "sha256": "8a4596059f4dd54c4051584be8086c666a4dcba8d0dc952848a4c4fd68e87ae6"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/i18n.ts",
+      "sha256": "8e829f8c3da1fbc76199f4c50a4687d173f05d9d27ed18c62ffc4f194d26ae87"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/locales/display.ru-RU.json",
+      "sha256": "49709793806b2c5dd974a0532118d7d390576c5d1b929398c021896ff962d912"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/locales/en-US.json",
+      "sha256": "c7bf4675917acd8b385df3bbb863000986f8502fc69de64ef5ba61e597ee1fde"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/locales/ru-RU.json",
+      "sha256": "92ed2b6ffd17097803aaf8a1f56a02eccce23612bf80269d0a1a56f7ba678fba"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/locales/zh-CN.json",
+      "sha256": "944dbc61e82c808a69af96d564fa4ae53d2f9b20f4683a0f289a5947da1e10dd"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/utils/__tests__/localization.spec.ts",
+      "sha256": "e69424b273cdde95b6fea4fcea477dbf69381757aac8571b52eff6c17ed19aba"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "07e74f8725e27f747d507247cd3c5cafb2226b70693b2d9d4748f744d53972ce"
+    },
+    {
+      "path": "UPSTREAM.md",
+      "sha256": "f22943e08c4c5d794e96d4ce19e3c82f53b12b9353d887ec9fd16db1092ca48b"
+    },
+    {
+      "path": "docs/BUILDING.ru.md",
+      "sha256": "afbe3d6c058a5c74ad17228d5d864853e3680868e346ff3d2d35ef80df9b193c"
+    },
+    {
+      "path": "docs/PUBLISHING.ru.md",
+      "sha256": "0a0ba7c0278272276b7f781324e4dfa71db3257deb3e0b5c28439cc77561563f"
+    },
+    {
+      "path": "docs/RELEASE_NOTES.ru.md",
+      "sha256": "edb8e7b33cc2249eda7575a8e3ec54f2e2ca4f05d7097b04e96f75b19be9dd13"
+    },
+    {
+      "path": "docs/TESTING.ru.md",
+      "sha256": "561c71c835421a1c54db75a3f6e1a7daa3e082c04d40cfb31ab6cfe5e8702e28"
+    },
+    {
+      "path": "docs/TROUBLESHOOTING.ru.md",
+      "sha256": "1a916a514f47dbb1a7669f7ef68a4f32818114fb56cd4e39b2642a330264973a"
+    },
+    {
+      "path": "extensions/cw_plus/CONFIGURATION.ru.md",
+      "sha256": "c8cd531a932bb38e26a5cb5535aa3150bb6a4b979d58ff453aa0f1616455b4c7"
+    },
+    {
+      "path": "extensions/cw_plus/FRONTEND_EMPTY_FIX.ru.md",
+      "sha256": "e39bda18d5a7e73ba66fa1eefe25680a0a8e06e5098a275388321ef635b47a70"
+    },
+    {
+      "path": "extensions/cw_plus/IDENTITY_SHOP_FIX.ru.md",
+      "sha256": "5470176fca2f284fde8660b6987fe28875c2c133af960c67dd5d7df27638ca6e"
+    },
+    {
+      "path": "extensions/cw_plus/LAYOUT_PERFORMANCE.ru.md",
+      "sha256": "d2db49aef0b16a5be9cd15a682a8ca3168334f17093ee54b3494f48cddfa8993"
+    },
+    {
+      "path": "extensions/cw_plus/PURCHASE_RECHECK_FIX.ru.md",
+      "sha256": "711718c1ba86f2b3e8f08d4d9a093a2e9d0b72666a7ae638dd2a7080c23f8734"
+    },
+    {
+      "path": "extensions/cw_plus/ROSTER_RECHECK.ru.md",
+      "sha256": "ca680a94df5e870eebc592102451c9d7d2682e678ba74d01629d4ed7acef312d"
+    },
+    {
+      "path": "extensions/cw_plus/RUN_SPEEDUP.ru.md",
+      "sha256": "7272f399513fc57e3074ca25658aaf98f996b49cab9eda5d820e0b6dba7ad030"
+    },
+    {
+      "path": "extensions/cw_plus/STRATEGY_INPUT_FIX.ru.md",
+      "sha256": "94848bddfaa3ea40c57a377b26d1f8f2246f2a00aaf2ed1175cc1402b8aa41eb"
+    },
+    {
+      "path": "extensions/cw_plus/THREE_OPTIMIZATIONS.ru.md",
+      "sha256": "0e5d4269182ac9a70b52546ab4125fc2e29e2d1aecc36fbf111714e3220903de"
+    },
+    {
+      "path": "extensions/cw_plus/game_input.py",
+      "sha256": "8a28762650ba6a28045b0aa239bbd14edabeda69daea2f9a752a61816e201210"
+    },
+    {
+      "path": "extensions/cw_plus/resources/strategy_code_paste.png",
+      "sha256": "f3410a4d2a32c756434084d54fcb0e01f19f8caf2f5ba8bb980ae5363967d8b4"
+    },
+    {
+      "path": "extensions/cw_plus/resources/strategy_code_placeholder.png",
+      "sha256": "92755b31d86957f1a98492b0e6bebd6e8a3ce6b9f484d905737e858d2e097952"
+    },
+    {
+      "path": "extensions/cw_plus/resources/strategy_code_title.png",
+      "sha256": "6b91e32f3f1b2dcf74af2a858def4acdd37cd107a2539f5e598873e51335139c"
+    },
+    {
+      "path": "extensions/cw_plus/strategies/himeko_global_europe_20261026.json",
+      "sha256": "62583343108ab9ce16a3b5e00ce46275f4639f75ab1a400c48f85b9d3d7e8cbe"
+    },
+    {
+      "path": "ocr-models.json",
+      "sha256": "b8baef826d13189a24f70aec2d4da864ebadbccf010f5fbc356dca7104ddb35e"
+    },
+    {
+      "path": "scripts/build_ru.py",
+      "sha256": "93aa2b1fddb6b2f01b83f3b6477ce1041ab98bb735b1f522562e3a20295a90a4"
+    },
+    {
+      "path": "scripts/check_offline.py",
+      "sha256": "6bb11ee71ea8d8a1f9b728c9b95d62fde511dace43023db1e145f60470c15579"
+    },
+    {
+      "path": "scripts/export_source.py",
+      "sha256": "84364353754c09e5ec4b52315a2be4044842877c2fe20c3f2f8e7517cb6c010e"
+    },
+    {
+      "path": "scripts/prepare_gpu_payload.py",
+      "sha256": "038ba006688a970f27bb2ea334c1fe220e3ec96880f2292373f34c0162f301da"
+    },
+    {
+      "path": "tests/fixtures/cw_strategy_code_dialog.png",
+      "sha256": "13768be3692b97266ec956f938a47e63f099dafbf615dd269f14ce5de1913c73"
+    },
+    {
+      "path": "tests/fixtures/frontend_empty/earlier_run.png",
+      "sha256": "9a9e7d0aa51bf0d47ced7bd02a61e4cde0faea0e3e514925d329ffa0841aed6b"
+    },
+    {
+      "path": "tests/fixtures/frontend_empty/provenance.json",
+      "sha256": "3f2098419eb78aab1d90ed908e4a31156e859dae1ea8691a6cea4d8683a14531"
+    },
+    {
+      "path": "tests/fixtures/frontend_empty/round_1_1.png",
+      "sha256": "6dcc24623944ae4cbfd0dbae0d7bf04b47ea47f2060bf0f2bde109c3da842558"
+    },
+    {
+      "path": "tests/fixtures/frontend_empty/round_1_2.png",
+      "sha256": "de84c42aa7c0650e11a6caecf72f96212251aa4306c85b776e059ea3dec46f36"
+    },
+    {
+      "path": "tests/fixtures/layout_performance/golden.json",
+      "sha256": "82b782794c7ba664f942b683207ab6bf9bbdabca52bc63dcd9eaeb0feab0be84"
+    },
+    {
+      "path": "tests/fixtures/layout_performance/no_badge.png",
+      "sha256": "cab3b6b187555702f76cfff718686117794d7ba2731bc057d9bfdca38d156964"
+    },
+    {
+      "path": "tests/fixtures/layout_performance/perf002_full_golden.json",
+      "sha256": "21deeef826ca1238c915dba1de7b5952f31029cfe4145f894994cb0ce4621d27"
+    },
+    {
+      "path": "tests/fixtures/layout_performance/perf002_projection_golden.json",
+      "sha256": "4cfbfe535e4461a3c944d3ca7ad006ba6690475fb91243fd647dc441055a6940"
+    },
+    {
+      "path": "tests/fixtures/layout_performance/recorded.png",
+      "sha256": "e09632e10a35c038baad672d230401382ca1c893be4f650947e0f4f860e0a0bf"
+    },
+    {
+      "path": "tests/fixtures/layout_performance/reviewed_support_control.png",
+      "sha256": "ccb973a702818f1f3366531ca7dbc52b6a114e907bd8e5be5b65060b79134bed"
+    },
+    {
+      "path": "tests/fixtures/page_search_perf/golden.json",
+      "sha256": "900b3d8b776e70a5c0393d503ab5fe18b7c5bd9b0919bf38d0100367f4e8bc04"
+    },
+    {
+      "path": "tests/fixtures/terminal_overclock/ocr.json",
+      "sha256": "920a9fa5c1f14f3bfaec9a2049e93b5f302f4e4e3c2760667e60563f1974a9f2"
+    },
+    {
+      "path": "tests/fixtures/terminal_overclock/provenance.json",
+      "sha256": "6facd72a50e4b82c2a4ce9dcaa06a21687fc21360b7be513e0db7dc27caa697e"
+    },
+    {
+      "path": "tests/fixtures/terminal_overclock/summary.png",
+      "sha256": "017e9fd9299dffad201d92b7554891b8371f1120eade0feff0fa1edca4a5bd45"
+    },
+    {
+      "path": "tests/fixtures/terminal_recorded_235133/ocr.json",
+      "sha256": "abba3c53eb31149d2cae39564065d58872fe9189c025203f1ed2a98ee7e8d34c"
+    },
+    {
+      "path": "tests/fixtures/terminal_recorded_235133/summary.png",
+      "sha256": "95a408e85e8a9c3040b7bcc986b0d07926a9fa3cf39e9ac59df03c4674a138f9"
+    },
+    {
+      "path": "tests/perf002_projection_controls.py",
+      "sha256": "b21dba8bcf921d932ab39c433c9119581e493a69dccb140e0472cef5dbe55ea4"
+    },
+    {
+      "path": "tests/test_currency_wars_combined_diagnostics.py",
+      "sha256": "37de6e21df7ca61abc5f45ccaac08bb0a526401ead33ff17a90259d802796b39"
+    },
+    {
+      "path": "tests/test_currency_wars_formation_order.py",
+      "sha256": "2a8e7ef4631ecc46cc31ee690b6160182c38937ea47e34b93108f6a4a5bb1ef3"
+    },
+    {
+      "path": "tests/test_currency_wars_frontend_empty.py",
+      "sha256": "d740a030ac057e4a6f50058e9572c119e069696eb2e6731ffca9e5cafa076651"
+    },
+    {
+      "path": "tests/test_currency_wars_identity_recovery.py",
+      "sha256": "40ce814231168de215ed190d910ee9239cf6cfb8be383ead97d71fd1a1d62fc7"
+    },
+    {
+      "path": "tests/test_currency_wars_layout_perf002.py",
+      "sha256": "34a3c54dcc713cf8187a9d7d01b06a69ee04aadf661bcb9b8a65a2fb3c28db09"
+    },
+    {
+      "path": "tests/test_currency_wars_layout_performance.py",
+      "sha256": "63f9f25eb08a8a9f374ef56cffb6bf546958edc3cfbd0f36b35a3ad229ff9c5a"
+    },
+    {
+      "path": "tests/test_currency_wars_page_cpu_perf001.py",
+      "sha256": "7d8735b427c1d89500210bda5ad88d422148f1add63b7414defe0a1c0085e496"
+    },
+    {
+      "path": "tests/test_currency_wars_page_search_perf.py",
+      "sha256": "933fca9b44fd142a7908e392995e69b9ec5c99d546621b6a1aa773735e8e5be9"
+    },
+    {
+      "path": "tests/test_currency_wars_panel_snapshot.py",
+      "sha256": "58b0d5bf5791cabe8e8dceff2bdd577efa348637df496554488c900b77a4c59c"
+    },
+    {
+      "path": "tests/test_currency_wars_partial_store_diagnostics.py",
+      "sha256": "ad212cc7087bb4d07baab0b00237f8f80ec660fe18cb8f6490188ed1e1aa123d"
+    },
+    {
+      "path": "tests/test_currency_wars_purchase_scan_plan.py",
+      "sha256": "779d230b675c05297e6e17d228770a1d731594a5edc9e0abc1895dd37c7a39fa"
+    },
+    {
+      "path": "tests/test_currency_wars_shop_input.py",
+      "sha256": "2d8d39f2cd59c01fb7fb6d3819c0c0e33fa990889e66c669dccbfd731ca7ee94"
+    },
+    {
+      "path": "tests/test_currency_wars_shop_navigation_perf.py",
+      "sha256": "37c89da92c591a5aa2d9962b71a83814f599c5c4d6e3640c4bc4b6e3ea098565"
+    },
+    {
+      "path": "tests/test_currency_wars_slow_preparation.py",
+      "sha256": "42559b9f94fb815c558879aea60bbdfe0b60981a672e1af79bf489113fa5e66d"
+    },
+    {
+      "path": "tests/test_currency_wars_stage_timing.py",
+      "sha256": "c531b24a3e35465937e7b1053a2239883a10e066000dbb74da6d2519418e30ee"
+    },
+    {
+      "path": "tests/test_currency_wars_strategy_input.py",
+      "sha256": "4e920663fa7633e387c359797273057705ce2f92cfeda3d1d2e181a17135543c"
+    },
+    {
+      "path": "tests/test_currency_wars_terminal_exit.py",
+      "sha256": "f5939de4b8366344ad65fbd4067a5400307b32b044285f2083a694c30ec2d75b"
+    },
+    {
+      "path": "tests/test_currency_wars_terminal_recorded235133.py",
+      "sha256": "b4df2400226f884d1def9eabc650b80c385e5287df0f0bc3ef64f9a3de628f7b"
+    },
+    {
+      "path": "tests/test_currency_wars_three_way_integration.py",
+      "sha256": "feaab004c7105258af21573c0f760117fb4b55f1b78008c24b066945c843a4ea"
+    },
+    {
+      "path": "tests/test_ocr_provider_diagnostics.py",
+      "sha256": "18777fd77bd40b960e02ddb14c4ec76169c9e305673024b85c67be9e2bcac300"
+    },
+    {
+      "path": "tests/test_russian_localization.py",
+      "sha256": "3b14d2288fb72f83d36777421fe67c0ef14b1d75405d2912406a5476eee9450f"
+    },
+    {
+      "path": "tests/test_source_export.py",
+      "sha256": "15efb358221d19b6617f0ec68739cf7c248c47d59531d69c1066fc906b8dae1c"
+    },
+    {
+      "path": "tests/test_standard_io_utf8.py",
+      "sha256": "42548b877152f3e7c11da08d9961990cd30e7209e5c6f7ab62362e316a2c467e"
+    },
+    {
+      "path": "vendor/onnxruntime_directml-1.24.4-cp312-cp312-win_amd64.whl",
+      "sha256": "f2ecb68b7b7b259d2ef3112ae760149f9b5a1e7c0fbb73d539da6250a648a614"
+    }
+  ],
+  "changed": [
+    {
+      "path": ".gitattributes",
+      "upstream_sha256": "5feee77e0014be918c9bdd1775e79c9448ed4c24034b98d358b42ef88f4c882c",
+      "sha256": "f47a9ddb95eea557b63e04df76e94319706c4f859aaf938e173b4a051ac6df59"
+    },
+    {
+      "path": ".gitignore",
+      "upstream_sha256": "fca5e78128860f165db748e2bf96ca8df7b07e816b185d091edaa27134777a2b",
+      "sha256": "5ea151a59e5c22b4b6dc48dff62738bda24c9161d309914151212bd18b480dc2"
+    },
+    {
+      "path": "AGENTS.md",
+      "upstream_sha256": "98b2f15803b5e552cea4cf71d9b096161ba1bee7ee810042955414d005e2cc39",
+      "sha256": "538a946f1a3916fe8ce903ebba373f75d6d6489471fc5c7da5a372bb4b584c46"
+    },
+    {
+      "path": "ChangeLog2.0.md",
+      "upstream_sha256": "3c82de7af5f13a884b531e149b8b12aefcc2c0a64a97ccd0c7547b5692ffe911",
+      "sha256": "beb74a68d1526aa862d22ff75c95d7e4a005e45b256bb796122ebc6b7945db4b"
+    },
+    {
+      "path": "README.en.md",
+      "upstream_sha256": "7c78b7e426eb588bf68bf2ebd11718ff6ef6b2d286460a3f5cfd206895c1a14c",
+      "sha256": "78a368300cd7141a8be859fd7604d7c7a7510d630269cfd214d8795160e6a9f3"
+    },
+    {
+      "path": "README.md",
+      "upstream_sha256": "bc62720c6e24eb961210b1845799e27327cf06aa65ac2055eb647f8a6d6d8e8e",
+      "sha256": "ba88b555b0f1feff3d1df1e942212fea9cadf9258aaab31ed905e37ba45d6cf5"
+    },
+    {
+      "path": "SRACore/__main__.py",
+      "upstream_sha256": "8dc613958b29a97ae4a8fcdf554d00e14a24c751a140eaba1314dd64f8fa5521",
+      "sha256": "a153f31635e793af6e493417e19ef49240e395d5a3c079e7ac617d211c83c330"
+    },
+    {
+      "path": "SRACore/cli2.py",
+      "upstream_sha256": "07a16e8a93b67a4ea6ccbd19726a814ced01c071c2b5610ed07162b6a98cf07a",
+      "sha256": "b15bb2b4a3300ee5ea8f96ce69631722acb21378c70da935f6fadea6080b6669"
+    },
+    {
+      "path": "SRACore/localization/resource.py",
+      "upstream_sha256": "208fe91d64d67ffe5d15fd6e5f8c1145d2a47128a438b5c67840ff85ed8e0c71",
+      "sha256": "b2f2dfb9a3ce88cc5bf5ad312c806d0feb1b184fa98419d0af56fc22fdcb60c2"
+    },
+    {
+      "path": "SRACore/localization/resource.toml",
+      "upstream_sha256": "58cd8395c9f1ab5acdaef73c1e68c24398cbdb4a2f0d7e8c0f59cf4babe26dc2",
+      "sha256": "0d8d2b6a33149852732b56a7a3f32a108cb453f17e05b0451cf8689325734f38"
+    },
+    {
+      "path": "SRACore/localization/resource_en-us.json",
+      "upstream_sha256": "81f1b404ecfce20b2a84aee8699a5b375e311c76001598ae4377414c4a0ccffc",
+      "sha256": "9302abaa3090b5dce7df09676b251033116074f912f0863f6a6e3e4e3de37f10"
+    },
+    {
+      "path": "SRACore/localization/resource_zh-cn.json",
+      "upstream_sha256": "5ec45fb862734af314ef47199d2c40614dc1f39a8eac5ac785f2183a2c5f3c68",
+      "sha256": "9866295632b04124bc2d3fd031b2f494192e7a34783d3c0b22f078d15c6d120c"
+    },
+    {
+      "path": "SRACore/notification/models.py",
+      "upstream_sha256": "1a7223c5142efa41ecf3f38d7d5104d7ef595361939e540ee0a55e03a182662c",
+      "sha256": "6d1e65b83f86abb00cf776842209669dd1a53f64faf4592a1a60a4d100eed8cd"
+    },
+    {
+      "path": "SRACore/notification/service.py",
+      "upstream_sha256": "54c68336d2a3476aeaf72772b0ba192a0ee8477af090a7cab000cd52f24e1aaf",
+      "sha256": "1eb4694f20d0617dcee21fb57767ce8c3521f3c76ba26f5538ddf095cdacf35b"
+    },
+    {
+      "path": "SRACore/operators/browser_operator.py",
+      "upstream_sha256": "f7f7cbdbce40621ca5f8097e92050d235ac07e5363a4303f4c00ea9d509e0023",
+      "sha256": "15f68ee4e7bf41fe0ab4468c15f4ba808e3f326d7a4675b8782bedac5622d196"
+    },
+    {
+      "path": "SRACore/operators/factory.py",
+      "upstream_sha256": "cd7aec1cc29f650df47a71dec6af99bb83021f21aac8650231f3bc453532dc3c",
+      "sha256": "755cc92455312cbd8f5f6f918f76f55fc3b07d45b7b948e58de5ffa018ed032d"
+    },
+    {
+      "path": "SRACore/operators/ioperator.py",
+      "upstream_sha256": "a09695b2a2d308b8b935cf50cb15c333155660c702591b1b6c8638fe509f3443",
+      "sha256": "08663afe42e5aa20a44e5283ae7d634dd06e0791b78d61cbdbf44cdddb042c1a"
+    },
+    {
+      "path": "SRACore/operators/operator.py",
+      "upstream_sha256": "4aa7f4e1d3f763907f34f7f68f7de26430f4d81322e7b5f0d5902f0732f99a53",
+      "sha256": "c1d01f12a77a8ceee5ba24c3b5bd9f6afdf2115f3969cf0ce415963f96b34710"
+    },
+    {
+      "path": "SRACore/util/logger.py",
+      "upstream_sha256": "246beb1cd5f52748e1964d44b0153c19edabaf5b4dd996d857b49cf61fac297c",
+      "sha256": "4f0f27d78b0b15e258f19b9344609281b538a983836f0e4cdd5b1e28698369f7"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/App.axaml.cs",
+      "upstream_sha256": "96e4970e8e478bcdfaad9cb3ab6af690502ccabe591f0489707f1e4331b5babd",
+      "sha256": "1780b191f6ba4412f1b9d2e9dff2e5a9345b1651f3062ab2d9db2a6f049e96b7"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Controls/ActivityPageView.axaml",
+      "upstream_sha256": "f8487f21d63aa998126c9f9e167f3955421d56d97b031986b7b69b17e2b2a540",
+      "sha256": "2ab158279143a3182aaa858b1b27f181ce4e22aaccdb2793f1e5a00a2f3b6f48"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Controls/ActivityPageViewModel.cs",
+      "upstream_sha256": "4a5da4b25624e11d6decb59001ad3bf9d08be26532e38117bd0b12a6219597f6",
+      "sha256": "d312d62c95e1fca1c28a0bcba6d9e4577d60a69e3e3b81e0eabb24ad8c0f6a86"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Controls/ControlPanelViewModel.cs",
+      "upstream_sha256": "845d88cb16c0b8d9fd213f9228d479f56d0c66ec7c92739c2658c0787051e5fa",
+      "sha256": "51b8a1f4aaf8fd0b0e2037e08832d5493b35aa5f252d62855bb00c9f5024dfaa"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Controls/Converters.cs",
+      "upstream_sha256": "2d5597ab30c9e9d7e86dad2bf411838b66fcea5247e2ce223b2cf4133b594846",
+      "sha256": "cb3f549c3172b56db87a8903cbe1cc3f68ddfee18c09944a50e1d06de3932dc0"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Controls/OverlayWindow.axaml.cs",
+      "upstream_sha256": "68a6f6de6e4c53bdc55c1b892456f54dd4715f1b40b4bffd6a894b4db91f8b18",
+      "sha256": "9dc3c6edbc329eaffac7a6b4f45452ec785c5edc68bb939a1a85a45c8ec971a3"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Controls/TpAddTaskControl.axaml",
+      "upstream_sha256": "178e049f21bbafd0d0d9d39781bdd9df766c587ce96f9107d9d679c410515ebe",
+      "sha256": "2f53ddf272cdd3ab4ca5ebed3b6c34a1351833dbddf12660212cc71d5d124dcf"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Controls/TpTaskListControl.axaml",
+      "upstream_sha256": "382ed8c962f69718d8f522ba9e7a8e06799ae98f787bbb50d4acd164f0e5dd82",
+      "sha256": "cfe126fd75671cb58c130741b5caa54edcc7124e3ec01a24c8c81daaa1d2bc53"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Styles/Styles.axaml",
+      "upstream_sha256": "953bfd80cc443c05abe481ed2a468832882563674a029fa114f3f9c2ca3f740a",
+      "sha256": "227aa4cf40928defd3441ec24e586a67eb8467b5940c18a2e378478fe21cc672"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/ViewModels/CommonModel.cs",
+      "upstream_sha256": "39a18f99cb7cb87948a7cba78db320030a2f6f023b877444f69969180bad85c0",
+      "sha256": "a07e5ee86794a50948b1c32b362ea2de82181679203c780ec2c6fbd4f5e861a1"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/ViewModels/ConfigFieldViewModel.cs",
+      "upstream_sha256": "1808d2caa82fa78905e41f8fe301f4c0786381504089fe32b67fbd5c5ab2a24e",
+      "sha256": "2e5c7cf261af92c1747754e1f99f9ef3faafcbd85a7a5ae4a22309cc6b77f004"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/ViewModels/ConsolePageViewModel.cs",
+      "upstream_sha256": "2f6ef16de57b2caf5325a9bd9706978ac46275a0686e0bf76a49c7df2fbad19a",
+      "sha256": "a34bf80e235087b443a019c6811a50e2ae8a4e31657e1acb708c386609bb848b"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/ViewModels/ExtensionCardViewModel.cs",
+      "upstream_sha256": "dbb7c7d60162493361fc2f56e1c670ffa48bc3b043c8c2d8f28a3c07796ca848",
+      "sha256": "8346ccb09b965fc0e5889c89decfd323b8bf2818e91fdd9673a9230bab55356d"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/ViewModels/ExtensionConfigDialogViewModel.cs",
+      "upstream_sha256": "7bd096b69f3ed5b824bbe7e2a9182375d12f4b31089605aacc55ee67ae714b00",
+      "sha256": "935538e6ba1f06638a24a1495aaee7a33be00fccaa0dd98ee1ddc5d264a096da"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/ViewModels/MainWindowViewModel.cs",
+      "upstream_sha256": "bf56a5197e95f5193276883fcb2972020c8eb5376b133e0137346cc1b1ebc8a4",
+      "sha256": "8a17340bfd974bf60812084e1eb68d21a351a9315ae64b659e45f96bb2537f6b"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/ViewModels/ResourceCleanupViewModel.cs",
+      "upstream_sha256": "39ea0db99c2bd32d01e72c77ee2b2a3d78fd3f360d929a090a66af1c1930cd1c",
+      "sha256": "91a574e662fd4ab91ff3c7fd266c2636aef1d341806fdf5cf58d5128a6634c68"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/ViewModels/SettingsPageViewModel.cs",
+      "upstream_sha256": "c4980375e31f67037eca501512cd284137a229759eb001e03fcba1ff6466eaea",
+      "sha256": "a03daeb3b80e0f06f35d934cc303c039272dfadce65d5d4edd4149871449130d"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/ViewModels/TaskPageViewModel.cs",
+      "upstream_sha256": "0647a65953b951ce02160a73ef1226ecfd95722a99489b2ddf97ab2ab3ac8354",
+      "sha256": "7f1f52978e4a9b58200518fdc3f20443a8b4310dbebcc94fbb6cb71ff97dd302"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Views/ConsolePageView.axaml",
+      "upstream_sha256": "9eba2cbc963996e24a38dbd27b33559bebf835c221275f5bd21e9b594d5d8f58",
+      "sha256": "c4dd147256b23f65ff48f02beb6d5b1479416873502fa6928823606649781933"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Views/ExtensionConfigDialogView.axaml",
+      "upstream_sha256": "d06bee78c848d9170336b79fca92449ca0f1079bb0bd2be9cbd7e53e1ca9056d",
+      "sha256": "ca3c7fa8ccda92f9ad837bd48d2b37058e5fd97215ecf09e396ad0c9cec75a09"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Views/ExtensionPageView.axaml",
+      "upstream_sha256": "68ca598971104179f7137a1255c149231fda49154a591858f5e93374e12dde38",
+      "sha256": "5405c1a49a0de6bfd98af2c7627287430d07c0eff7da7baf9e3eed44c0834302"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Views/MainWindow.axaml",
+      "upstream_sha256": "05ba04e26a75e5f676029cb48bd4e7be372e9ec58509d1cdcb7ac524702fd7ab",
+      "sha256": "7a1802fc7efcdcbcc1c8d3415f890fd8fa5e7b530484801c1cb47ce7d625b76c"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Views/ResourceCleanupView.axaml",
+      "upstream_sha256": "3f4bb8f99d18eb9a5a47fe3ffd81783097b403798499ffd0a2553499df11c01e",
+      "sha256": "2632fc691c66c9ec2b31ce7033445b354ca0fcecc3d9c0f71c8e41be2b3f9b97"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Views/SettingsPageView.axaml",
+      "upstream_sha256": "6fb79334067621f418f0679275b47c023c7ac46129974b6d24415e77b9f51c0a",
+      "sha256": "1eb65e746c54edcf0e98d05576642a049b039eade33f2b4715e06df88e75fc4b"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Views/TaskViews/CosmicStrife.axaml",
+      "upstream_sha256": "c650f2a4a2b042c20fc0f66784ec568bd94bd99cc47f30ba27850fe3de3b8009",
+      "sha256": "3ff2e96e0f57d45d6fcc06cc2f46e908cd93e84cd6c6835f2cb7ee2cebfd4c77"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Views/TaskViews/MissionAccomplishView.axaml",
+      "upstream_sha256": "2a33c85ead30ac25b36f7345b296ba363f1303a32be75fb34679d765b7591c86",
+      "sha256": "96482854b0d253b8f2f48d61f0c50cace02651f890ed741ee223bb3d049d7055"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Views/TaskViews/ReceiveRewardsView.axaml",
+      "upstream_sha256": "7cd9f2acefb7d44169b5779bf3d658fce884170041ea0fcd429faa10693336ad",
+      "sha256": "32f3e40dbe531c1d4a0a088830ed1ed5bb2bbc063c7cb52ca006c4a7e25e99dd"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Views/TaskViews/StartGameView.axaml",
+      "upstream_sha256": "5095eecdb400fd7740c492977f0f455f57174efbff735b798d779665c3c68238",
+      "sha256": "0692aac9a8164d0ad1b8335f2a9852773b6d6d3fbbeb190d0922a46bae11272b"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Desktop/Views/TaskViews/TrailblazePowerView.axaml",
+      "upstream_sha256": "2c0c4b5b1c853842eecb7afcb86286472ee963e91a4e5863478482c38a57f72b",
+      "sha256": "a70c38b1234a4af44ac24e31f59c4875c6d4b2b520cb06934078bc60dc380ba0"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend.Server/Services/HostedService.cs",
+      "upstream_sha256": "12e2bf9ce19f5b609e5ea6a8ef895274324fa2dbc85e021d0a3d608fceca86ec",
+      "sha256": "515cb829f530d7e5e380e4b8fec40ef692d388d60eb8d4b0a05da678ed8a526f"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend/Services/AppService.cs",
+      "upstream_sha256": "6435a8ceb1f31b93c097c7cf1fa4e3953fe76b7eb1e496a0b991197f32faf94d",
+      "sha256": "edf65681d223411b6de03ca8e6d12b3b495c4351e780c6d2abfa9109deaa3123"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend/Services/LocalBackendService.cs",
+      "upstream_sha256": "6141c6b497ceed2d99b9c187b944ad2deb8ba85ba0e44892ad7b36a5f815ae24",
+      "sha256": "1bf57cf3bc942e7a98d102593570c9f75e77872b9d1c75139049aa92a3d2e8e2"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend/Services/RegistryService.cs",
+      "upstream_sha256": "dec32660b65e613d395f4cf3ac1b69ac1e87b4a448efff2de36a9a98dc14207d",
+      "sha256": "5c513f0b9b3c591dd3a743769c498596194f7d3cb6c12255c4a4fdc6c40f9bfc"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend/Services/RemoteBackendService.cs",
+      "upstream_sha256": "2536c265cae1c9bd4aa9c1bbe52b8ed3d1f61b46767ab20ce8836e214a37cc00",
+      "sha256": "27ff678377f11025630ead3f52c4177cce680cfbdb41302fa101a8fffbafad73"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend/Services/UpdateService.cs",
+      "upstream_sha256": "37ddab4914fd73de2f60202bfe7ae9f50d2ca6b7011f8a4b98fb963e8d64725c",
+      "sha256": "cd2937d0a4872b3a1401d8a8f0245a2928e7e39c4af74a8b307cad67a47a56d9"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend/Utils/VersionHelper.cs",
+      "upstream_sha256": "4559e40b24bfc8b2dd8af83268e3c2f1436835243479165575ec2ddd9810ff85",
+      "sha256": "ffc2e1fb8da6f191db29024b0698e8559bd1c29fdc4877cef7d4d24f7e2b6771"
+    },
+    {
+      "path": "SRAFrontend/SRAFrontend/Utils/ZipUtil.cs",
+      "upstream_sha256": "7be3b2802acdbc4c1c7ce5116ac744e3fe3dad3bb9827ecd7bcbfb324bce0aa0",
+      "sha256": "19f0c9de41e4a72f892db1a432ae2879d274c56636fbff10678e1b510333bfef"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/.gitattributes",
+      "upstream_sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
+      "sha256": "26c80dec18407e7b90f84d8b6d57fa75945e6e74acbe1307abc546472473d28d"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/App.vue",
+      "upstream_sha256": "c985c58432460832814cfbbcee29a6f3840cedf0aef37f247383aa3f7006ba54",
+      "sha256": "d8627d75909418fdfced1fdef7b005dcfd55bbb22c6a42c3300e07905198cf30"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/api/auth.ts",
+      "upstream_sha256": "80523cbe0b3d06c360feb20d91cd9f8e698cbfa73ae9aeb5117b85b1f9dc8f8e",
+      "sha256": "35de3853d320838f80becca2669b5fa5d093f97a817588c9b4c2cf8e04c27df0"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/api/http.ts",
+      "upstream_sha256": "43f676e4a2f1fb1440c9a551be3bf274f2884e7f4251989408069c73b9a8a74e",
+      "sha256": "b7df89fab7d45c8ccde36f56b985db45ff9508f8e2478b6830f55681bd62c436"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/api/live.ts",
+      "upstream_sha256": "eef14b413236753d33c04770b773f290c19a5156fd14aa300d9bd0dfc7f152dd",
+      "sha256": "2063818d6aabafd0d2462e1c48dcff80072c2f0ffe8dfd5dcb0356c81724f2b9"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/AnnouncementCard.vue",
+      "upstream_sha256": "cc731e56684491e2f9673ad2d96edd36a50e42bc32a48ebe3bc2c4c10b16b15d",
+      "sha256": "f5fc14ecc7e4236975b4411857f0a8b26bb98bb6123b4f2755ec5fd789dcdba6"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/BackendControlCard.vue",
+      "upstream_sha256": "ae3aed8ddcede7c3047abb4f074a03965c6fa4cc7e531d08bb6fd4ccbd805960",
+      "sha256": "5d902cda25401f6f2d256fb5b920935aa2553773d2f4fd09c951d9db9d898cbf"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/BuildEnvCard.vue",
+      "upstream_sha256": "2e22af925186549aab420df900921dd10eb3e0069e02c62bf9da1f12a8a6a183",
+      "sha256": "1eac8a7ab6b0ba020d8d2d774284eff7c792c40da440cc96b39333d318928a1b"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/ConfigCard.vue",
+      "upstream_sha256": "e60cde27fc2d14a294e7c1e1dfb63aa7d8284afa89c6cb66edd6e5ced743ee9c",
+      "sha256": "969c3a8a7b607c425fb5b47e3662ccf1e61a7e9848086e1078ca60684afa4ead"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/GitHubRepoCard.vue",
+      "upstream_sha256": "a4fdf0a578964149d8510fb494125529c2d6fc88235a44cd2b37cff75ce799a1",
+      "sha256": "1e53a3c239d3e2279ae3bdfbf77ee7810a8b7076df8ccdfbc31114250ecba41f"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/HeroSection.vue",
+      "upstream_sha256": "e64088bde81fbf34bd7f790292990c643a359cdb1501bd9366b4189927695210",
+      "sha256": "097f1c881d4c88352aff67f9808dd9d54c2afe1224af788f574ca8f749928c2d"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/LiveViewCard.vue",
+      "upstream_sha256": "1027d171bb6d409b484a94d50090d0462011f72e6a5a39c9746ace4ddd84b991",
+      "sha256": "98eb876de253ea65a4209a8c2f81779d1979a7811ad9205cde0ab66bc17cb447"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/NavBar.vue",
+      "upstream_sha256": "12467422cc90f039024a454180ea63b2ac6b0d373c4a9f477427684538c7bcee",
+      "sha256": "ce696d72f5c4ba30c7b0dcc14cb143d29c961fbe353b4cb12aa40741164a37cf"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/SchemaArrayEditor.vue",
+      "upstream_sha256": "94eac5eda368c72d93f986ef57fd9039896814da458642c872ed15e23b313140",
+      "sha256": "1009db029d6903989511221083758e4a9f6c66c5b4cba23a722e9d08fa4a8124"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/SchemaField.vue",
+      "upstream_sha256": "a519d1ec6ce257649a0075545eff6159de3861a6981b08c493c1f0385a49c159",
+      "sha256": "37825b1a49f704a9b88acc3a70baac2ddc36b798d98e52995fab0195467a43bc"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/SchemaForm.vue",
+      "upstream_sha256": "d8aa3b8eeb9c81200b3ccdb3f48116670103eb5864e51c639021229bd7a82a2e",
+      "sha256": "7d51026955605a63c3608937962cf05f42ea89f77cf3da064afe8c0eb10e529c"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/SettingsNavCard.vue",
+      "upstream_sha256": "0ea2889f78ee3733451799989d33f100a928d07b63f5879dcb649c3c07c68e9b",
+      "sha256": "e6c07303607492b78ee9edbefdfaf5e00fe04944ca9f2fc5b653d72672a2ecea"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/SettingsSectionCard.vue",
+      "upstream_sha256": "96ea220a729bc1003cfdc2f773cb36351590bbffe7b8c86aff4f43a30d711aa4",
+      "sha256": "8ac9e967b61ceaba4cb86cf1a798fb0bae6d54403118cf0ca8ebbd21522bed9e"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/StatusCard.vue",
+      "upstream_sha256": "7dacd652ef917d7bf0a31be197f6908b1a0323c20a9d9d3177450b84e85443dc",
+      "sha256": "1cafe8f09b7317ac0c83d9a31d7f28ef3eee3af0b5bb8ec78d8266500db48808"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/SystemInfoCard.vue",
+      "upstream_sha256": "875e397c55f638df875f6b7201f06b821bc726889e858ef6afaaf00307ec23e2",
+      "sha256": "4640edd27b11c74e4b4f97bb4121231481c72c67ae6afb0677d5bd309e29e3bf"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/TasksConfigPanel.vue",
+      "upstream_sha256": "470ff242aea377f1d82e6550904463292b7ecabc2acf90c31cd3c18e94c847de",
+      "sha256": "04dcae9c91509033693a6d555c6d967298bc87584618b9ab69ba8b544ada01fd"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/components/ThemeHuePicker.vue",
+      "upstream_sha256": "f27ac9f0ec928d41b0ba53780998f9ed943c8f3c009864fba62efd4ecd90378c",
+      "sha256": "afc73bb9884d30ac55b976b6a17f98ad5507da1a01903aeba44df03363205ac8"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/composables/useLogStream.ts",
+      "upstream_sha256": "eeb2783d268f1ad4cf376c312b35a7b1bf12ccba9974c35188c454a6d7bbaf92",
+      "sha256": "6e3e60ee21280bf6fe777446c601db662ec643c85b4280a27afead341e74946a"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/configs/siteConfig.ts",
+      "upstream_sha256": "517d4b3d861d7033074e38ccddd79dec9a09698e3d96bf88cecb3c2a4817c526",
+      "sha256": "8460be0097bc6f73f12d90e44fe9a0079b82023364fe1400228b3053626bfaf8"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/router/index.ts",
+      "upstream_sha256": "399dfd599051ec1beec7ddc2055f147f646a5789e90bdc6394978a6df4e1eda1",
+      "sha256": "b2b86ea6fff681903f7ee9b4cf7e526828da6f31c22797500368ef67a1f7eb31"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/utils/schemaForm.ts",
+      "upstream_sha256": "3277c8e86395c00f80dbd5482e2e823ce2e1d2ae62c3357883c24c7cf21de539",
+      "sha256": "77067f50780683b6b79873379fc1ff538018a2bbe48a641f0c82a5429851427f"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/views/AboutView.vue",
+      "upstream_sha256": "df175f30b20cb0e24f1175ccc6ed1839177e30ac59553587423a4238d82b1acc",
+      "sha256": "8581a04cb94235cbf4d965ae553a53953d2cc2038b87b62d18425667dc58f0f7"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/views/HomeView.vue",
+      "upstream_sha256": "32a7ee1683bf79443aaf8c88996d4da3166e92e0d602bfe7311cdafb7876777a",
+      "sha256": "10b68cbee64f3cbf341e92100807afe89e713fcfa36cb6280a9201cc3e5dff96"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/views/LogView.vue",
+      "upstream_sha256": "914281903171b40cdd4589b8c84bf52240a82a579c056504a80d4391e219b4af",
+      "sha256": "201afe7e171b8302d7e90c946f73bec108b32fad815ed67ea919c4522fbfad8e"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/views/LoginView.vue",
+      "upstream_sha256": "2cc8a2c9352afaeabc0ea7a5a4501966a4dd00bf01234aee671cce877eb411d7",
+      "sha256": "4239e697ac6e33edefdd1d9271f8973f743a2975cf31ccff3f3db78385554af2"
+    },
+    {
+      "path": "SRAFrontend/srafrontend-webui/src/views/SettingsView.vue",
+      "upstream_sha256": "a54a3836f444d8fd46f18b83741448d54a4215756cbe1d59bd9cd9990ced1ed0",
+      "sha256": "c5e81ac2f505a859b1d17d1878ea476829863ff906cc24d78bea45a45f65d257"
+    },
+    {
+      "path": "extensions/currency_wars_plus.py",
+      "upstream_sha256": "61e608ac123c7cfaf1767f6bdfafd4f2df80db8cd7b4694b48f0ae4ebec17fcd",
+      "sha256": "6caa2ae8f9dd0bf95398ce20a63e6e07eb1a8d4a37c8027bce7650b895aabbb9"
+    },
+    {
+      "path": "extensions/cw_plus/CONFIGURATION.md",
+      "upstream_sha256": "c884dc252a88c626a232439ffef859972349a98b17c3b569caa295a8d1f0caba",
+      "sha256": "5573fd1d40f5b4087ca9e717cabffcd902ab131f0813a1cac77b2517d6c3f542"
+    },
+    {
+      "path": "extensions/cw_plus/CurrencyWars.py",
+      "upstream_sha256": "d6d0095f4cab0778274bca9524ec50d8ac0b06573e59184e27bd3f64440fe675",
+      "sha256": "5a5164935557f5e52eb15cf1f68b5184acc54009595bd426e17f2fc65e11f979"
+    },
+    {
+      "path": "extensions/cw_plus/README.md",
+      "upstream_sha256": "ce3a3e350e5b005bc65c06d3bddac300db5156710074ea64e27fc6eb2add616a",
+      "sha256": "9752cbed2f853eb6261cac7ef283a41018f25e8e8f623ae9e9a72406314884c9"
+    },
+    {
+      "path": "extensions/cw_plus/equipment_choice.py",
+      "upstream_sha256": "88f6176fbd56a18332d7ca9c5606368cc00a28346947da7d8bc85205479b1d10",
+      "sha256": "3c3e7d26141d004a2bb635aadd8ccec974d63b341c652fd46066a4f2c75d522c"
+    },
+    {
+      "path": "extensions/cw_plus/formation.py",
+      "upstream_sha256": "8980fbc7a480e9178f7eac7eaab4f509a6cdc83d5cbb2c4487be9918020aaa82",
+      "sha256": "90ada86d0e9dbfa7bb2c65d41e7fa333a737bed57a806b1b299189ae97185083"
+    },
+    {
+      "path": "extensions/cw_plus/images.py",
+      "upstream_sha256": "56689175eb43e108358ffcc95943ab772befd8270a62f19a205bafd4f0f85325",
+      "sha256": "33aa420c94c403f08cd95c50b5f0bc8ed90537737fb5f5848468373e5b5a1f3f"
+    },
+    {
+      "path": "extensions/cw_plus/module_runtime.py",
+      "upstream_sha256": "d45fa012d78ab64a372d229e800647639c2261872dbdf59b0f26a5da3967aaea",
+      "sha256": "49f7ed7c4bef280ae4694aa74e280735779582bdd912b8700a9a8e6b09926f82"
+    },
+    {
+      "path": "extensions/cw_plus/population_vision.py",
+      "upstream_sha256": "7c6de214547e1877eeb29db0edd191a7c73a4b3b6b53afd990900c9f5388a9db",
+      "sha256": "58c33cd4eb818390a73bc5c2c7300d2a405759daab0caf5cfcad410a6ec5078f"
+    },
+    {
+      "path": "extensions/cw_plus/shop_overlay.py",
+      "upstream_sha256": "34ccf4d091eabbb64b7bcc7e9dc1cab8f8eb3619269386d9e5c1ef57abd11a96",
+      "sha256": "18474e8d1070abec5f96e4839c040abd9a20eedc31908c42ce4f7023728890d6"
+    },
+    {
+      "path": "extensions/cw_plus/unicode_templates.py",
+      "upstream_sha256": "4a90ad69d3b6b81acc79d92c2bc87786b3f6131c12a655951a3ea0735149a254",
+      "sha256": "c28b5022b2a10bcd08e79e4eb0c2cd3c818ee2cd4087268f764d2369c0fd4e32"
+    },
+    {
+      "path": "extensions/cw_plus/vision.py",
+      "upstream_sha256": "ce364385527a644c7057d78afa364ff5722b2220f5a8a97fc03b35961042caaf",
+      "sha256": "24c24b9c081a2f5576f4445d3e30c6c9e538a352faa275cbb42e8dbfc86c69c9"
+    },
+    {
+      "path": "package.json",
+      "upstream_sha256": "31f9d442b7547c14897e3e293ba1a1b733fb9955c61016a21161d87f35d71578",
+      "sha256": "9481728274a9e3b376861478d19af22a46ccf8de100a4c07d10bfba8c5f5bc33"
+    },
+    {
+      "path": "pyproject.toml",
+      "upstream_sha256": "41d1e7561441228bf1074f67b6677f20c8fc0b60e75a984762c631a024d630dc",
+      "sha256": "1d0cbabff538dafb145676d0c74fc63ee514bd30dbfa7e444d76ceac76393536"
+    },
+    {
+      "path": "scripts/package.py",
+      "upstream_sha256": "6014c6a908d3d18f127b44456f2628f58993d0be7a83504bbb5d5059943d0439",
+      "sha256": "0cd91cf123ada73e112f927eb14737201d7b93cee654e038a20ee30ae9d673c2"
+    },
+    {
+      "path": "tests/test_main.py",
+      "upstream_sha256": "467287dee4335fc36e922b61f9f0427806f838c0f7639aab28763c852c9a4b71",
+      "sha256": "f5e050abb0c61b2f01a6e4b02a2324040849f1d3d52df12623af1414e253116d"
+    },
+    {
+      "path": "tests/test_notification_system.py",
+      "upstream_sha256": "47d1a5ca16b8103d03dab78fc10627dc7523a62bcc125b6e0ebe081a696d221e",
+      "sha256": "0d424cb0d7bb12d4438b9622aef05feaf041aa443a4c9829eeb6f7ba4f4e8571"
+    },
+    {
+      "path": "tests/test_tasks_notifications.py",
+      "upstream_sha256": "e128aa2c7e8a30b4fe44da06fd5d0d4d10644f9b795efb0798aaf7b7e4426a7c",
+      "sha256": "4b3260ca28ef12fc2b9dfaf75ab1e6afe255ae9d0146f851e8661f0da5f01258"
+    }
+  ],
+  "removed_from_source_export": [
+    ".github/workflows/auto-mas.yml",
+    ".github/workflows/mirrorchyan.yml",
+    ".github/workflows/mirrorchyan_release_note.yml",
+    ".github/workflows/mirrorchyan_resource.yml",
+    ".github/workflows/pypi.yml",
+    ".github/workflows/python-app.yml",
+    "SRAFrontend/srafrontend-webui/.agents/skills/sra-frontend-conventions/SKILL.md",
+    "SRAFrontend/srafrontend-webui/.agents/skills/sra-frontend-conventions/references/api-patterns.md",
+    "SRAFrontend/srafrontend-webui/.agents/skills/sra-frontend-conventions/references/theme-system.md",
+    "SRAFrontend/srafrontend-webui/.vscode/extensions.json"
+  ],
+  "unchanged_count": 727,
+  "note": "Content inventory, not a Git commit or proof of GitHub fork-network linkage."
+}

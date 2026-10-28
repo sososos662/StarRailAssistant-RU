@@ -16,10 +16,12 @@ from loguru import logger
 from SRACore.operators.model import Box
 from SRACore.task import Executable
 from SRACore.util.errors import ErrorCode, SRAError, ThreadStoppedError
+from SRACore.util.phase_timing import _report, _scope, _stage
 from .characters import Character, Characters, Positioning
 from tasks.img import IMG, DUIMG
 from .images import CWIMG
 from .unicode_templates import load_template, load_match_template, template_cache_key
+from .game_input import adapt_game_input
 from .paths import CALIBRATION_ROOT, RESOURCE_ROOT, default_data_dir, resolve_strategy_path
 from .logic import (
     SlotState, SlotObservation, ShopState, ActionResult, SellResult, ShoppingResult,
@@ -135,7 +137,7 @@ class CurrencyWars(Executable):
     SHOP_EXPERIENCE_COST = 4  # 这是本玩法单次 F 输入的价格，并非整级升级价格。
 
     def __init__(self, operator, runtimes, *, data_dir=None):
-        super().__init__(operator)
+        super().__init__(adapt_game_input(operator))
         # 扩展存档和诊断使用独立目录，避免与原版任务互相覆盖。
         self._data_dir = Path(data_dir) if data_dir is not None else default_data_dir()
         self.runtimes = runtimes
@@ -341,11 +343,12 @@ class CurrencyWars(Executable):
     def _timed(self, phase):
         started = time.monotonic()
         try:
-            yield
+            with _scope(phase, self.operator, clock=lambda: time.monotonic()):
+                yield
         finally:
             elapsed = time.monotonic() - started
             self.phase_seconds[phase] = self.phase_seconds.get(phase, 0.0) + elapsed
-            logger.debug(f"[货币战争耗时] {phase}: {elapsed:.2f}s")
+            logger.debug(f"[货币战争耗时] {phase}: {elapsed:.2f}s (inclusive; not additive to CW_TIMING)")
 
     def _begin_session(self):
         self._session_context_tracking = False
@@ -719,6 +722,7 @@ class CurrencyWars(Executable):
             return "population_observation_conflict"
         return None
 
+    @_stage("recovery")
     def _recover_preparation_observations(self, reason):
         # 仅恢复缺失证据；可靠备战区角色无须再次执行完整 OCR。
         if reason in {"purchase_recheck_unknown", "purchase_transaction_unconfirmed"}:
@@ -980,6 +984,7 @@ class CurrencyWars(Executable):
         return replace(desired, state=Readiness.DEGRADED, reason="budget_finished_continue_battle",
                        blocked_reason="")
 
+    @_report("prepare_for_battle", clock=lambda: time.monotonic())
     def prepare_for_battle(self):
         """有界的观测、布阵、确认流程，由所有入口共用。"""
         self._begin_preparation()
@@ -1192,6 +1197,18 @@ class CurrencyWars(Executable):
     def _slot_needs_scan(self, area, index, now=None):
         observation = self._observations[area][index]
         key = (area, index)
+        # 开局/实时零人口建立的是空场基线，不是角色面板 OCR 缓存。
+        # 目标移动、未知奖励、页面重建会撤销该对象或标脏；时间流逝本身
+        # 不会往空槽放入角色。与 _observe_slot_impl 的空场规则保持一致，
+        # 绝不为这类逻辑证据伪造或续签逐槽截图时间。
+        if (area != "in_hand" and observation.state == SlotState.EMPTY
+                and observation.evidence in {"new_game_empty", "zero_population"}
+                and key not in self._dirty_slots
+                and (area != "off_field" or self._layout_valid
+                     and index in self._backend_ordinary_slots
+                     and index not in self._backend_unknown_slots
+                     and index not in self._backend_support_slots)):
+            return False
         receipt = self._slot_evidence.get(key)
         return (key in self._dirty_slots or not self._complete_slot_observation(observation)
                 or receipt is None or receipt[0] is not observation
@@ -1235,7 +1252,10 @@ class CurrencyWars(Executable):
             for index, observation in enumerate(slots):
                 if self._slot_needs_scan(area, index, now):
                     return False
-                receipt = self._slot_evidence[(area, index)]
+                receipt = self._slot_evidence.get((area, index))
+                if receipt is None:
+                    # 已通过 _slot_needs_scan 的空场基线没有逐槽截图时间。
+                    continue
                 if receipt[1] > now:
                     return False
                 observed_times.append(receipt[1])
@@ -1395,6 +1415,59 @@ class CurrencyWars(Executable):
         self._record_slot_evidence(area_type, observation, observed_at=observed_at)
         return observation
 
+    def _character_panel_frame(self):
+        """仅标准本地 OCR 共用当前姓名/星级帧；自定义、云端及 OCR 留图沿用原入口。"""
+        from SRACore.operators.ioperator import IOperator
+        if (getattr(self.operator, "type", None) != "Local"
+                or getattr(getattr(self.operator, "ocr", None), "__func__", None) is not IOperator.ocr
+                or getattr(self.operator, "is_save_ocr_image", False)
+                or not callable(getattr(self._vision, "_engine_ocr", None))):
+            return None
+        self._check_stop()
+        try:
+            frame = self.operator.screenshot()
+            self._check_stop()
+            if tuple(frame.size) == (self.operator.window_context.width, self.operator.window_context.height):
+                return frame
+        except (ThreadStoppedError, InterruptedError):
+            raise
+        except Exception:
+            self._check_stop()
+        return None
+
+    def _character_panel_ocr(self, frame, roi):
+        try:
+            crop = frame.crop(tuple(value * frame.size[i % 2] for i, value in enumerate(roi))).convert("L")
+            rows = self._vision._engine_ocr(crop)
+            # 旧式 OCR 列表也必须遵守宿主的严格 > 阈值。
+            rows = [row for row in rows if row[2] > self.operator.ocr_confidence] if rows is not None else None
+        except (ThreadStoppedError, InterruptedError):
+            raise
+        except Exception:
+            self._check_stop()
+            return None
+        self._check_stop()
+        logger.debug(f"OCR Result: {rows}")
+        return rows
+
+    def _character_panel_stars(self, frame):
+        import pyscreeze
+        crop = frame.crop((.83 * frame.width, .15 * frame.height, .87 * frame.width, .17 * frame.height))
+        boxes = []
+        try:
+            for match in pyscreeze.locateAll(load_template(CWIMG.STAR), crop,
+                    confidence=self.operator.tm_confidence):
+                self._check_stop()
+                boxes.append(Box(*match))
+        except pyscreeze.ImageNotFoundException:
+            pass
+        except (ThreadStoppedError, InterruptedError):
+            raise
+        except Exception:
+            self._check_stop()
+            return None
+        return boxes
+
     def _observe_slot_impl(self, area_type, index, count_stars=False, use_backup_ocr=False):
         self._check_stop()
         if area_type == "off_field" and not self._layout_valid:
@@ -1419,16 +1492,29 @@ class CurrencyWars(Executable):
             if not self.operator.click_point(*area, after_sleep=0.2, trace=False):
                 return SlotObservation(index, SlotState.UNKNOWN, evidence="click_failed",
                                        revision=self._observation_revision)
-            results = self._vision.operator_ocr(from_x=0.775, from_y=0.175, to_x=0.880, to_y=0.2315)
+            frame = self._character_panel_frame()
+            results = (self._character_panel_ocr(frame, (.775, .175, .880, .2315)) if frame is not None
+                else self._vision.operator_ocr(from_x=0.775, from_y=0.175, to_x=0.880, to_y=0.2315))
             char = parse_character_name(results, self._lookup_known_character)
             if char is None and use_backup_ocr:
-                backup = self._vision.operator_ocr(from_x=0.775, from_y=0.445, to_x=0.880, to_y=0.486)
+                backup = (self._character_panel_ocr(frame, (.775, .445, .880, .486)) if frame is not None
+                    else self._vision.operator_ocr(from_x=0.775, from_y=0.445, to_x=0.880, to_y=0.486))
                 char = parse_character_name(backup, self._lookup_known_character)
+            if frame is not None and char is None:
+                # 面板仍可能加载/动画：恢复原有新帧 OCR，不以历史身份或无文字授权。
+                frame = None
+                results = self._vision.operator_ocr(from_x=.775, from_y=.175, to_x=.880, to_y=.2315)
+                char = parse_character_name(results, self._lookup_known_character)
+                if char is None and use_backup_ocr:
+                    char = parse_character_name(self._vision.operator_ocr(
+                        from_x=.775, from_y=.445, to_x=.880, to_y=.486), self._lookup_known_character)
             if char is not None:
                 stars = None
                 if count_stars and not char.is_npc:
-                    boxes = self.operator.locate_all(CWIMG.STAR, from_x=0.83, from_y=0.15,
-                                                     to_x=0.87, to_y=0.17, trace=False)
+                    boxes = self._character_panel_stars(frame) if frame is not None else None
+                    if not boxes:
+                        boxes = self.operator.locate_all(CWIMG.STAR, from_x=0.83, from_y=0.15,
+                                                         to_x=0.87, to_y=0.17, trace=False)
                     valid = []
                     for box in boxes or ():
                         if not any(box.distance(other) < 3 for other in valid):
@@ -1449,6 +1535,7 @@ class CurrencyWars(Executable):
             # 续局也可通过实时 0/N 读数建立同样的基线。
             # 文本冲突会使该基线也失效。
             if (area_type != "in_hand" and previous.state == SlotState.EMPTY
+                    and (area_type, index) not in self._dirty_slots
                     and empty is not False
                     and previous.evidence in ("new_game_empty", "zero_population")
                     and not any(str(item[1]).strip() and not str(item[1]).strip().isdecimal()
@@ -1536,7 +1623,10 @@ class CurrencyWars(Executable):
         width, height = frame.size
         crop = frame.crop((round(.775 * width), round(.175 * height),
                            round(.880 * width), round(.2315 * height)))
-        rows = self._vision._engine_ocr(crop.convert("L"), minimum_confidence=0.9)
+        # 与普通姓名读取使用同一置信度；身份仍须两帧姓名/星级一致，
+        # 并由前后布局认证。不能让可读的0.89姓名陷入仅此处0.9的死循环。
+        confidence = max(0.7, getattr(self.operator, "ocr_confidence", 0.7))
+        rows = self._vision._engine_ocr(crop.convert("L"), minimum_confidence=confidence)
         char = parse_character_name(rows, self._lookup_known_character)
         if char is None or char.is_npc or char.is_locked:
             return None
@@ -1624,14 +1714,17 @@ class CurrencyWars(Executable):
         # 同一页未变化的文字像素可复用 OCR；每次仍取新截图确认实际牌面。
         frame = self._capture_page_frame()
         results = None
+        attempts = []
+        selected_method = "gray"
         width = self.operator.window_context.width
         same_frame = (frame is not None and callable(getattr(frame, "crop", None))
                       and callable(getattr(self.operator, "ocr_engine", None)))
         if same_frame:
             try:
                 width, height = frame.size
-                crop = frame.crop((round(0.19 * width), round(0.26 * height),
-                                   round(0.88 * width), round(0.31 * height))).convert("RGB")
+                crop_box = (round(0.19 * width), round(0.26 * height),
+                            round(0.88 * width), round(0.31 * height))
+                crop = frame.crop(crop_box).convert("RGB")
                 results = self._vision._engine_ocr(crop.convert("L"))
             except ThreadStoppedError:
                 raise
@@ -1644,28 +1737,42 @@ class CurrencyWars(Executable):
             results = self.operator.ocr(from_x=0.19, from_y=0.26, to_x=0.88, to_y=0.31)
         offer = scan_store_cards(results, self._lookup_known_character, self.store_area,
                                  width)
+        if same_frame:
+            attempts.append(("gray", results, offer))
         if same_frame and (offer.state == ShopState.UNKNOWN or offer.reason.startswith("partial")):
             # 只有名称/槽位识别不完整才使用同帧彩色后备；价格未知直接交给采购。
             try:
-                color_offer = scan_store_cards(self._vision._engine_ocr(crop),
+                color_results = self._vision._engine_ocr(crop)
+                color_offer = scan_store_cards(color_results,
                     self._lookup_known_character, self.store_area, width)
+                attempts.append(("rgb", color_results, color_offer))
                 original_names = {card.slot_index: card.character.name for card in offer.cards}
                 color_names = {card.slot_index: card.character.name for card in color_offer.cards}
                 if (color_offer.state == ShopState.READY and not color_offer.reason.startswith("partial")
                         and all(color_names.get(slot) == name for slot, name in original_names.items())):
                     offer = color_offer
+                    selected_method = "rgb"
                     logger.debug("[商店识别] 同帧彩色后备补全名称与槽位")
             except ThreadStoppedError:
                 raise
             except Exception as error:
                 self._check_stop()
                 logger.debug(f"[商店识别] 彩色后备未完成：{type(error).__name__}")
+        sample_reason = None
         if offer.state == ShopState.UNKNOWN:
             empty_slots = self._vision.slot_is_empty_batch("store", self.store_area)
             if (len(empty_slots) == len(self.store_area)
                     and all(value is True for value in empty_slots.values())):
                 offer = ShopObservation(ShopState.EMPTY, reason="verified_empty_slots")
             else:
+                sample_reason = "unknown_store"
+        elif any(observed.reason.startswith("partial") for _, _, observed in attempts):
+            sample_reason = "partial_store"
+        if sample_reason is not None:
+            if same_frame:
+                self._capture_store_sample(sample_reason, frame, crop, crop_box,
+                                           attempts, offer, selected_method)
+            elif sample_reason == "unknown_store":
                 self._vision.capture_sample("unknown_store", {"reason": offer.reason})
         for card in offer.cards:
             if card.price is None:
@@ -1677,6 +1784,68 @@ class CurrencyWars(Executable):
             self._observed_prices[name] = card.price
         self._reconcile_form_change_pending()
         return offer
+
+    def _capture_store_sample(self, reason, frame, crop, crop_box, attempts, offer, selected_method):
+        # 仅记录参与判定的帧及文本，不重截屏、不重跑 OCR、不改变采购结论。
+        try:
+            scans = []
+            truncated = False
+            for method, results, observed in attempts:
+                rows, unknown_names = [], []
+                known_text = ["".join(card.raw_text.split()) for card in observed.cards]
+                for item in (results[:20] if isinstance(results, (list, tuple)) else ()):
+                    if not isinstance(item, (list, tuple)) or len(item) < 2 or not isinstance(item[1], str):
+                        continue
+                    text = item[1][:120]
+                    truncated |= len(item[1]) > len(text)
+                    points = item[0].tolist() if hasattr(item[0], "tolist") else item[0]
+                    box = [[float(point[0]), float(point[1])] for point in points[:4]]
+                    score = float(item[2]) if len(item) > 2 else None
+                    rows.append(dict(text=text, score=score, box=box))
+                    normalized = "".join(text.split())
+                    if (any(char.isalpha() for char in normalized)
+                            and not any(normalized in name for name in known_text)):
+                        unknown_names.append(text)
+                scans.append(dict(method=method, state=observed.state.value, reason=observed.reason,
+                    row_count=len(results) if isinstance(results, (list, tuple)) else 0,
+                    rows=rows, unknown_names=unknown_names,
+                    slots=[dict(slot_index=card.slot_index, name=card.character.name,
+                                target=list(card.target), raw_text=card.raw_text[:120],
+                                price=card.price, price_evidence=card.price_evidence)
+                           for card in observed.cards]))
+                truncated |= any(len(card.raw_text) > 120 for card in observed.cards)
+            metadata = dict(store_scan=dict(source="decision_frame", roi=[.19, .26, .88, .31],
+                crop_box=list(crop_box), state=offer.state.value, reason=offer.reason,
+                selected_method=selected_method, unknown_names_source="unmatched_ocr_fragments",
+                attempts=scans))
+            diagnostic = metadata["store_scan"]
+            diagnostic["metadata_truncated"] = truncated or any(
+                scan["row_count"] > len(scan["rows"]) for scan in scans)
+            # 为 capture_sample 的 8 KiB 总上限保留图片路径和会话字段空间。
+            for text_limit in (60, 30, 12):
+                if len(json.dumps(metadata, ensure_ascii=False, separators=(",", ":")).encode("utf-8")) <= 6000:
+                    break
+                diagnostic["metadata_truncated"] = True
+                for scan in scans:
+                    for row in scan["rows"]:
+                        row["text"] = row["text"][:text_limit]
+                    scan["unknown_names"] = [name[:text_limit] for name in scan["unknown_names"]]
+                    for slot in scan["slots"]:
+                        slot["raw_text"] = slot["raw_text"][:text_limit]
+            while len(json.dumps(metadata, ensure_ascii=False, separators=(",", ":")).encode("utf-8")) > 6000:
+                diagnostic["metadata_truncated"] = True
+                longest = max(scans, key=lambda scan: len(scan["rows"]))
+                if not longest["rows"]:
+                    break
+                longest["rows"].pop()
+            self._vision.capture_sample(reason, metadata, frame=frame,
+                related_images=(("store_roi_rgb", crop), ("store_roi_gray", crop.convert("L"))))
+        except ThreadStoppedError:
+            raise
+        except Exception as error:
+            self._check_stop()
+            logger.debug(f"[商店诊断] 同帧样本未完成：{type(error).__name__}")
+            self._vision.capture_sample(reason, {"error_type": type(error).__name__}, frame=frame)
 
     def _confirm_purchase(self, card, before_coins):
         self._confirmed_purchase_snapshot = None
@@ -2243,6 +2412,7 @@ class CurrencyWars(Executable):
             return self.operator.click_box(box, after_sleep=after_sleep)
         return self.operator.click_point(*point, after_sleep=after_sleep, tag="恢复：继续挑战")
 
+    @_report("live_page_recovery", stage="recovery", clock=lambda: time.monotonic())
     def _recover_live_page(self):
         # 当前观测页面决定恢复方式；已保存摘要
         # 仅为历史，绝不授权重复购买、拖拽或选择。
@@ -2278,6 +2448,7 @@ class CurrencyWars(Executable):
         return True
 
     # ==================== 进入流程辅助方法 ====================
+    @_report("entry_transition", stage="transition", clock=lambda: time.monotonic())
     def _enter_from_start_page(self) -> bool:
         """
         从开始页面进入对局
@@ -2526,6 +2697,43 @@ class CurrencyWars(Executable):
             self.operator.click_point(0.5, 0.5, after_sleep=1)
             self.operator.click_img(IMG.ENSURE2, after_sleep=1)
 
+    def _strategy_code_controls(self, frame):
+        """同帧认证1080p攻略码弹窗；不能在其他页面盲点剪贴板坐标。"""
+        self._check_stop()
+        if frame is None or tuple(frame.size) != (1920, 1080) or tuple(frame.size) != (
+                self.operator.window_context.width, self.operator.window_context.height):
+            return None
+        title = self._locate_page_template(CWIMG.STRATEGY_CODE_TITLE, frame)
+        paste = self._locate_page_template(CWIMG.STRATEGY_CODE_PASTE, frame)
+        if title is None or paste is None:
+            return None
+        tx, ty = title.center
+        px, py = paste.center
+        if not (870 <= tx <= 1050 and 320 <= ty <= 365 and 1410 <= px <= 1480 and 500 <= py <= 570):
+            return None
+        return paste
+
+    def _strategy_code_text_state(self, frame):
+        """占位文字消失不等于成功；须在输入区域读到配置码的连续片段。"""
+        if self._strategy_code_controls(frame) is None:
+            return "unknown"
+        field = frame.crop((445, 430, 1395, 635))
+        if self._locate_page_template(CWIMG.STRATEGY_CODE_PLACEHOLDER, field) is not None:
+            return "empty"
+        rows = self._vision._engine_ocr(field, minimum_confidence=0.7)
+        for row in rows or ():
+            if not isinstance(row, (list, tuple)) or len(row) != 3:
+                continue
+            if (not isinstance(row[1], str) or not isinstance(row[2], (int, float))
+                    or not 0.7 <= row[2] <= 1):
+                continue
+            text = re.sub(r"\s", "", row[1])
+            # OCR无需逐字无误；12位连续匹配只证明配置码已可见，不证明游戏已接受攻略。
+            if any(text[i:i + 12] in self.strategy_code for i in range(len(text) - 11)):
+                return "visible"
+        return "unknown"
+
+    @_report("handle_game_entered", stage="transition", clock=lambda: time.monotonic())
     def handle_game_entered(self) -> bool:  # NOQA  # 保留原有静态检查指令。
         """初始化前应用新局攻略；开局重刷钩子保持独立。"""
         if not self.strategy_code or self.is_continue:
@@ -2554,18 +2762,33 @@ class CurrencyWars(Executable):
                 return self._fail_startup("strategy_code_entry_failed", "未能打开攻略码输入框")
             if self.operator.wait_img(IMG.ENSURE2, timeout=self.ENTRY_TRANSITION_TIMEOUT) is None:
                 return self._fail_startup("strategy_code_dialog_missing", "攻略码输入页面未确认")
-            self._check_stop()
-            if not self.operator.click_point(0.5, 0.5, after_sleep=1, tag="攻略码输入框"):
-                return self._fail_startup("strategy_code_focus_failed", "攻略码输入框点击失败")
+            frame = self._capture_page_frame()
+            paste = self._strategy_code_controls(frame)
+            if paste is None:
+                return self._fail_startup("strategy_code_dialog_unconfirmed",
+                                          "Не подтверждены заголовок окна и игровая кнопка вставки")
             step = "paste_code"
             self._check_stop()
             self.operator.copy(self.strategy_code)
             self._check_stop()
-            self.operator.paste()
-            self.operator.sleep(1)
+            if not self.operator.click_box(paste, after_sleep=0.5):
+                return self._fail_startup("strategy_code_paste_failed", "Не удалось нажать игровую кнопку вставки")
+            logger.info("[Ввод кода] Нажата игровая кнопка вставки; проверяется текст поля")
+
+            # Ограниченные свежие наблюдения, без повторной вставки и слепого подтверждения.
+            for _ in range(3):
+                frame = self._capture_page_frame()
+                state = self._strategy_code_text_state(frame)
+                self._check_stop()
+                if state == "visible":
+                    break
+                self.operator.sleep(0.3)
+            else:
+                return self._fail_startup("strategy_code_empty" if state == "empty" else
+                    "strategy_code_text_unconfirmed", "Текст кода в поле не подтверждён; отправка запрещена")
 
             step = "confirm_code"
-            confirm = self.operator.wait_img(IMG.ENSURE2, timeout=self.ENTRY_TRANSITION_TIMEOUT)
+            confirm = self._locate_page_template(IMG.ENSURE2, frame)
             self._check_stop()
             if confirm is None or not self.operator.click_box(confirm, after_sleep=1):
                 return self._fail_startup("strategy_code_confirm_failed", "攻略码提交失败")
@@ -2651,6 +2874,7 @@ class CurrencyWars(Executable):
             return "preparation"
         return "unknown"
 
+    @_stage("transition")
     def _return_to_startup_preparation(self):
         """以两张新鲜帧确认准备页，避免使用固定三秒的轮询分段。
 
@@ -2806,6 +3030,7 @@ class CurrencyWars(Executable):
         return "; ".join(gaps) or "no_slot_gap"
 
     # ssyb：购物离开后的恢复仍须核对当前页面和交易证据。
+    @_report("shopping_recovery", stage="recovery", clock=lambda: time.monotonic())
     def _resume_shopping_after(self, result):
         """继续同一购物额度前，重新观测缺失证据。"""
         if getattr(result, "confirmed_purchases", 0) > 0:
@@ -2914,6 +3139,7 @@ class CurrencyWars(Executable):
             return False
         return True
 
+    @_stage("capture")
     def _capture_page_frame(self):
         """一张帧属于一次观测流程，绝不沿用到下一输入动作。"""
         self._check_stop()
@@ -2933,6 +3159,7 @@ class CurrencyWars(Executable):
         self._check_stop()
         return frame
 
+    @_stage("cpu_pages")
     def _locate_page_template(self, template, frame):
         self._check_stop()
         if frame is None:
@@ -2960,12 +3187,24 @@ class CurrencyWars(Executable):
         try:
             haystack = frame
             if getattr(pyscreeze, "_useOpenCV", False):
+                import cv2
+
                 if grayscale not in self._page_match_pixels:
                     self._page_match_pixels[grayscale] = pyscreeze._load_cv2(frame, grayscale)
                 haystack = self._page_match_pixels[grayscale]
                 image = load_match_template(template, grayscale)
-            match = pyscreeze.locate(image, haystack,
-                confidence=self.operator.tm_confidence)
+                # 保持全屏、原阈值和逐行首个命中；只省去 Pyscreeze 为所有
+                # 位置创建的 int64 索引网格，不能改成最高分位置或缩小 ROI。
+                if any(haystack.shape[index] < image.shape[index] for index in (0, 1)):
+                    return None
+                scores = cv2.matchTemplate(haystack, image, cv2.TM_CCOEFF_NORMED)
+                accepted = scores > float(self.operator.tm_confidence)
+                first = int(accepted.argmax())
+                y, x = divmod(first, accepted.shape[1])
+                match = (x, y, image.shape[1], image.shape[0]) if accepted[y, x] else None
+            else:
+                match = pyscreeze.locate(image, haystack,
+                    confidence=self.operator.tm_confidence)
         except ThreadStoppedError:
             raise
         except pyscreeze.ImageNotFoundException:
@@ -3027,6 +3266,7 @@ class CurrencyWars(Executable):
                 candidates.append((label, box))
         return candidates[0] if len(candidates) == 1 else None
 
+    @_stage("cpu_pages")
     def _observe_page_frame(self, frame, *, ignore_pending_equipment=False,
                             ignore_pending_selection=False, full_navigation=True):
         """同帧只读分类：终局、阻挡弹窗、节点、底层页面依次认证。
@@ -3278,6 +3518,7 @@ class CurrencyWars(Executable):
             self._last_selection_sent = False
         logger.info(f"[节点退场] 已连续两帧确认阶段={phase}，解除节点输入收据={pending}")
 
+    @_report("runtime_recovery", stage="recovery", clock=lambda: time.monotonic())
     def _recover_runtime_flow(self, error, attempt=1):
         """有界的页面恢复：仅执行导航，保留进行中的动作。"""
         self._check_stop()
@@ -3475,6 +3716,7 @@ class CurrencyWars(Executable):
                 for value in old_deadlines)
 
     # Yukki：延迟续跑沿用本局收据，不重放旧输入。
+    @_report("flow_recovery", stage="recovery", clock=lambda: time.monotonic())
     def _auto_resume_failed_flow(self, error):
         """重新启动当前页面恢复，保留对局、交易收据和同一战斗总计时。"""
         while self._auto_resume_attempts < len(self.AUTO_RESUME_DELAYS):
@@ -3509,6 +3751,7 @@ class CurrencyWars(Executable):
         logger.error("[自动续跑] 同一处故障的续跑轮次已用完，保留诊断与存档")
         return False
 
+    @_report("next_step", stage="transition", clock=lambda: time.monotonic())
     def handle_next_step(self, _previous=None):
         # NEXT_STEP 由开局、过渡和终局页面共用；
         # 只有终局识别器可以将它解释为对局结果。
@@ -4200,7 +4443,8 @@ class CurrencyWars(Executable):
                 continue
             try:
                 overrides = (getattr(self, "_bench_scan_overrides", None) if area_type == "in_hand" else
-                             getattr(self, "_backend_scan_overrides", None) if area_type == "off_field" else None)
+                             getattr(self, "_backend_scan_overrides", None) if area_type == "off_field" else
+                             getattr(self, "_frontend_scan_overrides", None))
                 obs = overrides.get(index) if overrides is not None else None
                 if obs is old:
                     continue  # 此交易未影响该已确认身份。
@@ -4271,9 +4515,38 @@ class CurrencyWars(Executable):
             self._backend_scan_overrides = None
         self._reconcile_placed()
 
-    def get_on_field_area(self, force=False, equip=False):
-        self._get_character_in_area(self.on_field_area, self.on_field_character, force,
-                                    equip, True)
+    def get_on_field_area(self, force=False, equip=False, *, indices=None):
+        # 与后台/备战席一样，前台空位先共享两张当前截图。
+        # 只有完整空标认证才免于逐槽点击/OCR；未知/占用仍走原身份读取。
+        positions = {i: point for i, point in enumerate(self.on_field_area)
+                     if (indices is None or i in indices)
+                     and (force or self._observations["on_field"][i].state != SlotState.KNOWN)}
+        overrides = {}
+        reader = getattr(self._vision, "read_empty_slots", None)
+        if positions and callable(reader):
+            self._check_stop()
+            self.operator.click_point(0.5, 0.5, trace=False)
+            observed_at = time.monotonic()
+            try:
+                values = reader("on_field", positions)
+                self._check_stop()
+                for i, empty in values.items():
+                    if i in positions and empty is True:
+                        self._observation_revision += 1
+                        overrides[i] = SlotObservation(i, SlotState.EMPTY, occupied=False,
+                            evidence="two_empty_frames", revision=self._observation_revision)
+                        self._record_slot_evidence("on_field", overrides[i], observed_at=observed_at)
+            except (ThreadStoppedError, InterruptedError):
+                raise
+            except Exception as error:
+                self._check_stop()
+                logger.debug(f"[前台空位] 批量读取未确认，恢复逐槽识别：{type(error).__name__}")
+        self._frontend_scan_overrides = overrides
+        try:
+            self._get_character_in_area(self.on_field_area, self.on_field_character, force,
+                                        equip, True, indices=indices)
+        finally:
+            self._frontend_scan_overrides = None
         self._reconcile_placed()
 
     def _supply_pause(self, seconds):
@@ -4510,6 +4783,7 @@ class CurrencyWars(Executable):
         locked_count = sum(o.state == SlotState.LOCKED for o in self._observations["in_hand"])
         logger.info(f"备战席已识别 {self.in_hand_character_count}，锁定 {locked_count}，未知 {self.in_hand_unknown_count}")
 
+    @_stage("cpu_geometry")
     def _read_equipment_choice(self, frame=None):
         """只使用同一张新鲜帧认证通用装备三选一的标题与实际卡框。"""
         self._check_stop()
@@ -4595,6 +4869,7 @@ class CurrencyWars(Executable):
         logger.warning("[装备三选一] 输入结果尚未确认，保留待确认状态，禁止重复选择或点击底层控件")
         return False
 
+    @_stage("cpu_geometry")
     def _read_shop_probability_overlay(self, frame=None):
         """在同一张客户区帧上认证标题与关闭控件。"""
         self._check_stop()
@@ -4623,6 +4898,7 @@ class CurrencyWars(Executable):
             logger.debug(f"[商店概率弹窗] 识别未确认：{type(error).__name__}")
             return None
 
+    @_stage("transition")
     def _set_shop_open(self, opened, *, deadline=None):
         """使用商店或棋盘坐标前，先确认面板状态。"""
         self._experience_input_revision += 1
@@ -5979,6 +6255,7 @@ class CurrencyWars(Executable):
                 return index
             logger.debug("[关卡切换] 稳定等待后画面已变化，重新确认当前阶段")
 
+    @_report("stage_transition", stage="transition", clock=lambda: time.monotonic())
     def stage_transition(self):
         """实现关卡切换逻辑，通过识别图片状态执行对应操作"""
         terminal = self._terminal_route_screen
@@ -6136,6 +6413,7 @@ class CurrencyWars(Executable):
             # 如果所有角色信息均为None，打开商店界面购买角色
             self._empty_roster_needs_shop = True
 
+    @_report("handle_game_over", stage="transition", clock=lambda: time.monotonic())
     def handle_game_over(self, _: StageName | None, *, first_screen=None) -> bool:
         """导航已认证的终局页面；仅在主菜单结束记录。"""
         deadline = time.monotonic() + self.REWARD_TRANSITION_TIMEOUT
@@ -6771,6 +7049,10 @@ class CurrencyWars(Executable):
                 logger.info("[购后增量核实] 缺全场完成标记，按真实逐槽收据补缺；不作废未受影响观测")
             for attempt in range(2):
                 self._check_stop()
+                # 时效决定本轮开始时哪些槽须读，不是所有读取同时完成的期限。
+                # 一次串行扫描可能超过60秒；仍逐槽保留真实收据和脏标记，
+                # 不因扫描自身耗时而作废刚读过的全场并进入重复恢复。
+                scan_started = time.monotonic()
                 incremental = reusable and not full_scan and attempt == 0
                 vacancies = self._read_bench_empty_observations()
                 if incremental and any(before["in_hand"][index].state == SlotState.KNOWN
@@ -6785,8 +7067,9 @@ class CurrencyWars(Executable):
                     vacancies = self._read_bench_empty_observations()
                 # 完整身份扫描仍必须遵守当前锁定槽位；
                 # 点击它们不会出现角色面板。
-                overrides = {index: obs for index, obs in vacancies.items()
-                             if not full_scan or obs.state == SlotState.LOCKED}
+                # full_scan 撤销的是旧快照，不是刚重建布局后读取的双帧空位。
+                # 丢弃这些真实收据会对每个空位再次点击/OCR，并扩大扫描耗时。
+                overrides = dict(vacancies)
                 if incremental:
                     for index, old in enumerate(before["in_hand"]):
                         if (index not in overrides and old is self._observations["in_hand"][index]
@@ -6799,15 +7082,19 @@ class CurrencyWars(Executable):
                     logger.info(f"[购后增量核实] 复用未变化角色={reused}，批量确认空位={len(vacancies)}，"
                                 f"备战席需读身份星级={len(self.in_hand_area) - len(overrides)}")
                 for area in ("on_field", "off_field"):
+                    indices = set()
                     for index, obs in enumerate(self._observations[area]):
                         historical = getattr(self, area + "_character")[index]
                         character = obs.character or historical
                         if (not full_scan and ((area, index) in self._dirty_slots
                                 or character is not None and character.name in names
-                                or self._slot_needs_scan(area, index, time.monotonic()))):
-                            observed = self._observe_slot(area, index, count_stars=True,
-                                use_backup_ocr=area == "off_field")
-                            self._set_observation(area, observed)
+                                or self._slot_needs_scan(area, index, scan_started))):
+                            indices.add(index)
+                    if indices:
+                        if area == "on_field":
+                            self.get_on_field_area(True, indices=indices)
+                        else:
+                            self.get_off_field_area(True, indices=indices)
                 self._bench_scan_overrides = overrides
                 try:
                     self.get_in_hand_area(True)
@@ -6833,7 +7120,7 @@ class CurrencyWars(Executable):
                          and all(self._complete_slot_observation(obs) and (area, index) not in self._dirty_slots
                              for area, slots in self._observations.items()
                              for index, obs in enumerate(slots))) for name in names)
-                        and all(not self._slot_needs_scan(area, index, time.monotonic())
+                        and all(not self._slot_needs_scan(area, index, scan_started)
                             for area in ("on_field", "off_field")
                             for index, obs in enumerate(self._observations[area]))):
                     return True
@@ -6850,6 +7137,7 @@ class CurrencyWars(Executable):
             self._bench_scan_overrides = None
             self._purchase_scan_baseline = None
 
+    @_stage("recovery")
     def _recover_full_shop_offer(self):
         """考虑安全经验输入前，先关闭备战区满员遮罩。"""
         if not self._set_shop_open(False):
@@ -7515,6 +7803,7 @@ class CurrencyWars(Executable):
                 self._deferred_purchase_cycle = None
 
     # Yukki：异常恢复不能把未确认的额外输入并入旧账。
+    @_stage("recovery")
     def _recover_purchase_accounting(self):
         cycle = getattr(self, "_deferred_purchase_cycle", None)
         if not cycle or not cycle.get("receipts"):
@@ -7762,6 +8051,7 @@ class CurrencyWars(Executable):
         logger.info(f"[终局运营] 本次结束：{self._last_shopping_result}")
         return self._last_shopping_result
 
+    @_report("shopping", clock=lambda: time.monotonic())
     def shopping(self):
         """先应用强制最终回合规则，再应用攻略购物规则。"""
         self._check_stop()
@@ -7770,10 +8060,29 @@ class CurrencyWars(Executable):
                 reason="purchase_recheck_unknown")
             return self._last_shopping_result
         budget_spent = self._preparation_budget_spent()
-        if not self._set_shop_open(False):
+        # 当前准备回合与完整棋盘均已认证时，下面只有缓存读取和纯决策。
+        # 无需为了读取已缓存的回合先收店再展店；输入授权仍由后面的
+        # _set_shop_open(True) 重新拍摄并连续确认两帧，不复用旧页面凭据。
+        defer_initial_close = (not budget_spent
+            and self._preparation_round not in (None, (3, 7))
+            and getattr(self, "_preparation_round_context", None) == (
+                self._cycle_number, self._last_completed_battle_id,
+                self._preparation_departure_confirmed)
+            and self._backend_identity_ready()
+            and not (self._dirty_slots or self._bench_dirty or self._purchase_pending_names
+                or self._pending_move is not None or self._placement_pending
+                or self._runtime_node_pending or self._selection_event_pending is not None
+                or self._equipment_choice_pending is not None or self._form_change_pending)
+            and (self.economy_config is None or self._confirmed_battle_count is not None)
+            and all(self._complete_slot_observation(obs)
+                for slots in self._observations.values() for obs in slots))
+        if not defer_initial_close and not self._set_shop_open(False):
             self._last_shopping_result = ShoppingResult(ActionResult.INDETERMINATE,
                 reason="final_round_page_unknown")
             return self._last_shopping_result
+        if defer_initial_close:
+            # 省略往返不意味着复用上一购物尝试的费用（尤其免费次数）。
+            self._coin_action_costs.clear()
         # 超时豁免只能使用本准备期两张认证帧得到的回合。
         # 无来源或跨战斗的旧缓存不授权消费，重读仍消耗原有最多两次额度。
         if (budget_spent and self._preparation_round is not None
@@ -7806,6 +8115,11 @@ class CurrencyWars(Executable):
         if current_round == (3, 7):
             return self._shopping_final_round()
         if self._preparation_budget_spent():
+            # 纯决策期间也可能到达时限；即使未进入购物窗口，仍须收店。
+            if defer_initial_close and not self._set_shop_open(False):
+                self._last_shopping_result = ShoppingResult(ActionResult.INDETERMINATE,
+                    reason="final_round_page_unknown")
+                return self._last_shopping_result
             self._last_shopping_result = ShoppingResult(ActionResult.CONFIRMED,
                 reason="preparation_budget_finished")
             return self._last_shopping_result
@@ -7851,11 +8165,21 @@ class CurrencyWars(Executable):
             # 商店关闭时读取标题，并在整个准备阶段复用，
             # 包括购买后清理并重开商店的过程。
             refresh_allowed = self._opening_action_allowed("refresh")
+            opening_board_revision = (self._snapshot_revision, self._layout_revision)
             shop_opened = self._set_shop_open(True)
             if not shop_opened:
                 self._last_shopping_result = ShoppingResult(ActionResult.INDETERMINATE,
                     0, 0, 0, 0, "shop_not_open")
                 logger.warning(f"商店本轮结束：{self._last_shopping_result}")
+                return self._last_shopping_result
+            # 开店认证可能处理奖励并撤销原棋盘证据。此时走既有有界
+            # 整备恢复；页面已认证不等于奖励前的身份仍能授权采购。
+            if defer_initial_close and (
+                    opening_board_revision != (self._snapshot_revision, self._layout_revision)
+                    or not self._backend_identity_ready() or self._dirty_slots or self._bench_dirty
+                    or self._purchase_pending_names):
+                self._last_shopping_result = ShoppingResult(ActionResult.INDETERMINATE,
+                    reason="purchase_targets_unknown")
                 return self._last_shopping_result
             # 读取与合成恢复各自拥有有限保护；
             # 动作预算仅统计购买、刷新和经验输入。
@@ -9440,7 +9764,12 @@ class CurrencyWars(Executable):
         needs_input = any(area != "off_field" or self._layout_valid for area, _ in pending)
         if needs_input and not self._set_shop_open(False):
             self._fail_battle("field_scan_shop_not_closed")
+        front = {index for area, index in pending if area == "on_field"}
+        if front:
+            self.get_on_field_area(True, indices=front)
         for area, index in pending:
+            if area == "on_field":
+                continue
             obs = self._observe_slot(area, index, count_stars=True,
                                      use_backup_ocr=area == "off_field")
             self._set_observation(area, obs)
@@ -9559,7 +9888,7 @@ class CurrencyWars(Executable):
                     f"稳定={self.STAGE_SETTLE_SECONDS} 战斗复核={self.BATTLE_TIMEOUT} "
                     f"战斗总上限={self.BATTLE_MAX_WAIT_SECONDS}")
         paths = [Path(__file__).resolve()]
-        for name in ("logic", "formation", "vision", "characters", "preparation", "layout", "session", "economy", "shop_overlay", "equipment_choice", "policy", "equipment_policy", "shopping_batch", "coins", "images", "paths", "stop_compat"):
+        for name in ("logic", "formation", "vision", "characters", "preparation", "layout", "session", "economy", "shop_overlay", "equipment_choice", "policy", "equipment_policy", "shopping_batch", "coins", "images", "paths", "stop_compat", "game_input"):
             module = sys.modules.get(f"{__package__}.{name}")
             location = getattr(module, "__file__", None)
             if location:

@@ -11,6 +11,7 @@ import pyperclip
 import pyscreeze
 from PIL import Image
 from rapidocr import RapidOCR
+from SRACore.util.phase_timing import _stage, _wait
 
 from SRACore.models.app_settings import AppSettings
 from SRACore.operators.ioperator import IOperator
@@ -206,6 +207,7 @@ class Operator(IOperator):
         return Region(self.window_context.left, self.window_context.top, self.window_context.width,
                       self.window_context.height)
 
+    @_stage("capture")
     def screenshot(self, *,
                    from_x: float | None = None,
                    from_y: float | None = None,
@@ -360,7 +362,7 @@ class Operator(IOperator):
         if self.stop_event is not None and self.stop_event.is_set():
             raise ThreadStoppedError("按键中断", "线程已停止")
         try:
-            time.sleep(wait)
+            _wait(time.sleep, wait)
             keys = key.split("+")
             if trace:
                 logger.debug(f"Press key: {key}")
@@ -369,7 +371,7 @@ class Operator(IOperator):
                     pyautogui.hotkey(*keys)
                 else:
                     pyautogui.press(keys[0])
-                time.sleep(interval)
+                _wait(time.sleep, interval)
             return True
         except Exception as e:
             if trace:
@@ -385,7 +387,7 @@ class Operator(IOperator):
                 logger.debug(f"Hold key {key}")
             for k in keys:
                 pyautogui.keyDown(k)
-            time.sleep(duration)
+            _wait(time.sleep, duration)
             for k in reversed(keys):
                 pyautogui.keyUp(k)
             return True

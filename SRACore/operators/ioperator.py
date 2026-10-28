@@ -12,6 +12,7 @@ import pyscreeze
 from PIL.Image import Image
 from loguru import logger
 from rapidocr import RapidOCR
+from SRACore.util.phase_timing import _stage, _wait
 from rapidocr.utils.output import RapidOCROutput
 
 from SRACore.models.app_settings import AppSettings
@@ -112,6 +113,7 @@ class IOperator(ABC):
         """
         ...
 
+    @_stage("cpu_pages")
     def locate_all(self,
                    template: str,
                    *,
@@ -159,6 +161,7 @@ class IOperator(ABC):
                 logger.trace(f"ImageNotFound: {template} -> {e}")
             return None
 
+    @_stage("cpu_pages")
     def locate_any(self,
                    templates: list[str],
                    *,
@@ -210,6 +213,7 @@ class IOperator(ABC):
                 return templates.index(img_path), Box(left, top, width, height, source=img_path)
         return -1, None
 
+    @_stage("cpu_pages")
     def locate(self,
                template: str,
                *,
@@ -256,6 +260,7 @@ class IOperator(ABC):
                 logger.trace(f"ImageNotFound: {template} -> {e}")
             return None
 
+    @_stage("ocr")
     def ocr(self,
             from_x: float | None = None,
             from_y: float | None = None,
@@ -439,7 +444,7 @@ class IOperator(ABC):
             box = self.ocr_match(text, confidence, *args, **kwargs)
             if box is not None:
                 return box
-            time.sleep(interval)
+            _wait(time.sleep, interval)
         logger.debug(f"Timeout: '{text}' -> NotFound in {timeout} seconds")
         return None
 
@@ -467,7 +472,7 @@ class IOperator(ABC):
             index, box = self.ocr_match_any(texts, confidence, *args, **kwargs)
             if index != -1:
                 return index, box
-            time.sleep(interval)
+            _wait(time.sleep, interval)
         logger.debug(f"Timeout: '{texts}' -> NotFound in {timeout} seconds")
         return -1, None
 
@@ -565,7 +570,7 @@ class IOperator(ABC):
             )
             if boxes:
                 return boxes[0]
-            time.sleep(interval)
+            _wait(time.sleep, interval)
         if trace:
             logger.debug(f"Timeout: wait_color HSV {hsv_lower}-{hsv_upper} -> NotFound in {timeout}s")
         return None
@@ -647,7 +652,7 @@ class IOperator(ABC):
             box = self.locate(template)
             if box is not None:
                 return box
-            time.sleep(interval)
+            _wait(time.sleep, interval)
         logger.debug(f"Timeout: {template} -> NotFound in {timeout} seconds")
         return None
 
@@ -668,7 +673,7 @@ class IOperator(ABC):
             index, box = self.locate_any(templates, trace=trace)
             if index != -1:
                 return index, box
-            time.sleep(interval)
+            _wait(time.sleep, interval)
         logger.debug(f"Timeout: {templates} -> NotFound in {timeout} seconds")
         return -1, None
 
@@ -751,7 +756,7 @@ class IOperator(ABC):
                     continue  # 元组结果为 (-1, ...) 表示未找到，继续检查下一个条件
                 if result is not None:
                     return index, result
-            time.sleep(interval)
+            _wait(time.sleep, interval)
         logger.debug(f"Timeout: wait_any conditions -> NotFound in {timeout} seconds")
         return -1, None
 
@@ -786,6 +791,7 @@ class IOperator(ABC):
         ...
 
     @staticmethod
+    @_stage("wait")
     def sleep(seconds: float) -> None:
         """
         Sleep for the specified number of seconds.
@@ -926,10 +932,10 @@ class IOperator(ABC):
         """
         iterations = 0
         action()
-        time.sleep(interval)
+        _wait(time.sleep, interval)
         while condition() and iterations < max_iterations:
             action()
-            time.sleep(interval)
+            _wait(time.sleep, interval)
             iterations += 1
         return iterations != max_iterations
 

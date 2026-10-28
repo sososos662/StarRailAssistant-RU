@@ -5,6 +5,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from .paths import RESOURCE_ROOT
+from SRACore.util.phase_timing import _stage
 
 
 def _private_template_path(template):
@@ -142,6 +143,7 @@ class UnicodeTemplateOperator:
         if event is not None and event.is_set():
             raise ThreadStoppedError("图像识别中断", "线程已停止")
 
+    @_stage("wait")
     def sleep(self, seconds):
         self._check_stop()
         event = self.stop_event

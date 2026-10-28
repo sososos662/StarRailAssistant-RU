@@ -1,5 +1,12 @@
 # 货币战争优化版配置
 
+> RU 分支当前基于官方 **v2.25.0-beta.1 / 8635090**，不是 v2.24.1。
+> 下文的 plusv1 / v2.24.1 / 40 次测试为保留的历史上游记录。
+> 当前分支与俄语说明见 [CONFIGURATION.ru.md](CONFIGURATION.ru.md) 和
+> [FORK.md](../../FORK.md)。阶段经济、独立扩展、3-7 终局规则已存在于上游；
+> 两份正式 JSON 未因翻译而改动。俄语旧标题“七级全员二星”不符合
+> 实际姬子上场二星升级门槛，已更正。
+
 本文对应 `CurrencyWarsPlus` 扩展 **plusv1** 的配置行为，宿主基线为官方 **v2.24.1 / d1fb48a**。扩展开发者：**YukkiSSYB**；感谢 **Shasnow / StarRailAssistant 贡献者**提供基础实现。攻略原作者保留在各 JSON 的 `author` 中。
 
 ## 扩展窗口

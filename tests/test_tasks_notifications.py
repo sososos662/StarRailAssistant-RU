@@ -18,6 +18,27 @@ class FakeOperator:
         self.height = 1080
         self.type = "Desktop"
 
+    def screenshot(self):
+        return None
+
+    def press_key(self, _key, **_kwargs):
+        pass
+
+    def do_while(self, *_args, **_kwargs):
+        pass
+
+    def wait_img(self, *_args, **_kwargs):
+        return True
+
+    def click_img(self, *_args, **_kwargs):
+        return True
+
+    def click_point(self, *_args, **_kwargs):
+        return True
+
+    def sleep(self, _seconds):
+        pass
+
 
 def test_load_all_tasks_and_trigger_start_complete_notifications(monkeypatch) -> None:
     """Load all registered tasks and verify `start()`/`complete()` emit notifications.
@@ -29,11 +50,14 @@ def test_load_all_tasks_and_trigger_start_complete_notifications(monkeypatch) ->
 
     sent_notifications: list[tuple[str, str, str]] = []
 
-    def fake_try_send_notification(title, message, result="success", image=None):
+    def fake_try_send_notification(settings, title, message, result="success", image=None):
         sent_notifications.append((title, message, result))
         return True
 
     monkeypatch.setattr(task_module, "try_send_notification", fake_try_send_notification)
+
+    from SRACore.util import dynamic_import
+    dynamic_import("tasks")
 
     task_classes = task_module.get_task_classes()
     loaded_names = [cls.__name__ for cls in task_classes]
@@ -56,6 +80,8 @@ def test_load_all_tasks_and_trigger_start_complete_notifications(monkeypatch) ->
 
         config = TasksConfig.from_dict({})
         task = task_cls(fake_operator, config)
+        if hasattr(task, "goto_survival_index"):
+            monkeypatch.setattr(task, "goto_survival_index", lambda: True)
 
         sent_notifications.clear()
 

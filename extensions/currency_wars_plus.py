@@ -45,7 +45,7 @@ class CurrencyWarsPlusConfig(BaseModel):
         return schema
 
 
-@extension(extension_id="CurrencyWarsPlus", name="货币战争优化版", description="常规与超频博弈，包含最新金币、支援识别和失败汇总修复。", background=False)
+@extension(extension_id="CurrencyWarsPlus", name="货币战争优化版", description="按所选攻略自动进行货币战争：购买角色、部署阵容并开始战斗，支持常规与超频博弈。", background=False)
 class CurrencyWarsPlusExtension(BaseExtension[CurrencyWarsPlusConfig]):
     """复用宿主操作器执行优化流程，保持独立角色表、资源和存档。"""
 

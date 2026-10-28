@@ -1,0 +1,16 @@
+StarRailAssistant-RU — unofficial derivative of Shasnow/StarRailAssistant.
+Upstream base: v2.25.0-beta.1, commit 863509072bf2011b4d5a3e3d71072b6cd269637e.
+Copyright notices of Shasnow, YukkiSSYB and other upstream contributors are retained.
+
+Fork modifications dated 2026-10-26 through 2026-10-28 include Russian
+presentation/localization, Windows UTF-8 interoperability, CurrencyWarsPlus
+correctness/performance/diagnostics and portable build/publication tooling.
+See FORK.md, CHANGELOG_RU.md and FORK_CHANGES.json for the scope and dated file list.
+
+This is not an official upstream or HoYoverse release. Game names, trademarks
+and game-derived recognition assets remain the property of their respective
+rights holders. No affiliation or endorsement is implied.
+
+The project remains AGPL-3.0-or-later; retain LICENSE and supply corresponding
+source and build instructions when distributing modified binaries. Third-party
+components retain their own license terms. See THIRD_PARTY_NOTICES.md.

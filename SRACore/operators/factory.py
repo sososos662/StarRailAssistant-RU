@@ -1,6 +1,6 @@
 import enum
 import threading
-from rapidocr import RapidOCR
+from SRACore.operators.ocr_diagnostics import RapidOCR
 
 from SRACore.models.app_settings import AppSettings
 from SRACore.operators.ioperator import IOperator

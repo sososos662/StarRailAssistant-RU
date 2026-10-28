@@ -1,0 +1,2297 @@
+{
+  "baseline_sha256": "2f4ddfdd4d34d660cf6f2619ac686cd446e0e5ac6be099a8d31e3483abe42640",
+  "cases": {
+    "recorded": {
+      "result": {
+        "valid": true,
+        "positions": [
+          [
+            0.3151041666666667,
+            0.6199074074074075
+          ],
+          [
+            0.3888020833333333,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6111979166666667,
+            0.6199074074074075
+          ],
+          [
+            0.6848958333333334,
+            0.6199074074074075
+          ]
+        ],
+        "changed": false,
+        "reason": "backend_identity_partial",
+        "boxes": [
+          [
+            536.0,
+            601.0,
+            138.0,
+            137.0
+          ],
+          [
+            680.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            824.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            968.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            1107.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            1246.0,
+            601.0,
+            138.0,
+            137.0
+          ]
+        ],
+        "protected_slots": [],
+        "geometry_valid": true,
+        "unknown_protected_slots": [
+          3
+        ],
+        "ordinary_count_confirmed": false,
+        "ordinary_slots": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "ordinary_count": null
+      },
+      "diagnostics": {
+        "layout_boxes": [
+          [
+            1246,
+            601,
+            138,
+            137
+          ],
+          [
+            536,
+            601,
+            138,
+            137
+          ],
+          [
+            1107,
+            601,
+            133,
+            137
+          ],
+          [
+            680,
+            601,
+            133,
+            137
+          ],
+          [
+            968,
+            601,
+            128,
+            137
+          ],
+          [
+            824,
+            601,
+            128,
+            137
+          ]
+        ],
+        "layout_centers": [
+          [
+            605.0,
+            669.5
+          ],
+          [
+            746.5,
+            669.5
+          ],
+          [
+            888.0,
+            669.5
+          ],
+          [
+            1032.0,
+            669.5
+          ],
+          [
+            1173.5,
+            669.5
+          ],
+          [
+            1315.0,
+            669.5
+          ]
+        ],
+        "layout_gaps": [
+          141.5,
+          141.5,
+          144.0,
+          141.5,
+          141.5
+        ],
+        "layout_median_gap": 141.5,
+        "layout_candidate_count": 6,
+        "previous_layout_positions": [
+          [
+            0.31484375,
+            0.6199074074074075
+          ],
+          [
+            0.3885416666666667,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6114583333333333,
+            0.6199074074074075
+          ],
+          [
+            0.68515625,
+            0.6199074074074075
+          ]
+        ],
+        "layout_window_size": [
+          1920,
+          1080
+        ],
+        "layout_deep_recheck": false,
+        "layout_detection_failures": 0,
+        "evidence": "backend_identity_partial",
+        "layout_recovery": false,
+        "layout_alternative": true,
+        "layout_protected_slots": [],
+        "layout_unknown_protected_slots": [
+          3
+        ],
+        "layout_ordinary_slots": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "layout_ordinary_count_confirmed": false,
+        "layout_ordinary_count": null,
+        "layout_support_authentication": {
+          "reason": "no_support_authenticated",
+          "search_radius_px": 10,
+          "profile_valid": true,
+          "slots": [
+            {
+              "index": 0,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 1,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 2,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 3,
+              "reason": "positioning_badge_only",
+              "offset_px": [
+                -1.0,
+                -2
+              ],
+              "shear": -0.099,
+              "portrait": "robot-portrait",
+              "distances": [
+                0.203423,
+                0.024017
+              ]
+            },
+            {
+              "index": 4,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 5,
+              "reason": "positioning_badge_not_matched"
+            }
+          ],
+          "unresolved_slots": [
+            3
+          ],
+          "positioning_badge_slots": [
+            3
+          ],
+          "exterior_positions": [
+            [
+              0.1677083333333333,
+              0.6199074074074075
+            ],
+            [
+              0.24140625,
+              0.6199074074074075
+            ],
+            [
+              0.7585937500000001,
+              0.6199074074074075
+            ]
+          ],
+          "exterior_authentication": {
+            "reason": "no_support_authenticated",
+            "search_radius_px": 10,
+            "profile_valid": true,
+            "slots": [
+              {
+                "index": 0,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 1,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 2,
+                "reason": "positioning_badge_not_matched"
+              }
+            ],
+            "unresolved_slots": [],
+            "positioning_badge_slots": []
+          },
+          "ordinary_count": null,
+          "ordinary_count_confirmed": false,
+          "ordinary_slots": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "unknown_protected_slots": [
+            3
+          ],
+          "previous_ordinary_count": null
+        },
+        "layout_second_evidence": "backend_identity_partial",
+        "layout_second_boxes": [
+          [
+            1246,
+            601,
+            138,
+            137
+          ],
+          [
+            536,
+            601,
+            138,
+            137
+          ],
+          [
+            1107,
+            601,
+            133,
+            137
+          ],
+          [
+            680,
+            601,
+            133,
+            137
+          ],
+          [
+            968,
+            601,
+            128,
+            137
+          ],
+          [
+            824,
+            601,
+            128,
+            137
+          ]
+        ],
+        "layout_second_positions": [
+          [
+            0.3151041666666667,
+            0.6199074074074075
+          ],
+          [
+            0.3888020833333333,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6111979166666667,
+            0.6199074074074075
+          ],
+          [
+            0.6848958333333334,
+            0.6199074074074075
+          ]
+        ],
+        "layout_second_support_authentication": {
+          "reason": "no_support_authenticated",
+          "search_radius_px": 10,
+          "profile_valid": true,
+          "slots": [
+            {
+              "index": 0,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 1,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 2,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 3,
+              "reason": "positioning_badge_only",
+              "offset_px": [
+                -1.0,
+                -2
+              ],
+              "shear": -0.099,
+              "portrait": "robot-portrait",
+              "distances": [
+                0.203423,
+                0.024017
+              ]
+            },
+            {
+              "index": 4,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 5,
+              "reason": "positioning_badge_not_matched"
+            }
+          ],
+          "unresolved_slots": [
+            3
+          ],
+          "positioning_badge_slots": [
+            3
+          ],
+          "exterior_positions": [
+            [
+              0.1677083333333333,
+              0.6199074074074075
+            ],
+            [
+              0.24140625,
+              0.6199074074074075
+            ],
+            [
+              0.7585937500000001,
+              0.6199074074074075
+            ]
+          ],
+          "exterior_authentication": {
+            "reason": "no_support_authenticated",
+            "search_radius_px": 10,
+            "profile_valid": true,
+            "slots": [
+              {
+                "index": 0,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 1,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 2,
+                "reason": "positioning_badge_not_matched"
+              }
+            ],
+            "unresolved_slots": [],
+            "positioning_badge_slots": []
+          },
+          "ordinary_count": null,
+          "ordinary_count_confirmed": false,
+          "ordinary_slots": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "unknown_protected_slots": [
+            3
+          ],
+          "previous_ordinary_count": null
+        }
+      },
+      "captures": 2,
+      "work": {
+        "resize": 48238,
+        "transform": 41346,
+        "crop": 6908,
+        "convert": 48246
+      },
+      "cpu_seconds": 5.625
+    },
+    "reviewed_support_control": {
+      "result": {
+        "valid": true,
+        "positions": [
+          [
+            0.3151041666666667,
+            0.6199074074074075
+          ],
+          [
+            0.3888020833333333,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6111979166666667,
+            0.6199074074074075
+          ],
+          [
+            0.6848958333333334,
+            0.6199074074074075
+          ]
+        ],
+        "changed": false,
+        "reason": "layout_unchanged",
+        "boxes": [
+          [
+            536.0,
+            601.0,
+            138.0,
+            137.0
+          ],
+          [
+            680.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            824.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            968.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            1107.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            1246.0,
+            601.0,
+            138.0,
+            137.0
+          ]
+        ],
+        "protected_slots": [
+          3
+        ],
+        "geometry_valid": true,
+        "unknown_protected_slots": [],
+        "ordinary_count_confirmed": true,
+        "ordinary_slots": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "ordinary_count": 5
+      },
+      "diagnostics": {
+        "layout_boxes": [
+          [
+            1246,
+            601,
+            138,
+            137
+          ],
+          [
+            536,
+            601,
+            138,
+            137
+          ],
+          [
+            1107,
+            601,
+            133,
+            137
+          ],
+          [
+            680,
+            601,
+            133,
+            137
+          ],
+          [
+            968,
+            601,
+            128,
+            137
+          ],
+          [
+            824,
+            601,
+            128,
+            137
+          ]
+        ],
+        "layout_centers": [
+          [
+            605.0,
+            669.5
+          ],
+          [
+            746.5,
+            669.5
+          ],
+          [
+            888.0,
+            669.5
+          ],
+          [
+            1032.0,
+            669.5
+          ],
+          [
+            1173.5,
+            669.5
+          ],
+          [
+            1315.0,
+            669.5
+          ]
+        ],
+        "layout_gaps": [
+          141.5,
+          141.5,
+          144.0,
+          141.5,
+          141.5
+        ],
+        "layout_median_gap": 141.5,
+        "layout_candidate_count": 6,
+        "previous_layout_positions": [
+          [
+            0.31484375,
+            0.6199074074074075
+          ],
+          [
+            0.3885416666666667,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6114583333333333,
+            0.6199074074074075
+          ],
+          [
+            0.68515625,
+            0.6199074074074075
+          ]
+        ],
+        "layout_window_size": [
+          1920,
+          1080
+        ],
+        "layout_deep_recheck": false,
+        "layout_detection_failures": 0,
+        "evidence": "layout_unchanged",
+        "layout_recovery": false,
+        "layout_alternative": true,
+        "layout_protected_slots": [
+          3
+        ],
+        "layout_unknown_protected_slots": [],
+        "layout_ordinary_slots": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "layout_ordinary_count_confirmed": true,
+        "layout_ordinary_count": 5,
+        "layout_support_authentication": {
+          "reason": "support_slots_authenticated",
+          "search_radius_px": 10,
+          "profile_valid": true,
+          "slots": [
+            {
+              "index": 0,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 1,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 2,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 3,
+              "reason": "support_portrait_and_positioning_badge_matched",
+              "offset_px": [
+                -1.0,
+                0
+              ],
+              "shear": 0.0,
+              "portrait": "portrait",
+              "distances": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "index": 4,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 5,
+              "reason": "positioning_badge_not_matched"
+            }
+          ],
+          "unresolved_slots": [],
+          "positioning_badge_slots": [
+            3
+          ],
+          "exterior_positions": [
+            [
+              0.1677083333333333,
+              0.6199074074074075
+            ],
+            [
+              0.24140625,
+              0.6199074074074075
+            ],
+            [
+              0.7585937500000001,
+              0.6199074074074075
+            ]
+          ],
+          "exterior_authentication": {
+            "reason": "no_support_authenticated",
+            "search_radius_px": 10,
+            "profile_valid": true,
+            "slots": [
+              {
+                "index": 0,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 1,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 2,
+                "reason": "positioning_badge_not_matched"
+              }
+            ],
+            "unresolved_slots": [],
+            "positioning_badge_slots": []
+          },
+          "ordinary_count": 5,
+          "ordinary_count_confirmed": true,
+          "ordinary_slots": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "unknown_protected_slots": [],
+          "previous_ordinary_count": null
+        },
+        "layout_second_evidence": "layout_unchanged",
+        "layout_second_boxes": [
+          [
+            1246,
+            601,
+            138,
+            137
+          ],
+          [
+            536,
+            601,
+            138,
+            137
+          ],
+          [
+            1107,
+            601,
+            133,
+            137
+          ],
+          [
+            680,
+            601,
+            133,
+            137
+          ],
+          [
+            968,
+            601,
+            128,
+            137
+          ],
+          [
+            824,
+            601,
+            128,
+            137
+          ]
+        ],
+        "layout_second_positions": [
+          [
+            0.3151041666666667,
+            0.6199074074074075
+          ],
+          [
+            0.3888020833333333,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6111979166666667,
+            0.6199074074074075
+          ],
+          [
+            0.6848958333333334,
+            0.6199074074074075
+          ]
+        ],
+        "layout_second_support_authentication": {
+          "reason": "support_slots_authenticated",
+          "search_radius_px": 10,
+          "profile_valid": true,
+          "slots": [
+            {
+              "index": 0,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 1,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 2,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 3,
+              "reason": "support_portrait_and_positioning_badge_matched",
+              "offset_px": [
+                -1.0,
+                0
+              ],
+              "shear": 0.0,
+              "portrait": "portrait",
+              "distances": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "index": 4,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 5,
+              "reason": "positioning_badge_not_matched"
+            }
+          ],
+          "unresolved_slots": [],
+          "positioning_badge_slots": [
+            3
+          ],
+          "exterior_positions": [
+            [
+              0.1677083333333333,
+              0.6199074074074075
+            ],
+            [
+              0.24140625,
+              0.6199074074074075
+            ],
+            [
+              0.7585937500000001,
+              0.6199074074074075
+            ]
+          ],
+          "exterior_authentication": {
+            "reason": "no_support_authenticated",
+            "search_radius_px": 10,
+            "profile_valid": true,
+            "slots": [
+              {
+                "index": 0,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 1,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 2,
+                "reason": "positioning_badge_not_matched"
+              }
+            ],
+            "unresolved_slots": [],
+            "positioning_badge_slots": []
+          },
+          "ordinary_count": 5,
+          "ordinary_count_confirmed": true,
+          "ordinary_slots": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "unknown_protected_slots": [],
+          "previous_ordinary_count": null
+        }
+      },
+      "captures": 2,
+      "work": {
+        "resize": 36180,
+        "transform": 30996,
+        "crop": 5200,
+        "convert": 36188
+      },
+      "cpu_seconds": 4.96875
+    },
+    "no_badge": {
+      "result": {
+        "valid": true,
+        "positions": [
+          [
+            0.3151041666666667,
+            0.6199074074074075
+          ],
+          [
+            0.3888020833333333,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6111979166666667,
+            0.6199074074074075
+          ],
+          [
+            0.6848958333333334,
+            0.6199074074074075
+          ]
+        ],
+        "changed": false,
+        "reason": "layout_unchanged",
+        "boxes": [
+          [
+            536.0,
+            601.0,
+            138.0,
+            137.0
+          ],
+          [
+            680.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            824.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            968.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            1107.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            1246.0,
+            601.0,
+            138.0,
+            137.0
+          ]
+        ],
+        "protected_slots": [],
+        "geometry_valid": true,
+        "unknown_protected_slots": [],
+        "ordinary_count_confirmed": true,
+        "ordinary_slots": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "ordinary_count": 6
+      },
+      "diagnostics": {
+        "layout_boxes": [
+          [
+            1246,
+            601,
+            138,
+            137
+          ],
+          [
+            536,
+            601,
+            138,
+            137
+          ],
+          [
+            1107,
+            601,
+            133,
+            137
+          ],
+          [
+            680,
+            601,
+            133,
+            137
+          ],
+          [
+            824,
+            601,
+            128,
+            137
+          ],
+          [
+            968,
+            601,
+            128,
+            137
+          ]
+        ],
+        "layout_centers": [
+          [
+            605.0,
+            669.5
+          ],
+          [
+            746.5,
+            669.5
+          ],
+          [
+            888.0,
+            669.5
+          ],
+          [
+            1032.0,
+            669.5
+          ],
+          [
+            1173.5,
+            669.5
+          ],
+          [
+            1315.0,
+            669.5
+          ]
+        ],
+        "layout_gaps": [
+          141.5,
+          141.5,
+          144.0,
+          141.5,
+          141.5
+        ],
+        "layout_median_gap": 141.5,
+        "layout_candidate_count": 6,
+        "previous_layout_positions": [
+          [
+            0.31484375,
+            0.6199074074074075
+          ],
+          [
+            0.3885416666666667,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6114583333333333,
+            0.6199074074074075
+          ],
+          [
+            0.68515625,
+            0.6199074074074075
+          ]
+        ],
+        "layout_window_size": [
+          1920,
+          1080
+        ],
+        "layout_deep_recheck": false,
+        "layout_detection_failures": 0,
+        "evidence": "layout_unchanged",
+        "layout_recovery": false,
+        "layout_alternative": true,
+        "layout_protected_slots": [],
+        "layout_unknown_protected_slots": [],
+        "layout_ordinary_slots": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "layout_ordinary_count_confirmed": true,
+        "layout_ordinary_count": 6,
+        "layout_support_authentication": {
+          "reason": "no_support_authenticated",
+          "search_radius_px": 10,
+          "profile_valid": true,
+          "slots": [
+            {
+              "index": 0,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 1,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 2,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 3,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 4,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 5,
+              "reason": "positioning_badge_not_matched"
+            }
+          ],
+          "unresolved_slots": [],
+          "positioning_badge_slots": [],
+          "exterior_positions": [
+            [
+              0.1677083333333333,
+              0.6199074074074075
+            ],
+            [
+              0.24140625,
+              0.6199074074074075
+            ],
+            [
+              0.7585937500000001,
+              0.6199074074074075
+            ]
+          ],
+          "exterior_authentication": {
+            "reason": "no_support_authenticated",
+            "search_radius_px": 10,
+            "profile_valid": true,
+            "slots": [
+              {
+                "index": 0,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 1,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 2,
+                "reason": "positioning_badge_not_matched"
+              }
+            ],
+            "unresolved_slots": [],
+            "positioning_badge_slots": []
+          },
+          "ordinary_count": 6,
+          "ordinary_count_confirmed": true,
+          "ordinary_slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unknown_protected_slots": [],
+          "previous_ordinary_count": null
+        },
+        "layout_second_evidence": "layout_unchanged",
+        "layout_second_boxes": [
+          [
+            1246,
+            601,
+            138,
+            137
+          ],
+          [
+            536,
+            601,
+            138,
+            137
+          ],
+          [
+            1107,
+            601,
+            133,
+            137
+          ],
+          [
+            680,
+            601,
+            133,
+            137
+          ],
+          [
+            824,
+            601,
+            128,
+            137
+          ],
+          [
+            968,
+            601,
+            128,
+            137
+          ]
+        ],
+        "layout_second_positions": [
+          [
+            0.3151041666666667,
+            0.6199074074074075
+          ],
+          [
+            0.3888020833333333,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6111979166666667,
+            0.6199074074074075
+          ],
+          [
+            0.6848958333333334,
+            0.6199074074074075
+          ]
+        ],
+        "layout_second_support_authentication": {
+          "reason": "no_support_authenticated",
+          "search_radius_px": 10,
+          "profile_valid": true,
+          "slots": [
+            {
+              "index": 0,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 1,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 2,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 3,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 4,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 5,
+              "reason": "positioning_badge_not_matched"
+            }
+          ],
+          "unresolved_slots": [],
+          "positioning_badge_slots": [],
+          "exterior_positions": [
+            [
+              0.1677083333333333,
+              0.6199074074074075
+            ],
+            [
+              0.24140625,
+              0.6199074074074075
+            ],
+            [
+              0.7585937500000001,
+              0.6199074074074075
+            ]
+          ],
+          "exterior_authentication": {
+            "reason": "no_support_authenticated",
+            "search_radius_px": 10,
+            "profile_valid": true,
+            "slots": [
+              {
+                "index": 0,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 1,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 2,
+                "reason": "positioning_badge_not_matched"
+              }
+            ],
+            "unresolved_slots": [],
+            "positioning_badge_slots": []
+          },
+          "ordinary_count": 6,
+          "ordinary_count_confirmed": true,
+          "ordinary_slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unknown_protected_slots": [],
+          "previous_ordinary_count": null
+        }
+      },
+      "captures": 2,
+      "work": {
+        "resize": 36166,
+        "transform": 30996,
+        "crop": 5186,
+        "convert": 36174
+      },
+      "cpu_seconds": 4.609375
+    },
+    "recorded__reviewed_support_control": {
+      "result": {
+        "valid": false,
+        "positions": [
+          [
+            0.3151041666666667,
+            0.6199074074074075
+          ],
+          [
+            0.3888020833333333,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6111979166666667,
+            0.6199074074074075
+          ],
+          [
+            0.6848958333333334,
+            0.6199074074074075
+          ]
+        ],
+        "changed": false,
+        "reason": "layout_not_stable",
+        "boxes": [
+          [
+            536.0,
+            601.0,
+            138.0,
+            137.0
+          ],
+          [
+            680.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            824.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            968.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            1107.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            1246.0,
+            601.0,
+            138.0,
+            137.0
+          ]
+        ],
+        "protected_slots": [],
+        "geometry_valid": false,
+        "unknown_protected_slots": [
+          3
+        ],
+        "ordinary_count_confirmed": false,
+        "ordinary_slots": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "ordinary_count": null
+      },
+      "diagnostics": {
+        "layout_boxes": [
+          [
+            1246,
+            601,
+            138,
+            137
+          ],
+          [
+            536,
+            601,
+            138,
+            137
+          ],
+          [
+            1107,
+            601,
+            133,
+            137
+          ],
+          [
+            680,
+            601,
+            133,
+            137
+          ],
+          [
+            968,
+            601,
+            128,
+            137
+          ],
+          [
+            824,
+            601,
+            128,
+            137
+          ]
+        ],
+        "layout_centers": [
+          [
+            605.0,
+            669.5
+          ],
+          [
+            746.5,
+            669.5
+          ],
+          [
+            888.0,
+            669.5
+          ],
+          [
+            1032.0,
+            669.5
+          ],
+          [
+            1173.5,
+            669.5
+          ],
+          [
+            1315.0,
+            669.5
+          ]
+        ],
+        "layout_gaps": [
+          141.5,
+          141.5,
+          144.0,
+          141.5,
+          141.5
+        ],
+        "layout_median_gap": 141.5,
+        "layout_candidate_count": 6,
+        "previous_layout_positions": [
+          [
+            0.31484375,
+            0.6199074074074075
+          ],
+          [
+            0.3885416666666667,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6114583333333333,
+            0.6199074074074075
+          ],
+          [
+            0.68515625,
+            0.6199074074074075
+          ]
+        ],
+        "layout_window_size": [
+          1920,
+          1080
+        ],
+        "layout_deep_recheck": false,
+        "layout_detection_failures": 0,
+        "evidence": "backend_identity_partial",
+        "layout_recovery": false,
+        "layout_alternative": true,
+        "layout_protected_slots": [],
+        "layout_unknown_protected_slots": [
+          3
+        ],
+        "layout_ordinary_slots": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "layout_ordinary_count_confirmed": false,
+        "layout_ordinary_count": null,
+        "layout_support_authentication": {
+          "reason": "no_support_authenticated",
+          "search_radius_px": 10,
+          "profile_valid": true,
+          "slots": [
+            {
+              "index": 0,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 1,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 2,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 3,
+              "reason": "positioning_badge_only",
+              "offset_px": [
+                -1.0,
+                -2
+              ],
+              "shear": -0.099,
+              "portrait": "robot-portrait",
+              "distances": [
+                0.203423,
+                0.024017
+              ]
+            },
+            {
+              "index": 4,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 5,
+              "reason": "positioning_badge_not_matched"
+            }
+          ],
+          "unresolved_slots": [
+            3
+          ],
+          "positioning_badge_slots": [
+            3
+          ],
+          "exterior_positions": [
+            [
+              0.1677083333333333,
+              0.6199074074074075
+            ],
+            [
+              0.24140625,
+              0.6199074074074075
+            ],
+            [
+              0.7585937500000001,
+              0.6199074074074075
+            ]
+          ],
+          "exterior_authentication": {
+            "reason": "no_support_authenticated",
+            "search_radius_px": 10,
+            "profile_valid": true,
+            "slots": [
+              {
+                "index": 0,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 1,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 2,
+                "reason": "positioning_badge_not_matched"
+              }
+            ],
+            "unresolved_slots": [],
+            "positioning_badge_slots": []
+          },
+          "ordinary_count": null,
+          "ordinary_count_confirmed": false,
+          "ordinary_slots": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "unknown_protected_slots": [
+            3
+          ],
+          "previous_ordinary_count": null
+        },
+        "layout_second_evidence": "layout_unchanged",
+        "layout_second_boxes": [
+          [
+            1246,
+            601,
+            138,
+            137
+          ],
+          [
+            536,
+            601,
+            138,
+            137
+          ],
+          [
+            1107,
+            601,
+            133,
+            137
+          ],
+          [
+            680,
+            601,
+            133,
+            137
+          ],
+          [
+            968,
+            601,
+            128,
+            137
+          ],
+          [
+            824,
+            601,
+            128,
+            137
+          ]
+        ],
+        "layout_second_positions": [
+          [
+            0.3151041666666667,
+            0.6199074074074075
+          ],
+          [
+            0.3888020833333333,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6111979166666667,
+            0.6199074074074075
+          ],
+          [
+            0.6848958333333334,
+            0.6199074074074075
+          ]
+        ],
+        "layout_second_support_authentication": {
+          "reason": "support_slots_authenticated",
+          "search_radius_px": 10,
+          "profile_valid": true,
+          "slots": [
+            {
+              "index": 0,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 1,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 2,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 3,
+              "reason": "support_portrait_and_positioning_badge_matched",
+              "offset_px": [
+                -1.0,
+                0
+              ],
+              "shear": 0.0,
+              "portrait": "portrait",
+              "distances": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "index": 4,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 5,
+              "reason": "positioning_badge_not_matched"
+            }
+          ],
+          "unresolved_slots": [],
+          "positioning_badge_slots": [
+            3
+          ],
+          "exterior_positions": [
+            [
+              0.1677083333333333,
+              0.6199074074074075
+            ],
+            [
+              0.24140625,
+              0.6199074074074075
+            ],
+            [
+              0.7585937500000001,
+              0.6199074074074075
+            ]
+          ],
+          "exterior_authentication": {
+            "reason": "no_support_authenticated",
+            "search_radius_px": 10,
+            "profile_valid": true,
+            "slots": [
+              {
+                "index": 0,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 1,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 2,
+                "reason": "positioning_badge_not_matched"
+              }
+            ],
+            "unresolved_slots": [],
+            "positioning_badge_slots": []
+          },
+          "ordinary_count": 5,
+          "ordinary_count_confirmed": true,
+          "ordinary_slots": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "unknown_protected_slots": [],
+          "previous_ordinary_count": null
+        }
+      },
+      "captures": 2,
+      "work": {
+        "resize": 42209,
+        "transform": 36171,
+        "crop": 6054,
+        "convert": 42217
+      },
+      "cpu_seconds": 4.578125
+    },
+    "reviewed_support_control__no_badge": {
+      "result": {
+        "valid": false,
+        "positions": [
+          [
+            0.3151041666666667,
+            0.6199074074074075
+          ],
+          [
+            0.3888020833333333,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6111979166666667,
+            0.6199074074074075
+          ],
+          [
+            0.6848958333333334,
+            0.6199074074074075
+          ]
+        ],
+        "changed": false,
+        "reason": "layout_not_stable",
+        "boxes": [
+          [
+            536.0,
+            601.0,
+            138.0,
+            137.0
+          ],
+          [
+            680.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            824.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            968.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            1107.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            1246.0,
+            601.0,
+            138.0,
+            137.0
+          ]
+        ],
+        "protected_slots": [
+          3
+        ],
+        "geometry_valid": false,
+        "unknown_protected_slots": [],
+        "ordinary_count_confirmed": true,
+        "ordinary_slots": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "ordinary_count": 5
+      },
+      "diagnostics": {
+        "layout_boxes": [
+          [
+            1246,
+            601,
+            138,
+            137
+          ],
+          [
+            536,
+            601,
+            138,
+            137
+          ],
+          [
+            1107,
+            601,
+            133,
+            137
+          ],
+          [
+            680,
+            601,
+            133,
+            137
+          ],
+          [
+            968,
+            601,
+            128,
+            137
+          ],
+          [
+            824,
+            601,
+            128,
+            137
+          ]
+        ],
+        "layout_centers": [
+          [
+            605.0,
+            669.5
+          ],
+          [
+            746.5,
+            669.5
+          ],
+          [
+            888.0,
+            669.5
+          ],
+          [
+            1032.0,
+            669.5
+          ],
+          [
+            1173.5,
+            669.5
+          ],
+          [
+            1315.0,
+            669.5
+          ]
+        ],
+        "layout_gaps": [
+          141.5,
+          141.5,
+          144.0,
+          141.5,
+          141.5
+        ],
+        "layout_median_gap": 141.5,
+        "layout_candidate_count": 6,
+        "previous_layout_positions": [
+          [
+            0.31484375,
+            0.6199074074074075
+          ],
+          [
+            0.3885416666666667,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6114583333333333,
+            0.6199074074074075
+          ],
+          [
+            0.68515625,
+            0.6199074074074075
+          ]
+        ],
+        "layout_window_size": [
+          1920,
+          1080
+        ],
+        "layout_deep_recheck": false,
+        "layout_detection_failures": 0,
+        "evidence": "layout_unchanged",
+        "layout_recovery": false,
+        "layout_alternative": true,
+        "layout_protected_slots": [
+          3
+        ],
+        "layout_unknown_protected_slots": [],
+        "layout_ordinary_slots": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "layout_ordinary_count_confirmed": true,
+        "layout_ordinary_count": 5,
+        "layout_support_authentication": {
+          "reason": "support_slots_authenticated",
+          "search_radius_px": 10,
+          "profile_valid": true,
+          "slots": [
+            {
+              "index": 0,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 1,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 2,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 3,
+              "reason": "support_portrait_and_positioning_badge_matched",
+              "offset_px": [
+                -1.0,
+                0
+              ],
+              "shear": 0.0,
+              "portrait": "portrait",
+              "distances": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "index": 4,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 5,
+              "reason": "positioning_badge_not_matched"
+            }
+          ],
+          "unresolved_slots": [],
+          "positioning_badge_slots": [
+            3
+          ],
+          "exterior_positions": [
+            [
+              0.1677083333333333,
+              0.6199074074074075
+            ],
+            [
+              0.24140625,
+              0.6199074074074075
+            ],
+            [
+              0.7585937500000001,
+              0.6199074074074075
+            ]
+          ],
+          "exterior_authentication": {
+            "reason": "no_support_authenticated",
+            "search_radius_px": 10,
+            "profile_valid": true,
+            "slots": [
+              {
+                "index": 0,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 1,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 2,
+                "reason": "positioning_badge_not_matched"
+              }
+            ],
+            "unresolved_slots": [],
+            "positioning_badge_slots": []
+          },
+          "ordinary_count": 5,
+          "ordinary_count_confirmed": true,
+          "ordinary_slots": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "unknown_protected_slots": [],
+          "previous_ordinary_count": null
+        },
+        "layout_second_evidence": "layout_unchanged",
+        "layout_second_boxes": [
+          [
+            1246,
+            601,
+            138,
+            137
+          ],
+          [
+            536,
+            601,
+            138,
+            137
+          ],
+          [
+            1107,
+            601,
+            133,
+            137
+          ],
+          [
+            680,
+            601,
+            133,
+            137
+          ],
+          [
+            824,
+            601,
+            128,
+            137
+          ],
+          [
+            968,
+            601,
+            128,
+            137
+          ]
+        ],
+        "layout_second_positions": [
+          [
+            0.3151041666666667,
+            0.6199074074074075
+          ],
+          [
+            0.3888020833333333,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6111979166666667,
+            0.6199074074074075
+          ],
+          [
+            0.6848958333333334,
+            0.6199074074074075
+          ]
+        ],
+        "layout_second_support_authentication": {
+          "reason": "no_support_authenticated",
+          "search_radius_px": 10,
+          "profile_valid": true,
+          "slots": [
+            {
+              "index": 0,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 1,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 2,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 3,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 4,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 5,
+              "reason": "positioning_badge_not_matched"
+            }
+          ],
+          "unresolved_slots": [],
+          "positioning_badge_slots": [],
+          "exterior_positions": [
+            [
+              0.1677083333333333,
+              0.6199074074074075
+            ],
+            [
+              0.24140625,
+              0.6199074074074075
+            ],
+            [
+              0.7585937500000001,
+              0.6199074074074075
+            ]
+          ],
+          "exterior_authentication": {
+            "reason": "no_support_authenticated",
+            "search_radius_px": 10,
+            "profile_valid": true,
+            "slots": [
+              {
+                "index": 0,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 1,
+                "reason": "positioning_badge_not_matched"
+              },
+              {
+                "index": 2,
+                "reason": "positioning_badge_not_matched"
+              }
+            ],
+            "unresolved_slots": [],
+            "positioning_badge_slots": []
+          },
+          "ordinary_count": 6,
+          "ordinary_count_confirmed": true,
+          "ordinary_slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "unknown_protected_slots": [],
+          "previous_ordinary_count": null
+        }
+      },
+      "captures": 2,
+      "work": {
+        "resize": 36173,
+        "transform": 30996,
+        "crop": 5193,
+        "convert": 36181
+      },
+      "cpu_seconds": 3.609375
+    }
+  }
+}

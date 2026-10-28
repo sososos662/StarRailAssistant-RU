@@ -1,5 +1,19 @@
 # 货币战争优化版 plusv1
 
+> **RU 分支说明（2026-10-28）**：本仓库的宿主基线是官方
+> `v2.25.0-beta.1 / 863509072bf2011b4d5a3e3d71072b6cd269637e`。
+> 独立 Plus、阶段阵容/经济、3-7 终局规则等已经包含在该上游版本，
+> 不能全部记为 RU 分支新功能。本分支在其上修复、优化并增加俄语与诊断。
+> [俄语实际配置说明](CONFIGURATION.ru.md) · [分支差异](../../FORK.md)。
+> 两份正式攻略保持上游原字节；“七级二星放行”指姬子上场二星后放行
+> 七级起常规经验购买，不是全员二星，姬子采购目标仍为三星。
+> 另经用户许可附带欧洲/Global 姬子变体 `himeko_global_europe_20261026.json`：
+> 仅名称和游戏分享码不同，采购、阵容和经济规则不变。
+>
+> 下方保留扩展的**历史上游说明与历史测试结果**（含 v2.24.1 PR 适配记录），
+> 不作为本分支宿主版本或本次验收结果。当前测试见
+> [docs/TESTING.ru.md](../../docs/TESTING.ru.md)。
+
 开发者：**YukkiSSYB**。感谢 **Shasnow** 与 [StarRailAssistant 上游贡献者](https://github.com/Shasnow/StarRailAssistant/graphs/contributors)提供宿主及原始货币战争实现。
 
 宿主基线为官方预发布版 [v2.24.1](https://github.com/Shasnow/StarRailAssistant/releases/tag/v2.24.1)、提交 [`d1fb48a`](https://github.com/Shasnow/StarRailAssistant/commit/d1fb48ac9e807110f955a5cbb02beeab48cbad1a)。本扩展版本为 **plusv1**，ID 为 `CurrencyWarsPlus`，界面名称为“货币战争优化版”。支持常规博弈、超频博弈及指定运行局数，与原版货币战争和刷开局分别选择运行。

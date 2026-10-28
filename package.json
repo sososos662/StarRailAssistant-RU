@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "python main.py",
     "dev:frontend": "cd SRAFrontend/SRAFrontend.Desktop && dotnet run",
-    "build": "dotnet publish -c Release -r win-x64 SRAFrontend/SRAFrontend.sln && python scripts/package.py",
+    "build": "python scripts/build_ru.py",
     "install": "pip install \".[full]\"",
     "frontend": "dotnet run --project SRAFrontend/SRAFrontend.Desktop/SRAFrontend.Desktop.csproj",
     "pyl10nc": "python scripts/pyl10nc/__main__.py SRACore/localization/resource.toml",

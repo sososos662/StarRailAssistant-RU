@@ -1,0 +1,33 @@
+name: Ошибка StarRailAssistant-RU
+description: Сообщить об ошибке именно этого неофициального форка
+body:
+  - type: checkboxes
+    attributes:
+      label: До отправки
+      options:
+        - label: Это сборка форка, а не неизменённая официальная версия
+          required: true
+        - label: Я убрал UID, имя, локальные пути, токены и личные настройки из приложений
+          required: true
+  - type: input
+    attributes:
+      label: Ревизия FORK_VERSION и версия приложения
+      placeholder: 2.25.0-beta.1-ru.20261028.1 / 2.25.0-beta.1
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Среда
+      description: Windows, GPU, CPU или DirectML, язык игры, разрешение и масштаб
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Воспроизведение
+      description: Шаги, ожидаемое и фактическое поведение. Не прикладывайте весь AppData или архив логов без очистки.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Обезличенная диагностика
+      description: Только необходимый фрагмент; не публикуйте секреты даже в свёрнутом блоке

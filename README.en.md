@@ -1,4 +1,28 @@
-<p align="center"><img src="/resources/SRAico.png" alt="icon"></p>
+# StarRailAssistant-RU — unofficial fork
+
+**[Русский: fork overview, installation and differences](README_RU.md)**
+
+This fork is pinned to Shasnow/StarRailAssistant **v2.25.0-beta.1**, commit
+`863509072bf2011b4d5a3e3d71072b6cd269637e`; it is not current upstream or an
+official Russian release. It adds Russian UI resources, CurrencyWarsPlus fixes,
+conservative CPU optimizations, optional DirectML OCR and bounded diagnostics.
+The game must still use Simplified Chinese and 1920×1080. No completion,
+performance, account-safety or anti-ban guarantee is made.
+
+See [fork scope](FORK.md), [build instructions](docs/BUILDING.ru.md),
+[changes](CHANGELOG_RU.md) and [exact upstream base](UPSTREAM.md).
+The user's approved **Himeko Nova (Europe)** preset is included as
+`himeko_global_europe_20261026.json`; its gameplay configuration is unchanged.
+**[Download fork releases](https://github.com/sososos662/StarRailAssistant-RU/releases).**
+Get fork binaries from **this repository's Releases**. Upstream download links
+below do not contain these changes. The upstream updater can overwrite this fork.
+
+---
+
+The upstream English documentation is retained below; its feature list is not
+an independent validation of this fork.
+
+<p align="center"><img src="resources/SRAico.png" alt="icon"></p>
 <p align="center">
     <img src="https://img.shields.io/badge/platform-Windows-blue" alt="platform">
     <img alt="Static Badge" src="https://img.shields.io/badge/python-3.12-skyblue">
@@ -12,7 +36,7 @@
       <img alt="PyPI Version" src="https://img.shields.io/pypi/v/starrailassistant">
     </a>
 </p>
-<p align="center"><a href="https://starrailassistant.top"><b>Homepage</b></a> | <a href="README.md"><b>中文</b></a></p>
+<p align="center"><a href="https://starrailassistant.top"><b>Homepage</b></a> | <a href="README.md"><b>Русский</b></a> | <a href="README.zh.md"><b>中文</b></a></p>
 
 #### [Troubleshooting](https://starrailassistant.top/getting-started/trouble-shooting/) | [FAQ](https://starrailassistant.top/getting-started/faq/) | [Download & Install](https://starrailassistant.top/getting-started/download/) | [Getting Started](https://starrailassistant.top/getting-started/getting-started/)
 

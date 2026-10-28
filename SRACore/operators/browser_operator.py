@@ -10,6 +10,7 @@ import psutil
 from PIL import Image
 from loguru import logger
 from rapidocr import RapidOCR
+from SRACore.util.phase_timing import _stage, _wait
 from selenium import webdriver
 from selenium.common import NoSuchElementException, SessionNotCreatedException, TimeoutException
 from selenium.webdriver import Keys, ActionChains
@@ -338,7 +339,7 @@ class BrowserOperator(IOperator):
                         document.getElementsByClassName("coin-prior-choose-item-include-info")[1].click();
                     } catch(e) {}
                 """)
-                time.sleep(2)
+                _wait(time.sleep, 2)
                 status = WebDriverWait(self.driver, 10).until(
                     lambda d: d.execute_script("""
                         if (document.querySelector(arguments[0])) return "game_running";
@@ -450,6 +451,7 @@ class BrowserOperator(IOperator):
             return None
         return base64.b64decode(result["data"])
 
+    @_stage("capture")
     def screenshot(self, *, from_x: float | None = None, from_y: float | None = None, to_x: float | None = None,
                    to_y: float | None = None, background: bool = True, resize: tuple[int, int] | None = None,
                    save_path: str | None = None, jpeg_quality: int | None = None) -> Image.Image:

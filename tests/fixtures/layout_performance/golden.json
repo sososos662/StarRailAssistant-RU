@@ -1,0 +1,556 @@
+{
+  "previous_positions": [
+    [
+      0.31484375,
+      0.6199074074074075
+    ],
+    [
+      0.3885416666666667,
+      0.6199074074074075
+    ],
+    [
+      0.4625,
+      0.6199074074074075
+    ],
+    [
+      0.5375,
+      0.6199074074074075
+    ],
+    [
+      0.6114583333333333,
+      0.6199074074074075
+    ],
+    [
+      0.68515625,
+      0.6199074074074075
+    ]
+  ],
+  "cases": {
+    "recorded": {
+      "result": {
+        "valid": true,
+        "positions": [
+          [
+            0.3151041666666667,
+            0.6199074074074075
+          ],
+          [
+            0.3888020833333333,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6111979166666667,
+            0.6199074074074075
+          ],
+          [
+            0.6848958333333334,
+            0.6199074074074075
+          ]
+        ],
+        "changed": false,
+        "reason": "backend_identity_partial",
+        "boxes": [
+          [
+            536.0,
+            601.0,
+            138.0,
+            137.0
+          ],
+          [
+            680.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            824.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            968.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            1107.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            1246.0,
+            601.0,
+            138.0,
+            137.0
+          ]
+        ],
+        "protected_slots": [],
+        "geometry_valid": true,
+        "unknown_protected_slots": [
+          3
+        ],
+        "ordinary_count_confirmed": false,
+        "ordinary_slots": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "ordinary_count": null
+      },
+      "support_diagnostics": {
+        "reason": "no_support_authenticated",
+        "search_radius_px": 10,
+        "profile_valid": true,
+        "slots": [
+          {
+            "index": 0,
+            "reason": "positioning_badge_not_matched"
+          },
+          {
+            "index": 1,
+            "reason": "positioning_badge_not_matched"
+          },
+          {
+            "index": 2,
+            "reason": "positioning_badge_not_matched"
+          },
+          {
+            "index": 3,
+            "reason": "positioning_badge_only",
+            "offset_px": [
+              -1.0,
+              -2
+            ],
+            "shear": -0.099,
+            "portrait": "robot-portrait",
+            "distances": [
+              0.203423,
+              0.024017
+            ]
+          },
+          {
+            "index": 4,
+            "reason": "positioning_badge_not_matched"
+          },
+          {
+            "index": 5,
+            "reason": "positioning_badge_not_matched"
+          }
+        ],
+        "unresolved_slots": [
+          3
+        ],
+        "positioning_badge_slots": [
+          3
+        ],
+        "exterior_positions": [
+          [
+            0.1677083333333333,
+            0.6199074074074075
+          ],
+          [
+            0.24140625,
+            0.6199074074074075
+          ],
+          [
+            0.7585937500000001,
+            0.6199074074074075
+          ]
+        ],
+        "exterior_authentication": {
+          "reason": "no_support_authenticated",
+          "search_radius_px": 10,
+          "profile_valid": true,
+          "slots": [
+            {
+              "index": 0,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 1,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 2,
+              "reason": "positioning_badge_not_matched"
+            }
+          ],
+          "unresolved_slots": [],
+          "positioning_badge_slots": []
+        },
+        "ordinary_count": null,
+        "ordinary_count_confirmed": false,
+        "ordinary_slots": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "unknown_protected_slots": [
+          3
+        ],
+        "previous_ordinary_count": null
+      },
+      "capture_count": 2,
+      "seconds_before": 21.86570009999923
+    },
+    "no_badge": {
+      "result": {
+        "valid": true,
+        "positions": [
+          [
+            0.3151041666666667,
+            0.6199074074074075
+          ],
+          [
+            0.3888020833333333,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6111979166666667,
+            0.6199074074074075
+          ],
+          [
+            0.6848958333333334,
+            0.6199074074074075
+          ]
+        ],
+        "changed": false,
+        "reason": "layout_unchanged",
+        "boxes": [
+          [
+            536.0,
+            601.0,
+            138.0,
+            137.0
+          ],
+          [
+            680.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            824.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            968.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            1107.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            1246.0,
+            601.0,
+            138.0,
+            137.0
+          ]
+        ],
+        "protected_slots": [],
+        "geometry_valid": true,
+        "unknown_protected_slots": [],
+        "ordinary_count_confirmed": true,
+        "ordinary_slots": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "ordinary_count": 6
+      },
+      "support_diagnostics": {
+        "reason": "no_support_authenticated",
+        "search_radius_px": 10,
+        "profile_valid": true,
+        "slots": [
+          {
+            "index": 0,
+            "reason": "positioning_badge_not_matched"
+          },
+          {
+            "index": 1,
+            "reason": "positioning_badge_not_matched"
+          },
+          {
+            "index": 2,
+            "reason": "positioning_badge_not_matched"
+          },
+          {
+            "index": 3,
+            "reason": "positioning_badge_not_matched"
+          },
+          {
+            "index": 4,
+            "reason": "positioning_badge_not_matched"
+          },
+          {
+            "index": 5,
+            "reason": "positioning_badge_not_matched"
+          }
+        ],
+        "unresolved_slots": [],
+        "positioning_badge_slots": [],
+        "exterior_positions": [
+          [
+            0.1677083333333333,
+            0.6199074074074075
+          ],
+          [
+            0.24140625,
+            0.6199074074074075
+          ],
+          [
+            0.7585937500000001,
+            0.6199074074074075
+          ]
+        ],
+        "exterior_authentication": {
+          "reason": "no_support_authenticated",
+          "search_radius_px": 10,
+          "profile_valid": true,
+          "slots": [
+            {
+              "index": 0,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 1,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 2,
+              "reason": "positioning_badge_not_matched"
+            }
+          ],
+          "unresolved_slots": [],
+          "positioning_badge_slots": []
+        },
+        "ordinary_count": 6,
+        "ordinary_count_confirmed": true,
+        "ordinary_slots": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unknown_protected_slots": [],
+        "previous_ordinary_count": null
+      },
+      "capture_count": 2,
+      "seconds_before": 22.49779789999957
+    },
+    "reviewed_support_control": {
+      "result": {
+        "valid": true,
+        "positions": [
+          [
+            0.3151041666666667,
+            0.6199074074074075
+          ],
+          [
+            0.3888020833333333,
+            0.6199074074074075
+          ],
+          [
+            0.4625,
+            0.6199074074074075
+          ],
+          [
+            0.5375,
+            0.6199074074074075
+          ],
+          [
+            0.6111979166666667,
+            0.6199074074074075
+          ],
+          [
+            0.6848958333333334,
+            0.6199074074074075
+          ]
+        ],
+        "changed": false,
+        "reason": "layout_unchanged",
+        "boxes": [
+          [
+            536.0,
+            601.0,
+            138.0,
+            137.0
+          ],
+          [
+            680.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            824.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            968.0,
+            601.0,
+            128.0,
+            137.0
+          ],
+          [
+            1107.0,
+            601.0,
+            133.0,
+            137.0
+          ],
+          [
+            1246.0,
+            601.0,
+            138.0,
+            137.0
+          ]
+        ],
+        "protected_slots": [
+          3
+        ],
+        "geometry_valid": true,
+        "unknown_protected_slots": [],
+        "ordinary_count_confirmed": true,
+        "ordinary_slots": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "ordinary_count": 5
+      },
+      "support_diagnostics": {
+        "reason": "support_slots_authenticated",
+        "search_radius_px": 10,
+        "profile_valid": true,
+        "slots": [
+          {
+            "index": 0,
+            "reason": "positioning_badge_not_matched"
+          },
+          {
+            "index": 1,
+            "reason": "positioning_badge_not_matched"
+          },
+          {
+            "index": 2,
+            "reason": "positioning_badge_not_matched"
+          },
+          {
+            "index": 3,
+            "reason": "support_portrait_and_positioning_badge_matched",
+            "offset_px": [
+              -1.0,
+              0
+            ],
+            "shear": 0.0,
+            "portrait": "portrait",
+            "distances": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "index": 4,
+            "reason": "positioning_badge_not_matched"
+          },
+          {
+            "index": 5,
+            "reason": "positioning_badge_not_matched"
+          }
+        ],
+        "unresolved_slots": [],
+        "positioning_badge_slots": [
+          3
+        ],
+        "exterior_positions": [
+          [
+            0.1677083333333333,
+            0.6199074074074075
+          ],
+          [
+            0.24140625,
+            0.6199074074074075
+          ],
+          [
+            0.7585937500000001,
+            0.6199074074074075
+          ]
+        ],
+        "exterior_authentication": {
+          "reason": "no_support_authenticated",
+          "search_radius_px": 10,
+          "profile_valid": true,
+          "slots": [
+            {
+              "index": 0,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 1,
+              "reason": "positioning_badge_not_matched"
+            },
+            {
+              "index": 2,
+              "reason": "positioning_badge_not_matched"
+            }
+          ],
+          "unresolved_slots": [],
+          "positioning_badge_slots": []
+        },
+        "ordinary_count": 5,
+        "ordinary_count_confirmed": true,
+        "ordinary_slots": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "unknown_protected_slots": [],
+        "previous_ordinary_count": null
+      },
+      "capture_count": 2,
+      "seconds_before": 19.93551579999985
+    }
+  }
+}

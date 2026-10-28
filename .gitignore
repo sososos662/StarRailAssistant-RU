@@ -35,3 +35,31 @@ SRAFrontend/SRAFrontend.Server/wwwroot/*
 
 # 其他
 version_info.txt
+
+# Fork: private runtime state, release staging and tool caches
+/evidence/
+/reports/
+/dist/
+/build/
+/release-build/
+/publish/
+/gpu_payload/
+/backend-build-inputs.json
+/.pytest_cache/
+/.ruff_cache/
+**/node_modules/
+**/TestResults/
+**/*.egg-info/
+SRAFrontend/srafrontend-webui/dist/
+SRAFrontend/srafrontend-webui/*.tsbuildinfo
+*.pyc
+*.log
+*.zip.sha256
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+/settings.json
+/extensions.json
+/current_run.json

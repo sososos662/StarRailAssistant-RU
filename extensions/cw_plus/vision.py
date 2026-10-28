@@ -4,7 +4,7 @@
 配置缺失或无效时始终返回 UNKNOWN。
 校准流程：截取真实窗口图像，用 crop_slot_template 裁剪，保存明确标注为空或占用的 PNG，再以 make_template_entry 构建条目并验证生成的 JSON 配置。
 辅助函数不能判断人工标注是否正确，仍须在真实游戏中审核。
-本模块不导入 SRACore，也不启动 GUI。
+本模块仅使用 SRACore 的无 GUI 计时辅助，不启动 GUI。
 配置模式中的所有模板路径均相对于配置目录。
 模式示例：{"version": 2, "window_size": [1920, 1080], "aspect_tolerance": 0.005, "scale_tolerance": 0.01, "slots": [{"area": "in_hand", "index": 0, "position": [0.229, 0.844], "relative_box": [-0.02, -0.03, 0.02, 0.03], "max_mae": 0.035, "min_margin": 0.025, "require_empty_structure": true, "empty": [{"path": "empty.png", "label": "empty", "sha256": "..."}], "occupied": [{"path": "occupied.png", "label": "occupied", "sha256": "..."}]}]}。
 版本 1 保留原行为，除非槽位明确启用 require_empty_structure。
@@ -15,6 +15,7 @@ from __future__ import annotations
 
 from .paths import RESOURCE_ROOT
 from .layout import current_backend_extent_matches
+from SRACore.util.phase_timing import _report, _stage
 
 import hashlib
 from collections import OrderedDict
@@ -374,10 +375,33 @@ def _field_structure(image):
 
 def _matches_field_structure(crop, structure):
     detail = _field_highpass(crop)
+    if all(sum(max(1, expected * 0.4) <= detail[index] <= expected + 6
+               for index, expected in band) >= 0.65 * len(band) for band in structure):
+        return True
+    # 邻域容差只能用于与完整原图轮廓高度相关的细线；密集蓝色噪点
+    # 也可能覆盖多个邻域，必须先用同网格全局正轮廓相关性排除它。
+    positive = tuple(value if value >= 3 else 0 for value in detail)
+    norm = sum(value * value for value in positive)
+    reference_norm = sum(expected * expected for band in structure for _, expected in band)
+    dot = sum(expected * positive[index] for band in structure for index, expected in band)
+    if not norm or dot * dot < 0.9 ** 2 * reference_norm * norm:
+        return False
+
+    def matches(index, expected):
+        low, high = max(1, expected * 0.4), expected + 6
+        if low <= detail[index] <= high:
+            return True
+        # 64×96 网格中允许一个像素的抗锯齿位移；不是降低轮廓覆盖率。
+        # 缓慢背景动画会改变细线的离散取样，精确同坐标比较把真实空标
+        # 的末段错误判为缺失。六段仍须各自覆盖65%，RGB正负间距不变。
+        y, x = divmod(index, 64)
+        return any(low <= detail[row * 64 + column] <= high
+                   for row in range(max(0, y - 1), min(96, y + 2))
+                   for column in range(max(0, x - 1), min(64, x + 2)))
     # 逐段检查，避免孤立星星或被遮挡标志残留的一小部分
     # 认证整个部署槽位为空。
-    return all(sum(max(1, expected * 0.4) <= detail[index] <= expected + 6
-                   for index, expected in band) >= 0.65 * len(band)
+    return all(sum(matches(index, expected)
+                    for index, expected in band) >= 0.65 * len(band)
                for band in structure)
 
 
@@ -614,6 +638,7 @@ class CurrencyWarsVision:
             self._confirmed_backend_ordinary_count = observation.ordinary_count
         return observation
 
+    @_report("backend_layout", stage="cpu_geometry", clock=lambda: time.monotonic())
     def read_backend_layout(self, previous_positions, *, recover=False):
         """完整双帧几何与逐槽身份分开认证；角标单独命中仅触发有限身份复核。"""
         self._backend_layout_frames = []
@@ -819,16 +844,38 @@ class CurrencyWarsVision:
         if not positions or len(positions) > 12 or tuple(frame.size) != (1920, 1080):
             return ()
         try:
-            from PIL import Image, ImageChops
+            import cv2
+            import numpy as np
+            from PIL import Image
             diagnostics["reason"] = "invalid_support_profile"
             reference_position, portraits, badge = self._load_backend_support_profile()
+            # RGB字节不变；L1范数是原逐通道直方图加权和的同一整数总和。
+            # 仅缓存已校验模板向量，绝不缓存现场帧、角色身份或观测时效。
+            grids = {id(item): np.frombuffer(item[2].tobytes(), dtype=np.uint8)
+                     for item in (*portraits, badge)}
+            # 网格分块的直方图前缀给出到任意 RGB 区间的精确 L1 下界。
+            # 分块只用于否决不可能命中的投影，实际比较仍为完整原网格。
+            channel_bounds = []
+            levels = np.arange(256, dtype=np.int64)
+            badge_grid = grids[id(badge)].reshape(64, 64, 3)
+            for gy in range(0, 64, 16):
+                for gx in range(0, 64, 16):
+                    below, above = [], []
+                    for channel in badge_grid[gy:gy + 16, gx:gx + 16].reshape(-1, 3).T:
+                        histogram = np.bincount(channel, minlength=256)
+                        counts = histogram.cumsum()
+                        sums = (histogram * levels).cumsum()
+                        below.append(levels * counts - sums)
+                        above.append(sums[-1] - sums - levels * (counts[-1] - counts))
+                    channel_bounds.append((gx, gy, np.array(below), np.array(above)))
             diagnostics["profile_valid"] = True
             radius = diagnostics["search_radius_px"]
             # 卡片的透视剪切将站位角标映到半像素位置。头像与角标仍共享
             # 同一平移和剪切，不改变素材、大小或认证阈值。
             offsets = sorted(((dx / 2, dy) for dx in range(-2 * radius, 2 * radius + 1)
                               for dy in range(-radius, radius + 1)),
-                             key=lambda offset: (abs(offset[0]) + abs(offset[1]), offset))
+                              key=lambda offset: (abs(offset[0]) + abs(offset[1]), offset))
+            offset_x, offset_y = np.array(offsets).T
             matched = []
             frame = frame.convert("RGB")
             for index, position in enumerate(positions):
@@ -837,6 +884,42 @@ class CurrencyWarsVision:
                 slot_details = {"index": index, "reason": "positioning_badge_not_matched"}
                 diagnostics["slots"].append(slot_details)
                 best_score, badge_seen, authenticated = float("inf"), False, False
+                shears = self._backend_projection_shears(reference_position, position)
+                bounded_search = False
+                # 仅排除原搜索不可能命中的 RGB 范围，不用颜色认证支援或普通身份。
+                # 包围全部剪切/半像素平移，再外扩两像素覆盖双线性采样邻域。
+                # 两次 BILINEAR 都是非负加权；每个输出通道仍在源像素极值之间。
+                # 模板到此区间的 L1 下界若已超阈值，所有原投影都必定不匹配。
+                try:
+                    left, top, right, bottom = badge[0]
+                    shift_x = round((position[0] - reference_position[0]) * frame.width)
+                    shift_y = round((position[1] - reference_position[1]) * frame.height)
+                    reference_y = reference_position[1] * frame.height
+                    xs = [x + shift_x + shear * (y - reference_y)
+                          for x in (left, right) for y in (top, bottom) for shear in shears]
+                    bounds = (math.floor(min(xs) - radius) - 2, top + shift_y - radius - 2,
+                              math.ceil(max(xs) + radius) + 2, bottom + shift_y + radius + 2)
+                    if (0 <= bounds[0] < bounds[2] <= frame.width
+                            and 0 <= bounds[1] < bounds[3] <= frame.height):
+                        extrema = frame.crop(bounds).getextrema()
+                        minimum, maximum = (np.array(values, dtype=np.uint8)
+                                            for values in zip(*extrema))
+                        grid = grids[id(badge)]
+                        nearest = np.clip(grid.reshape(-1, 3), minimum, maximum).reshape(-1)
+                        lower_bound = cv2.norm(grid, nearest, cv2.NORM_L1) / (64 * 64 * 3 * 255)
+                        self._check_stop()
+                        if lower_bound > badge[3]:
+                            continue
+                        # 小范围滤波结果只属于当前帧、当前槽，不跨帧复用。
+                        patch_box = (bounds[0] - 2, bounds[1] - 2, bounds[2] + 2, bounds[3] + 2)
+                        if (0 <= patch_box[0] < patch_box[2] <= frame.width
+                                and 0 <= patch_box[1] < patch_box[3] <= frame.height):
+                            patch = np.asarray(frame.crop(patch_box))
+                            filters = {}
+                            bounded_search = True
+                except Exception as error:
+                    # 无法证明负例时始终退回完整原搜索；取消信号不能被吞掉。
+                    self._failure(error)
 
                 def distance_at(calibrated, shear, offset):
                     pixels, _, grid, _, _ = calibrated
@@ -845,15 +928,52 @@ class CurrencyWarsVision:
                     if crop is None:
                         return float("inf")
                     resized = crop.resize((64, 64), Image.Resampling.BILINEAR)
-                    # 与 image_distance 相同的 RGB 网格及 MAE，比较由 Pillow 在 C 层执行。
-                    difference = ImageChops.difference(resized, grid)
-                    histogram = difference.histogram()
-                    return sum((value % 256) * count for value, count in enumerate(histogram)) / (
-                        difference.width * difference.height * 3 * 255)
+                    # 保持同一64×64双线性RGB网格、投影、搜索顺序和阈值。
+                    pixels = np.frombuffer(resized.tobytes(), dtype=np.uint8)
+                    return cv2.norm(pixels, grids[id(calibrated)], cv2.NORM_L1) / (
+                        resized.width * resized.height * 3 * 255)
 
-                for shear in self._backend_projection_shears(reference_position, position):
-                    for offset in offsets:
+                for shear in shears:
+                    impossible = ()
+                    if bounded_search:
+                        try:
+                            lower_bounds = np.zeros(len(offsets), dtype=np.int64)
+                            left, top, right, bottom = badge[0]
+                            scale_x, scale_y = (right - left) / 64, (bottom - top) / 64
+                            for gx, gy, below, above in channel_bounds:
+                                self._check_stop()
+                                # BILINEAR 缩小时核宽按比例扩大；裁剪边缘按原图钳位。
+                                x0 = left + max(0, gx * scale_x - max(1, scale_x))
+                                x1 = left + min(right - left, (gx + 16) * scale_x + max(1, scale_x))
+                                y0 = top + max(0, gy * scale_y - max(1, scale_y))
+                                y1 = top + min(bottom - top, (gy + 16) * scale_y + max(1, scale_y))
+                                xs = [x + shift_x + shear * (y - reference_y)
+                                      for x in (x0, x1) for y in (y0, y1)]
+                                width = math.ceil(max(xs) - min(xs)) + 3
+                                height = math.ceil(y1 - y0) + 3
+                                key = width, height
+                                if key not in filters:
+                                    kernel = np.ones((height, width), dtype=np.uint8)
+                                    filters[key] = (cv2.erode(patch, kernel, anchor=(0, 0)),
+                                                    cv2.dilate(patch, kernel, anchor=(0, 0)))
+                                minima, maxima = filters[key]
+                                px = np.floor(min(xs) + offset_x).astype(int) - 1 - patch_box[0]
+                                py = np.floor(y0 + shift_y + offset_y).astype(int) - 1 - patch_box[1]
+                                if (np.any(px < 0) or np.any(py < 0)
+                                        or np.any(px + width > patch.shape[1])
+                                        or np.any(py + height > patch.shape[0])):
+                                    raise ValueError("badge bound outside local patch")
+                                channels = np.arange(3)[:, None]
+                                lower_bounds += (below[channels, minima[py, px].T]
+                                                 + above[channels, maxima[py, px].T]).sum(axis=0)
+                            impossible = lower_bounds / (64 * 64 * 3 * 255) > badge[3]
+                        except Exception as error:
+                            self._failure(error)
+                            bounded_search = False
+                    for offset_index, offset in enumerate(offsets):
                         self._check_stop()
+                        if bounded_search and impossible[offset_index]:
+                            continue
                         badge_distance = distance_at(badge, shear, offset)
                         # 角标可见时才比较支援头像，但角标可见不等于支援。
                         if badge_distance > badge[3]:
@@ -1062,7 +1182,8 @@ class CurrencyWarsVision:
                    "layout_second_boxes", "layout_second_positions", "layout_protected_slots",
                    "layout_unknown_protected_slots", "layout_ordinary_slots",
                    "layout_ordinary_count_confirmed", "layout_ordinary_count",
-                   "layout_support_authentication", "layout_second_support_authentication", "population_reason"}
+                    "layout_support_authentication", "layout_second_support_authentication", "population_reason",
+                    "store_scan"}
         payload = {key: value for key, value in (metadata.items() if isinstance(metadata, Mapping) else ()) if key in allowed}
         if "ocr_attempts" in payload:
             attempts = payload["ocr_attempts"]
@@ -1152,6 +1273,7 @@ class CurrencyWarsVision:
                 self._text_pixel_cache.popitem(last=False)
         return result
 
+    @_stage("ocr")
     def _engine_ocr_uncached(self, image, *, minimum_confidence=None):
         self._check_stop()
         output = self.operator.ocr_engine(image, use_det=True, use_cls=False, use_rec=True)
@@ -1465,9 +1587,31 @@ class CurrencyWarsVision:
                 failure_summary = (headers == {"挑战失败"}
                     and "小队生命值" in {text for text, _ in regions[0][0]}
                     and "对局评价" in identity_labels)
-                if {"对局评价", "当前职级"} <= identity_labels or failure_summary:
+                # 超频胜利页也可能没有“当前职级”。须同时具备成功标题、
+                # 完整生命值标签、评价身份和精确下一步动作，不能靠按钮猜页。
+                success_identity = (headers == {"挑战成功"}
+                    and "对局评价" in identity_labels and any(text == "小队生命值" or
+                        re.fullmatch(r"小队生命值[:：]?[❤♥♡]?(?:100|[1-9]?[0-9])", text)
+                         for text, _ in regions[0][0]))
+                if success_identity and "下一步" not in action_labels:
+                    # 原尺寸可能只读到“下一”。不放宽精确动作、模板或页面身份；
+                    # 仅放大同一帧的原动作 ROI，再要求完整高置信度“下一步”。
+                    from PIL import Image
+                    action_crop = frame.crop(regions[1][1])
+                    action_crop = action_crop.resize((action_crop.width * 2, action_crop.height * 2),
+                                                     Image.Resampling.LANCZOS)
+                    action_lines, action_raw = _battle_result_lines(
+                        self._engine_ocr(action_crop, minimum_confidence=0.9), action_crop.size)
+                    self._check_stop()
+                    attempts.append({"method": "final_action_2x", "roi": list(BATTLE_RESULT_ACTION_ROI),
+                                     "text": action_raw, "reason": "exact_action_same_frame"})
+                    if "下一步" in {text for text, _ in action_lines}:
+                        action_labels.add("下一步")
+                success_summary = success_identity and "下一步" in action_labels
+                if {"对局评价", "当前职级"} <= identity_labels or failure_summary or success_summary:
                     return BattleScreenObservation("final_summary", None, None,
-                        ("same_frame_failure_header_health_evaluation_and_next_step" if failure_summary
+                        ("same_frame_success_header_health_evaluation_and_next_step" if success_summary
+                         else "same_frame_failure_header_health_evaluation_and_next_step" if failure_summary
                          else "same_frame_final_header_labels_and_next_step"), (raw_text + " | " + raw)[:480],
                         outcome, point)
             if not headers:
@@ -1558,6 +1702,17 @@ class CurrencyWarsVision:
                                 round(roi[3] * height) - round(roi[1] * height))
                 self._check_stop()
                 answer = parse_squad_health(rows, image_size=size, evidence=method)
+                if (has_engine and tuple(roi) == FINAL_HEALTH_ROI
+                        and answer.reason in {"health_label_missing", "health_value_missing"}):
+                    # 同一终局 ROI 的心形字形可能把 RGB 标签框并入数字；
+                    # 原尺寸灰度恢复完整标签，不放宽置信度、相邻框或双帧一致性。
+                    # 明确冲突、越界及低置信度结果不能被后备覆盖。
+                    gray_rows = self._engine_ocr(image.convert("L"), minimum_confidence=0.0)
+                    self._check_stop()
+                    gray_answer = parse_squad_health(gray_rows, image_size=size,
+                                                     evidence="health_same_frame_gray")
+                    if gray_answer.current is not None:
+                        answer, method = gray_answer, "health_same_frame_gray"
             except Exception as error:
                 self._failure(error)
                 answer = HealthObservation(None, None, method, type(error).__name__, "")

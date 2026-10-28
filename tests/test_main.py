@@ -10,15 +10,16 @@ from types import SimpleNamespace
 import pytest
 
 import main
+import SRACore.__main__ as core_main
 from SRACore.util.const import VERSION
 
 
 def test_main_version_option_exits_cleanly(monkeypatch, capsys):
     """main.py should print the version and exit when --version is used."""
 
-    monkeypatch.setattr(main, "load_app_settings", lambda: SimpleNamespace(Display=SimpleNamespace(language=0)))
-    monkeypatch.setattr(main.Resource, "set_language", lambda *_args, **_kwargs: None)
-    monkeypatch.setattr(main.sys, "argv", ["main.py", "--version"])
+    monkeypatch.setattr(core_main, "SettingsService", lambda: SimpleNamespace(settings=SimpleNamespace(Display=SimpleNamespace(Language=0))))
+    monkeypatch.setattr(core_main.Resource, "set_language", lambda *_args, **_kwargs: None)
+    monkeypatch.setattr(sys, "argv", ["main.py", "--version"])
 
     with pytest.raises(SystemExit) as exc_info:
         main.main()

@@ -1,1 +1,2 @@
-* text=auto eol=lf
+# Keep the audited source archive and Git blobs byte-identical, including CRLF.
+* -text
